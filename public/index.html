@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stremio Sub-Genre Catalog Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="glass-background"></div>
+
+  <header class="app-header">
+    <div class="logo-group">
+      <div class="logo-icon">🎬</div>
+      <div>
+        <h1>Stremio <span>Catalog Generator</span></h1>
+        <p class="subtitle">Auto-Sync Movies to Stremio Desktop & Easynews</p>
+      </div>
+    </div>
+    
+    <div class="actions">
+      <a id="stremioInstallBtn" href="stremio://localhost:7000/manifest.json" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Install in Stremio Desktop
+      </a>
+      <button id="copyTvUrlBtn" class="btn btn-accent" title="Use this URL for Smart TVs, Firesticks & Mobile Devices">
+        📺 Copy TV Network URL
+      </button>
+      <button id="copyUrlBtn" class="btn btn-secondary">
+        📋 Copy PC URL
+      </button>
+    </div>
+  </header>
+
+  <main class="main-layout">
+
+    <!-- Sidebar / Subgenre Selectors -->
+    <aside id="sidebarView" class="sidebar-panel">
+      <div class="panel-header">
+        <h3>🎯 Sub-Genre Collections</h3>
+        <span class="badge">Auto-Updating</span>
+      </div>
+
+      <button id="openCustomModalBtn" class="btn btn-ai btn-full" style="margin-bottom: 1rem;">
+        ✨ + Create AI Custom Genre
+      </button>
+
+      <div id="subgenreList" class="subgenre-grid">
+        <!-- Subgenre pills populated dynamically -->
+      </div>
+
+      <div class="settings-box">
+        <h4>⚙️ Auto-Sync & API Settings</h4>
+
+        <div id="tunnelStatusContainer" style="margin-bottom: 0.85rem; font-size: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+          <span style="color: var(--text-muted);">Secure TV Link:</span>
+          <span id="tunnelStatusBadge" class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.3);">Activating...</span>
+        </div>
+        
+        <div class="form-group">
+          <label>Gemini API Key (Required for AI Scrubbing):</label>
+          <input type="password" id="geminiKeyInput" class="form-control" placeholder="Enter Gemini API Key...">
+        </div>
+
+        <div class="form-group">
+          <label>Sort Movies By:</label>
+          <select id="sortSelect" class="form-control">
+            <option value="release_date.desc">🆕 Newest Releases (Auto-Sync)</option>
+            <option value="popularity.desc">🔥 Trending & Popular Now</option>
+            <option value="vote_average.desc">⭐ Top Rated All-Time</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>TMDB API Key (Optional):</label>
+          <input type="password" id="tmdbKeyInput" class="form-control" placeholder="Enter TMDB API Key...">
+        </div>
+
+        <button id="saveSettingsBtn" class="btn btn-accent btn-full">
+          🔄 Save Settings & Update
+        </button>
+
+        <div id="statusMessage" class="status-msg"></div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <section id="contentView" class="content-panel">
+      <div class="content-header">
+        <div>
+          <h2 id="currentSubgenreTitle">Loading Collection...</h2>
+          <p id="currentSubgenreDesc" class="text-muted">Fetching movies...</p>
+        </div>
+        <div class="stat-badge">
+          <span id="movieCountBadge">0</span> Movies Loaded
+        </div>
+      </div>
+
+      <div id="posterGrid" class="poster-grid">
+        <!-- Movies populated dynamically -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- AI Custom Genre Modal -->
+  <div id="customModal" class="modal-backdrop" style="display: none;">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>✨ Create Custom AI Sub-Genre</h3>
+        <button id="closeModalBtn" class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Type any custom theme or sub-genre prompt. Gemini AI will scrub the web, curate matching movies, resolve IMDb IDs, and build your Stremio catalog!</p>
+        
+        <div class="form-group">
+          <label>Collection Name:</label>
+          <input type="text" id="customNameInput" class="form-control" placeholder="e.g. 90s Cyberpunk Thrillers or Cozy Winter Whodunits">
+        </div>
+
+        <div class="form-group">
+          <label>AI Web Scrub Prompt / Description:</label>
+          <textarea id="customPromptInput" class="form-control" rows="3" placeholder="e.g. Top Korean mind-bending psychological thrillers with shocking plot twists"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Gemini API Key:</label>
+          <input type="password" id="modalGeminiKey" class="form-control" placeholder="Enter your Gemini API Key...">
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button id="createCustomBtn" class="btn btn-primary btn-full">
+            🤖 Scrub Web & Build Movie Catalog
+          </button>
+          <button id="cancelCustomBtn" class="btn btn-secondary" style="display: none;">
+            Stop
+          </button>
+        </div>
+
+        <div id="modalStatus" class="status-msg" style="margin-top: 1rem;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Movie Detail Modal (Trailers, Full Synopsis, Ratings & Reviews) -->
+  <div id="movieDetailModal" class="modal-backdrop" style="display: none;">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <h3 id="detailTitle">Movie Title</h3>
+        <button id="closeDetailBtn" class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body detail-body">
+        
+        <!-- Trailer Embed Container -->
+        <div id="trailerContainer" class="trailer-wrapper">
+          <!-- Youtube iframe inserted here -->
+        </div>
+
+        <div class="detail-meta-group">
+          <span id="detailRatingBadge" class="rating-tag">★ 8.5</span>
+          <span id="detailYear" class="meta-tag">2024</span>
+          <span id="detailRuntime" class="meta-tag">120 mins</span>
+          <span id="detailGenres" class="genres-tag">Action, Sci-Fi</span>
+        </div>
+
+        <p id="detailTagline" class="detail-tagline"></p>
+
+        <div class="detail-section">
+          <h4>📖 Synopsis & Overview</h4>
+          <p id="detailOverview" class="detail-overview">Loading overview...</p>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="detail-section">
+          <h4>💬 Recent User & Critic Reviews</h4>
+          <div id="reviewsContainer" class="reviews-list">
+            <!-- Review cards inserted here -->
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <a id="playStremioBtn" href="#" class="btn btn-primary btn-full">
+            ▶️ Play in Stremio Desktop
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-bottom-nav">
+    <button id="navHomeBtn" class="nav-btn active">
+      <span class="nav-icon">🎬</span>
+      <span>Catalog</span>
+    </button>
+    <button id="navAIBtn" class="nav-btn">
+      <span class="nav-icon">✨</span>
+      <span>AI Gen</span>
+    </button>
+    <button id="navSettingsBtn" class="nav-btn">
+      <span class="nav-icon">⚙️</span>
+      <span>Settings</span>
+    </button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
