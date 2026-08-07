@@ -624,7 +624,7 @@ function postJson(urlStr, body) {
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(postData)
       },
-      timeout: 30000
+      timeout: 90000
     }, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
@@ -634,7 +634,7 @@ function postJson(urlStr, body) {
     });
     req.on('timeout', () => {
       req.destroy();
-      reject(new Error('Gemini API request timed out after 30 seconds'));
+      reject(new Error('Gemini API request timed out after 90 seconds'));
     });
     req.on('error', err => reject(err));
     req.write(postData);
@@ -657,8 +657,7 @@ Return the most popular 50 to 70 movies matching the query.
 You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
 Format: [{"title": "Movie Title 1", "year": 1999}]`
     : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
-You MUST act as an exhaustive database scraper. Return a MASSIVE, comprehensive list of EVERY SINGLE real, existing movie you can find that matches the theme. 
-Aim for at least 150 to 300+ movies if possible. Do NOT stop at 20 or 50. Dig deep into film history, international cinema, and hidden gems.
+Return a high-quality, comprehensive list of the best 70 to 100 real, existing movies matching the theme. Dig deep into film history and iconic cinema.
 You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
 Format:
 [
@@ -667,8 +666,8 @@ Format:
 ]`;
 
   const modelsToTry = preferredModel 
-    ? [preferredModel, 'gemini-flash-latest', 'gemini-2.5-flash'] 
-    : ['gemini-flash-latest', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-pro-latest'];
+    ? [preferredModel, 'gemini-1.5-flash', 'gemini-2.0-flash', 'gemini-1.5-pro'] 
+    : ['gemini-1.5-flash', 'gemini-2.0-flash', 'gemini-1.5-pro', 'gemini-flash-latest'];
 
   let lastError;
   for (const model of modelsToTry) {
