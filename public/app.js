@@ -473,6 +473,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             successCount++;
             totalMovies += res.count || 0;
             lastCreatedId = res.subgenre.id;
+
+            // Live update UI immediately as each collection finishes!
+            const colRes = await fetch('/api/collections').then(r => r.json());
+            collections = colRes;
+            localStorage.setItem('subgenre_collections', JSON.stringify(collections));
+            currentActiveId = res.subgenre.id;
+            renderSubgenres();
+            await loadActiveMovies();
           }
         } catch (err) {
           if (err.name === 'AbortError') throw err;

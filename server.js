@@ -802,7 +802,7 @@ app.post('/api/custom-genre', async (req, res) => {
       });
     }
 
-    const subgenreId = 'custom_' + Date.now();
+    const subgenreId = 'custom_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7);
     const newSubgenre = {
       id: subgenreId,
       name: name || prompt.slice(0, 30),
@@ -815,12 +815,12 @@ app.post('/api/custom-genre', async (req, res) => {
 
     // Save to collections dictionary
     collections[subgenreId] = newSubgenre;
-    saveCollections();
+    await saveCollections();
 
     // Still unshift to SUBGENRES so the UI dropdown can see it as a legacy config option
     SUBGENRES.unshift({ id: subgenreId, name: newSubgenre.name, description: newSubgenre.description, isCustom: true });
     config.activeSubgenre = subgenreId;
-    saveConfig();
+    await saveConfig();
 
     console.log(`[Gemini AI] Successfully created custom subgenre "${newSubgenre.name}" with ${stremioMetas.length} movies!`);
 
