@@ -117,15 +117,22 @@
       <div class="modal-body">
         <p class="modal-desc">Type any custom theme or sub-genre prompt. Gemini AI will scrub the web, curate matching movies, resolve IMDb IDs, and build your Stremio catalog!</p>
         
-        <div class="form-group">
-          <label>Collection Name:</label>
-          <input type="text" id="customNameInput" class="form-control" placeholder="e.g. 90s Cyberpunk Thrillers or Cozy Winter Whodunits">
+        <div id="promptSlotsContainer">
+          <div class="prompt-slot-card" style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.08);">
+            <div class="form-group" style="margin-bottom: 8px;">
+              <label style="font-weight: 600; font-size: 0.85rem; color: #a78bfa;">Collection #1 Name:</label>
+              <input type="text" class="customNameInput form-control" placeholder="e.g. 90s & 2000s Hood Classics">
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label style="font-size: 0.8rem;">AI Web Scrub Prompt / Description:</label>
+              <textarea class="customPromptInput form-control" rows="2" placeholder="e.g. Classic 90s and 2000s Black urban dramas..."></textarea>
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label>AI Web Scrub Prompt / Description:</label>
-          <textarea id="customPromptInput" class="form-control" rows="3" placeholder="e.g. Top Korean mind-bending psychological thrillers with shocking plot twists"></textarea>
-        </div>
+        <button id="addPromptSlotBtn" type="button" class="btn btn-secondary btn-full" style="margin-bottom: 1rem; font-size: 0.85rem; border: 1px dashed rgba(167, 139, 250, 0.4); color: #a78bfa;">
+          ➕ Add Another Collection Prompt (Scrub Simultaneously)
+        </button>
 
         <div class="form-group">
           <label>Gemini API Key:</label>

@@ -380,66 +380,131 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  createCustomBtn.addEventListener('click', async () => {
-    const name = customNameInput.value.trim();
-    const prompt = customPromptInput.value.trim();
-    const key = modalGeminiKey.value.trim() || geminiKeyInput.value.trim();
+  const promptSlotsContainer = document.getElementById('promptSlotsContainer');
+  const addPromptSlotBtn = document.getElementById('addPromptSlotBtn');
 
-    if (!prompt) {
-      modalStatus.innerText = '⚠️ Please enter a prompt or subgenre description!';
-      return;
-    }
+  let slotCount = 1;
+  if (addPromptSlotBtn && promptSlotsContainer) {
+    addPromptSlotBtn.addEventListener('click', () => {
+      slotCount++;
+      const slotCard = document.createElement('div');
+      slotCard.className = 'prompt-slot-card';
+      slotCard.style.cssText = 'background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.08); position: relative;';
+      slotCard.innerHTML = `
+        <button type="button" class="remove-slot-btn" style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ef4444; cursor: pointer; font-size: 1.1rem;" title="Remove Prompt">✕</button>
+        <div class="form-group" style="margin-bottom: 8px;">
+          <label style="font-weight: 600; font-size: 0.85rem; color: #a78bfa;">Collection #${slotCount} Name:</label>
+          <input type="text" class="customNameInput form-control" placeholder="e.g. Black Horror & Thrillers">
+        </div>
+        <div class="form-group" style="margin-bottom: 0;">
+          <label style="font-size: 0.8rem;">AI Web Scrub Prompt / Description:</label>
+          <textarea class="customPromptInput form-control" rows="2" placeholder="e.g. Black horror movies, social thrillers, and psychological suspense..."></textarea>
+        </div>
+      `;
+      slotCard.querySelector('.remove-slot-btn').addEventListener('click', () => {
+        slotCard.remove();
+      });
+      promptSlotsContainer.appendChild(slotCard);
+    });
+  }
+
+  createCustomBtn.addEventListener('click', async () => {
+    const key = modalGeminiKey.value.trim() || geminiKeyInput.value.trim();
     if (!key) {
       modalStatus.innerText = '⚠️ Please enter your Gemini API Key!';
       return;
     }
 
+    const cards = promptSlotsContainer.querySelectorAll('.prompt-slot-card');
+    const tasks = [];
+
+    cards.forEach((card, index) => {
+      const nameInput = card.querySelector('.customNameInput');
+      const promptInput = card.querySelector('.customPromptInput');
+      const name = nameInput ? nameInput.value.trim() : '';
+      const prompt = promptInput ? promptInput.value.trim() : '';
+      if (prompt) {
+        tasks.push({ index: index + 1, name, prompt });
+      }
+    });
+
+    if (tasks.length === 0) {
+      modalStatus.innerText = '⚠️ Please enter at least one prompt description!';
+      return;
+    }
+
     try {
       createCustomBtn.disabled = true;
-      createCustomBtn.innerText = '🤖 Gemini AI Scrubbing Web & Building Catalog...';
+      createCustomBtn.innerText = `🤖 Gemini AI Scrubbing ${tasks.length} Collection${tasks.length > 1 ? 's' : ''} Simultaneously...`;
       cancelCustomBtn.style.display = 'block';
-      modalStatus.innerText = 'Scrubbing web for movies matching your prompt...';
+      modalStatus.style.color = '#a78bfa';
+      modalStatus.innerText = `⚡ Scrubbing web in parallel for ${tasks.length} collection${tasks.length > 1 ? 's' : ''}... Please wait.`;
 
       geminiKeyInput.value = key;
-      
       currentScrubController = new AbortController();
 
-      const res = await fetch('/api/custom-genre', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: name || prompt.slice(0, 30),
-          description: `AI-Curated Collection for "${prompt}"`,
-          prompt: prompt,
-          geminiApiKey: key,
-          tmdbApiKey: tmdbKeyInput.value.trim()
-        }),
-        signal: currentScrubController.signal
-      }).then(r => r.json());
+      const promises = tasks.map(t => 
+        fetch('/api/custom-genre', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: t.name || t.prompt.slice(0, 30),
+            description: `AI-Curated Collection for "${t.prompt}"`,
+            prompt: t.prompt,
+            geminiApiKey: key,
+            tmdbApiKey: tmdbKeyInput.value.trim()
+          }),
+          signal: currentScrubController.signal
+        }).then(r => r.json())
+      );
 
-      if (res.error) {
-        throw new Error(res.error);
-      }
+      const results = await Promise.all(promises);
 
-      if (res.success) {
+      let totalMovies = 0;
+      let successCount = 0;
+      let lastCreatedId = null;
+
+      results.forEach(res => {
+        if (res.success) {
+          successCount++;
+          totalMovies += res.count || 0;
+          lastCreatedId = res.subgenre.id;
+        }
+      });
+
+      if (successCount > 0) {
         modalStatus.style.color = '#10b981';
-        modalStatus.innerText = `✓ Success! Curated ${res.count} movies.`;
-        
-        // Refresh collections and set active
+        modalStatus.innerText = `✓ Success! Created ${successCount} collection${successCount > 1 ? 's' : ''} with ${totalMovies} total movies!`;
+
+        // Refresh collections and update UI
         const colRes = await fetch('/api/collections').then(r => r.json());
         collections = colRes;
         localStorage.setItem('subgenre_collections', JSON.stringify(collections));
-        currentActiveId = res.subgenre.id;
+        if (lastCreatedId) currentActiveId = lastCreatedId;
         renderSubgenres();
         await loadActiveMovies();
 
         setTimeout(() => {
           customModal.style.display = 'none';
-          customNameInput.value = '';
-          customPromptInput.value = '';
+          // Reset slots back to 1 slot
+          promptSlotsContainer.innerHTML = `
+            <div class="prompt-slot-card" style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.08);">
+              <div class="form-group" style="margin-bottom: 8px;">
+                <label style="font-weight: 600; font-size: 0.85rem; color: #a78bfa;">Collection #1 Name:</label>
+                <input type="text" class="customNameInput form-control" placeholder="e.g. 90s & 2000s Hood Classics">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label style="font-size: 0.8rem;">AI Web Scrub Prompt / Description:</label>
+                <textarea class="customPromptInput form-control" rows="2" placeholder="e.g. Classic 90s and 2000s Black urban dramas..."></textarea>
+              </div>
+            </div>
+          `;
+          slotCount = 1;
           modalStatus.innerText = '';
           modalStatus.style.color = '';
-        }, 2000);
+        }, 2500);
+      } else {
+        throw new Error('Failed to curate collections');
       }
     } catch (err) {
       console.error(err);
@@ -450,7 +515,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     } finally {
       createCustomBtn.disabled = false;
-      createCustomBtn.innerText = '🤖 Scrub Web & Build Catalog';
+      createCustomBtn.innerText = '🤖 Scrub Web & Build Movie Catalog';
       cancelCustomBtn.style.display = 'none';
       currentScrubController = null;
     }
