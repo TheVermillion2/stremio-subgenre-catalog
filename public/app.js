@@ -435,46 +435,59 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
       createCustomBtn.disabled = true;
-      createCustomBtn.innerText = `🤖 Gemini AI Scrubbing ${tasks.length} Collection${tasks.length > 1 ? 's' : ''} Simultaneously...`;
+      createCustomBtn.innerText = `🤖 Gemini AI Scrubbing ${tasks.length} Collection${tasks.length > 1 ? 's' : ''}...`;
       cancelCustomBtn.style.display = 'block';
-      modalStatus.style.color = '#a78bfa';
-      modalStatus.innerText = `⚡ Scrubbing web in parallel for ${tasks.length} collection${tasks.length > 1 ? 's' : ''}... Please wait.`;
 
       geminiKeyInput.value = key;
       currentScrubController = new AbortController();
 
-      const promises = tasks.map(t => 
-        fetch('/api/custom-genre', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: t.name || t.prompt.slice(0, 30),
-            description: `AI-Curated Collection for "${t.prompt}"`,
-            prompt: t.prompt,
-            geminiApiKey: key,
-            tmdbApiKey: tmdbKeyInput.value.trim()
-          }),
-          signal: currentScrubController.signal
-        }).then(r => r.json())
-      );
-
-      const results = await Promise.all(promises);
-
       let totalMovies = 0;
       let successCount = 0;
       let lastCreatedId = null;
+      const errors = [];
 
-      results.forEach(res => {
-        if (res.success) {
-          successCount++;
-          totalMovies += res.count || 0;
-          lastCreatedId = res.subgenre.id;
+      for (let i = 0; i < tasks.length; i++) {
+        const t = tasks[i];
+        const taskName = t.name || t.prompt.slice(0, 25);
+        modalStatus.style.color = '#a78bfa';
+        modalStatus.innerText = `⏳ [${i + 1}/${tasks.length}] Scrubbing web for "${taskName}"... Please wait.`;
+
+        try {
+          const res = await fetch('/api/custom-genre', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: t.name || t.prompt.slice(0, 30),
+              description: `AI-Curated Collection for "${t.prompt}"`,
+              prompt: t.prompt,
+              geminiApiKey: key,
+              tmdbApiKey: tmdbKeyInput.value.trim()
+            }),
+            signal: currentScrubController.signal
+          }).then(r => r.json());
+
+          if (res.error) {
+            console.error(`Collection #${t.index} failed:`, res.error);
+            errors.push(`"${taskName}": ${res.error}`);
+          } else if (res.success) {
+            successCount++;
+            totalMovies += res.count || 0;
+            lastCreatedId = res.subgenre.id;
+          }
+        } catch (err) {
+          if (err.name === 'AbortError') throw err;
+          console.error(`Collection #${t.index} fetch error:`, err.message);
+          errors.push(`"${taskName}": ${err.message}`);
         }
-      });
+      }
 
       if (successCount > 0) {
         modalStatus.style.color = '#10b981';
-        modalStatus.innerText = `✓ Success! Created ${successCount} collection${successCount > 1 ? 's' : ''} with ${totalMovies} total movies!`;
+        let msg = `✓ Success! Created ${successCount} collection${successCount > 1 ? 's' : ''} with ${totalMovies} total movies!`;
+        if (errors.length > 0) {
+          msg += ` (${errors.length} failed)`;
+        }
+        modalStatus.innerText = msg;
 
         // Refresh collections and update UI
         const colRes = await fetch('/api/collections').then(r => r.json());
@@ -504,10 +517,12 @@ document.addEventListener('DOMContentLoaded', async () => {
           modalStatus.style.color = '';
         }, 2500);
       } else {
-        throw new Error('Failed to curate collections');
+        const errorDetail = errors.length > 0 ? errors.join('; ') : 'Check API Key or prompt text.';
+        throw new Error(errorDetail);
       }
     } catch (err) {
       console.error(err);
+      modalStatus.style.color = '#ef4444';
       if (err.name === 'AbortError') {
         modalStatus.innerText = `🛑 Scrubbing cancelled.`;
       } else {
