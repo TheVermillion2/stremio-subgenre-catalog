@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
@@ -390,7 +390,7 @@ app.get('/manifest.json', (req, res) => {
   catalogs.unshift({
     type: 'movie',
     id: 'ai_search',
-    name: '🤖 AI Movie Search Curator',
+    name: '≡ƒñû AI Movie Search Curator',
     extra: [
       { name: 'search', isRequired: true },
       { name: 'skip', isRequired: false }
@@ -400,7 +400,7 @@ app.get('/manifest.json', (req, res) => {
   const manifest = {
     id: 'org.subgenre.auto.catalog',
     version: '2.1.0',
-    name: '🤖 AI Movie Search Curator & Custom Genres',
+    name: '≡ƒñû AI Movie Search Curator & Custom Genres',
     description: 'Instant AI Movie Search & Auto-updating Custom Playlists!',
     resources: ['catalog', 'meta'],
     types: ['movie'],
@@ -636,26 +636,42 @@ function postJson(urlStr, body) {
 }
 
 // Call Gemini API to scrub web & return movies matching prompt
-// Helper for calling Gemini API with automatic model fallbacks
-async function callGemini(systemInstruction, userPrompt, apiKey, preferredModel = '') {
+async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isLiveSearch = false) {
   const key = apiKey || config.geminiApiKey || process.env.GEMINI_API_KEY;
   if (!key) {
     throw new Error('Gemini API Key is missing. Please enter your Gemini API Key in the Dashboard Settings.');
   }
 
+  console.log(`[Gemini AI] Scrubbing web & curating movies for prompt: "${promptText}"...`);
+
+  const systemInstruction = isLiveSearch 
+    ? `You are a lightning-fast Stremio search backend. The user is searching for a movie theme or query.
+  Return the top 15 to 20 most relevant real movies matching the query.
+  You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
+  Format: [{"title": "Movie Title 1", "year": 1999}]`
+    : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
+Return a high-quality, comprehensive list of the best 70 to 100 real, existing movies matching the theme. Dig deep into film history and iconic cinema.
+You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
+Format:
+[
+  {"title": "Movie Title 1", "year": 1999},
+  {"title": "Movie Title 2", "year": 2005}
+]`;
+
   const modelsToTry = preferredModel && preferredModel !== 'gemini-1.5-pro'
-    ? [preferredModel, 'gemini-2.0-flash', 'gemini-1.5-flash-latest', 'gemini-1.5-flash-8b'] 
-    : ['gemini-2.0-flash', 'gemini-1.5-flash-latest', 'gemini-1.5-flash-8b'];
+    ? [preferredModel, 'gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'] 
+    : ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'];
 
   let lastError;
   for (const model of modelsToTry) {
+    console.log(`[Gemini AI] Trying model: ${model}...`);
     try {
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
       const payload = {
         contents: [
           {
             parts: [
-              { text: `${systemInstruction}\n\nUser Request: "${userPrompt}".` }
+              { text: `${systemInstruction}\n\nUser Custom Request: "${promptText}". Generate a comprehensive list of real movies matching this.` }
             ]
           }
         ],
@@ -693,7 +709,8 @@ async function callGemini(systemInstruction, userPrompt, apiKey, preferredModel 
           }
         }
 
-        if (parsed && Array.isArray(parsed) && parsed.length > 0) {
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          console.log(`[Gemini AI] Success with model ${model}! Received ${parsed.length} movies.`);
           return parsed;
         } else {
           console.log(`[Gemini AI] Model ${model} returned empty or unparseable array.`);
@@ -712,148 +729,6 @@ async function callGemini(systemInstruction, userPrompt, apiKey, preferredModel 
   throw lastError || new Error('All Gemini API models failed. Please check your API key.');
 }
 
-// Call Gemini API to scrub web & return movies matching prompt
-async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isLiveSearch = false) {
-  console.log(`[Gemini AI] Scrubbing web & curating movies for prompt: "${promptText}"...`);
-  const systemInstruction = isLiveSearch 
-    ? `You are a lightning-fast Stremio search backend. The user is searching for a movie theme or query.
-  Return the top 15 to 20 most relevant real movies matching the query.
-  You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
-  Format: [{"title": "Movie Title 1", "year": 1999}]`
-    : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
-  Return all real, existing movies matching the theme. Dig deep into film history, iconic cinema, classics, and hidden gems across all decades.
-  CRITICAL RULE: Every single movie MUST strictly match the subject. Do NOT include filler or random movies.
-  You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
-  Format: [{"title": "Movie Title 1", "year": 1999}]`;
-
-  return await callGemini(systemInstruction, promptText, apiKey, preferredModel);
-}
-
-// Multi-perspective curation using Gemini Flash's deep film knowledge
-async function queryGeminiForMoviesMultiChunk(promptText, apiKey, model = '') {
-  console.log(`[Gemini AI] Curating all relevant movies using Gemini Flash brain for: "${promptText}"...`);
-
-  const perspectives = [
-    {
-      name: "Essential & Iconic Matches",
-      instruction: `You are an expert film database curator. The user wants movies for the subject/theme: "${promptText}".
-Return ALL well-known, iconic, critically acclaimed, or major defining movies that genuinely fit this subject.
-CRITICAL RULE: Every single movie MUST strictly match the subject "${promptText}". Do NOT include filler, loosely related movies, or random movies just to make the list longer. Only return movies that genuinely fit this subject.
-Return ONLY a raw JSON array format with NO markdown formatting:
-[{"title": "Movie Title", "year": 1999}]`
-    },
-    {
-      name: "Cult Classics & Fan Favorites",
-      instruction: `You are an expert film database curator. The user wants movies for the subject/theme: "${promptText}".
-Return ALL cult classics, fan favorites, box office hits, and popular titles across all decades that genuinely fit this subject.
-CRITICAL RULE: Every single movie MUST strictly match the subject "${promptText}". Do NOT include filler, loosely related movies, or random movies just to make the list longer. Only return movies that genuinely fit this subject.
-Return ONLY a raw JSON array format with NO markdown formatting:
-[{"title": "Movie Title", "year": 1999}]`
-    },
-    {
-      name: "Hidden Gems & Deep Cuts",
-      instruction: `You are an expert film database curator. The user wants movies for the subject/theme: "${promptText}".
-Return ALL hidden gems, underrated classics, independent films, deep cuts, and notable entries that genuinely fit this subject.
-CRITICAL RULE: Every single movie MUST strictly match the subject "${promptText}". Do NOT include filler, loosely related movies, or random movies just to make the list longer. Only return movies that genuinely fit this subject.
-Return ONLY a raw JSON array format with NO markdown formatting:
-[{"title": "Movie Title", "year": 1999}]`
-    }
-  ];
-
-  const results = await Promise.all(
-    perspectives.map(p => 
-      callGemini(p.instruction, promptText, apiKey, model)
-        .catch(err => {
-          console.warn(`[Gemini AI] Chunk "${p.name}" failed: ${err.message}`);
-          return [];
-        })
-    )
-  );
-
-  const combined = results.flat();
-  const seen = new Set();
-  const deduplicated = [];
-  
-  for (const m of combined) {
-    if (!m || !m.title) continue;
-    const cleanTitle = m.title.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
-    const key = `${cleanTitle}_${m.year || ''}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      deduplicated.push({ title: m.title.trim(), year: m.year ? parseInt(m.year, 10) : null });
-    }
-  }
-
-  console.log(`[Gemini AI] Curated ${deduplicated.length} unique candidate movies for "${promptText}"`);
-  return deduplicated;
-}
-
-// Sub-Agent QA Verification Pass to ensure 100% prompt relevance
-async function verifyMoviesWithGeminiSubAgent(candidates, promptText, apiKey, model = '') {
-  if (!candidates || candidates.length === 0) return [];
-  
-  console.log(`[Gemini QA] Running Sub-Agent QA Verification across ${candidates.length} candidates for: "${promptText}"...`);
-
-  const batchSize = 100;
-  const verifiedList = [];
-
-  for (let i = 0; i < candidates.length; i += batchSize) {
-    const chunk = candidates.slice(i, i + batchSize);
-    const candidateStr = JSON.stringify(chunk);
-
-    const qaInstruction = `You are a strict QA film database auditor.
-The user's theme is: "${promptText}".
-Analyze the provided list of candidate movies and return ONLY the movies that are 100% strictly relevant to this theme.
-REMOVAL RULE: Throw out any movie that does not directly and strongly fit "${promptText}". Do NOT keep filler or loosely related movies. Do NOT add any new movies.
-Return ONLY a raw JSON array format with NO markdown formatting:
-[{"title": "Movie Title", "year": 1999}]`;
-
-    try {
-      const verifiedChunk = await callGemini(qaInstruction, candidateStr, apiKey, model);
-      if (Array.isArray(verifiedChunk) && verifiedChunk.length > 0) {
-        verifiedList.push(...verifiedChunk);
-      } else {
-        verifiedList.push(...chunk);
-      }
-    } catch (e) {
-      console.warn(`[Gemini QA] Verification batch failed (${e.message}), keeping candidate chunk.`);
-      verifiedList.push(...chunk);
-    }
-  }
-
-  const seen = new Set();
-  const finalMovies = [];
-  for (const m of verifiedList) {
-    if (!m || !m.title) continue;
-    const cleanTitle = m.title.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
-    const key = `${cleanTitle}_${m.year || ''}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      finalMovies.push({ title: m.title.trim(), year: m.year ? parseInt(m.year, 10) : null });
-    }
-  }
-
-  console.log(`[Gemini QA] Verification complete: ${finalMovies.length} strictly relevant movies approved.`);
-  return finalMovies;
-}
-
-
-// Helper: HTTP request wrapper using native fetch
-async function fetchJson(urlStr) {
-  try {
-    const res = await fetch(urlStr, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-        'Accept': 'application/json'
-      }
-    });
-    if (!res.ok) return null;
-    return await res.json();
-  } catch (err) {
-    return null;
-  }
-}
-
 // Search TMDB by Title + Year to resolve IMDb IDs and rich metadata
 async function searchTmdbMovie(title, year, apiKey) {
   const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
@@ -861,19 +736,17 @@ async function searchTmdbMovie(title, year, apiKey) {
     let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
     if (year) searchUrl += `&year=${year}`;
 
-    let res = await fetchJson(searchUrl);
-
-    // If year search returned no results, retry without year filter
-    if ((!res || !res.results || res.results.length === 0) && year) {
-      const fallbackUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
-      res = await fetchJson(fallbackUrl);
-    }
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('TMDB Timeout')), 1200));
+    const res = await Promise.race([fetchJson(searchUrl), timeoutPromise]);
 
     if (res && res.results && res.results.length > 0) {
       const m = res.results[0];
       let externalId = `tt${m.id}`;
       try {
-        const extRes = await fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`);
+        const extRes = await Promise.race([
+          fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`),
+          new Promise((_, reject) => setTimeout(() => reject(new Error('ExtID Timeout')), 800))
+        ]);
         if (extRes && extRes.imdb_id) externalId = extRes.imdb_id;
       } catch (err) {}
 
@@ -894,380 +767,6 @@ async function searchTmdbMovie(title, year, apiKey) {
   return null;
 }
 
-// Search TMDB Direct by Query Keywords (Strict Keyword Match)
-async function searchTmdbDirectByQuery(queryStr, apiKey) {
-  const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
-  let rawMovies = [];
-
-  try {
-    const cleanQuery = queryStr
-      .replace(/movies about|movie about|films about|movies|films|the best|top|a list of|list of|collection of/gi, '')
-      .trim();
-
-    // 1. Search full clean query across TMDB search pages
-    for (let page = 1; page <= 5; page++) {
-      const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(cleanQuery || queryStr)}&page=${page}`;
-      const res = await fetchJson(searchUrl);
-      if (res && res.results && res.results.length > 0) {
-        res.results.forEach(m => {
-          rawMovies.push({ title: m.title || m.original_title, year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null });
-        });
-        if (page >= res.total_pages) break;
-      } else {
-        break;
-      }
-    }
-  } catch (err) {
-    console.error(`[TMDB Direct Search Error] "${queryStr}":`, err.message);
-  }
-
-  // Deduplicate and return strict movie list
-  const uniqueMovies = Array.from(new Map(rawMovies.map(m => [m.title.toLowerCase(), m])).values());
-  return uniqueMovies;
-}
-
-async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
-  const text = (name + ' ' + prompt).toLowerCase();
-  let staticMovies = [];
-  
-  // 1. Relationships, Marriage, Abuse, Toxic Love
-  if (text.includes('relationship') || text.includes('abusive') || text.includes('marriage') || text.includes('toxic') || text.includes('divorce') || text.includes('cheating') || text.includes('partner')) {
-    staticMovies = staticMovies.concat([
-      { title: "Marriage Story", year: 2019 },
-      { title: "Blue Valentine", year: 2010 },
-      { title: "Gone Girl", year: 2014 },
-      { title: "Revolutionary Road", year: 2008 },
-      { title: "Sleeping with the Enemy", year: 1991 },
-      { title: "Enough", year: 2002 },
-      { title: "What's Love Got to Do with It", year: 1993 },
-      { title: "Closer", year: 2004 },
-      { title: "Fatal Attraction", year: 1987 },
-      { title: "The War of the Roses", year: 1989 },
-      { title: "Scenes from a Marriage", year: 1973 },
-      { title: "Unfaithful", year: 2002 },
-      { title: "Phantom Thread", year: 2017 },
-      { title: "Kramer vs. Kramer", year: 1979 }
-    ]);
-  }
-
-  // 2. A.I., Robots, Androids & Technology
-  if (text.includes('a.i.') || text.includes('ai') || text.includes('robot') || text.includes('android') || text.includes('artificial intelligence') || text.includes('machine')) {
-    staticMovies = staticMovies.concat([
-      { title: "Ex Machina", year: 2014 },
-      { title: "Her", year: 2013 },
-      { title: "Blade Runner 2049", year: 2017 },
-      { title: "The Matrix", year: 1999 },
-      { title: "I, Robot", year: 2004 },
-      { title: "A.I. Artificial Intelligence", year: 2001 },
-      { title: "Terminator 2: Judgment Day", year: 1991 },
-      { title: "M3GAN", year: 2022 },
-      { title: "Upgrade", year: 2018 },
-      { title: "Ghost in the Shell", year: 1995 }
-    ]);
-  }
-
-  // 3. Zombie, Vampire & Outbreak Sagas
-  if (text.includes('zombie') || text.includes('vampire') || text.includes('outbreak') || text.includes('undead')) {
-    staticMovies = staticMovies.concat([
-      { title: "28 Days Later", year: 2002 },
-      { title: "Dawn of the Dead", year: 2004 },
-      { title: "Train to Busan", year: 2016 },
-      { title: "Shaun of the Dead", year: 2004 },
-      { title: "World War Z", year: 2013 },
-      { title: "Zombieland", year: 2009 },
-      { title: "Dracula", year: 1992 },
-      { title: "Interview with the Vampire", year: 1994 },
-      { title: "Blade", year: 1998 },
-      { title: "From Dusk Till Dawn", year: 1996 },
-      { title: "Let the Right One In", year: 2008 },
-      { title: "30 Days of Night", year: 2007 },
-      { title: "I Am Legend", year: 2007 },
-      { title: "The Lost Boys", year: 1987 },
-      { title: "Night of the Living Dead", year: 1968 }
-    ]);
-  }
-
-  // 4. Horror Master Vault (Slashers, Hauntings, Possession, A24 Elevated, Zombies, Vampires, Body Horror)
-  if (text.includes('horror') || text.includes('slasher') || text.includes('haunting') || text.includes('possession') || text.includes('demonic') || text.includes('occult') || text.includes('vault') || text.includes('spooky')) {
-    staticMovies = staticMovies.concat([
-      // Iconic Slashers & Serial Killers
-      { title: "The Texas Chain Saw Massacre", year: 1974 },
-      { title: "Halloween", year: 1978 },
-      { title: "Friday the 13th", year: 1980 },
-      { title: "Friday the 13th Part 2", year: 1981 },
-      { title: "A Nightmare on Elm Street", year: 1984 },
-      { title: "A Nightmare on Elm Street 3: Dream Warriors", year: 1987 },
-      { title: "Child's Play", year: 1988 },
-      { title: "Scream", year: 1996 },
-      { title: "Scream 2", year: 1997 },
-      { title: "Scream VI", year: 2023 },
-      { title: "I Know What You Did Last Summer", year: 1997 },
-      { title: "Urban Legend", year: 1998 },
-      { title: "Sleepaway Camp", year: 1983 },
-      { title: "My Bloody Valentine", year: 1981 },
-      { title: "Candyman", year: 1992 },
-      { title: "House of Wax", year: 2005 },
-      { title: "You're Next", year: 2011 },
-      { title: "Terrifier", year: 2016 },
-      { title: "Terrifier 2", year: 2022 },
-      { title: "X", year: 2022 },
-      { title: "Pearl", year: 2022 },
-      { title: "Ma", year: 2019 },
-      { title: "Happy Death Day", year: 2017 },
-      { title: "Freaky", year: 2020 },
-      { title: "Bodies Bodies Bodies", year: 2022 },
-      { title: "Thanksgiving", year: 2023 },
-
-      // Supernatural, Hauntings & Possession
-      { title: "The Exorcist", year: 1973 },
-      { title: "The Omen", year: 1976 },
-      { title: "Poltergeist", year: 1982 },
-      { title: "The Shining", year: 1980 },
-      { title: "Doctor Sleep", year: 2019 },
-      { title: "The Sixth Sense", year: 1999 },
-      { title: "The Ring", year: 2002 },
-      { title: "The Grudge", year: 2004 },
-      { title: "The Others", year: 2001 },
-      { title: "Paranormal Activity", year: 2007 },
-      { title: "The Conjuring", year: 2013 },
-      { title: "The Conjuring 2", year: 2016 },
-      { title: "Annabelle: Creation", year: 2017 },
-      { title: "Insidious", year: 2010 },
-      { title: "Insidious: Chapter 2", year: 2013 },
-      { title: "Sinister", year: 2012 },
-      { title: "Oculus", year: 2013 },
-      { title: "Ouija: Origin of Evil", year: 2016 },
-      { title: "The Orphanage", year: 2007 },
-      { title: "The Devil's Backbone", year: 2001 },
-      { title: "Lights Out", year: 2016 },
-      { title: "The Autopsy of Jane Doe", year: 2016 },
-      { title: "The Black Phone", year: 2021 },
-      { title: "Smile", year: 2022 },
-      { title: "Talk to Me", year: 2022 },
-      { title: "Barbarian", year: 2022 },
-      { title: "Longlegs", year: 2024 },
-      { title: "Late Night with the Devil", year: 2023 },
-      { title: "Immaculate", year: 2024 },
-      { title: "The First Omen", year: 2024 },
-
-      // Modern A24 & Elevated Horror
-      { title: "The Babadook", year: 2014 },
-      { title: "It Follows", year: 2014 },
-      { title: "The Witch", year: 2015 },
-      { title: "Get Out", year: 2017 },
-      { title: "Us", year: 2019 },
-      { title: "Nope", year: 2022 },
-      { title: "Hereditary", year: 2018 },
-      { title: "Midsommar", year: 2019 },
-      { title: "Saint Maud", year: 2019 },
-      { title: "The Lighthouse", year: 2019 },
-      { title: "Climax", year: 2018 },
-      { title: "A24 Men", year: 2022 },
-      { title: "Resurrection", year: 2022 },
-      { title: "The Menu", year: 2022 },
-      { title: "Run", year: 2020 },
-      { title: "Beau Is Afraid", year: 2023 },
-
-      // Zombie Apocalypses & Outbreak Sagas
-      { title: "Dawn of the Dead", year: 1978 },
-      { title: "Day of the Dead", year: 1985 },
-      { title: "Dawn of the Dead", year: 2004 },
-      { title: "28 Days Later", year: 2002 },
-      { title: "28 Weeks Later", year: 2007 },
-      { title: "Shaun of the Dead", year: 2004 },
-      { title: "Train to Busan", year: 2016 },
-      { title: "World War Z", year: 2013 },
-      { title: "Zombieland", year: 2009 },
-      { title: "Zombieland: Double Tap", year: 2019 },
-      { title: "I Am Legend", year: 2007 },
-      { title: "Planet Terror", year: 2007 },
-      { title: "Overlord", year: 2018 },
-      { title: "The Sadness", year: 2021 },
-      { title: "Cargo", year: 2017 },
-      { title: "One Cut of the Dead", year: 2017 },
-
-      // Vampire Classics
-      { title: "Bram Stoker's Dracula", year: 1992 },
-      { title: "Interview with the Vampire", year: 1994 },
-      { title: "The Lost Boys", year: 1987 },
-      { title: "Fright Night", year: 1985 },
-      { title: "Near Dark", year: 1987 },
-      { title: "Blade", year: 1998 },
-      { title: "Blade II", year: 2002 },
-      { title: "From Dusk Till Dawn", year: 1996 },
-      { title: "Let the Right One In", year: 2008 },
-      { title: "Let Me In", year: 2010 },
-      { title: "30 Days of Night", year: 2007 },
-      { title: "Renfield", year: 2023 },
-      { title: "Abigail", year: 2024 },
-      { title: "The Last Voyage of the Demeter", year: 2023 },
-
-      // Body Horror & Creature Features
-      { title: "Alien", year: 1979 },
-      { title: "Aliens", year: 1986 },
-      { title: "The Thing", year: 1982 },
-      { title: "The Fly", year: 1986 },
-      { title: "Videodrome", year: 1983 },
-      { title: "Hellraiser", year: 1987 },
-      { title: "Hellbound: Hellraiser II", year: 1988 },
-      { title: "Society", year: 1989 },
-      { title: "Tremors", year: 1990 },
-      { title: "An American Werewolf in London", year: 1981 },
-      { title: "The Descent", year: 2005 },
-      { title: "The Mist", year: 2007 },
-      { title: "Crawl", year: 2019 },
-      { title: "Slither", year: 2006 },
-      { title: "Splinter", year: 2008 },
-      { title: "Titane", year: 2021 },
-      { title: "Tusk", year: 2014 },
-      { title: "The Substance", year: 2024 },
-
-      // Psychological Dread & Mystery
-      { title: "Shutter Island", year: 2010 },
-      { title: "American Psycho", year: 2000 },
-      { title: "The Silence of the Lambs", year: 1991 },
-      { title: "Misery", year: 1990 },
-      { title: "Se7en", year: 1995 },
-      { title: "Black Swan", year: 2010 },
-      { title: "Jacob's Ladder", year: 1990 },
-      { title: "Saw", year: 2004 },
-      { title: "Saw II", year: 2005 },
-      { title: "Saw X", year: 2023 }
-    ]);
-  }
-
-  // 5. Found Footage & Tech Horror
-  if (text.includes('found footage') || text.includes('screenlife') || text.includes('vhs') || text.includes('tech horror')) {
-    staticMovies = staticMovies.concat([
-      { title: "The Blair Witch Project", year: 1999 },
-      { title: "Paranormal Activity", year: 2007 },
-      { title: "Cloverfield", year: 2008 },
-      { title: "REC", year: 2007 },
-      { title: "V/H/S", year: 2012 },
-      { title: "V/H/S/2", year: 2013 },
-      { title: "Unfriended", year: 2014 },
-      { title: "Searching", year: 2018 },
-      { title: "Missing", year: 2023 },
-      { title: "Creep", year: 2014 },
-      { title: "Creep 2", year: 2017 },
-      { title: "As Above, So Below", year: 2014 },
-      { title: "Hell House LLC", year: 2015 },
-      { title: "Grave Encounters", year: 2011 },
-      { title: "Chronicle", year: 2012 },
-      { title: "Host", year: 2020 }
-    ]);
-  }
-
-  // 6. Psychological Thrillers & Suspense
-  if (text.includes('psychological') || text.includes('suspense') || text.includes('thriller') || text.includes('mind twist') || text.includes('stalker')) {
-    staticMovies = staticMovies.concat([
-      { title: "Se7en", year: 1995 },
-      { title: "The Silence of the Lambs", year: 1991 },
-      { title: "Shutter Island", year: 2010 },
-      { title: "Zodiac", year: 2007 },
-      { title: "American Psycho", year: 2000 },
-      { title: "Nightcrawler", year: 2014 },
-      { title: "Gone Girl", year: 2014 },
-      { title: "Prisoners", year: 2013 },
-      { title: "Black Swan", year: 2010 },
-      { title: "Memento", year: 2000 },
-      { title: "The Sixth Sense", year: 1999 },
-      { title: "Misery", year: 1990 }
-    ]);
-  }
-
-  // 7. Heists & Crime Underworld
-  if (text.includes('heist') || text.includes('bank robbery') || text.includes('underworld') || text.includes('mafia') || text.includes('cartel')) {
-    staticMovies = staticMovies.concat([
-      { title: "Heat", year: 1995 },
-      { title: "The Town", year: 2010 },
-      { title: "Ocean's Eleven", year: 2001 },
-      { title: "Inside Man", year: 2006 },
-      { title: "Baby Driver", year: 2017 },
-      { title: "Inception", year: 2010 },
-      { title: "Set It Off", year: 1996 },
-      { title: "Den of Thieves", year: 2018 },
-      { title: "Goodfellas", year: 1990 },
-      { title: "The Godfather", year: 1972 }
-    ]);
-  }
-
-  // 8. 90s Hood Classics
-  if (text.includes('hood') || text.includes('hood classic') || text.includes('street saga') || text.includes('urban drama')) {
-    staticMovies = staticMovies.concat([
-      { title: "Boyz n the Hood", year: 1991 },
-      { title: "Menace II Society", year: 1993 },
-      { title: "Poetic Justice", year: 1993 },
-      { title: "Juice", year: 1992 },
-      { title: "Set It Off", year: 1996 },
-      { title: "New Jack City", year: 1991 },
-      { title: "Dead Presidents", year: 1995 },
-      { title: "Paid in Full", year: 2002 },
-      { title: "Friday", year: 1995 },
-      { title: "Belly", year: 1998 },
-      { title: "Clockers", year: 1995 },
-      { title: "King of New York", year: 1990 }
-    ]);
-  }
-
-  // 9. Biopics & History
-  if (text.includes('biopic') || text.includes('civil rights') || text.includes('historical figure') || text.includes('true story')) {
-    staticMovies = staticMovies.concat([
-      { title: "Malcolm X", year: 1992 },
-      { title: "Selma", year: 2014 },
-      { title: "Hidden Figures", year: 2016 },
-      { title: "Judas and the Black Messiah", year: 2021 },
-      { title: "Ray", year: 2004 },
-      { title: "Ali", year: 2001 },
-      { title: "42", year: 2013 },
-      { title: "The Hurricane", year: 1999 }
-    ]);
-  }
-
-  // 10. Martial Arts & Kung Fu
-  if (text.includes('martial arts') || text.includes('kung fu') || text.includes('wuxia') || text.includes('bruce lee')) {
-    staticMovies = staticMovies.concat([
-      { title: "Enter the Dragon", year: 1973 },
-      { title: "Fist of Legend", year: 1994 },
-      { title: "Drunken Master II", year: 1994 },
-      { title: "Ip Man", year: 2008 },
-      { title: "Crouching Tiger, Hidden Dragon", year: 2000 },
-      { title: "The 36th Chamber of Shaolin", year: 1978 }
-    ]);
-  }
-
-  // 11. Black Romance & Rom-Coms
-  if (text.includes('romance') || text.includes('rom-com') || text.includes('love story')) {
-    staticMovies = staticMovies.concat([
-      { title: "Love & Basketball", year: 2000 },
-      { title: "Brown Sugar", year: 2002 },
-      { title: "The Best Man", year: 1999 },
-      { title: "Love Jones", year: 1997 },
-      { title: "Beyond the Lights", year: 2014 },
-      { title: "The Wood", year: 1999 }
-    ]);
-  }
-
-  // 12. Comedy & House Party
-  if (text.includes('comedy') || text.includes('house party') || text.includes('cookout')) {
-    staticMovies = staticMovies.concat([
-      { title: "Friday", year: 1995 },
-      { title: "Next Friday", year: 2000 },
-      { title: "Barbershop", year: 2002 },
-      { title: "House Party", year: 1990 },
-      { title: "Girls Trip", year: 2017 },
-      { title: "Think Like a Man", year: 2012 }
-    ]);
-  }
-
-  if (staticMovies.length > 0) {
-    const uniqueMovies = Array.from(new Map(staticMovies.map(item => [item.title, item])).values());
-    return uniqueMovies;
-  }
-
-  return [];
-}
-
 // Endpoint to Create AI Custom Genre via Gemini
 app.post('/api/custom-genre', async (req, res) => {
   try {
@@ -1281,22 +780,11 @@ app.post('/api/custom-genre', async (req, res) => {
 
     saveConfig();
 
-    // 1. Scrub web via Gemini Multi-Chunk Engine + Gemini QA Sub-Agent Verification
-    let rawMovies = [];
-    const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
-
-    try {
-      console.log(`[Gemini Pass 1] Launching Multi-Chunk Parallel Curation for: "${prompt}"...`);
-      const candidates = await queryGeminiForMoviesMultiChunk(prompt, config.geminiApiKey, model);
-      
-      console.log(`[Gemini Pass 2] Running Sub-Agent QA Verification across ${candidates.length} candidates for: "${prompt}"...`);
-      rawMovies = await verifyMoviesWithGeminiSubAgent(candidates, prompt, config.geminiApiKey, model);
-    } catch (err) {
-      console.warn(`[AI Genre Fallback] Gemini API error (${err.message}). Using strict fallback taxonomy for "${name || prompt}"...`);
-      rawMovies = await getFallbackMoviesForPrompt(name, prompt, tmdbKey);
-    }
+    // 1. Scrub web via Gemini API
+    const rawMovies = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
 
     // 2. Resolve to TMDB / IMDb metadata in parallel chunks
+    const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
     const stremioMetas = [];
     const chunkSize = 10;
 
@@ -1434,18 +922,18 @@ app.listen(PORT, '0.0.0.0', async () => {
   
   const localIp = getLocalIpAddress();
   console.log(`=======================================================`);
-  console.log(`🎬 Stremio Custom Sub-Genre Catalog Server Running!`);
-  console.log(`💻 PC Dashboard UI: http://localhost:${PORT}`);
-  console.log(`📺 TV / Network Manifest URL: http://${localIp}:${PORT}/manifest.json`);
-  console.log(`🚀 1-Click Install (LAN): stremio://${localIp}:${PORT}/manifest.json`);
+  console.log(`≡ƒÄ¼ Stremio Custom Sub-Genre Catalog Server Running!`);
+  console.log(`≡ƒÆ╗ PC Dashboard UI: http://localhost:${PORT}`);
+  console.log(`≡ƒô║ TV / Network Manifest URL: http://${localIp}:${PORT}/manifest.json`);
+  console.log(`≡ƒÜÇ 1-Click Install (LAN): stremio://${localIp}:${PORT}/manifest.json`);
   console.log(`=======================================================`);
 
   try {
     console.log(`[Tunnel] Connecting secure HTTPS tunnel...`);
     const tunnel = await localtunnel({ port: PORT });
     tunnelUrl = tunnel.url;
-    console.log(`📡 Secure Public HTTPS URL: ${tunnelUrl}/manifest.json`);
-    console.log(`🚀 1-Click Install (Secure): stremio://${tunnelUrl.replace(/^https?:\/\//, '')}/manifest.json`);
+    console.log(`≡ƒôí Secure Public HTTPS URL: ${tunnelUrl}/manifest.json`);
+    console.log(`≡ƒÜÇ 1-Click Install (Secure): stremio://${tunnelUrl.replace(/^https?:\/\//, '')}/manifest.json`);
     console.log(`=======================================================`);
   } catch (err) {
     console.error(`[Tunnel] Failed to start localtunnel:`, err.message);
