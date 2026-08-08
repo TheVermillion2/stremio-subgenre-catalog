@@ -529,7 +529,7 @@ app.post('/api/sync-collections', (req, res) => {
     if (clientCollections && typeof clientCollections === 'object') {
       let updated = false;
       for (const id in clientCollections) {
-        if (!collections[id] && clientCollections[id] && clientCollections[id].name) {
+        if (clientCollections[id] && clientCollections[id].name) {
           collections[id] = clientCollections[id];
           updated = true;
         }
