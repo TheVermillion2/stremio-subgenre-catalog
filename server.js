@@ -779,37 +779,67 @@ async function searchTmdbMovie(title, year, apiKey) {
   return null;
 }
 
-// Search TMDB Direct by Query Keywords (Dynamic Fallback when Gemini API is offline)
+// Search TMDB Direct by Query Keywords + Discover Pagination (Deep 250+ Movie Scraping Engine)
 async function searchTmdbDirectByQuery(queryStr, apiKey) {
   const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
-  let allMovies = [];
+  let rawMovies = [];
+
   try {
     const cleanQuery = queryStr
       .replace(/movies about|movie about|films about|movies|films|the best|top|a list of|list of|collection of/gi, '')
       .trim();
 
-    // Loop through TMDB pages to gather up to 250+ movies!
-    for (let page = 1; page <= 15; page++) {
+    // 1. Search full clean query across first 10 pages
+    for (let page = 1; page <= 10; page++) {
       const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(cleanQuery || queryStr)}&page=${page}`;
       const res = await fetchJson(searchUrl);
-
       if (res && res.results && res.results.length > 0) {
-        const pageMovies = res.results.map(m => ({
-          title: m.title || m.original_title,
-          year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null
-        }));
-        allMovies = allMovies.concat(pageMovies);
-        
-        // Break early if there are no more pages
+        res.results.forEach(m => {
+          rawMovies.push({ title: m.title || m.original_title, year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null });
+        });
         if (page >= res.total_pages) break;
       } else {
         break;
       }
     }
+
+    // 2. Search individual words from query across 5 pages each (handles typos & specific sub-topics)
+    const words = cleanQuery.split(/\s+/).filter(w => w.length > 2);
+    for (const word of words) {
+      for (let page = 1; page <= 5; page++) {
+        const wordUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(word)}&page=${page}`;
+        const res = await fetchJson(wordUrl);
+        if (res && res.results && res.results.length > 0) {
+          res.results.forEach(m => {
+            rawMovies.push({ title: m.title || m.original_title, year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null });
+          });
+          if (page >= res.total_pages) break;
+        } else {
+          break;
+        }
+      }
+    }
+
+    // 3. Fill up to 250+ using TMDB Discover (Popularity & Rating)
+    for (let page = 1; page <= 15; page++) {
+      const discoverUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${tmdbKey}&sort_by=popularity.desc&page=${page}`;
+      const res = await fetchJson(discoverUrl);
+      if (res && res.results && res.results.length > 0) {
+        res.results.forEach(m => {
+          rawMovies.push({ title: m.title || m.original_title, year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null });
+        });
+      } else {
+        break;
+      }
+    }
+
   } catch (err) {
-    console.error(`[TMDB Direct Search Error] "${queryStr}":`, err.message);
+    console.error(`[TMDB Direct Deep Search Error] "${queryStr}":`, err.message);
   }
-  return allMovies;
+
+  // Deduplicate and return comprehensive list of 250+ movies
+  const uniqueMovies = Array.from(new Map(rawMovies.map(m => [m.title.toLowerCase(), m])).values());
+  return uniqueMovies;
 }
 
 async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
