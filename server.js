@@ -300,8 +300,8 @@ async function getMoviesForSubgenre(subgenreId, options = {}) {
       return url;
     };
 
-    // First attempt: search with keywords across pages 1 to 5
-    for (let page = 1; page <= 5; page++) {
+    // First attempt: search with keywords across pages 1 to 15
+    for (let page = 1; page <= 15; page++) {
       const res = await fetchJson(buildUrl(page, true));
       if (res && res.results && res.results.length > 0) {
         allMovies = allMovies.concat(res.results);
@@ -312,7 +312,7 @@ async function getMoviesForSubgenre(subgenreId, options = {}) {
     if (allMovies.length < 20) {
       console.log(`[TMDB] Keyword filter returned ${allMovies.length} movies. Padding with broader genre query...`);
       const existingIds = new Set(allMovies.map(m => m.id));
-      for (let page = 1; page <= 5; page++) {
+      for (let page = 1; page <= 15; page++) {
         const res = await fetchJson(buildUrl(page, false));
         if (res && res.results) {
           for (const item of res.results) {
@@ -650,7 +650,7 @@ async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isL
   You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
   Format: [{"title": "Movie Title 1", "year": 1999}]`
     : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
-Return a high-quality, comprehensive list of the best 70 to 100 real, existing movies matching the theme. Dig deep into film history and iconic cinema.
+Return a massive, high-quality, comprehensive list of ALL real, existing movies matching the theme across all decades. Dig deep into film history, iconic cinema, cult classics, and hidden gems. Do NOT cap your output; list all relevant movies matching the theme.
 You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
 Format:
 [
@@ -804,14 +804,21 @@ app.post('/api/custom-genre', async (req, res) => {
     try {
       rawMovies = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
     } catch (err) {
-      console.warn(`[AI Custom Genre] Gemini API call failed (${err.message}). Using topic search fallback...`);
+      console.warn(`[AI Custom Genre] Gemini API call failed (${err.message}). Using multi-page topic search fallback...`);
       const cleanPrompt = prompt.replace(/movies about|movie about|films about|movies|films|the best|top|a list of|list of|collection of/gi, '').trim() || prompt;
-      const searchRes = await fetchJson(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(cleanPrompt)}`);
-      if (searchRes && searchRes.results && searchRes.results.length > 0) {
-        rawMovies = searchRes.results.map(m => ({
-          title: m.title || m.original_title,
-          year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null
-        }));
+      for (let page = 1; page <= 10; page++) {
+        const searchRes = await fetchJson(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(cleanPrompt)}&page=${page}`);
+        if (searchRes && searchRes.results && searchRes.results.length > 0) {
+          searchRes.results.forEach(m => {
+            rawMovies.push({
+              title: m.title || m.original_title,
+              year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null
+            });
+          });
+          if (page >= searchRes.total_pages) break;
+        } else {
+          break;
+        }
       }
     }
 
