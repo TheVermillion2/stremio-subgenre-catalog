@@ -50921,5 +50921,1305 @@
     ],
     "name": "Christmas Movies Collection",
     "timestamp": 1786231513847
+  },
+  "custom_wiki_hood_films_1786232527296": {
+    "description": "Official Wikipedia Collection: List of iconic Hood Films & Urban Cinema Classics.",
+    "id": "custom_wiki_hood_films_1786232527296",
+    "isCustomAI": true,
+    "name": "Wikipedia Hood Films Collection",
+    "timestamp": 1786232527296
+  },
+  "custom_wiki_hood_films_1786232546738": {
+    "description": "Official Wikipedia Collection: List of Hood Films & Urban Cinema Classics.",
+    "id": "custom_wiki_hood_films_1786232546738",
+    "isCustomAI": true,
+    "movies": [
+      {
+        "background": "https://image.tmdb.org/t/p/original/qdecDSIVoqctIoYoOhLH3TgSYLD.jpg",
+        "description": "A small-time hood must choose from among love, friendship and the chance to rise within the mob.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0070379",
+        "imdbRating": "7.0",
+        "name": "Mean Streets",
+        "poster": "https://image.tmdb.org/t/p/w500/9msfwOeGc9uL1iRRTBdEf15XonC.jpg",
+        "releaseInfo": "1973",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/u3fFEz0NdoyXL3UUxTPNqeM2vrc.jpg",
+        "description": "A gangster, Nino, is in the Cash Money Brothers, making a million dollars every week selling crack. A cop, Scotty, discovers that the only way to infiltrate the gang is to become a dealer himself.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0102526",
+        "imdbRating": "6.7",
+        "name": "New Jack City",
+        "poster": "https://image.tmdb.org/t/p/w500/k9VjzXyGElRAxXyXgPvtRRSznyL.jpg",
+        "releaseInfo": "1991",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/w9Buzxn7RjbttP2xm9leMfMdyCP.jpg",
+        "description": "In the middle of the Los Angeles ghetto, drugs, robberies and shootings dominate everyday life. During these times, Furious tries to raise his son Tre to be a decent person. Tre's friends, on the other hand, have little regard for the law and drag the entire neighborhood into a street war...",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0101507",
+        "imdbRating": "7.6",
+        "name": "Boyz n the Hood",
+        "poster": "https://image.tmdb.org/t/p/w500/v4ox4aSCNT5vyLXl4Q71JiWwCXW.jpg",
+        "releaseInfo": "1991",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/qk3Ygm4ueB3GP1dhpaKxuFlEuAN.jpg",
+        "description": "Larry, a troubled teen living in the rough Red Hook section of Brooklyn, decides he wants out and turns to crime to fund his escape. But his plan involves scamming the neighborhood's biggest drug kingpin, a heist that's dangerous at best.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0102989",
+        "imdbRating": "6.7",
+        "name": "Straight Out of Brooklyn",
+        "poster": "https://image.tmdb.org/t/p/w500/g0C6BbyDKbI33fn14Yqb8TZO4Hq.jpg",
+        "releaseInfo": "1991",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/lOje1iz4VYWELYWRkZAwI7oIJd0.jpg",
+        "description": "Kat is an improv comedy teacher beginning to question if she’s missed her shot at success. When an undercover cop offers her the role of a lifetime, she recruits two of her students to infiltrate London’s gangland by impersonating dangerous criminals.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt31121295",
+        "imdbRating": "6.7",
+        "name": "Deep Cover",
+        "poster": "https://image.tmdb.org/t/p/w500/yYfaChljpg6eo9ZlFyTmI81PMZC.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/54xcERdFHlRny2FJ9NC4koForkR.jpg",
+        "description": "Four Harlem friends -- Bishop, Q, Steel and Raheem -- dabble in petty crime, but they decide to go big by knocking off a convenience store. Bishop, the magnetic leader of the group, has the gun. But Q has different aspirations. He wants to be a DJ and happens to have a gig the night of the robbery. Unfortunately for him, Bishop isn't willing to take no for answer in a game where everything's for keeps.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0104573",
+        "imdbRating": "7.2",
+        "name": "Juice",
+        "poster": "https://image.tmdb.org/t/p/w500/hfXFPMhNjLnCugBHMN0nrtKW7Ra.jpg",
+        "releaseInfo": "1992",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ogw4HLfdmSqjpZx6k0C4u5l3sFE.jpg",
+        "description": "Chantel Mitchell, a hip, articulate, black high-school girl in Brooklyn, is determined not to become \"just another girl on the IRT\" (the IRT is one of NYC's subway lines). She dreams of medical school, a family, and an escape from the generational poverty and street-corner life her friends seem to have accepted as their lot. But personal and sexual challenges confront Chantel on her way to fulfilling these dreams.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0104575",
+        "imdbRating": "6.9",
+        "name": "Just Another Girl on the I.R.T.",
+        "poster": "https://image.tmdb.org/t/p/w500/jjBthOisXwuyUqBd1BAmIzdSf4S.jpg",
+        "releaseInfo": "1993",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/aU4X43pt0c640CO0vn1WZrQ3i4C.jpg",
+        "description": "During a 10-year sentence for murdering the leader of a rival South Central Los Angeles gang, Bobby Johnson finds religion and rehabilitation with the help of Muslim inmate Ali. Upon his release, Bobby returns home to find that his young son, Jimmie, has joined the Deuces, his old crew. Tensions rise as Bobby struggles to convince Jimmie to leave the gang that was his only family during the painful years his absent father spent behind bars.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0105450",
+        "imdbRating": "6.7",
+        "name": "South Central",
+        "poster": "https://image.tmdb.org/t/p/w500/i1kpCAxuEeUPe9Ep8r1VUYRfSVX.jpg",
+        "releaseInfo": "1992",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/yFoSPpJBN0IKZNeEBMmReO8AVMM.jpg",
+        "description": "Kyle and Sarah Miller have it all: a huge gated house on the water, fancy cars, and the potential for romance in their relationship. He's just back from a business trip and their teen daughter Avery is sneaking out to a party, when four thugs in security uniforms and ski masks stage a home invasion. They want what's in the safe: cash and diamonds. As Kyle stalls them, trying to negotiate for Sarah's freedom, the fault lines in Kyle and Sarah's marriage and the pasts of the four robbers come into play. Is there room here for heroism?",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt1674784",
+        "imdbRating": "5.5",
+        "name": "Trespass",
+        "poster": "https://image.tmdb.org/t/p/w500/yP60huMcPTWOJfplRLi4FQAEQxX.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xoXioy0KWBbHAH8keeCVlGOe77d.jpg",
+        "description": "A white, hip-hop loving teen falls in love with a black girl in Detroit.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0105885",
+        "imdbRating": "5.7",
+        "name": "Zebrahead",
+        "poster": "https://image.tmdb.org/t/p/w500/yM5faEnpRmYHGyMerTY1GZUErUy.jpg",
+        "releaseInfo": "1992",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/s5PP0ryxAo12jzvPntSEybahpCw.jpg",
+        "description": "A young street hustler attempts to escape the rigors and temptations of the ghetto in a quest for a better life.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0107554",
+        "imdbRating": "7.5",
+        "name": "Menace II Society",
+        "poster": "https://image.tmdb.org/t/p/w500/nS7yqmSVeNoH22VXj69JoFCxW1h.jpg",
+        "releaseInfo": "1993",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/911kCT2YwGBhFz1CNDfb0La8ybG.jpg",
+        "description": "With a magical new invention that promised to revolutionize blood testing, Elizabeth Holmes became the world’s youngest self-made billionaire, heralded as the next Steve Jobs. Then, overnight, her 10-billion-dollar company dissolved. The rise and fall of Theranos is a window into the psychology of fraud.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt8488126",
+        "imdbRating": "7.0",
+        "name": "The Inventor: Out for Blood in Silicon Valley",
+        "poster": "https://image.tmdb.org/t/p/w500/u21ImPnHHX2SFgkdHIjwlpEwRux.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/lNvlerKoYwboltmK7hQfgxsYtNP.jpg",
+        "description": "Still grieving after the murder of her boyfriend, hairdresser Justice writes poetry to deal with the pain of her loss. Unable to get to Oakland to attend a convention because of her broken-down car, Justice gets a lift with her friend, Iesha, and Iesha's postal worker boyfriend, Chicago. Along for the ride is Chicago's co-worker, Lucky, to whom Justice grows close after some initial problems. But is she ready to open her heart again?",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0107840",
+        "imdbRating": "6.7",
+        "name": "Poetic Justice",
+        "poster": "https://image.tmdb.org/t/p/w500/6jE7Vzh3edBQtbbDcF4AC5gMX2g.jpg",
+        "releaseInfo": "1993",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/vay1nnmwRbS6HUPjCEhWHzUkq8x.jpg",
+        "description": "After her husband is arrested for looting, Lisette struggles for independence while dealing with her transgender sibling, her critical mother-in-law and assorted neighborhood eccentrics.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0110091",
+        "imdbRating": "6.3",
+        "name": "I Like It Like That",
+        "poster": "https://image.tmdb.org/t/p/w500/aCxh21UPLHi7Pxm9ykH1GNx39OW.jpg",
+        "releaseInfo": "1994",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ueL2dupQ5Clyyd4Hsq5HSBDzNxz.jpg",
+        "description": "In the Harlem neighborhood of New York City, the Mafia steps in when a drug dealer quits his partner and brother to lead a straight life with his girlfriend.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0107079",
+        "imdbRating": "5.6",
+        "name": "Sugar Hill",
+        "poster": "https://image.tmdb.org/t/p/w500/6bnYhhJS7vuDMRPVSplWaXdK49g.jpg",
+        "releaseInfo": "1994",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/vIGWegxzGfymD9sQBnw9HBINY3l.jpg",
+        "description": "Two Indigenous Latina bestfriends, Mousie and Sad Girl live in a contemporary Los Angeles poor Indigenous Hispanic American neighborhood. But when Sad Girl becomes pregnant by Mousie's boyfriend, a drug dealer named Ernesto, the two become bitter enemies. While their dispute escalates towards violence, the violence of the world around them soon also impacts their lives.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0107566",
+        "imdbRating": "6.6",
+        "name": "Mi Vida Loca",
+        "poster": "https://image.tmdb.org/t/p/w500/gtKIaHUqkNqdgVnMFosyVJXvKMC.jpg",
+        "releaseInfo": "1994",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/oVv5l6L5Wi5j3gd4P2vt0YvVMOg.jpg",
+        "description": "Frustrated by scrolling dating apps only to end up on lame, tedious dates, Noa takes a chance by giving her number to the awkwardly charming Steve after a produce-section meet-cute at the grocery store.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt13403046",
+        "imdbRating": "6.9",
+        "name": "Fresh",
+        "poster": "https://image.tmdb.org/t/p/w500/tlu71AgaL3EQBBCNGsAwZLPbV5D.jpg",
+        "releaseInfo": "2022",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8yUVptQ82wWax8h3X9lURadGZ0d.jpg",
+        "description": "The story of a young man who must confront his own fears about love as well as his relationships with family and friends.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0110186",
+        "imdbRating": "6.7",
+        "name": "Jason's Lyric",
+        "poster": "https://image.tmdb.org/t/p/w500/2dXA5dNh3kqDQwRt08TxxgldTOW.jpg",
+        "releaseInfo": "1994",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/1SWpsQlWlGqvTLeXSvhuNdAjN07.jpg",
+        "description": "This is the Easter weekend. In an inner city project, three people struggle against their demons and try to find redemption. They are Maxine, a window dresser depressed since she had an abortion and lost her lover ; Jordan, a boxer who has indulged in gay-bashing ; and 'The General', a drug dealer turned artist.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0114305",
+        "imdbRating": "4.7",
+        "name": "Rude",
+        "poster": "https://image.tmdb.org/t/p/w500/rVkJ9t706jAmGVNOGHXPTp8KSbF.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/5UkALzOeRLkJMIgotUXLBZSK1Jj.jpg",
+        "description": "A young black man takes a job as a debt collector in Toronto's Jamaican community.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0114503",
+        "imdbRating": "7.0",
+        "name": "Soul Survivor",
+        "poster": "https://image.tmdb.org/t/p/w500/cXXytCgOGrj8ln9gORuQJ8fdMPP.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bfoOP1RN7N6FzF0MQYx3v5yi3WU.jpg",
+        "description": "A strange mortician tells four horrific tales to three drug dealers that he traps in a local funeral parlor.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0114609",
+        "imdbRating": "6.3",
+        "name": "Tales from the Hood",
+        "poster": "https://image.tmdb.org/t/p/w500/glPNCcI7V8zTTI3BG0iIUJJcwXN.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xhYs4yaBnDNM3utncVzLmFVpAmK.jpg",
+        "description": "Strike is a young city drug pusher under the tutelage of drug lord Rodney Little. When a night manager at a fast-food restaurant is found with four bullets in his body, Strike’s older brother turns himself in as the killer. Detective Rocco Klein doesn’t buy the story, however, setting out to find the truth, and it seems that all the fingers point toward Strike & Rodney.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0112688",
+        "imdbRating": "6.7",
+        "name": "Clockers",
+        "poster": "https://image.tmdb.org/t/p/w500/c79uqLJleho2a7OQayfrW5Ypphf.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/yK5vziICSiW6uHLltNqkZ1TXhNx.jpg",
+        "description": "Former Marine Louanne Johnson lands a gig teaching in a pilot program for bright but underachieving teens at a notorious inner-city high school. After having a terrible first day, she decides she must throw decorum to the wind. When Johnson returns to the classroom, she does so armed with a no-nonsense attitude informed by her military training and a fearless determination to better the lives of her students -- no matter what the cost.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0112792",
+        "imdbRating": "7.0",
+        "name": "Dangerous Minds",
+        "poster": "https://image.tmdb.org/t/p/w500/yWHWC8fJRp2kLgiFrEa8o3krOH9.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/c8H6Xi9im1tT6HP9PA9HpFE3sOy.jpg",
+        "description": "On the streets they call cash dead presidents. And that's just what a Vietnam veteran is after when he returns home from the war only to find himself drawn into a life of crime. With the aid of his fellow vets he plans the ultimate heist -- a daring robbery of an armored car filled with unmarked U.S. currency!",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0112819",
+        "imdbRating": "6.7",
+        "name": "Dead Presidents",
+        "poster": "https://image.tmdb.org/t/p/w500/eGfsSXizR11tTHVo0kuOOFPAxZt.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/yQy9Y3p5INwkfTuHSnzYnz4MCV3.jpg",
+        "description": "Years after Tess and Anna endured an identity crisis, Anna now has a daughter of her own and a soon-to-be stepdaughter. As they navigate the myriad challenges that come when two families merge, Tess and Anna discover lightning might indeed strike twice.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt31956415",
+        "imdbRating": "6.8",
+        "name": "Freakier Friday",
+        "poster": "https://image.tmdb.org/t/p/w500/9wV65OmsjLAqBfDnYTkMPutXH8j.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/wfStsmeSW7MtvYhD9Ac6ETXdbmx.jpg",
+        "description": "Carmen and Juni think their parents are boring. Little do they know that in their day, Gregorio and Ingrid Cortez were the top secret agents from their respective countries. They gave up that life to raise their children. Now, the disappearances of several of their old colleagues forces the Cortez' return from retirement. What they didn't count on was Carmen and Juni joining the \"family business.\"",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0227538",
+        "imdbRating": "5.8",
+        "name": "Spy Kids",
+        "poster": "https://image.tmdb.org/t/p/w500/j3rUkHIAAoKr6jU30q3Db4fcIF9.jpg",
+        "releaseInfo": "2001",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ds835eZ1BQa6MP0GuaGuu8Bb9RD.jpg",
+        "description": "Jason and Midget are two young, black teenagers living in Newark, New Jersey, the unofficial car theft capital of the world. Their favourite pastime is that of everybody in their neighbourhood: stealing cars and joyriding. The trouble starts when they steal a police car and the cops launch a violent offensive that involves beating and even shooting suspects.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0113967",
+        "imdbRating": "6.2",
+        "name": "New Jersey Drive",
+        "poster": "https://image.tmdb.org/t/p/w500/lXJWJT6lfAg2NEqEueJcI4ESWSG.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/viGCwLxupyoaLsa6hrnu1gYrB0B.jpg",
+        "description": "After a chaotic night of rioting in a marginal suburb of Paris, three young friends, Vinz, Hubert and Saïd, wander around unoccupied waiting for news about the state of health of a mutual friend who has been seriously injured when confronting the police.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0113247",
+        "imdbRating": "8.1",
+        "name": "La Haine",
+        "poster": "https://image.tmdb.org/t/p/w500/hY4exng4s29RzDbtQInjx9MA3PZ.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/46DaijLq9PiJ2j36VoEIE3utJGJ.jpg",
+        "description": "Raï is about a gang of youths in a Parisian suburb.This is the multicultural environment in which Mezz, Aziz, Laurent, Nordine, Poisson and the others have grown up. There is no future in Garges-les-Gonesses. Unemployment is high, drugs and violence are a part of everyday life. The opportunity to escape seems nonexistent.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0114227",
+        "imdbRating": "5.6",
+        "name": "Rai",
+        "poster": "https://image.tmdb.org/t/p/w500/901dyJNYGpfBaBTLp1Crv8OcgvF.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8ebAtpx6YVfRGrxPrs4nTTWSbT9.jpg",
+        "description": "Four inner-city Black women, determined to end their constant struggle, decide to live by one rule — get what you want or die trying. So the four women take back their lives and take out some banks in the process.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0117603",
+        "imdbRating": "7.2",
+        "name": "Set It Off",
+        "poster": "https://image.tmdb.org/t/p/w500/wpiARyUqTfabzakAXHMIUY6Tl1A.jpg",
+        "releaseInfo": "1996",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/U4NA0YZinyEQ8lJSVW8QPcffTN.jpg",
+        "description": "When a Brooklyn high school student writes the police code for homicide, 187, inside a textbook owned by teacher Trevor Garfield, Garfield feels threatened. The principal dismisses the incident, but the same student stabs Trevor soon after. Fifteen months later, a physically and emotionally scarred Trevor relocates to California and takes up substitute teaching. To his dismay, his new school is as full of dangerously undisciplined students as his old one—including four Latin Americans and a European American claiming membership in tagging gang K.O.S. (Kappin' Off Suckers)—driving him over the edge.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0118531",
+        "imdbRating": "6.7",
+        "name": "One Eight Seven",
+        "poster": "https://image.tmdb.org/t/p/w500/rPmmyspi1MZBItSvfx40qwep8ow.jpg",
+        "releaseInfo": "1997",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/mOj9BKbrZiGts8E44emOoIdZUeB.jpg",
+        "description": "Chinese kid Julian, who was adopted by the black family of Joe and Annabelle Lee -- and Asian exchange student May-Ling, who is housed with a black family -- are trying to adapt to their mostly black neighborhood of South Central.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0119097",
+        "imdbRating": "6.0",
+        "name": "Fakin' Da Funk",
+        "poster": "https://image.tmdb.org/t/p/w500/yR2XzSGH4I2bTshziMqdDx5ak7x.jpg",
+        "releaseInfo": "1997",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xGVLZDHDx6KTn7DEAnKqGhR6i7H.jpg",
+        "description": "Marcus is a New York City street kid torn between his friends' criminal activities and a girl trying to keep him out of trouble.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0119338",
+        "imdbRating": "5.3",
+        "name": "Hurricane Streets",
+        "poster": "https://image.tmdb.org/t/p/w500/kI8WAtPfjiPygfdKcwYJUkMZyh4.jpg",
+        "releaseInfo": "1997",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/2mewzhHgyV510QBvlybmIDXN7ak.jpg",
+        "description": "I'm Bout It is a 1997 film by rapper Master P. The plot details his life in a New Orleans uptown ghetto. Master P wrote, directed and acted in the film.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0157784",
+        "imdbRating": "6.6",
+        "name": "I'm Bout It",
+        "poster": "https://image.tmdb.org/t/p/w500/uetKPVszS0STX1D7wOf60HynzJZ.jpg",
+        "releaseInfo": "1997",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/dRa64R3HNjFZQR5BWZSct5NmiIu.jpg",
+        "description": "Outwardly a chilling portrait of the aimless lives of unemployed inner city youths living on society's fringe, the underlying message of this volatile drama seems to call for violence to rectify social injustices. The film centers on two teenaged gangs who basically terrorize their neighborhoods with their anarchic behavior. There are few limits to their unpleasant philosophy of \"desire equals acquisition.\" The loosely structured tale reaches its climax at a concert where the two rival groups collide.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0119589",
+        "imdbRating": "5.8",
+        "name": "Crack 6T",
+        "poster": "https://image.tmdb.org/t/p/w500/zNZInVQv3yZBff4AcOEYnDSx6wK.jpg",
+        "releaseInfo": "1997",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/6qHI1IYj7QlLSCwHRzkL62X175s.jpg",
+        "description": "Derek Vineyard is paroled after serving 3 years in prison for killing two African-American men. Through his brother, Danny Vineyard's narration, we learn that before going to prison, Derek was a skinhead and the leader of a violent white supremacist gang that committed acts of racial crime throughout L.A. and his actions greatly influenced Danny. Reformed and fresh out of prison, Derek severs contact with the gang and becomes determined to keep Danny from going down the same violent path as he did.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0120586",
+        "imdbRating": "8.3",
+        "name": "American History X",
+        "poster": "https://image.tmdb.org/t/p/w500/x2drgoXYZ8484lqyDj7L1CEVR4T.jpg",
+        "releaseInfo": "1998",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/AqyE8A5QdZYoeeRy3SnETzXB6VI.jpg",
+        "description": "Hip-hop artist Jay-Z tells a story about life in the streets, combining a narrative structure and musical numbers into an autobiographical tale of his life in Brooklyn, from hustler to performer.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0306100",
+        "imdbRating": "7.5",
+        "name": "Streets is Watching",
+        "poster": "https://image.tmdb.org/t/p/w500/8y5qC0TUWiZVDL4dv08AQOXqmLi.jpg",
+        "releaseInfo": "1998",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/qOzN3bxxUgIMgkBNEhLKPqRcIWV.jpg",
+        "description": "Gabriel, Bobby and Costa are old friends from Altona, a multicultural hood in Hamburg. Just out of prison, Gabriel wants to turn his back on crime, but the others continue to operate as petty criminals. Friendships are tested as the trio navigate a dark world of mafia bosses and deals gone wrong.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0162426",
+        "imdbRating": "6.7",
+        "name": "Short Sharp Shock",
+        "poster": "https://image.tmdb.org/t/p/w500/cVyYb5REN5cX5CWAr7wcdu7cT4Y.jpg",
+        "releaseInfo": "1998",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8b7ct0DNWCLaVSw2YGCLm5JR53C.jpg",
+        "description": "Two broke buddies feel lucky when they come upon a truckload of cellular phones and begin selling them out of the back of their van. Trouble arises though, when the phones develop faults. The two friends then not only have to deal with unsatisfied customers but also the FBI.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0131436",
+        "imdbRating": "5.5",
+        "name": "I Got the Hook-Up",
+        "poster": "https://image.tmdb.org/t/p/w500/u8kdtt80gFiqGKLTdQqdGWy9FfZ.jpg",
+        "releaseInfo": "1998",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bmyugjdRl1aEOfBePwUpykIY3x3.jpg",
+        "description": "Tommy Bundy and Sincere are best friends as well as infamous and ruthless criminals and shot-callers in the hood. Respected by many but feared by all.  As the police are closing in on them and new players are looking for a come up, will their reign last?",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0158493",
+        "imdbRating": "6.3",
+        "name": "Belly",
+        "poster": "https://image.tmdb.org/t/p/w500/i4QhjdZXxdOpKOhc9kh4qqWjRWr.jpg",
+        "releaseInfo": "1998",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xeN6uxr1ao3wBjvjn86mThQJ5ku.jpg",
+        "description": "Raymond Joshua, a young black performance poet, is arrested and imprisoned for a petty marijuana charge in a Washington, D.C. jail. Although the confining prison walls do little to shield him from danger, it is within those walls that Raymond establishes his identity, strength, and voice and meets a prison gang leader and a prison writing teacher, Lauren Bell. Bell inspires Raymond to use the power of creative expression to free himself from the struggles and demise of the Black male as another victim of the judicial system.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0139615",
+        "imdbRating": "6.9",
+        "name": "Slam",
+        "poster": "https://image.tmdb.org/t/p/w500/qU0QR2ax1hyjfACni4Clgsc5YyX.jpg",
+        "releaseInfo": "1998",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/vBPR3urSuYheuF8FjY5UZiPzqgV.jpg",
+        "description": "Drug lord Dwayne Gittens rules Cincinnati with an iron fist. No wonder he's known as \"God\" on the streets. Determined to break Gittens' stranglehold on the city is undercover cop Jeffrey Cole. But as Cole takes on an assumed identity to penetrate Gittens' criminal empire, he makes a disturbing discovery -- he kind of likes being a gangster.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0160401",
+        "imdbRating": "6.4",
+        "name": "In Too Deep",
+        "poster": "https://image.tmdb.org/t/p/w500/mYteXffai9mmShyGCa4nPhfGCLQ.jpg",
+        "releaseInfo": "1999",
+        "type": "movie"
+      },
+      {
+        "description": "After decades of terror, two deadly street gangs reach a delicate truce and young MJ (Silkk the Shocker) sees a way out of the hood once and for all. Only Corrupt (Ice-T) stands in MJ's way, resulting into a violent and brutal roller coaster ride of action!",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0194773",
+        "imdbRating": "4.4",
+        "name": "Corrupt",
+        "poster": "https://image.tmdb.org/t/p/w500/bV3WtFCe3blZr5z2uZJyRAJchEZ.jpg",
+        "releaseInfo": "1999",
+        "type": "movie"
+      },
+      {
+        "description": "In Los Angeles, two rival gang leaders are also trying to be music producers. When DJ's equipment shorts out and Lonzo is cut out of the action by a record producer, the two join forces, which also requires a tentative peace between gangs. With backing from Gator, a smooth New Orleans drug king, DJ and Lonzo start dealing, organizing their gangs into pushers. Just as their finances are looking up, one of Gator's team pulls a double cross and two of DJ and Lonzo's gang bangers start a shooting war. Can the erstwhile music producers salvage anything of their bond or their plans?",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0220095",
+        "imdbRating": "5.2",
+        "name": "Thicker Than Water",
+        "poster": "https://image.tmdb.org/t/p/w500/xgP3gor7uIJIMtFz3IXKfRt0E27.jpg",
+        "releaseInfo": "1999",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/czFQEjWwG6mAPhdvy6y5q5YeFpF.jpg",
+        "description": "An insane preacher seeks retribution from the local crime syndicate for the violent death of his family and the burning of his church in a horrendous ghetto crime spree.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0196181",
+        "imdbRating": "3.3",
+        "name": "Urban Menace",
+        "poster": "https://image.tmdb.org/t/p/w500/jWYikMOOfGm2fMuEHJu5JbdTl3y.jpg",
+        "releaseInfo": "1999",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xi4Uy11TdACds3SXglrbbmaVd90.jpg",
+        "description": "A streetwise man flees South Central Los Angeles heading to the suburbs and his lottery-winner uncle and cousin to avoid a neighborhood thug with a grudge who has just escaped from prison. But trouble soon follows and the suburbs will never be the same.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0195945",
+        "imdbRating": "6.5",
+        "name": "Next Friday",
+        "poster": "https://image.tmdb.org/t/p/w500/dP4fYCGQZzg17ta7FvLwJVCwwt9.jpg",
+        "releaseInfo": "2000",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/h7paUmJnLHYeSMRhT1JYlviI8IS.jpg",
+        "description": "Brian Hooks plays a character who is just released from jail. And the state adopts a \"3 strikes\" rule for felons that involves serious penalties. Hooks has 2 strikes, and wants to change his life for the better. When a friend picks him up, they are pulled over, and his friend shoots at police officers, and Hooks escapes. Now Hooks, a wanted man, must clear his name of having nothing to do with the shooting.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0199290",
+        "imdbRating": "5.6",
+        "name": "3 Strikes",
+        "poster": "https://image.tmdb.org/t/p/w500/ca7xVIgh7UYsFOCBLP8ERmBktC5.jpg",
+        "releaseInfo": "2000",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/fcIi6Wec9jpyK431VAWKVlREoCf.jpg",
+        "description": "A flashback to the early life of the narrator/ protagonist 'Tanuk' (Juvenile) shows life in the Magnolia projects in New Orleans. He bears witness to his father's demise at the hands of local gangster Garr over a debt of $2000. Fast forward to the year 2000. Beatrice (Birdman aka Baby or #1 stunna) along with Tanuk, Chopper (B.G) and Teke (Turk) meet with representatives of a drug cartel and purchase a large batch of cocaine. We then see scenes of everyday business in Magnolia with Iceberg Shorty (Lil Wayne) selling some drugs.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0315253",
+        "imdbRating": "6.6",
+        "name": "Baller Blockin'",
+        "poster": "https://image.tmdb.org/t/p/w500/lfv1TsOzdJoRTE6h2ne9fIHKZXo.jpg",
+        "releaseInfo": "2000",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/sChPC8EozCIqmduXgZEV6ie8swD.jpg",
+        "description": "When Butch, Postmaster P, and Stray Bullet loot the local hip-hop mogul's studio to fund their demo album, the threesome unwittingly ends up with the secret of Mack Daddy's success: a magical flute. Their gigs instantly turn golden but a blood-thristy Leprechaun and an angry Mack Daddy are hot on their trail, leaving a wake of destruction tainted by politically incorrect limericks.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0209095",
+        "imdbRating": "4.9",
+        "name": "Leprechaun in the Hood",
+        "poster": "https://image.tmdb.org/t/p/w500/lCRwtuxnJWkZ04gwtfYF9h1GUkl.jpg",
+        "releaseInfo": "2000",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/iw2TEfMZzT5Mj3PEYhPl02Ww0mh.jpg",
+        "description": "Snap, Crackle, and Pop are top dogs in the Eastsidaz gang in Long Beach. Pop, also known as Killa, is the alpha dog. He has Crackle and Snap set up a big drug deal that's going to put him on easy street. But Crackle and Snap have their own agenda: they kill the suppliers, take a suitcase of money, and set up Killa to take the fall. Stuck in the state pen in Chino, Killa has his gang figure out what really happened while he hatches an escape plan. Meanwhile, Crackle has kidnaped Killa's sweetie, Booboo, and the government has confiscated his assets. Can Killa Pop escape Chino, rescue Booboo, exact revenge, find the loot, and elude the police? Written by",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0229362",
+        "imdbRating": "4.8",
+        "name": "Tha Eastsidaz",
+        "poster": "https://image.tmdb.org/t/p/w500/6i6kGEJ3QVHt3nYpNn5VtxWB36M.jpg",
+        "releaseInfo": "2000",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/wyMfhalkfbEjrAnvlqs9zOnDsCZ.jpg",
+        "description": "The story of Jody, a misguided, 20-year-old African-American who is really just a baby boy finally forced-kicking and screaming to face the commitments of real life. Streetwise and jobless, he has not only fathered two children by two different women-Yvette and Peanut but still lives with his own mother. He can't seem to strike a balance or find direction in his chaotic life.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0255819",
+        "imdbRating": "7.1",
+        "name": "Baby Boy",
+        "poster": "https://image.tmdb.org/t/p/w500/9dcic3zV5Gq6BQ1Et696qBtp9Xg.jpg",
+        "releaseInfo": "2001",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ptz40qVKfkIZnyX6XrFbmYLwzfO.jpg",
+        "description": "After being incarcerated, Pancho Villa returns home to his wife and child. With a crooked parole officer and a boss that tries to frame him for stealing, Villa decides to participate in a robbery to provide for his family. His partners in crime are small town hustlers, D.J, Juice and weapons dealer Chat. Their target: local drug lord Big Pat.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0368342",
+        "imdbRating": "7.4",
+        "name": "Choices: The Movie",
+        "poster": "https://image.tmdb.org/t/p/w500/dnMBtlumbFqkmmmXYpxNmLiHGvB.jpg",
+        "releaseInfo": "2001",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bhzZUvWRZX1qQBQYIFtJeZMVbcj.jpg",
+        "description": "Elijah has been bounced from group home to group home throughout his turbulent young life. What has sustained him is his art. After a promised scholarship is taken away, Elijah ends up in a fight that result in the death of another boy. Now, sentenced to a minimum of fifteen years, the young man must find a way to keep his soul alive behind bars or turn into a hardened bitter criminal.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0216982",
+        "imdbRating": "5.5",
+        "name": "Prison Song",
+        "poster": "https://image.tmdb.org/t/p/w500/jfDblc9uLEAe0wziUD9xzF9xXp9.jpg",
+        "releaseInfo": "2001",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/rlqYPt4oqToT0WZG6QNPGJfEdqV.jpg",
+        "description": "A charismatic rapper falls in love with a young Jewish girl despite the confines of her religious background.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0240389",
+        "imdbRating": "5.1",
+        "name": "Brooklyn Babylon",
+        "poster": "https://image.tmdb.org/t/p/w500/yTuxAhq9LDQ0ZCX1awtiK1PLU39.jpg",
+        "releaseInfo": "2001",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/nrttRPdsfoCB0RsxR9G2Aa4bFY7.jpg",
+        "description": "A child of a middle class home with solid moral values is lured into a world of crime and corruption.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0283952",
+        "imdbRating": "6.8",
+        "name": "Blue Hill Avenue",
+        "poster": "https://image.tmdb.org/t/p/w500/njLTR6gnsCcOnEs3dXlgMVcZPQf.jpg",
+        "releaseInfo": "2003",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/nuO8o9ltxhI7AZQxePavEZ4TyHa.jpg",
+        "description": "On his first day on the job as a narcotics officer, a rookie cop works with a rogue detective who isn't what he appears.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0139654",
+        "imdbRating": "7.5",
+        "name": "Training Day",
+        "poster": "https://image.tmdb.org/t/p/w500/bUeiwBQdupBLQthMCHKV7zv56uv.jpg",
+        "releaseInfo": "2001",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/lFn8azDMDXa1vEhW0DTfY7GNFDi.jpg",
+        "description": "Jamal and Silas, two ordinary guys who smoke something magical, pass their college entrance exams with flying colors and end up at Harvard. Ivy League ways are strange but Silas and Jamal take it in a stride -- until their supply of supernatural smoke runs dry. That's when they have to start living by their wits and rely on their natural resources to make the grade.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0278488",
+        "imdbRating": "6.4",
+        "name": "How High",
+        "poster": "https://image.tmdb.org/t/p/w500/qWF784YqUZE8KhbBfuqhMSzmUPs.jpg",
+        "releaseInfo": "2001",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/gvr2N9cwighn92GRL10LzrCu0IP.jpg",
+        "description": "Paper Soldiers follows an overeager burglar named Shawn through the ups and downs of his short, stressful career.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0309986",
+        "imdbRating": "5.6",
+        "name": "Paper Soldiers",
+        "poster": "https://image.tmdb.org/t/p/w500/z2rHu9VeJTj5IuJkUdu7WmvPx3T.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/zsbmsV4XHyJqG5fD7Vdw4NZbT2Y.jpg",
+        "description": "A day in the life of a barbershop on the south side of Chicago. Calvin, who inherited the struggling business from his deceased father, views the shop as nothing but a burden and waste of his time. After selling the shop to a local loan shark, Calvin slowly begins to see his father's vision and legacy and struggles with the notion that he just sold it out.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0303714",
+        "imdbRating": "6.5",
+        "name": "Barbershop",
+        "poster": "https://image.tmdb.org/t/p/w500/up8cEgEsl2Dq5Djb9lMZYBK0s84.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
+        "description": "In the poverty-stricken favelas of Rio de Janeiro in the 1970s, two young men choose different paths. Rocket is a budding photographer who documents the increasing drug-related violence of his neighborhood, while José “Zé” Pequeno is an ambitious drug dealer diving into a dangerous life of crime.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0317248",
+        "imdbRating": "8.4",
+        "name": "City of God",
+        "poster": "https://image.tmdb.org/t/p/w500/k7eYdWvhYQyRQoU2TB2A2Xu2TfD.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/jNG7pl0DkN1nzxnbZj4MCGf2VEG.jpg",
+        "description": "For Jimmy Smith, Jr., life is a daily fight just to keep hope alive. Feeding his dreams in Detroit's vibrant music scene, Jimmy wages an extraordinary personal struggle to find his own voice - and earn a place in a world where rhymes rule, legends are born and every moment… is another chance.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0298203",
+        "imdbRating": "7.1",
+        "name": "8 Mile",
+        "poster": "https://image.tmdb.org/t/p/w500/7BmQj8qE1FLuLTf7Xjf9sdIHzoa.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bfnQPbcmPAXO2QmDONalx4vNWPB.jpg",
+        "description": "Craig and his cousin Day-Day have finally moved out of their parents' houses and into their own crib, working nights at a local mall as security guards. When their house is robbed on Christmas Eve they set out to track down the culprit.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0293815",
+        "imdbRating": "6.4",
+        "name": "Friday After Next",
+        "poster": "https://image.tmdb.org/t/p/w500/sxHFGPKLWj9e3aaA6wGVxghoiPE.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/wLMvCoBCtQ83cwKTXxtoQ5Y9Z4J.jpg",
+        "description": "A Philadelphia gang member becomes a drug kingpin and starts a feud with vicious rivals in his quest for the American Dream.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0301893",
+        "imdbRating": "6.4",
+        "name": "State Property",
+        "poster": "https://image.tmdb.org/t/p/w500/eq8ygk2egSs9QnQfrjqE4fJ44OJ.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/jtWjSUOPiU69kiUaGwDChTklAU8.jpg",
+        "description": "Ace is an impressionable young man working for a dry cleaning business. His friend, drug dealer Mitch, goes to prison. In an unrelated incident, he finds some cocaine in a pants pocket. Soon, Ace finds himself dealing cocaine for Lulu. Via lucky breaks and solid interpersonal skills, Ace moves to the top of the Harlem drug world. Of course, unfaithful employees and/or rivals conspire to bring about Ace's fall.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0259484",
+        "imdbRating": "6.8",
+        "name": "Paid in Full",
+        "poster": "https://image.tmdb.org/t/p/w500/oiG5BObjENJjEacFdWw1KfK3TFx.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/3wLPGWYSix2Rbz4QUoAiaQe08wE.jpg",
+        "description": "When Emily Woodrow and her friends happen on a treasure chest full of gold coins, they fail to to heed the warnings of a wise old psychic who had foretold that they would encounter trouble with a very nasty and protective Leprechaun.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0339294",
+        "imdbRating": "4.9",
+        "name": "Leprechaun: Back 2 tha Hood",
+        "poster": "https://image.tmdb.org/t/p/w500/uBXtcz92oigWaWnFDyS8j5tMAc1.jpg",
+        "releaseInfo": "2003",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/eU9aNlCCgtwFBHgdbOHZG7Zqc2I.jpg",
+        "description": "Ricky is just out of a young offenders institute, heading home to Hackney and determined to go straight. Instead, he heads straight for trouble when he becomes involved in a street confrontation, siding with his best friend Wisdom against a local rude boy. The trouble escalates into a series of tit-for-tat incidents that threaten to spiral out of control. Ricky's 12-year-old brother Curtis, hero-worships Ricky, though he appears smart enough to know he doesn't want to follow his example. Yet, despite the stern warnings from his mother and support from her friends in the community, might Ricky's bad boy allure be too attractive for Curtis to resist?",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0385568",
+        "imdbRating": "5.7",
+        "name": "Bullet Boy",
+        "poster": "https://image.tmdb.org/t/p/w500/lZk17BnjqJTbXWu7xCimOJtjGuv.jpg",
+        "releaseInfo": "2004",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/6A6HCmRTmyqPqFVDVR5hlX2vJd2.jpg",
+        "description": "This movie is the story of Fresh (Big Noyd), a street kid with connections inside the music industry. When his friend (G.O.D. III of Infamous Mobb) comes home from jail with musical aspirations instead of returning to the life of crime, Fresh must choose between lyrics and larceny...With the help of mutual friends and Queensbridge neighbors, Mobb Deep, who play themselves, they seem to have a path laid for them in the music industry that will get them off the streets for good. But Fresh finds that walking away from the streets is not that simple....A very decent straight to video release, Mobb Deep only appear in spurts, as Prodigy produced and wrote the screenplay. Director Lawrence Page has a hilarious cameo as a rival drug dealer.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0416056",
+        "imdbRating": "9.0",
+        "name": "Murda Muzik",
+        "poster": "https://image.tmdb.org/t/p/w500/zKVzfYcBazbrBIW6XtNd7gL2jg1.jpg",
+        "releaseInfo": "2004",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/hrM6X1GR5Rvca71gt9WqpFRPzGf.jpg",
+        "description": "A drug kingpin's rise and tragic fall is witnessed vicariously by a reporter who uses the criminal's diary as the basis for his new book.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0354766",
+        "imdbRating": "5.5",
+        "name": "Never Die Alone",
+        "poster": "https://image.tmdb.org/t/p/w500/nLN6zs2ySlekfdXS7mZ6uujTSBi.jpg",
+        "releaseInfo": "2004",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/kMy5HSN3XkWyg0PYdnUkwAfntdU.jpg",
+        "description": "A young boxer is taken under the wing of a mob boss after his mother dies and his father is run out of town for being an abusive alcoholic.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt3349772",
+        "imdbRating": "3.0",
+        "name": "Back in the Day",
+        "poster": "https://image.tmdb.org/t/p/w500/eSLGYrj0IGgScf95TQB7JDX9k19.jpg",
+        "releaseInfo": "2016",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bxJmFRjwWnpoLFkp5OSzA7xfzn6.jpg",
+        "description": "A tale of an inner city drug dealer who turns away from crime to pursue his passion, rap music.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0430308",
+        "imdbRating": "6.8",
+        "name": "Get Rich or Die Tryin'",
+        "poster": "https://image.tmdb.org/t/p/w500/aaEJu8vFKtrAoSRtw3xjCf1aM5d.jpg",
+        "releaseInfo": "2005",
+        "type": "movie"
+      },
+      {
+        "description": "Death is only the beginning for the young victim of a drive-by shooting. Devastated at the loss of his younger brother Jermaine, scientific older sibling Ricky uses the situation as an opportunity to test an experimental serum designed to breathe new life into dead cells. Though Ricky's reanimation serum does indeed help to get his previously deceased younger brother back on his feet, Jermaine's insatiable hunger for human flesh soon spreads like wildfire throughout the neighborhood, leaving his older brother to find a way to halt the epidemic before the army of flesh-eaters become too powerful to be contained.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0449599",
+        "imdbRating": "3.9",
+        "name": "Hood of the Living Dead",
+        "poster": "https://image.tmdb.org/t/p/w500/dAcvrETlNAkw2ClkAvAPx5o4c6X.jpg",
+        "releaseInfo": "2005",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/9pAL0tNWbkNUJj42khYEK1Gah6Q.jpg",
+        "description": "As four friends prepare for life after high school, different challenges bring about turning points in each of their lives. The dramas unfold and resolve at their local rollerskating rink, Cascade.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0466856",
+        "imdbRating": "7.0",
+        "name": "ATL",
+        "poster": "https://image.tmdb.org/t/p/w500/wi9VRukGburXfDwDKqcQQdgFK5S.jpg",
+        "releaseInfo": "2006",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/x2iXE5hOePEoV8ZlUNlAZftKqp0.jpg",
+        "description": "A day in the life of a group of troubled 15-year-olds growing up in west London.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0435680",
+        "imdbRating": "6.3",
+        "name": "Kidulthood",
+        "poster": "https://image.tmdb.org/t/p/w500/uEZSnTcwBm445NGh8QtVLvPbX9b.jpg",
+        "releaseInfo": "2006",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/kblkyMfm0E3qwMf9MIFz6YpMf1t.jpg",
+        "description": "An ex-convict gets tangled up with a gang after his car is hijacked with his son inside.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0456020",
+        "imdbRating": "6.4",
+        "name": "Waist Deep",
+        "poster": "https://image.tmdb.org/t/p/w500/xBshLPA17Sbq1AJEACpkDLnRvPd.jpg",
+        "releaseInfo": "2006",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/2R8w0mwwTahv4lLCu2lkSsvu7jx.jpg",
+        "description": "Flea was a basketball player, happy with his subtle hustle, until a Dominican connect introduced him to a new way to spread the work and make money.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0798786",
+        "imdbRating": "4.6",
+        "name": "Killa Season",
+        "poster": "https://image.tmdb.org/t/p/w500/5DLE2PHDfuyXOny0axmVZuDRZbP.jpg",
+        "releaseInfo": "2006",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/cFMl2jt9ABthgLbCgZ08jWLQMd7.jpg",
+        "description": "From the youth directed novel of the same name by Greogor Tressnow comes a film by Detlev Buck that is a realistic portrait of life in the section of Berlin called Neukölln. It’s about power and weakness, delinquents and victims, and the difficulties a 15-year-old faces in a poor and criminal environment.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0475317",
+        "imdbRating": "6.8",
+        "name": "Tough Enough",
+        "poster": "https://image.tmdb.org/t/p/w500/3HcEEKSNs2m4k8ghZ9cgTaSfyoF.jpg",
+        "releaseInfo": "2006",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bkh82nJqpURecfiRPqUMTqxD702.jpg",
+        "description": "An American traveling in South America ends up living with a group of misfits at an abandoned hospital with a troubling past.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt2791026",
+        "imdbRating": "4.7",
+        "name": "City of Dead Men",
+        "poster": "https://image.tmdb.org/t/p/w500/polwU0BsjZ55nLL7K5MiG9HOCJZ.jpg",
+        "releaseInfo": "2014",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/7MEi8dOoQKz6no668dZDQgotOPD.jpg",
+        "description": "The lives of two siblings are completely upended when they discover a dead body, long buried in their parent’s basement, sending them down a rabbit hole of crime and murder.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt26657977",
+        "imdbRating": "6.0",
+        "name": "Adulthood",
+        "poster": "https://image.tmdb.org/t/p/w500/a40Gi0Zq4Ecqu3obmOp6TSgEne1.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/A4DRsRDz74dhFIiWF3qolVzPv9W.jpg",
+        "description": "A coming of age story about an inner-city youth raised by a hardworking single mother. When his dream of becoming a basketball player fails to materialize, he finds himself employed in a supermarket. After his mother is tragically gunned down, Clarence (played by Jackson) is consumed by revenge and takes up a life of crime in order to support his younger brother.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt1310569",
+        "imdbRating": "4.9",
+        "name": "Before I Self Destruct",
+        "poster": "https://image.tmdb.org/t/p/w500/z16xMsUlG4Hb6ruVgGOY79nTuAA.jpg",
+        "releaseInfo": "2009",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/40Rl5nZRxXQ4kHV4Lhghj5iQZZN.jpg",
+        "description": "In order to help bring Nazis to justice, U.S. government agent T.R. Devlin recruits Alicia Huberman, the American daughter of a convicted German war criminal, as a spy. As they begin to fall for one another, Alicia is instructed to win the affections of Alexander Sebastian, a Nazi hiding out in Brazil. When Sebastian becomes serious about his relationship with Alicia, the stakes get higher, and Devlin must watch her slip further undercover.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0038787",
+        "imdbRating": "7.7",
+        "name": "Notorious",
+        "poster": "https://image.tmdb.org/t/p/w500/4RERYb1NIQrJHYY5e8nUlYM7t2z.jpg",
+        "releaseInfo": "1946",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/d4SnuHyfQPP6a856SIgsWZENMQQ.jpg",
+        "description": "SHANK delivers a ruthless vision of forthcoming urban life, where guns have been superseded by knives and are fiercely wielded by aimless youths. Amidst the chaos is the Paper Chazers gang, a rare morally conscious group who trade scavenged food for money. After Chazers gang member, Junior, witnesses his brothers murder, he must decide whether to get revenge or stick to the gangs moral code.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt1320296",
+        "imdbRating": "4.9",
+        "name": "Shank",
+        "poster": "https://image.tmdb.org/t/p/w500/jUqEb54raDC2SnAznfkQYC08H2s.jpg",
+        "releaseInfo": "2010",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ncYrkutA6Yd1Gmh8fLyGieWlqLv.jpg",
+        "description": "A South London teen gang must team up with the other residents of their housing estate to protect the neighbourhood from a terrifying alien invasion.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt1478964",
+        "imdbRating": "6.5",
+        "name": "Attack the Block",
+        "poster": "https://image.tmdb.org/t/p/w500/wzCMnA6NDruLzgWeqMcLPDrGAdF.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/nWJPW8Z2fZr9vmBzqlLh2o5vOac.jpg",
+        "description": "Ensemble film revolving around characters living in Forest Gate, London. Over the course of a few days, six inter-linking stories explore issues of drug use, prostitution and urban poverty.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt1760967",
+        "imdbRating": "6.3",
+        "name": "Ill Manors",
+        "poster": "https://image.tmdb.org/t/p/w500/qhN0X6sDUalPxoNRfuUIBR6QmSO.jpg",
+        "releaseInfo": "2012",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/yJ9HQ4OrFouSj8kRF9opf8s7yGE.jpg",
+        "description": "Oppressed by her family setting, dead-end school prospects and the boys law in the neighborhood, Marieme starts a new life after meeting a group of three free-spirited girls. She changes her name, her dress code, and quits school to be accepted in the gang, hoping that this will be a way to freedom.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt3655522",
+        "imdbRating": "6.4",
+        "name": "Girlhood",
+        "poster": "https://image.tmdb.org/t/p/w500/qZ52DlSVguX0WHYoiOD464IIONd.jpg",
+        "releaseInfo": "2014",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/4z5laHeWp6cJGrZ2kvDSbxqPqxm.jpg",
+        "description": "Musician YG showcases his acting chops and uncanny ability to make his lyrics come alive as we follow him through a day of his \"krazy\" lIfe.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt4225142",
+        "imdbRating": "3.0",
+        "name": "Blame It on the Streets",
+        "poster": "https://image.tmdb.org/t/p/w500/pVQOMhYG75vuxtfQ06HU90yf9B9.jpg",
+        "releaseInfo": "2014",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/gUxI1DMkHch1nHygwGCMePvLtuh.jpg",
+        "description": "A 21-year-old reformed gangster's devotion to his family and his future is put to the test when he is released from prison and returns to his old stomping grounds in Watts, Los Angeles.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt3331028",
+        "imdbRating": "6.5",
+        "name": "Imperial Dreams",
+        "poster": "https://image.tmdb.org/t/p/w500/cEEsrLIH8LsGkuaU2Ql2FksewfT.jpg",
+        "releaseInfo": "2014",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/4Yihb0wD1Jd2sQtNrKo9TOs8S3l.jpg",
+        "description": "Malcolm is carefully surviving life in a tough neighborhood in Los Angeles while juggling college applications, academic interviews, and the SAT. A chance invitation to an underground party leads him into an adventure that could allow him to go from being a geek, to being dope, to ultimately being himself.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt3850214",
+        "imdbRating": "7.1",
+        "name": "Dope",
+        "poster": "https://image.tmdb.org/t/p/w500/n6u00imN7AX2NiyWUc5kTgHXmEf.jpg",
+        "releaseInfo": "2015",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8r9RoGfwGmn1pn0G3sbvHHemSWF.jpg",
+        "description": "In 1987, five young men, using brutally honest rhymes and hardcore beats, put their frustration and anger about life in the most dangerous place in America into the most powerful weapon they had: their music.  Taking us back to where it all began, Straight Outta Compton tells the true story of how these cultural rebels—armed only with their lyrics, swagger, bravado and raw talent—stood up to the authorities that meant to keep them down and formed the world’s most dangerous group, N.W.A.  And as they spoke the truth that no one had before and exposed life in the hood, their voice ignited a social revolution that is still reverberating today.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt1398426",
+        "imdbRating": "7.8",
+        "name": "Straight Outta Compton",
+        "poster": "https://image.tmdb.org/t/p/w500/1CiLJx8Xtv3TbbFj6k7BboSmKgC.jpg",
+        "releaseInfo": "2015",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/wmlQqGUdS0zTSipyHQGLcC6d93G.jpg",
+        "description": "A modern day adaptation of the ancient Greek play Lysistrata by Aristophanes, set against the backdrop of gang violence in Chicago.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt4594834",
+        "imdbRating": "5.7",
+        "name": "Chi-Raq",
+        "poster": "https://image.tmdb.org/t/p/w500/goT9g4Lem6mwkwmehR3mOGJXLBQ.jpg",
+        "releaseInfo": "2015",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/q18pdMKGX4wSHaT3lllt5jLjp8d.jpg",
+        "description": "It's Christmas Eve in Tinseltown and Sin-Dee is back on the block. Upon hearing that her pimp boyfriend hasn't been faithful during the 28 days she was locked up, the working girl and her best friend, Alexandra, embark on a mission to get to the bottom of the scandalous rumor. Their rip-roaring odyssey leads them through various subcultures of Los Angeles, including an Armenian family dealing with their own repercussions of infidelity.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt3824458",
+        "imdbRating": "6.9",
+        "name": "Tangerine",
+        "poster": "https://image.tmdb.org/t/p/w500/EKLR5c61XQzBTeMokFrmS3kdt8.jpg",
+        "releaseInfo": "2015",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/x73AAxWEF0gLbecippq7ONHw2ag.jpg",
+        "description": "When his hard-earned kicks get snatched by a local hood, fifteen-year old Brandon and his two best friends go on an ill-advised mission across the Bay Area to retrieve the stolen sneakers.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt4254584",
+        "imdbRating": "6.7",
+        "name": "Kicks",
+        "poster": "https://image.tmdb.org/t/p/w500/5lW7mFOQW5wPlCIT0gUuYbhNtVP.jpg",
+        "releaseInfo": "2016",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/wxijmbo9Oy5L9M9e4K1QhXVBRgm.jpg",
+        "description": "In 18th century France, the Chevalier de Fronsac and his Native American friend Mani are sent by the King to the Gevaudan province to investigate the killings of hundreds by a mysterious beast.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0237534",
+        "imdbRating": "6.7",
+        "name": "Brotherhood of the Wolf",
+        "poster": "https://image.tmdb.org/t/p/w500/w8CUoGAnP95txmIK2fl7leVmrmN.jpg",
+        "releaseInfo": "2001",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/jm1oD3eB08LImSwL1LrzF9AJQ5b.jpg",
+        "description": "The tender, heartbreaking story of a young man’s struggle to find himself, told across three defining chapters in his life as he experiences the ecstasy, pain, and beauty of falling in love, while grappling with his own sexuality.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt4975722",
+        "imdbRating": "7.4",
+        "name": "Moonlight",
+        "poster": "https://image.tmdb.org/t/p/w500/qLnfEmPrDjJfPyyddLJPkXmshkp.jpg",
+        "releaseInfo": "2016",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/7a9sOXKdRxXFHIVHqg7FNu7liU.jpg",
+        "description": "A group of young Cardboard Gangsters attempt to gain control of the drug trade in Darndale, chasing the glorified lifestyle of money, power and sex.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt5156274",
+        "imdbRating": "6.3",
+        "name": "Cardboard Gangsters",
+        "poster": "https://image.tmdb.org/t/p/w500/p8xEFeBpEYxA4rUYEvEYUaeYDcG.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8YYg4SXMJK5Qc7ddxEXoGrNxTGH.jpg",
+        "description": "In this modern take on Edmond Rostand's classic play \"Cyrano de Bergerac,\" C. D. Bales is the witty, intelligent, and brave fire chief of a small Pacific Northwest town who, due to the size of his enormous nose, declines to pursue the girl of his dreams, lovely Roxanne Kowalski. Instead, when his shy underling Chris McConnell becomes smitten with Roxanne, C.D. feeds the handsome young man the words of love to win her heart.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt0093886",
+        "imdbRating": "6.4",
+        "name": "Roxanne",
+        "poster": "https://image.tmdb.org/t/p/w500/c2XSGkpAIIof6Oi8Sr6wBvwt1Lk.jpg",
+        "releaseInfo": "1987",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/91YouXHP7MufOfl1Ymw2LWKh6x2.jpg",
+        "description": "Eli and Daniel, two Korean American brothers who own a struggling women's shoe store, have an unlikely friendship with 11-year-old Kamilla. On the first day of the 1992 L.A. riots, the trio must defend their store—and contemplate the meaning of family, their personal dreams and the future.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt6057032",
+        "imdbRating": "6.4",
+        "name": "Gook",
+        "poster": "https://image.tmdb.org/t/p/w500/Ij6zyFnVd3ha5uR5b4na3LYux6.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/r4clWIxKeWoqrHspQP0XunuUmB7.jpg",
+        "description": "To push the crime rate below one percent for the rest of the year, the New Founding Fathers of America test a sociological theory that vents aggression for one night in one isolated community. But when the violence of oppressors meets the rage of the others, the contagion will explode from the trial-city borders and spread across the nation.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt6133466",
+        "imdbRating": "6.0",
+        "name": "The First Purge",
+        "poster": "https://image.tmdb.org/t/p/w500/litjsBoiydO6JlO70uOX4N3WnNL.jpg",
+        "releaseInfo": "2018",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/62a8bMDftwD9aU0dkXr4eN6Q5q2.jpg",
+        "description": "Adult content creator Bonnie Blue announced that she’d slept with 1057 men in 12 hours. Exploring the polarising debate around Bonnie and the pornification of our society, the film follows her over the most eye-opening six months of her life.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt37738006",
+        "imdbRating": "5.1",
+        "name": "1000 Men and Me: The Bonnie Blue Story",
+        "poster": "https://image.tmdb.org/t/p/w500/ip78INb1BSW1YbQLd5iOnsYvsc5.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/jH1f7VaYtMCyqgJRoG7lCg8krxO.jpg",
+        "description": "Noumouké, from the suburb of Paris, is about to decide which brother's foot steps to follow - the lawyer student Soulaymaan or the gangster Demba.",
+        "genres": [
+          "Hood Films"
+        ],
+        "id": "tt10958282",
+        "imdbRating": "6.9",
+        "name": "Street Flow",
+        "poster": "https://image.tmdb.org/t/p/w500/rhOFpiEDA9S2rmuz5990KBjLgcP.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      }
+    ],
+    "name": "Wikipedia Hood Films Collection",
+    "timestamp": 1786232546738
   }
 }
