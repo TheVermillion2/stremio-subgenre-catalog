@@ -650,7 +650,7 @@ async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isL
   You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
   Format: [{"title": "Movie Title 1", "year": 1999}]`
     : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
-  Return a high-quality, comprehensive list of 150 to 200 real, existing movies matching the theme. Dig deep into film history, iconic cinema, classics, and hidden gems across all decades.
+  Return a massive, high-quality, comprehensive list of 250 to 300 real, existing movies matching the theme. Dig deep into film history, iconic cinema, classics, and hidden gems across all decades. You must not stop until you have scrubbed all movies for that specific genre prompt.
   You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
   Format:
   [
@@ -782,32 +782,43 @@ async function searchTmdbMovie(title, year, apiKey) {
 // Search TMDB Direct by Query Keywords (Dynamic Fallback when Gemini API is offline)
 async function searchTmdbDirectByQuery(queryStr, apiKey) {
   const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+  let allMovies = [];
   try {
     const cleanQuery = queryStr
       .replace(/movies about|movie about|films about|movies|films|the best|top|a list of|list of|collection of/gi, '')
       .trim();
 
-    const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(cleanQuery || queryStr)}&page=1`;
-    const res = await fetchJson(searchUrl);
+    // Loop through TMDB pages to gather up to 250+ movies!
+    for (let page = 1; page <= 15; page++) {
+      const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(cleanQuery || queryStr)}&page=${page}`;
+      const res = await fetchJson(searchUrl);
 
-    if (res && res.results && res.results.length > 0) {
-      return res.results.slice(0, 20).map(m => ({
-        title: m.title || m.original_title,
-        year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null
-      }));
+      if (res && res.results && res.results.length > 0) {
+        const pageMovies = res.results.map(m => ({
+          title: m.title || m.original_title,
+          year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null
+        }));
+        allMovies = allMovies.concat(pageMovies);
+        
+        // Break early if there are no more pages
+        if (page >= res.total_pages) break;
+      } else {
+        break;
+      }
     }
   } catch (err) {
     console.error(`[TMDB Direct Search Error] "${queryStr}":`, err.message);
   }
-  return [];
+  return allMovies;
 }
 
 async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
   const text = (name + ' ' + prompt).toLowerCase();
+  let staticMovies = [];
   
   // 1. Relationships, Marriage, Abuse, Toxic Love
   if (text.includes('relationship') || text.includes('abusive') || text.includes('marriage') || text.includes('toxic') || text.includes('divorce') || text.includes('cheating') || text.includes('partner')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "Marriage Story", year: 2019 },
       { title: "Blue Valentine", year: 2010 },
       { title: "Gone Girl", year: 2014 },
@@ -822,12 +833,12 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
       { title: "Unfaithful", year: 2002 },
       { title: "Phantom Thread", year: 2017 },
       { title: "Kramer vs. Kramer", year: 1979 }
-    ];
+    ]);
   }
 
   // 2. A.I., Robots, Androids & Technology
   if (text.includes('a.i.') || text.includes('ai') || text.includes('robot') || text.includes('android') || text.includes('artificial intelligence') || text.includes('machine')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "Ex Machina", year: 2014 },
       { title: "Her", year: 2013 },
       { title: "Blade Runner 2049", year: 2017 },
@@ -838,12 +849,12 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
       { title: "M3GAN", year: 2022 },
       { title: "Upgrade", year: 2018 },
       { title: "Ghost in the Shell", year: 1995 }
-    ];
+    ]);
   }
 
   // 3. Zombie, Vampire & Outbreak Sagas
   if (text.includes('zombie') || text.includes('vampire') || text.includes('outbreak') || text.includes('undead')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "28 Days Later", year: 2002 },
       { title: "Dawn of the Dead", year: 2004 },
       { title: "Train to Busan", year: 2016 },
@@ -859,12 +870,12 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
       { title: "I Am Legend", year: 2007 },
       { title: "The Lost Boys", year: 1987 },
       { title: "Night of the Living Dead", year: 1968 }
-    ];
+    ]);
   }
 
   // 4. Horror (Supernatural, Hauntings, Slashers, Occult, A24 Elevated)
   if (text.includes('horror') || text.includes('slasher') || text.includes('haunting') || text.includes('possession') || text.includes('demonic') || text.includes('occult')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "The Exorcist", year: 1973 },
       { title: "The Shining", year: 1980 },
       { title: "Halloween", year: 1978 },
@@ -885,12 +896,12 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
       { title: "Smile", year: 2022 },
       { title: "Talk to Me", year: 2022 },
       { title: "Alien", year: 1979 }
-    ];
+    ]);
   }
 
   // 5. Found Footage & Tech Horror
   if (text.includes('found footage') || text.includes('screenlife') || text.includes('vhs') || text.includes('tech horror')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "The Blair Witch Project", year: 1999 },
       { title: "Paranormal Activity", year: 2007 },
       { title: "Cloverfield", year: 2008 },
@@ -907,12 +918,12 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
       { title: "Grave Encounters", year: 2011 },
       { title: "Chronicle", year: 2012 },
       { title: "Host", year: 2020 }
-    ];
+    ]);
   }
 
   // 6. Psychological Thrillers & Suspense
   if (text.includes('psychological') || text.includes('suspense') || text.includes('thriller') || text.includes('mind twist') || text.includes('stalker')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "Se7en", year: 1995 },
       { title: "The Silence of the Lambs", year: 1991 },
       { title: "Shutter Island", year: 2010 },
@@ -925,12 +936,12 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
       { title: "Memento", year: 2000 },
       { title: "The Sixth Sense", year: 1999 },
       { title: "Misery", year: 1990 }
-    ];
+    ]);
   }
 
   // 7. Heists & Crime Underworld
   if (text.includes('heist') || text.includes('bank robbery') || text.includes('underworld') || text.includes('mafia') || text.includes('cartel')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "Heat", year: 1995 },
       { title: "The Town", year: 2010 },
       { title: "Ocean's Eleven", year: 2001 },
@@ -941,12 +952,12 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
       { title: "Den of Thieves", year: 2018 },
       { title: "Goodfellas", year: 1990 },
       { title: "The Godfather", year: 1972 }
-    ];
+    ]);
   }
 
   // 8. 90s Hood Classics
   if (text.includes('hood') || text.includes('hood classic') || text.includes('street saga') || text.includes('urban drama')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "Boyz n the Hood", year: 1991 },
       { title: "Menace II Society", year: 1993 },
       { title: "Poetic Justice", year: 1993 },
@@ -959,12 +970,12 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
       { title: "Belly", year: 1998 },
       { title: "Clockers", year: 1995 },
       { title: "King of New York", year: 1990 }
-    ];
+    ]);
   }
 
   // 9. Biopics & History
   if (text.includes('biopic') || text.includes('civil rights') || text.includes('historical figure') || text.includes('true story')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "Malcolm X", year: 1992 },
       { title: "Selma", year: 2014 },
       { title: "Hidden Figures", year: 2016 },
@@ -973,49 +984,53 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
       { title: "Ali", year: 2001 },
       { title: "42", year: 2013 },
       { title: "The Hurricane", year: 1999 }
-    ];
+    ]);
   }
 
   // 10. Martial Arts & Kung Fu
   if (text.includes('martial arts') || text.includes('kung fu') || text.includes('wuxia') || text.includes('bruce lee')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "Enter the Dragon", year: 1973 },
       { title: "Fist of Legend", year: 1994 },
       { title: "Drunken Master II", year: 1994 },
       { title: "Ip Man", year: 2008 },
       { title: "Crouching Tiger, Hidden Dragon", year: 2000 },
       { title: "The 36th Chamber of Shaolin", year: 1978 }
-    ];
+    ]);
   }
 
   // 11. Black Romance & Rom-Coms
   if (text.includes('romance') || text.includes('rom-com') || text.includes('love story')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "Love & Basketball", year: 2000 },
       { title: "Brown Sugar", year: 2002 },
       { title: "The Best Man", year: 1999 },
       { title: "Love Jones", year: 1997 },
       { title: "Beyond the Lights", year: 2014 },
       { title: "The Wood", year: 1999 }
-    ];
+    ]);
   }
 
   // 12. Comedy & House Party
   if (text.includes('comedy') || text.includes('house party') || text.includes('cookout')) {
-    return [
+    staticMovies = staticMovies.concat([
       { title: "Friday", year: 1995 },
       { title: "Next Friday", year: 2000 },
       { title: "Barbershop", year: 2002 },
       { title: "House Party", year: 1990 },
       { title: "Girls Trip", year: 2017 },
       { title: "Think Like a Man", year: 2012 }
-    ];
+    ]);
   }
 
-  // 13. Dynamic TMDB Search Fallback for ALL Other Unmatched Queries
+  // 13. Dynamic TMDB Search Fallback for ALL Queries to fetch 250+ movies!
   const tmdbDirect = await searchTmdbDirectByQuery(prompt || name, apiKey);
-  if (tmdbDirect && tmdbDirect.length > 0) {
-    return tmdbDirect;
+  
+  if (staticMovies.length > 0 || (tmdbDirect && tmdbDirect.length > 0)) {
+    // Merge static curations + 250+ TMDB movies, and remove duplicates
+    const allMovies = [...staticMovies, ...(tmdbDirect || [])];
+    const uniqueMovies = Array.from(new Map(allMovies.map(item => [item.title, item])).values());
+    return uniqueMovies;
   }
 
   return [
