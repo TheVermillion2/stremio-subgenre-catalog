@@ -636,27 +636,12 @@ function postJson(urlStr, body) {
 }
 
 // Call Gemini API to scrub web & return movies matching prompt
-async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isLiveSearch = false) {
+// Helper for calling Gemini API with automatic model fallbacks
+async function callGemini(systemInstruction, userPrompt, apiKey, preferredModel = '') {
   const key = apiKey || config.geminiApiKey || process.env.GEMINI_API_KEY;
   if (!key) {
     throw new Error('Gemini API Key is missing. Please enter your Gemini API Key in the Dashboard Settings.');
   }
-
-  console.log(`[Gemini AI] Scrubbing web & curating movies for prompt: "${promptText}"...`);
-
-  const systemInstruction = isLiveSearch 
-    ? `You are a lightning-fast Stremio search backend. The user is searching for a movie theme or query.
-  Return the top 15 to 20 most relevant real movies matching the query.
-  You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
-  Format: [{"title": "Movie Title 1", "year": 1999}]`
-    : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
-  Return a massive, high-quality, comprehensive list of 250 to 300 real, existing movies matching the theme. Dig deep into film history, iconic cinema, classics, and hidden gems across all decades. You must not stop until you have scrubbed all movies for that specific genre prompt.
-  You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
-  Format:
-  [
-    {"title": "Movie Title 1", "year": 1999},
-    {"title": "Movie Title 2", "year": 2005}
-  ]`;
 
   const modelsToTry = preferredModel && preferredModel !== 'gemini-1.5-pro'
     ? [preferredModel, 'gemini-2.0-flash', 'gemini-1.5-flash-latest', 'gemini-1.5-flash-8b'] 
@@ -664,14 +649,13 @@ async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isL
 
   let lastError;
   for (const model of modelsToTry) {
-    console.log(`[Gemini AI] Trying model: ${model}...`);
     try {
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
       const payload = {
         contents: [
           {
             parts: [
-              { text: `${systemInstruction}\n\nUser Custom Request: "${promptText}". Generate a comprehensive list of real movies matching this.` }
+              { text: `${systemInstruction}\n\nUser Request: "${userPrompt}".` }
             ]
           }
         ],
@@ -710,7 +694,6 @@ async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isL
         }
 
         if (parsed && Array.isArray(parsed) && parsed.length > 0) {
-          console.log(`[Gemini AI] Successfully curated ${parsed.length} candidate movies using model: ${model}!`);
           return parsed;
         } else {
           console.log(`[Gemini AI] Model ${model} returned empty or unparseable array.`);
@@ -728,6 +711,132 @@ async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isL
 
   throw lastError || new Error('All Gemini API models failed. Please check your API key.');
 }
+
+// Call Gemini API to scrub web & return movies matching prompt
+async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isLiveSearch = false) {
+  console.log(`[Gemini AI] Scrubbing web & curating movies for prompt: "${promptText}"...`);
+  const systemInstruction = isLiveSearch 
+    ? `You are a lightning-fast Stremio search backend. The user is searching for a movie theme or query.
+  Return the top 15 to 20 most relevant real movies matching the query.
+  You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
+  Format: [{"title": "Movie Title 1", "year": 1999}]`
+    : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
+  Return all real, existing movies matching the theme. Dig deep into film history, iconic cinema, classics, and hidden gems across all decades.
+  CRITICAL RULE: Every single movie MUST strictly match the subject. Do NOT include filler or random movies.
+  You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
+  Format: [{"title": "Movie Title 1", "year": 1999}]`;
+
+  return await callGemini(systemInstruction, promptText, apiKey, preferredModel);
+}
+
+// Multi-perspective curation using Gemini Flash's deep film knowledge
+async function queryGeminiForMoviesMultiChunk(promptText, apiKey, model = '') {
+  console.log(`[Gemini AI] Curating all relevant movies using Gemini Flash brain for: "${promptText}"...`);
+
+  const perspectives = [
+    {
+      name: "Essential & Iconic Matches",
+      instruction: `You are an expert film database curator. The user wants movies for the subject/theme: "${promptText}".
+Return ALL well-known, iconic, critically acclaimed, or major defining movies that genuinely fit this subject.
+CRITICAL RULE: Every single movie MUST strictly match the subject "${promptText}". Do NOT include filler, loosely related movies, or random movies just to make the list longer. Only return movies that genuinely fit this subject.
+Return ONLY a raw JSON array format with NO markdown formatting:
+[{"title": "Movie Title", "year": 1999}]`
+    },
+    {
+      name: "Cult Classics & Fan Favorites",
+      instruction: `You are an expert film database curator. The user wants movies for the subject/theme: "${promptText}".
+Return ALL cult classics, fan favorites, box office hits, and popular titles across all decades that genuinely fit this subject.
+CRITICAL RULE: Every single movie MUST strictly match the subject "${promptText}". Do NOT include filler, loosely related movies, or random movies just to make the list longer. Only return movies that genuinely fit this subject.
+Return ONLY a raw JSON array format with NO markdown formatting:
+[{"title": "Movie Title", "year": 1999}]`
+    },
+    {
+      name: "Hidden Gems & Deep Cuts",
+      instruction: `You are an expert film database curator. The user wants movies for the subject/theme: "${promptText}".
+Return ALL hidden gems, underrated classics, independent films, deep cuts, and notable entries that genuinely fit this subject.
+CRITICAL RULE: Every single movie MUST strictly match the subject "${promptText}". Do NOT include filler, loosely related movies, or random movies just to make the list longer. Only return movies that genuinely fit this subject.
+Return ONLY a raw JSON array format with NO markdown formatting:
+[{"title": "Movie Title", "year": 1999}]`
+    }
+  ];
+
+  const results = await Promise.all(
+    perspectives.map(p => 
+      callGemini(p.instruction, promptText, apiKey, model)
+        .catch(err => {
+          console.warn(`[Gemini AI] Chunk "${p.name}" failed: ${err.message}`);
+          return [];
+        })
+    )
+  );
+
+  const combined = results.flat();
+  const seen = new Set();
+  const deduplicated = [];
+  
+  for (const m of combined) {
+    if (!m || !m.title) continue;
+    const cleanTitle = m.title.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+    const key = `${cleanTitle}_${m.year || ''}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      deduplicated.push({ title: m.title.trim(), year: m.year ? parseInt(m.year, 10) : null });
+    }
+  }
+
+  console.log(`[Gemini AI] Curated ${deduplicated.length} unique candidate movies for "${promptText}"`);
+  return deduplicated;
+}
+
+// Sub-Agent QA Verification Pass to ensure 100% prompt relevance
+async function verifyMoviesWithGeminiSubAgent(candidates, promptText, apiKey, model = '') {
+  if (!candidates || candidates.length === 0) return [];
+  
+  console.log(`[Gemini QA] Running Sub-Agent QA Verification across ${candidates.length} candidates for: "${promptText}"...`);
+
+  const batchSize = 100;
+  const verifiedList = [];
+
+  for (let i = 0; i < candidates.length; i += batchSize) {
+    const chunk = candidates.slice(i, i + batchSize);
+    const candidateStr = JSON.stringify(chunk);
+
+    const qaInstruction = `You are a strict QA film database auditor.
+The user's theme is: "${promptText}".
+Analyze the provided list of candidate movies and return ONLY the movies that are 100% strictly relevant to this theme.
+REMOVAL RULE: Throw out any movie that does not directly and strongly fit "${promptText}". Do NOT keep filler or loosely related movies. Do NOT add any new movies.
+Return ONLY a raw JSON array format with NO markdown formatting:
+[{"title": "Movie Title", "year": 1999}]`;
+
+    try {
+      const verifiedChunk = await callGemini(qaInstruction, candidateStr, apiKey, model);
+      if (Array.isArray(verifiedChunk) && verifiedChunk.length > 0) {
+        verifiedList.push(...verifiedChunk);
+      } else {
+        verifiedList.push(...chunk);
+      }
+    } catch (e) {
+      console.warn(`[Gemini QA] Verification batch failed (${e.message}), keeping candidate chunk.`);
+      verifiedList.push(...chunk);
+    }
+  }
+
+  const seen = new Set();
+  const finalMovies = [];
+  for (const m of verifiedList) {
+    if (!m || !m.title) continue;
+    const cleanTitle = m.title.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+    const key = `${cleanTitle}_${m.year || ''}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      finalMovies.push({ title: m.title.trim(), year: m.year ? parseInt(m.year, 10) : null });
+    }
+  }
+
+  console.log(`[Gemini QA] Verification complete: ${finalMovies.length} strictly relevant movies approved.`);
+  return finalMovies;
+}
+
 
 // Helper: HTTP request wrapper using native fetch
 async function fetchJson(urlStr) {
@@ -752,7 +861,13 @@ async function searchTmdbMovie(title, year, apiKey) {
     let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
     if (year) searchUrl += `&year=${year}`;
 
-    const res = await fetchJson(searchUrl);
+    let res = await fetchJson(searchUrl);
+
+    // If year search returned no results, retry without year filter
+    if ((!res || !res.results || res.results.length === 0) && year) {
+      const fallbackUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
+      res = await fetchJson(fallbackUrl);
+    }
 
     if (res && res.results && res.results.length > 0) {
       const m = res.results[0];
@@ -1145,23 +1260,12 @@ async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
     ]);
   }
 
-  // 13. Dynamic TMDB Search Fallback for ALL Queries to fetch 250+ movies!
-  const tmdbDirect = await searchTmdbDirectByQuery(prompt || name, apiKey);
-  
-  if (staticMovies.length > 0 || (tmdbDirect && tmdbDirect.length > 0)) {
-    // Merge static curations + 250+ TMDB movies, and remove duplicates
-    const allMovies = [...staticMovies, ...(tmdbDirect || [])];
-    const uniqueMovies = Array.from(new Map(allMovies.map(item => [item.title, item])).values());
+  if (staticMovies.length > 0) {
+    const uniqueMovies = Array.from(new Map(staticMovies.map(item => [item.title, item])).values());
     return uniqueMovies;
   }
 
-  return [
-    { title: "Inception", year: 2010 },
-    { title: "The Dark Knight", year: 2008 },
-    { title: "Pulp Fiction", year: 1994 },
-    { title: "Fight Club", year: 1999 },
-    { title: "Goodfellas", year: 1990 }
-  ];
+  return [];
 }
 
 // Endpoint to Create AI Custom Genre via Gemini
