@@ -941,6 +941,86 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Total Recall", year: 1990 }
     ];
   }
+  if (text.includes('found footage') || text.includes('tech paranoia') || text.includes('paranoia')) {
+    return [
+      { title: "The Blair Witch Project", year: 1999 },
+      { title: "Paranormal Activity", year: 2007 },
+      { title: "Cloverfield", year: 2008 },
+      { title: "REC", year: 2007 },
+      { title: "V/H/S", year: 2012 },
+      { title: "V/H/S/2", year: 2013 },
+      { title: "Unfriended", year: 2014 },
+      { title: "Searching", year: 2018 },
+      { title: "Missing", year: 2023 },
+      { title: "Creep", year: 2014 },
+      { title: "Creep 2", year: 2017 },
+      { title: "As Above, So Below", year: 2014 },
+      { title: "Hell House LLC", year: 2015 },
+      { title: "Grave Encounters", year: 2011 },
+      { title: "Chronicle", year: 2012 },
+      { title: "The Taking of Deborah Logan", year: 2014 },
+      { title: "Host", year: 2020 },
+      { title: "Cam", year: 2018 }
+    ];
+  }
+  if (text.includes('single-location') || text.includes('chamber') || text.includes('locked')) {
+    return [
+      { title: "12 Angry Men", year: 1957 },
+      { title: "Cube", year: 1997 },
+      { title: "Saw", year: 2004 },
+      { title: "Buried", year: 2010 },
+      { title: "Exam", year: 2009 },
+      { title: "Panic Room", year: 2002 },
+      { title: "Rope", year: 1948 },
+      { title: "The Hateful Eight", year: 2015 },
+      { title: "Coherence", year: 2013 },
+      { title: "Phone Booth", year: 2002 },
+      { title: "Devil", year: 2010 },
+      { title: "Room 1408", year: 2007 },
+      { title: "The Platform", year: 2019 }
+    ];
+  }
+  if (text.includes('suburban') || text.includes('coming-of-age') || text.includes('80s youth')) {
+    return [
+      { title: "Stand by Me", year: 1986 },
+      { title: "The Goonies", year: 1985 },
+      { title: "Super 8", year: 2011 },
+      { title: "Dazed and Confused", year: 1993 },
+      { title: "The Breakfast Club", year: 1985 },
+      { title: "Ferris Bueller's Day Off", year: 1986 },
+      { title: "Fast Times at Ridgemont High", year: 1982 },
+      { title: "Superbad", year: 2007 },
+      { title: "Mid90s", year: 2018 },
+      { title: "E.T. the Extra-Terrestrial", year: 1982 }
+    ];
+  }
+  if (text.includes('grindhouse') || text.includes('revenge') || text.includes('payback')) {
+    return [
+      { title: "Kill Bill: Vol. 1", year: 2003 },
+      { title: "Kill Bill: Vol. 2", year: 2004 },
+      { title: "Planet Terror", year: 2007 },
+      { title: "Death Proof", year: 2007 },
+      { title: "Machete", year: 2010 },
+      { title: "John Wick", year: 2014 },
+      { title: "Payback", year: 1999 },
+      { title: "Death Wish", year: 1974 },
+      { title: "I Spit on Your Grave", year: 2010 },
+      { title: "Revenge", year: 2017 }
+    ];
+  }
+  if (text.includes('buddy cop') || text.includes('neon 80s') || text.includes('cop')) {
+    return [
+      { title: "Lethal Weapon", year: 1987 },
+      { title: "Lethal Weapon 2", year: 1989 },
+      { title: "48 Hrs.", year: 1982 },
+      { title: "Beverly Hills Cop", year: 1984 },
+      { title: "Tango & Cash", year: 1989 },
+      { title: "Bad Boys", year: 1995 },
+      { title: "Die Hard", year: 1988 },
+      { title: "Red Heat", year: 1988 },
+      { title: "Rush Hour", year: 1998 }
+    ];
+  }
   if (text.includes('space horror') || text.includes('cosmic')) {
     return [
       { title: "Alien", year: 1979 },
