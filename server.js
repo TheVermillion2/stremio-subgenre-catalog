@@ -230,6 +230,8 @@ if (!fs.existsSync(path.join(__dirname, 'data'))) {
 let collections = {};
 let searchCache = {}; // Cache for live AI search queries
 
+const FIREBASE_URL = 'https://stremio-catalogue-3bad5-default-rtdb.firebaseio.com';
+
 async function loadCollections() {
   let localData = {};
   if (fs.existsSync(COLLECTIONS_FILE)) {
@@ -240,23 +242,18 @@ async function loadCollections() {
     }
   }
 
-  if (db) {
-    try {
-      const snapshot = await db.ref('collections').once('value');
-      if (snapshot.exists()) {
-        const fbCollections = snapshot.val() || {};
-        collections = fbCollections;
-        console.log(`[Firebase] Loaded ${Object.keys(collections).length} collections from Firebase.`);
-      } else if (Object.keys(localData).length > 0) {
-        collections = localData;
-        console.log(`[Firebase] Seeded Firebase with ${Object.keys(collections).length} local collections.`);
-        await saveCollections();
-      }
-    } catch (err) {
-      console.error('Failed to load collections from Firebase:', err.message);
+  try {
+    const fbRes = await fetchJson(`${FIREBASE_URL}/collections.json`);
+    if (fbRes && typeof fbRes === 'object' && Object.keys(fbRes).length > 0) {
+      collections = fbRes;
+      console.log(`[Firebase Cloud] Successfully loaded ${Object.keys(collections).length} collections from Firebase Cloud DB.`);
+    } else if (Object.keys(localData).length > 0) {
       collections = localData;
+      console.log(`[Firebase Cloud] Seeded Firebase Cloud DB with ${Object.keys(collections).length} local collections.`);
+      await saveCollections();
     }
-  } else {
+  } catch (err) {
+    console.error('Failed to load collections from Firebase Cloud:', err.message);
     collections = localData;
   }
 }
@@ -267,12 +264,29 @@ async function saveCollections() {
   } catch (err) {
     console.error('Failed to save collections locally:', err.message);
   }
-  if (db) {
-    try {
-      await db.ref('collections').set(collections);
-    } catch (err) {
-      console.error('Failed to save collections to Firebase:', err.message);
+  
+  try {
+    const res = await fetch(`${FIREBASE_URL}/collections.json`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(collections)
+    });
+    if (res.ok) {
+      console.log(`[Firebase Cloud] Saved ${Object.keys(collections).length} collections to Cloud DB.`);
     }
+  } catch (err) {
+    console.error('Failed to save collections to Firebase Cloud:', err.message);
+  }
+}
+
+async function deleteCollectionFromCloud(id) {
+  try {
+    await fetch(`${FIREBASE_URL}/collections/${id}.json`, {
+      method: 'DELETE'
+    });
+    console.log(`[Firebase Cloud] Deleted collection ${id} from Cloud DB.`);
+  } catch (err) {
+    console.error(`Failed to delete collection ${id} from Firebase Cloud:`, err.message);
   }
 }
 
@@ -641,13 +655,7 @@ app.delete('/api/collections/:id', async (req, res) => {
   if (collections[id]) {
     delete collections[id];
     await saveCollections();
-    if (db) {
-      try {
-        await db.ref(`collections/${id}`).remove();
-      } catch (err) {
-        console.error(`[Firebase] Failed to remove ${id} from Firebase:`, err.message);
-      }
-    }
+    await deleteCollectionFromCloud(id);
     res.json({ success: true, collections });
   } else {
     res.status(404).json({ error: 'Collection not found' });
