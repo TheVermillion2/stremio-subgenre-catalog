@@ -14966,5 +14966,171 @@
     "name": "90's Nostalgia",
     "prompt": "Movies with best soundtracks of the 90s",
     "timestamp": 1785898736779
+  },
+  "custom_1786211553391_rvjp9": {
+    "id": "custom_1786211553391_rvjp9",
+    "name": "90s Hood Classics",
+    "description": "AI-Curated Collection for \"hood classics street sagas\"",
+    "isCustomAI": true,
+    "prompt": "hood classics street sagas",
+    "movies": [
+      {
+        "id": "tt0101507",
+        "type": "movie",
+        "name": "Boyz n the Hood",
+        "poster": "https://image.tmdb.org/t/p/w500/v4ox4aSCNT5vyLXl4Q71JiWwCXW.jpg",
+        "background": "https://image.tmdb.org/t/p/original/w9Buzxn7RjbttP2xm9leMfMdyCP.jpg",
+        "description": "In the middle of the Los Angeles ghetto, drugs, robberies and shootings dominate everyday life. During these times, Furious tries to raise his son Tre to be a decent person. Tre's friends, on the other hand, have little regard for the law and drag the entire neighborhood into a street war...",
+        "releaseInfo": "1991",
+        "imdbRating": "7.6",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0107554",
+        "type": "movie",
+        "name": "Menace II Society",
+        "poster": "https://image.tmdb.org/t/p/w500/nS7yqmSVeNoH22VXj69JoFCxW1h.jpg",
+        "background": "https://image.tmdb.org/t/p/original/s5PP0ryxAo12jzvPntSEybahpCw.jpg",
+        "description": "A young street hustler attempts to escape the rigors and temptations of the ghetto in a quest for a better life.",
+        "releaseInfo": "1993",
+        "imdbRating": "7.5",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0107840",
+        "type": "movie",
+        "name": "Poetic Justice",
+        "poster": "https://image.tmdb.org/t/p/w500/6jE7Vzh3edBQtbbDcF4AC5gMX2g.jpg",
+        "background": "https://image.tmdb.org/t/p/original/lNvlerKoYwboltmK7hQfgxsYtNP.jpg",
+        "description": "Still grieving after the murder of her boyfriend, hairdresser Justice writes poetry to deal with the pain of her loss. Unable to get to Oakland to attend a convention because of her broken-down car, Justice gets a lift with her friend, Iesha, and Iesha's postal worker boyfriend, Chicago. Along for the ride is Chicago's co-worker, Lucky, to whom Justice grows close after some initial problems. But is she ready to open her heart again?",
+        "releaseInfo": "1993",
+        "imdbRating": "6.7",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0104573",
+        "type": "movie",
+        "name": "Juice",
+        "poster": "https://image.tmdb.org/t/p/w500/hfXFPMhNjLnCugBHMN0nrtKW7Ra.jpg",
+        "background": "https://image.tmdb.org/t/p/original/54xcERdFHlRny2FJ9NC4koForkR.jpg",
+        "description": "Four Harlem friends -- Bishop, Q, Steel and Raheem -- dabble in petty crime, but they decide to go big by knocking off a convenience store. Bishop, the magnetic leader of the group, has the gun. But Q has different aspirations. He wants to be a DJ and happens to have a gig the night of the robbery. Unfortunately for him, Bishop isn't willing to take no for answer in a game where everything's for keeps.",
+        "releaseInfo": "1992",
+        "imdbRating": "7.2",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0117603",
+        "type": "movie",
+        "name": "Set It Off",
+        "poster": "https://image.tmdb.org/t/p/w500/wpiARyUqTfabzakAXHMIUY6Tl1A.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8ebAtpx6YVfRGrxPrs4nTTWSbT9.jpg",
+        "description": "Four inner-city Black women, determined to end their constant struggle, decide to live by one rule — get what you want or die trying. So the four women take back their lives and take out some banks in the process.",
+        "releaseInfo": "1996",
+        "imdbRating": "7.2",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0102526",
+        "type": "movie",
+        "name": "New Jack City",
+        "poster": "https://image.tmdb.org/t/p/w500/k9VjzXyGElRAxXyXgPvtRRSznyL.jpg",
+        "background": "https://image.tmdb.org/t/p/original/u3fFEz0NdoyXL3UUxTPNqeM2vrc.jpg",
+        "description": "A gangster, Nino, is in the Cash Money Brothers, making a million dollars every week selling crack. A cop, Scotty, discovers that the only way to infiltrate the gang is to become a dealer himself.",
+        "releaseInfo": "1991",
+        "imdbRating": "6.7",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0112819",
+        "type": "movie",
+        "name": "Dead Presidents",
+        "poster": "https://image.tmdb.org/t/p/w500/eGfsSXizR11tTHVo0kuOOFPAxZt.jpg",
+        "background": "https://image.tmdb.org/t/p/original/c8H6Xi9im1tT6HP9PA9HpFE3sOy.jpg",
+        "description": "On the streets they call cash dead presidents. And that's just what a Vietnam veteran is after when he returns home from the war only to find himself drawn into a life of crime. With the aid of his fellow vets he plans the ultimate heist -- a daring robbery of an armored car filled with unmarked U.S. currency!",
+        "releaseInfo": "1995",
+        "imdbRating": "6.7",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0259484",
+        "type": "movie",
+        "name": "Paid in Full",
+        "poster": "https://image.tmdb.org/t/p/w500/oiG5BObjENJjEacFdWw1KfK3TFx.jpg",
+        "background": "https://image.tmdb.org/t/p/original/jtWjSUOPiU69kiUaGwDChTklAU8.jpg",
+        "description": "Ace is an impressionable young man working for a dry cleaning business. His friend, drug dealer Mitch, goes to prison. In an unrelated incident, he finds some cocaine in a pants pocket. Soon, Ace finds himself dealing cocaine for Lulu. Via lucky breaks and solid interpersonal skills, Ace moves to the top of the Harlem drug world. Of course, unfaithful employees and/or rivals conspire to bring about Ace's fall.",
+        "releaseInfo": "2002",
+        "imdbRating": "6.8",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0113118",
+        "type": "movie",
+        "name": "Friday",
+        "poster": "https://image.tmdb.org/t/p/w500/3Ya1RurP2NqaYoiok4DmfO41rCC.jpg",
+        "background": "https://image.tmdb.org/t/p/original/y3E6gIZkRILqNmp7nCLkHPg0WXF.jpg",
+        "description": "Craig and Smokey are two guys in Los Angeles hanging out on their porch on a Friday afternoon, smoking and drinking, looking for something to do.",
+        "releaseInfo": "1995",
+        "imdbRating": "7.1",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0158493",
+        "type": "movie",
+        "name": "Belly",
+        "poster": "https://image.tmdb.org/t/p/w500/i4QhjdZXxdOpKOhc9kh4qqWjRWr.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bmyugjdRl1aEOfBePwUpykIY3x3.jpg",
+        "description": "Tommy Bundy and Sincere are best friends as well as infamous and ruthless criminals and shot-callers in the hood. Respected by many but feared by all.  As the police are closing in on them and new players are looking for a come up, will their reign last?",
+        "releaseInfo": "1998",
+        "imdbRating": "6.3",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0112688",
+        "type": "movie",
+        "name": "Clockers",
+        "poster": "https://image.tmdb.org/t/p/w500/c79uqLJleho2a7OQayfrW5Ypphf.jpg",
+        "background": "https://image.tmdb.org/t/p/original/xhYs4yaBnDNM3utncVzLmFVpAmK.jpg",
+        "description": "Strike is a young city drug pusher under the tutelage of drug lord Rodney Little. When a night manager at a fast-food restaurant is found with four bullets in his body, Strike’s older brother turns himself in as the killer. Detective Rocco Klein doesn’t buy the story, however, setting out to find the truth, and it seems that all the fingers point toward Strike & Rodney.",
+        "releaseInfo": "1995",
+        "imdbRating": "6.7",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      },
+      {
+        "id": "tt0099939",
+        "type": "movie",
+        "name": "King of New York",
+        "poster": "https://image.tmdb.org/t/p/w500/1MyH4MJAJZJbb6wDVeOc2bTECtK.jpg",
+        "background": "https://image.tmdb.org/t/p/original/oQMuvptruDYovmB9VFpnYDnVk5j.jpg",
+        "description": "A former drug lord returns from prison determined to wipe out all his competition and distribute the profits of his operations to New York's poor and lower classes in this stylish and ultra violent modern twist on Robin Hood.",
+        "releaseInfo": "1990",
+        "imdbRating": "6.8",
+        "genres": [
+          "90s Hood Classics"
+        ]
+      }
+    ],
+    "timestamp": 1786211553391
   }
 }

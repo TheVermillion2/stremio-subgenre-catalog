@@ -729,39 +729,20 @@ Format:
   throw lastError || new Error('All Gemini API models failed. Please check your API key.');
 }
 
-// Helper: HTTP request wrapper
-function fetchJson(urlStr) {
-  return new Promise((resolve, reject) => {
-    try {
-      const parsedUrl = new URL(urlStr);
-      const options = {
-        hostname: parsedUrl.hostname,
-        port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80),
-        path: parsedUrl.pathname + parsedUrl.search,
-        method: 'GET',
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-          'Accept': 'application/json'
-        }
-      };
-      const client = parsedUrl.protocol === 'https:' ? https : http;
-      const req = client.request(options, (res) => {
-        let data = '';
-        res.on('data', (chunk) => data += chunk);
-        res.on('end', () => {
-          try {
-            resolve(JSON.parse(data));
-          } catch (e) {
-            reject(e);
-          }
-        });
-      });
-      req.on('error', (err) => reject(err));
-      req.end();
-    } catch (err) {
-      reject(err);
-    }
-  });
+// Helper: HTTP request wrapper using native fetch
+async function fetchJson(urlStr) {
+  try {
+    const res = await fetch(urlStr, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+        'Accept': 'application/json'
+      }
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (err) {
+    return null;
+  }
 }
 
 // Search TMDB by Title + Year to resolve IMDb IDs and rich metadata
@@ -771,17 +752,13 @@ async function searchTmdbMovie(title, year, apiKey) {
     let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
     if (year) searchUrl += `&year=${year}`;
 
-    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('TMDB Timeout')), 5000));
-    const res = await Promise.race([fetchJson(searchUrl), timeoutPromise]);
+    const res = await fetchJson(searchUrl);
 
     if (res && res.results && res.results.length > 0) {
       const m = res.results[0];
       let externalId = `tt${m.id}`;
       try {
-        const extRes = await Promise.race([
-          fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`),
-          new Promise((_, reject) => setTimeout(() => reject(new Error('ExtID Timeout')), 2000))
-        ]);
+        const extRes = await fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`);
         if (extRes && extRes.imdb_id) externalId = extRes.imdb_id;
       } catch (err) {}
 
