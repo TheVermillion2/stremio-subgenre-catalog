@@ -222,11 +222,8 @@ async function loadCollections() {
       const snapshot = await db.ref('collections').once('value');
       if (snapshot.exists()) {
         const fbCollections = snapshot.val() || {};
-        // Merge firebase and local data so no custom list is lost
-        collections = { ...localData, ...fbCollections };
-        console.log(`[Firebase] Loaded ${Object.keys(collections).length} collections.`);
-        // Sync merged data back to Firebase & local storage
-        await saveCollections();
+        collections = fbCollections;
+        console.log(`[Firebase] Loaded ${Object.keys(collections).length} collections from Firebase.`);
       } else if (Object.keys(localData).length > 0) {
         collections = localData;
         console.log(`[Firebase] Seeded Firebase with ${Object.keys(collections).length} local collections.`);
@@ -526,7 +523,8 @@ app.get('/api/collections', (req, res) => {
 app.post('/api/sync-collections', (req, res) => {
   try {
     const clientCollections = req.body;
-    if (clientCollections && typeof clientCollections === 'object') {
+    // Only merge client collections if server collections are empty
+    if (clientCollections && typeof clientCollections === 'object' && Object.keys(collections).length === 0) {
       let updated = false;
       for (const id in clientCollections) {
         if (clientCollections[id] && clientCollections[id].name) {
@@ -536,7 +534,6 @@ app.post('/api/sync-collections', (req, res) => {
       }
       if (updated) {
         saveCollections();
-        console.log(`[Sync] Synced ${Object.keys(collections).length} total collections from client storage.`);
       }
     }
     res.json({ success: true, collections });
@@ -545,12 +542,19 @@ app.post('/api/sync-collections', (req, res) => {
   }
 });
 
-app.delete('/api/collections/:id', (req, res) => {
+app.delete('/api/collections/:id', async (req, res) => {
   const id = req.params.id;
   if (collections[id]) {
     delete collections[id];
-    saveCollections();
-    res.json({ success: true });
+    await saveCollections();
+    if (db) {
+      try {
+        await db.ref(`collections/${id}`).remove();
+      } catch (err) {
+        console.error(`[Firebase] Failed to remove ${id} from Firebase:`, err.message);
+      }
+    }
+    res.json({ success: true, collections });
   } else {
     res.status(404).json({ error: 'Collection not found' });
   }
