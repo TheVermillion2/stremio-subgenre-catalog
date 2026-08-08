@@ -953,14 +953,6 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  return [
-    { title: "Inception", year: 2010 },
-    { title: "The Dark Knight", year: 2008 },
-    { title: "Pulp Fiction", year: 1994 },
-    { title: "Fight Club", year: 1999 },
-    { title: "Goodfellas", year: 1990 }
-  ];
-}
   if (text.includes('time loop') || text.includes('quantum')) {
     return [
       { title: "Edge of Tomorrow", year: 2014 },
