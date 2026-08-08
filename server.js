@@ -795,7 +795,15 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Friday", year: 1995 },
       { title: "Belly", year: 1998 },
       { title: "Clockers", year: 1995 },
-      { title: "King of New York", year: 1990 }
+      { title: "King of New York", year: 1990 },
+      { title: "Fresh", year: 1994 },
+      { title: "Sugar Hill", year: 1994 },
+      { title: "Deep Cover", year: 1992 },
+      { title: "South Central", year: 1992 },
+      { title: "Do the Right Thing", year: 1989 },
+      { title: "Jason's Lyric", year: 1994 },
+      { title: "Baby Boy", year: 2001 },
+      { title: "Shottas", year: 2002 }
     ];
   }
   if (text.includes('romance') || text.includes('rom-com') || text.includes('love')) {
@@ -807,7 +815,13 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Poetic Justice", year: 1993 },
       { title: "Beyond the Lights", year: 2014 },
       { title: "Two Can Play That Game", year: 2001 },
-      { title: "The Wood", year: 1999 }
+      { title: "The Wood", year: 1999 },
+      { title: "Boomerang", year: 1992 },
+      { title: "Just Wright", year: 2010 },
+      { title: "About Last Night", year: 2014 },
+      { title: "Deliver Us from Eva", year: 2003 },
+      { title: "Soul Food", year: 1997 },
+      { title: "Waiting to Exhale", year: 1995 }
     ];
   }
   if (text.includes('comedy') || text.includes('house party') || text.includes('cookout')) {
@@ -819,7 +833,11 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Girls Trip", year: 2017 },
       { title: "Think Like a Man", year: 2012 },
       { title: "Soul Plane", year: 2004 },
-      { title: "Booty Call", year: 1997 }
+      { title: "Booty Call", year: 1997 },
+      { title: "Don't Be a Menace to South Central", year: 1996 },
+      { title: "Class Act", year: 1992 },
+      { title: "Money Talks", year: 1997 },
+      { title: "House Party 2", year: 1991 }
     ];
   }
   if (text.includes('black horror') || text.includes('social suspense') || text.includes('peele')) {
@@ -831,7 +849,10 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Tales from the Hood", year: 1995 },
       { title: "His House", year: 2020 },
       { title: "Antebellum", year: 2020 },
-      { title: "Spell", year: 2020 }
+      { title: "Spell", year: 2020 },
+      { title: "The Blackening", year: 2022 },
+      { title: "Bones", year: 2001 },
+      { title: "Vampire in Brooklyn", year: 1995 }
     ];
   }
   if (text.includes('afrofuturism') || text.includes('black sci-fi')) {
@@ -841,7 +862,9 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Blade", year: 1998 },
       { title: "Attack the Block", year: 2011 },
       { title: "Spider-Man: Into the Spider-Verse", year: 2018 },
-      { title: "Fast Color", year: 2018 }
+      { title: "Fast Color", year: 2018 },
+      { title: "The Brother from Another Planet", year: 1984 },
+      { title: "See You Yesterday", year: 2019 }
     ];
   }
   if (text.includes('hip-hop') || text.includes('musical') || text.includes('music')) {
@@ -852,7 +875,9 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Notorious", year: 2009 },
       { title: "Krush Groove", year: 1985 },
       { title: "CB4", year: 1993 },
-      { title: "Get Rich or Die Tryin'", year: 2005 }
+      { title: "Get Rich or Die Tryin'", year: 2005 },
+      { title: "All Eyez on Me", year: 2017 },
+      { title: "Beat Street", year: 1984 }
     ];
   }
   if (text.includes('biopic') || text.includes('history') || text.includes('civil rights')) {
@@ -863,7 +888,9 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Judas and the Black Messiah", year: 2021 },
       { title: "Ray", year: 2004 },
       { title: "Ali", year: 2001 },
-      { title: "42", year: 2013 }
+      { title: "42", year: 2013 },
+      { title: "The Hurricane", year: 1999 },
+      { title: "One Night in Miami...", year: 2020 }
     ];
   }
   if (text.includes('blaxploitation')) {
@@ -874,7 +901,8 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Foxy Brown", year: 1974 },
       { title: "Black Caesar", year: 1973 },
       { title: "Dolemite", year: 1975 },
-      { title: "Black Dynamite", year: 2009 }
+      { title: "Black Dynamite", year: 2009 },
+      { title: "Cleopatra Jones", year: 1973 }
     ];
   }
   if (text.includes('martial arts') || text.includes('kung fu')) {
@@ -884,7 +912,10 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Drunken Master II", year: 1994 },
       { title: "Ip Man", year: 2008 },
       { title: "Crouching Tiger, Hidden Dragon", year: 2000 },
-      { title: "The 36th Chamber of Shaolin", year: 1978 }
+      { title: "The 36th Chamber of Shaolin", year: 1978 },
+      { title: "Fearless", year: 2006 },
+      { title: "Hero", year: 2002 },
+      { title: "Kung Fu Hustle", year: 2004 }
     ];
   }
   if (text.includes('heist') || text.includes('caper')) {
@@ -894,7 +925,9 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Ocean's Eleven", year: 2001 },
       { title: "Inside Man", year: 2006 },
       { title: "Baby Driver", year: 2017 },
-      { title: "Inception", year: 2010 }
+      { title: "Inception", year: 2010 },
+      { title: "Set It Off", year: 1996 },
+      { title: "Den of Thieves", year: 2018 }
     ];
   }
   if (text.includes('cyberpunk') || text.includes('dystopian')) {
@@ -903,7 +936,9 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "The Matrix", year: 1999 },
       { title: "Ghost in the Shell", year: 1995 },
       { title: "Akira", year: 1988 },
-      { title: "Dredd", year: 2012 }
+      { title: "Dredd", year: 2012 },
+      { title: "Minority Report", year: 2002 },
+      { title: "Total Recall", year: 1990 }
     ];
   }
   if (text.includes('space horror') || text.includes('cosmic')) {
@@ -912,7 +947,8 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Event Horizon", year: 1997 },
       { title: "Aliens", year: 1986 },
       { title: "Life", year: 2017 },
-      { title: "Pandorum", year: 2009 }
+      { title: "Pandorum", year: 2009 },
+      { title: "The Thing", year: 1982 }
     ];
   }
   if (text.includes('time loop') || text.includes('quantum')) {
@@ -921,7 +957,8 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Source Code", year: 2011 },
       { title: "Looper", year: 2012 },
       { title: "Tenet", year: 2020 },
-      { title: "Groundhog Day", year: 1993 }
+      { title: "Groundhog Day", year: 1993 },
+      { title: "Coherence", year: 2013 }
     ];
   }
   if (text.includes('psychopathy') || text.includes('anti-social')) {
