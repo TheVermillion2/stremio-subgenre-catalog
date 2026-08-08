@@ -779,7 +779,7 @@ async function searchTmdbMovie(title, year, apiKey) {
   return null;
 }
 
-// Search TMDB Direct by Query Keywords + Discover Pagination (Deep 250+ Movie Scraping Engine)
+// Search TMDB Direct by Query Keywords (Strict Keyword Match)
 async function searchTmdbDirectByQuery(queryStr, apiKey) {
   const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
   let rawMovies = [];
@@ -789,8 +789,8 @@ async function searchTmdbDirectByQuery(queryStr, apiKey) {
       .replace(/movies about|movie about|films about|movies|films|the best|top|a list of|list of|collection of/gi, '')
       .trim();
 
-    // 1. Search full clean query across first 10 pages
-    for (let page = 1; page <= 10; page++) {
+    // 1. Search full clean query across TMDB search pages
+    for (let page = 1; page <= 5; page++) {
       const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(cleanQuery || queryStr)}&page=${page}`;
       const res = await fetchJson(searchUrl);
       if (res && res.results && res.results.length > 0) {
@@ -802,42 +802,11 @@ async function searchTmdbDirectByQuery(queryStr, apiKey) {
         break;
       }
     }
-
-    // 2. Search individual words from query across 5 pages each (handles typos & specific sub-topics)
-    const words = cleanQuery.split(/\s+/).filter(w => w.length > 2);
-    for (const word of words) {
-      for (let page = 1; page <= 5; page++) {
-        const wordUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(word)}&page=${page}`;
-        const res = await fetchJson(wordUrl);
-        if (res && res.results && res.results.length > 0) {
-          res.results.forEach(m => {
-            rawMovies.push({ title: m.title || m.original_title, year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null });
-          });
-          if (page >= res.total_pages) break;
-        } else {
-          break;
-        }
-      }
-    }
-
-    // 3. Fill up to 250+ using TMDB Discover (Popularity & Rating)
-    for (let page = 1; page <= 15; page++) {
-      const discoverUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${tmdbKey}&sort_by=popularity.desc&page=${page}`;
-      const res = await fetchJson(discoverUrl);
-      if (res && res.results && res.results.length > 0) {
-        res.results.forEach(m => {
-          rawMovies.push({ title: m.title || m.original_title, year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null });
-        });
-      } else {
-        break;
-      }
-    }
-
   } catch (err) {
-    console.error(`[TMDB Direct Deep Search Error] "${queryStr}":`, err.message);
+    console.error(`[TMDB Direct Search Error] "${queryStr}":`, err.message);
   }
 
-  // Deduplicate and return comprehensive list of 250+ movies
+  // Deduplicate and return strict movie list
   const uniqueMovies = Array.from(new Map(rawMovies.map(m => [m.title.toLowerCase(), m])).values());
   return uniqueMovies;
 }
@@ -1085,14 +1054,18 @@ app.post('/api/custom-genre', async (req, res) => {
 
     saveConfig();
 
-    // 1. Scrub web via Gemini API with smart fallback list if quota is depleted
+    // 1. Scrub web via Gemini API + Gemini QA Sub-Agent Verification
     let rawMovies = [];
     const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
 
     try {
-      rawMovies = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
+      console.log(`[Gemini Pass 1] Curating candidate movies for: "${prompt}"...`);
+      const candidates = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
+      
+      console.log(`[Gemini Pass 2] Running Sub-Agent QA Verification for: "${prompt}"...`);
+      rawMovies = await verifyMoviesWithGeminiSubAgent(candidates, prompt, config.geminiApiKey, model);
     } catch (err) {
-      console.warn(`[AI Genre Fallback] Gemini API unavailable or quota depleted (${err.message}). Using fallback taxonomy for "${name || prompt}"...`);
+      console.warn(`[AI Genre Fallback] Gemini API error (${err.message}). Using strict fallback taxonomy for "${name || prompt}"...`);
       rawMovies = await getFallbackMoviesForPrompt(name, prompt, tmdbKey);
     }
 
