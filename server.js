@@ -709,8 +709,8 @@ async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isL
           }
         }
 
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          console.log(`[Gemini AI] Success with model ${model}! Received ${parsed.length} movies.`);
+        if (parsed && Array.isArray(parsed) && parsed.length > 0) {
+          console.log(`[Gemini AI] Successfully curated ${parsed.length} candidate movies using model: ${model}!`);
           return parsed;
         } else {
           console.log(`[Gemini AI] Model ${model} returned empty or unparseable array.`);
@@ -1054,15 +1054,15 @@ app.post('/api/custom-genre', async (req, res) => {
 
     saveConfig();
 
-    // 1. Scrub web via Gemini API + Gemini QA Sub-Agent Verification
+    // 1. Scrub web via Gemini Multi-Chunk Engine + Gemini QA Sub-Agent Verification
     let rawMovies = [];
     const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
 
     try {
-      console.log(`[Gemini Pass 1] Curating candidate movies for: "${prompt}"...`);
-      const candidates = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
+      console.log(`[Gemini Pass 1] Launching Multi-Chunk Parallel Curation for: "${prompt}"...`);
+      const candidates = await queryGeminiForMoviesMultiChunk(prompt, config.geminiApiKey, model);
       
-      console.log(`[Gemini Pass 2] Running Sub-Agent QA Verification for: "${prompt}"...`);
+      console.log(`[Gemini Pass 2] Running Sub-Agent QA Verification across ${candidates.length} candidates for: "${prompt}"...`);
       rawMovies = await verifyMoviesWithGeminiSubAgent(candidates, prompt, config.geminiApiKey, model);
     } catch (err) {
       console.warn(`[AI Genre Fallback] Gemini API error (${err.message}). Using strict fallback taxonomy for "${name || prompt}"...`);
