@@ -779,10 +779,69 @@ async function searchTmdbMovie(title, year, apiKey) {
   return null;
 }
 
-function getFallbackMoviesForPrompt(name = '', prompt = '') {
+// Search TMDB Direct by Query Keywords (Dynamic Fallback when Gemini API is offline)
+async function searchTmdbDirectByQuery(queryStr, apiKey) {
+  const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+  try {
+    const cleanQuery = queryStr
+      .replace(/movies about|movie about|films about|movies|films|the best|top|a list of|list of|collection of/gi, '')
+      .trim();
+
+    const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(cleanQuery || queryStr)}&page=1`;
+    const res = await fetchJson(searchUrl);
+
+    if (res && res.results && res.results.length > 0) {
+      return res.results.slice(0, 20).map(m => ({
+        title: m.title || m.original_title,
+        year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null
+      }));
+    }
+  } catch (err) {
+    console.error(`[TMDB Direct Search Error] "${queryStr}":`, err.message);
+  }
+  return [];
+}
+
+async function getFallbackMoviesForPrompt(name = '', prompt = '', apiKey = '') {
   const text = (name + ' ' + prompt).toLowerCase();
   
-  // 1. Zombie, Vampire & Outbreak Sagas
+  // 1. Relationships, Marriage, Abuse, Toxic Love
+  if (text.includes('relationship') || text.includes('abusive') || text.includes('marriage') || text.includes('toxic') || text.includes('divorce') || text.includes('cheating') || text.includes('partner')) {
+    return [
+      { title: "Marriage Story", year: 2019 },
+      { title: "Blue Valentine", year: 2010 },
+      { title: "Gone Girl", year: 2014 },
+      { title: "Revolutionary Road", year: 2008 },
+      { title: "Sleeping with the Enemy", year: 1991 },
+      { title: "Enough", year: 2002 },
+      { title: "What's Love Got to Do with It", year: 1993 },
+      { title: "Closer", year: 2004 },
+      { title: "Fatal Attraction", year: 1987 },
+      { title: "The War of the Roses", year: 1989 },
+      { title: "Scenes from a Marriage", year: 1973 },
+      { title: "Unfaithful", year: 2002 },
+      { title: "Phantom Thread", year: 2017 },
+      { title: "Kramer vs. Kramer", year: 1979 }
+    ];
+  }
+
+  // 2. A.I., Robots, Androids & Technology
+  if (text.includes('a.i.') || text.includes('ai') || text.includes('robot') || text.includes('android') || text.includes('artificial intelligence') || text.includes('machine')) {
+    return [
+      { title: "Ex Machina", year: 2014 },
+      { title: "Her", year: 2013 },
+      { title: "Blade Runner 2049", year: 2017 },
+      { title: "The Matrix", year: 1999 },
+      { title: "I, Robot", year: 2004 },
+      { title: "A.I. Artificial Intelligence", year: 2001 },
+      { title: "Terminator 2: Judgment Day", year: 1991 },
+      { title: "M3GAN", year: 2022 },
+      { title: "Upgrade", year: 2018 },
+      { title: "Ghost in the Shell", year: 1995 }
+    ];
+  }
+
+  // 3. Zombie, Vampire & Outbreak Sagas
   if (text.includes('zombie') || text.includes('vampire') || text.includes('outbreak') || text.includes('undead')) {
     return [
       { title: "28 Days Later", year: 2002 },
@@ -803,7 +862,7 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  // 2. Horror (Supernatural, Hauntings, Slashers, Occult, A24 Elevated)
+  // 4. Horror (Supernatural, Hauntings, Slashers, Occult, A24 Elevated)
   if (text.includes('horror') || text.includes('slasher') || text.includes('haunting') || text.includes('possession') || text.includes('demonic') || text.includes('occult')) {
     return [
       { title: "The Exorcist", year: 1973 },
@@ -829,7 +888,7 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  // 3. Found Footage & Tech Horror
+  // 5. Found Footage & Tech Horror
   if (text.includes('found footage') || text.includes('screenlife') || text.includes('vhs') || text.includes('tech horror')) {
     return [
       { title: "The Blair Witch Project", year: 1999 },
@@ -851,7 +910,7 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  // 4. Psychological Thrillers & Suspense
+  // 6. Psychological Thrillers & Suspense
   if (text.includes('psychological') || text.includes('suspense') || text.includes('thriller') || text.includes('mind twist') || text.includes('stalker')) {
     return [
       { title: "Se7en", year: 1995 },
@@ -869,7 +928,7 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  // 5. Heists & Crime Underworld
+  // 7. Heists & Crime Underworld
   if (text.includes('heist') || text.includes('bank robbery') || text.includes('underworld') || text.includes('mafia') || text.includes('cartel')) {
     return [
       { title: "Heat", year: 1995 },
@@ -885,7 +944,7 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  // 6. 90s Hood Classics
+  // 8. 90s Hood Classics
   if (text.includes('hood') || text.includes('hood classic') || text.includes('street saga') || text.includes('urban drama')) {
     return [
       { title: "Boyz n the Hood", year: 1991 },
@@ -903,7 +962,7 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  // 7. Biopics & History
+  // 9. Biopics & History
   if (text.includes('biopic') || text.includes('civil rights') || text.includes('historical figure') || text.includes('true story')) {
     return [
       { title: "Malcolm X", year: 1992 },
@@ -917,7 +976,7 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  // 8. Martial Arts & Kung Fu
+  // 10. Martial Arts & Kung Fu
   if (text.includes('martial arts') || text.includes('kung fu') || text.includes('wuxia') || text.includes('bruce lee')) {
     return [
       { title: "Enter the Dragon", year: 1973 },
@@ -929,7 +988,7 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  // 9. Black Romance & Rom-Coms
+  // 11. Black Romance & Rom-Coms
   if (text.includes('romance') || text.includes('rom-com') || text.includes('love story')) {
     return [
       { title: "Love & Basketball", year: 2000 },
@@ -941,7 +1000,7 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  // 10. Comedy & House Party
+  // 12. Comedy & House Party
   if (text.includes('comedy') || text.includes('house party') || text.includes('cookout')) {
     return [
       { title: "Friday", year: 1995 },
@@ -953,72 +1012,12 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
     ];
   }
 
-  if (text.includes('time loop') || text.includes('quantum')) {
-    return [
-      { title: "Edge of Tomorrow", year: 2014 },
-      { title: "Source Code", year: 2011 },
-      { title: "Looper", year: 2012 },
-      { title: "Tenet", year: 2020 },
-      { title: "Groundhog Day", year: 1993 },
-      { title: "Coherence", year: 2013 }
-    ];
+  // 13. Dynamic TMDB Search Fallback for ALL Other Unmatched Queries
+  const tmdbDirect = await searchTmdbDirectByQuery(prompt || name, apiKey);
+  if (tmdbDirect && tmdbDirect.length > 0) {
+    return tmdbDirect;
   }
-  if (text.includes('psychopathy') || text.includes('anti-social')) {
-    return [
-      { title: "American Psycho", year: 2000 },
-      { title: "Nightcrawler", year: 2014 },
-      { title: "No Country for Old Men", year: 2007 },
-      { title: "The Silence of the Lambs", year: 1991 },
-      { title: "Se7en", year: 1995 }
-    ];
-  }
-  if (text.includes('dissociative') || text.includes('alter ego')) {
-    return [
-      { title: "Fight Club", year: 1999 },
-      { title: "Split", year: 2016 },
-      { title: "Psycho", year: 1960 },
-      { title: "Shutter Island", year: 2010 }
-    ];
-  }
-  if (text.includes('folk horror') || text.includes('cult')) {
-    return [
-      { title: "Midsommar", year: 2019 },
-      { title: "The Wicker Man", year: 1973 },
-      { title: "The Witch", year: 2015 },
-      { title: "Apostle", year: 2018 }
-    ];
-  }
-  if (text.includes('southern gothic') || text.includes('rural')) {
-    return [
-      { title: "Wind River", year: 2017 },
-      { title: "No Country for Old Men", year: 2007 },
-      { title: "Hell or High Water", year: 2016 },
-      { title: "Mud", year: 2012 }
-    ];
-  }
-  if (text.includes('spanish')) {
-    return [
-      { title: "The Invisible Guest", year: 2016 },
-      { title: "Mirage", year: 2018 },
-      { title: "Wild Tales", year: 2014 },
-      { title: "The Body", year: 2012 }
-    ];
-  }
-  if (text.includes('korean')) {
-    return [
-      { title: "Train to Busan", year: 2016 },
-      { title: "I Saw the Devil", year: 2010 },
-      { title: "The Wailing", year: 2016 },
-      { title: "Oldboy", year: 2003 }
-    ];
-  }
-  if (text.includes('hallmark') || text.includes('lifetime')) {
-    return [
-      { title: "The Sweetest Christmas", year: 2017 },
-      { title: "A Royal Christmas", year: 2014 },
-      { title: "Love on Ice", year: 2017 }
-    ];
-  }
+
   return [
     { title: "Inception", year: 2010 },
     { title: "The Dark Knight", year: 2008 },
@@ -1043,15 +1042,16 @@ app.post('/api/custom-genre', async (req, res) => {
 
     // 1. Scrub web via Gemini API with smart fallback list if quota is depleted
     let rawMovies = [];
+    const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+
     try {
       rawMovies = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
     } catch (err) {
       console.warn(`[AI Genre Fallback] Gemini API unavailable or quota depleted (${err.message}). Using fallback taxonomy for "${name || prompt}"...`);
-      rawMovies = getFallbackMoviesForPrompt(name, prompt);
+      rawMovies = await getFallbackMoviesForPrompt(name, prompt, tmdbKey);
     }
 
     // 2. Resolve to TMDB / IMDb metadata in parallel chunks
-    const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
     const stremioMetas = [];
     const chunkSize = 10;
 
