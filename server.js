@@ -767,6 +767,216 @@ async function searchTmdbMovie(title, year, apiKey) {
   return null;
 }
 
+function getFallbackMoviesForPrompt(name = '', prompt = '') {
+  const text = (name + ' ' + prompt).toLowerCase();
+  
+  if (text.includes('hood') || text.includes('street') || text.includes('urban crime') || text.includes('underworld')) {
+    return [
+      { title: "Boyz n the Hood", year: 1991 },
+      { title: "Menace II Society", year: 1993 },
+      { title: "Poetic Justice", year: 1993 },
+      { title: "Juice", year: 1992 },
+      { title: "Set It Off", year: 1996 },
+      { title: "New Jack City", year: 1991 },
+      { title: "Dead Presidents", year: 1995 },
+      { title: "Paid in Full", year: 2002 },
+      { title: "Friday", year: 1995 },
+      { title: "Belly", year: 1998 },
+      { title: "Clockers", year: 1995 },
+      { title: "King of New York", year: 1990 }
+    ];
+  }
+  if (text.includes('romance') || text.includes('rom-com') || text.includes('love')) {
+    return [
+      { title: "Love & Basketball", year: 2000 },
+      { title: "Brown Sugar", year: 2002 },
+      { title: "The Best Man", year: 1999 },
+      { title: "Love Jones", year: 1997 },
+      { title: "Poetic Justice", year: 1993 },
+      { title: "Beyond the Lights", year: 2014 },
+      { title: "Two Can Play That Game", year: 2001 },
+      { title: "The Wood", year: 1999 }
+    ];
+  }
+  if (text.includes('comedy') || text.includes('house party') || text.includes('cookout')) {
+    return [
+      { title: "Friday", year: 1995 },
+      { title: "Next Friday", year: 2000 },
+      { title: "Barbershop", year: 2002 },
+      { title: "House Party", year: 1990 },
+      { title: "Girls Trip", year: 2017 },
+      { title: "Think Like a Man", year: 2012 },
+      { title: "Soul Plane", year: 2004 },
+      { title: "Booty Call", year: 1997 }
+    ];
+  }
+  if (text.includes('black horror') || text.includes('social suspense') || text.includes('peele')) {
+    return [
+      { title: "Get Out", year: 2017 },
+      { title: "Us", year: 2019 },
+      { title: "Nope", year: 2022 },
+      { title: "Candyman", year: 1992 },
+      { title: "Tales from the Hood", year: 1995 },
+      { title: "His House", year: 2020 },
+      { title: "Antebellum", year: 2020 },
+      { title: "Spell", year: 2020 }
+    ];
+  }
+  if (text.includes('afrofuturism') || text.includes('black sci-fi')) {
+    return [
+      { title: "Black Panther", year: 2018 },
+      { title: "They Cloned Tyrone", year: 2023 },
+      { title: "Blade", year: 1998 },
+      { title: "Attack the Block", year: 2011 },
+      { title: "Spider-Man: Into the Spider-Verse", year: 2018 },
+      { title: "Fast Color", year: 2018 }
+    ];
+  }
+  if (text.includes('hip-hop') || text.includes('musical') || text.includes('music')) {
+    return [
+      { title: "Straight Outta Compton", year: 2015 },
+      { title: "8 Mile", year: 2002 },
+      { title: "Hustle & Flow", year: 2005 },
+      { title: "Notorious", year: 2009 },
+      { title: "Krush Groove", year: 1985 },
+      { title: "CB4", year: 1993 },
+      { title: "Get Rich or Die Tryin'", year: 2005 }
+    ];
+  }
+  if (text.includes('biopic') || text.includes('history') || text.includes('civil rights')) {
+    return [
+      { title: "Malcolm X", year: 1992 },
+      { title: "Selma", year: 2014 },
+      { title: "Hidden Figures", year: 2016 },
+      { title: "Judas and the Black Messiah", year: 2021 },
+      { title: "Ray", year: 2004 },
+      { title: "Ali", year: 2001 },
+      { title: "42", year: 2013 }
+    ];
+  }
+  if (text.includes('blaxploitation')) {
+    return [
+      { title: "Shaft", year: 1971 },
+      { title: "Super Fly", year: 1972 },
+      { title: "Coffy", year: 1973 },
+      { title: "Foxy Brown", year: 1974 },
+      { title: "Black Caesar", year: 1973 },
+      { title: "Dolemite", year: 1975 },
+      { title: "Black Dynamite", year: 2009 }
+    ];
+  }
+  if (text.includes('martial arts') || text.includes('kung fu')) {
+    return [
+      { title: "Enter the Dragon", year: 1973 },
+      { title: "Fist of Legend", year: 1994 },
+      { title: "Drunken Master II", year: 1994 },
+      { title: "Ip Man", year: 2008 },
+      { title: "Crouching Tiger, Hidden Dragon", year: 2000 },
+      { title: "The 36th Chamber of Shaolin", year: 1978 }
+    ];
+  }
+  if (text.includes('heist') || text.includes('caper')) {
+    return [
+      { title: "Heat", year: 1995 },
+      { title: "The Town", year: 2010 },
+      { title: "Ocean's Eleven", year: 2001 },
+      { title: "Inside Man", year: 2006 },
+      { title: "Baby Driver", year: 2017 },
+      { title: "Inception", year: 2010 }
+    ];
+  }
+  if (text.includes('cyberpunk') || text.includes('dystopian')) {
+    return [
+      { title: "Blade Runner 2049", year: 2017 },
+      { title: "The Matrix", year: 1999 },
+      { title: "Ghost in the Shell", year: 1995 },
+      { title: "Akira", year: 1988 },
+      { title: "Dredd", year: 2012 }
+    ];
+  }
+  if (text.includes('space horror') || text.includes('cosmic')) {
+    return [
+      { title: "Alien", year: 1979 },
+      { title: "Event Horizon", year: 1997 },
+      { title: "Aliens", year: 1986 },
+      { title: "Life", year: 2017 },
+      { title: "Pandorum", year: 2009 }
+    ];
+  }
+  if (text.includes('time loop') || text.includes('quantum')) {
+    return [
+      { title: "Edge of Tomorrow", year: 2014 },
+      { title: "Source Code", year: 2011 },
+      { title: "Looper", year: 2012 },
+      { title: "Tenet", year: 2020 },
+      { title: "Groundhog Day", year: 1993 }
+    ];
+  }
+  if (text.includes('psychopathy') || text.includes('anti-social')) {
+    return [
+      { title: "American Psycho", year: 2000 },
+      { title: "Nightcrawler", year: 2014 },
+      { title: "No Country for Old Men", year: 2007 },
+      { title: "The Silence of the Lambs", year: 1991 },
+      { title: "Se7en", year: 1995 }
+    ];
+  }
+  if (text.includes('dissociative') || text.includes('alter ego')) {
+    return [
+      { title: "Fight Club", year: 1999 },
+      { title: "Split", year: 2016 },
+      { title: "Psycho", year: 1960 },
+      { title: "Shutter Island", year: 2010 }
+    ];
+  }
+  if (text.includes('folk horror') || text.includes('cult')) {
+    return [
+      { title: "Midsommar", year: 2019 },
+      { title: "The Wicker Man", year: 1973 },
+      { title: "The Witch", year: 2015 },
+      { title: "Apostle", year: 2018 }
+    ];
+  }
+  if (text.includes('southern gothic') || text.includes('rural')) {
+    return [
+      { title: "Wind River", year: 2017 },
+      { title: "No Country for Old Men", year: 2007 },
+      { title: "Hell or High Water", year: 2016 },
+      { title: "Mud", year: 2012 }
+    ];
+  }
+  if (text.includes('spanish')) {
+    return [
+      { title: "The Invisible Guest", year: 2016 },
+      { title: "Mirage", year: 2018 },
+      { title: "Wild Tales", year: 2014 },
+      { title: "The Body", year: 2012 }
+    ];
+  }
+  if (text.includes('korean')) {
+    return [
+      { title: "Train to Busan", year: 2016 },
+      { title: "I Saw the Devil", year: 2010 },
+      { title: "The Wailing", year: 2016 },
+      { title: "Oldboy", year: 2003 }
+    ];
+  }
+  if (text.includes('hallmark') || text.includes('lifetime')) {
+    return [
+      { title: "The Sweetest Christmas", year: 2017 },
+      { title: "A Royal Christmas", year: 2014 },
+      { title: "Love on Ice", year: 2017 }
+    ];
+  }
+  return [
+    { title: "Inception", year: 2010 },
+    { title: "The Dark Knight", year: 2008 },
+    { title: "Pulp Fiction", year: 1994 },
+    { title: "Fight Club", year: 1999 },
+    { title: "Goodfellas", year: 1990 }
+  ];
+}
+
 // Endpoint to Create AI Custom Genre via Gemini
 app.post('/api/custom-genre', async (req, res) => {
   try {
@@ -780,8 +990,14 @@ app.post('/api/custom-genre', async (req, res) => {
 
     saveConfig();
 
-    // 1. Scrub web via Gemini API
-    const rawMovies = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
+    // 1. Scrub web via Gemini API with smart fallback list if quota is depleted
+    let rawMovies = [];
+    try {
+      rawMovies = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
+    } catch (err) {
+      console.warn(`[AI Genre Fallback] Gemini API unavailable or quota depleted (${err.message}). Using fallback taxonomy for "${name || prompt}"...`);
+      rawMovies = getFallbackMoviesForPrompt(name, prompt);
+    }
 
     // 2. Resolve to TMDB / IMDb metadata in parallel chunks
     const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
