@@ -658,9 +658,17 @@ Format:
   {"title": "Movie Title 2", "year": 2005}
 ]`;
 
-  const modelsToTry = preferredModel && preferredModel !== 'gemini-1.5-pro'
-    ? [preferredModel, 'gemini-1.5-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash-8b', 'gemini-2.0-flash'] 
-    : ['gemini-1.5-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash-8b', 'gemini-2.0-flash', 'gemini-1.5-pro'];
+  const validModels = [
+    'gemini-2.0-flash',
+    'gemini-2.0-flash-lite',
+    'gemini-flash-latest',
+    'gemini-flash-lite-latest'
+  ];
+
+  let modelsToTry = [...validModels];
+  if (preferredModel && validModels.includes(preferredModel)) {
+    modelsToTry = [preferredModel, ...validModels.filter(m => m !== preferredModel)];
+  }
 
   let lastError;
   for (const model of modelsToTry) {
@@ -684,8 +692,8 @@ Format:
 
       // Handle Rate Limit / Quota Exceeded with a brief retry delay
       if (response && response.error && (response.error.message.includes('quota') || response.error.message.includes('Quota') || response.error.message.includes('429'))) {
-        console.log(`[Gemini AI] Model ${model} hit free tier rate limit. Waiting 2.5 seconds before fallback...`);
-        await new Promise(r => setTimeout(r, 2500));
+        console.log(`[Gemini AI] Model ${model} hit rate limit. Waiting 2 seconds before fallback...`);
+        await new Promise(r => setTimeout(r, 2000));
         lastError = new Error(response.error.message);
         continue;
       }
@@ -744,17 +752,18 @@ async function searchTmdbMovie(title, year, apiKey) {
     let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
     if (year) searchUrl += `&year=${year}`;
 
-    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('TMDB Timeout')), 1200));
-    const res = await Promise.race([fetchJson(searchUrl), timeoutPromise]);
+    let res = await fetchJson(searchUrl);
+
+    if ((!res || !res.results || res.results.length === 0) && year) {
+      const fallbackUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
+      res = await fetchJson(fallbackUrl);
+    }
 
     if (res && res.results && res.results.length > 0) {
       const m = res.results[0];
       let externalId = `tt${m.id}`;
       try {
-        const extRes = await Promise.race([
-          fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`),
-          new Promise((_, reject) => setTimeout(() => reject(new Error('ExtID Timeout')), 800))
-        ]);
+        const extRes = await fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`);
         if (extRes && extRes.imdb_id) externalId = extRes.imdb_id;
       } catch (err) {}
 
@@ -788,11 +797,25 @@ app.post('/api/custom-genre', async (req, res) => {
 
     saveConfig();
 
-    // 1. Scrub web via Gemini API
-    const rawMovies = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
+    const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+    let rawMovies = [];
+
+    // 1. Scrub web via Gemini API with safe fallback
+    try {
+      rawMovies = await queryGeminiForMovies(prompt, config.geminiApiKey, model);
+    } catch (err) {
+      console.warn(`[AI Custom Genre] Gemini API call failed (${err.message}). Using topic search fallback...`);
+      const cleanPrompt = prompt.replace(/movies about|movie about|films about|movies|films|the best|top|a list of|list of|collection of/gi, '').trim() || prompt;
+      const searchRes = await fetchJson(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(cleanPrompt)}`);
+      if (searchRes && searchRes.results && searchRes.results.length > 0) {
+        rawMovies = searchRes.results.map(m => ({
+          title: m.title || m.original_title,
+          year: m.release_date ? parseInt(m.release_date.substring(0, 4)) : null
+        }));
+      }
+    }
 
     // 2. Resolve to TMDB / IMDb metadata in parallel chunks
-    const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
     const stremioMetas = [];
     const chunkSize = 10;
 
