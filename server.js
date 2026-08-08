@@ -1,4 +1,4 @@
-﻿const express = require('express');
+const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
@@ -659,8 +659,8 @@ Format:
 ]`;
 
   const modelsToTry = preferredModel && preferredModel !== 'gemini-1.5-pro'
-    ? [preferredModel, 'gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'] 
-    : ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'];
+    ? [preferredModel, 'gemini-1.5-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash-8b', 'gemini-2.0-flash'] 
+    : ['gemini-1.5-flash', 'gemini-2.0-flash-lite', 'gemini-1.5-flash-8b', 'gemini-2.0-flash', 'gemini-1.5-pro'];
 
   let lastError;
   for (const model of modelsToTry) {
@@ -680,7 +680,15 @@ Format:
         }
       };
 
-      const response = await postJson(url, payload);
+      let response = await postJson(url, payload);
+
+      // Handle Rate Limit / Quota Exceeded with a brief retry delay
+      if (response && response.error && (response.error.message.includes('quota') || response.error.message.includes('Quota') || response.error.message.includes('429'))) {
+        console.log(`[Gemini AI] Model ${model} hit free tier rate limit. Waiting 2.5 seconds before fallback...`);
+        await new Promise(r => setTimeout(r, 2500));
+        lastError = new Error(response.error.message);
+        continue;
+      }
 
       if (response && response.error) {
         console.log(`[Gemini AI] Model ${model} returned API error: ${response.error.message}`);
