@@ -386,11 +386,11 @@ app.get('/manifest.json', (req, res) => {
     });
   }
 
-  // Inject the AI Search catalog
+  // Inject the AI Search catalog at position #1
   catalogs.unshift({
     type: 'movie',
     id: 'ai_search',
-    name: '🤖 AI Movie Assistant',
+    name: '🤖 AI Movie Search Curator',
     extra: [
       { name: 'search', isRequired: true },
       { name: 'skip', isRequired: false }
@@ -399,10 +399,10 @@ app.get('/manifest.json', (req, res) => {
 
   const manifest = {
     id: 'org.subgenre.auto.catalog',
-    version: '2.0.0',
-    name: 'Custom Genre Collections',
-    description: 'Auto-updating collections of movies. Works seamlessly with Easynews & Debrid!',
-    resources: ['catalog'],
+    version: '2.1.0',
+    name: '🤖 AI Movie Search Curator & Custom Genres',
+    description: 'Instant AI Movie Search & Auto-updating Custom Playlists!',
+    resources: ['catalog', 'meta'],
     types: ['movie'],
     catalogs: catalogs,
     idPrefixes: ['tt']
@@ -646,7 +646,7 @@ async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isL
 
   const systemInstruction = isLiveSearch 
     ? `You are a lightning-fast Stremio search backend. The user is searching for a movie theme or query.
-  Return the top 20 to 25 most accurate movies matching the query.
+  Return the top 15 to 20 most relevant real movies matching the query.
   You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
   Format: [{"title": "Movie Title 1", "year": 1999}]`
     : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
@@ -736,12 +736,17 @@ async function searchTmdbMovie(title, year, apiKey) {
     let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
     if (year) searchUrl += `&year=${year}`;
 
-    const res = await fetchJson(searchUrl);
+    const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('TMDB Timeout')), 1200));
+    const res = await Promise.race([fetchJson(searchUrl), timeoutPromise]);
+
     if (res && res.results && res.results.length > 0) {
       const m = res.results[0];
       let externalId = `tt${m.id}`;
       try {
-        const extRes = await fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`);
+        const extRes = await Promise.race([
+          fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`),
+          new Promise((_, reject) => setTimeout(() => reject(new Error('ExtID Timeout')), 800))
+        ]);
         if (extRes && extRes.imdb_id) externalId = extRes.imdb_id;
       } catch (err) {}
 
