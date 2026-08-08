@@ -449,18 +449,11 @@ app.get('/catalog/movie/:id*', async (req, res) => {
       
       try {
         const rawMovies = await queryGeminiForMovies(query, config.geminiApiKey, '', true);
-        const stremioMetas = [];
-        const chunkSize = 25; // Massive parallelization for speed
-        
-        for (let i = 0; i < rawMovies.length; i += chunkSize) {
-          const chunk = rawMovies.slice(i, i + chunkSize);
-          const batch = await Promise.all(
-            chunk.map(m => searchTmdbMovie(m.title, m.year, tmdbKey))
-          );
-          batch.filter(Boolean).forEach(m => {
-            stremioMetas.push(m);
-          });
-        }
+        // Parallelize all lookups at once for lightning-fast TV response
+        const batch = await Promise.all(
+          rawMovies.slice(0, 25).map(m => searchTmdbMovie(m.title, m.year, tmdbKey))
+        );
+        const stremioMetas = batch.filter(Boolean);
         
         searchCache[cacheKey] = {
           timestamp: Date.now(),
@@ -653,9 +646,9 @@ async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isL
 
   const systemInstruction = isLiveSearch 
     ? `You are a lightning-fast Stremio search backend. The user is searching for a movie theme or query.
-Return the most popular 50 to 70 movies matching the query.
-You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
-Format: [{"title": "Movie Title 1", "year": 1999}]`
+  Return the top 20 to 25 most accurate movies matching the query.
+  You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
+  Format: [{"title": "Movie Title 1", "year": 1999}]`
     : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
 Return a high-quality, comprehensive list of the best 70 to 100 real, existing movies matching the theme. Dig deep into film history and iconic cinema.
 You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
@@ -665,9 +658,9 @@ Format:
   {"title": "Movie Title 2", "year": 2005}
 ]`;
 
-  const modelsToTry = preferredModel 
-    ? [preferredModel, 'gemini-1.5-flash', 'gemini-2.0-flash', 'gemini-1.5-pro'] 
-    : ['gemini-1.5-flash', 'gemini-2.0-flash', 'gemini-1.5-pro', 'gemini-flash-latest'];
+  const modelsToTry = preferredModel && preferredModel !== 'gemini-1.5-pro'
+    ? [preferredModel, 'gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'] 
+    : ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'];
 
   let lastError;
   for (const model of modelsToTry) {
