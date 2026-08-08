@@ -30938,6 +30938,3046 @@
     "name": "Movies Everyone Should Watch At Least Once",
     "timestamp": 1786230742921
   },
+  "custom_letterboxd_top_250_docs_1786233417306": {
+    "description": "Official Letterboxd Collection: Top 250 highest-rated documentary films of all time.",
+    "id": "custom_letterboxd_top_250_docs_1786233417306",
+    "isCustomAI": true,
+    "name": "Letterboxd Official: Top 250 Documentary Films",
+    "timestamp": 1786233417306
+  },
+  "custom_letterboxd_top_250_docs_1786233425573": {
+    "description": "Official Letterboxd Collection: Top 250 highest-rated documentary films of all time (0 movies).",
+    "id": "custom_letterboxd_top_250_docs_1786233425573",
+    "isCustomAI": true,
+    "name": "Letterboxd Official: Top 250 Documentary Films",
+    "timestamp": 1786233425573
+  },
+  "custom_letterboxd_top_250_docs_1786233511843": {
+    "description": "Official Letterboxd Collection: Top 250 highest-rated documentary films of all time (233 movies).",
+    "id": "custom_letterboxd_top_250_docs_1786233511843",
+    "isCustomAI": true,
+    "movies": [
+      {
+        "background": "https://image.tmdb.org/t/p/original/kPDmoP4BCFaELJVBog4nIV4CPge.jpg",
+        "description": "A concert film documenting Talking Heads at the height of their popularity, on tour for their 1983 album \"Speaking in Tongues.\" The band takes the stage one by one and is joined by a cadre of guest musicians for a career-spanning and cinematic performance that features creative choreography and visuals.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0088178",
+        "imdbRating": "8.3",
+        "name": "Stop Making Sense",
+        "poster": "https://image.tmdb.org/t/p/w500/utNpurUe1MMjEaHqvpkfxgfpSnV.jpg",
+        "releaseInfo": "1984",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bBleQSVXH97a0G2oF9MDAYCOlLG.jpg",
+        "description": "This film made by a Palestinian-Israeli collective shows the destruction of the occupied West Bank's Masafer Yatta by Israeli soldiers and the alliance which develops between the Palestinian activist Basel and Israeli journalist Yuval.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt30953759",
+        "imdbRating": "8.0",
+        "name": "No Other Land",
+        "poster": "https://image.tmdb.org/t/p/w500/s7XYieuZg9kMe07i9VI4bfGN4Pw.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8yJg7SOv0hbuOYhFwq3FW8GajuM.jpg",
+        "description": "Where does voguing come from, and what, exactly, is throwing shade? This landmark documentary provides a vibrant snapshot of the 1980s through the eyes of New York City's African American and Latinx Harlem drag-ball scene. Made over seven years, PARIS IS BURNING offers an intimate portrait of rival fashion \"houses,\" from fierce contests for trophies to house mothers offering sustenance in a world rampant with homophobia, transphobia, racism, AIDS, and poverty. Featuring legendary voguers, drag queens, and trans women — including Willi Ninja, Pepper LaBeija, Dorian Corey, and Venus Xtravaganza.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0100332",
+        "imdbRating": "8.0",
+        "name": "Paris Is Burning",
+        "poster": "https://image.tmdb.org/t/p/w500/90rCWH41mj9hjHUEy2SOHfuAOl3.jpg",
+        "releaseInfo": "1991",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bJolDsqM8vnlusFJdnCi9rg1nX7.jpg",
+        "description": "Director Claude Lanzmann spent 11 years on this sprawling documentary about the Holocaust, conducting his own interviews and refusing to use a single frame of archival footage. Dividing Holocaust witnesses into three categories – survivors, bystanders, and perpetrators – Lanzmann presents testimonies from survivors of the Chelmno concentration camp, an Auschwitz escapee, and witnesses of the Warsaw Ghetto Uprising, as well as a chilling report of gas chambers from an SS officer at Treblinka.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0090015",
+        "imdbRating": "8.2",
+        "name": "Shoah",
+        "poster": "https://image.tmdb.org/t/p/w500/yvwF7dfSCybFcBOklUzKpE46bHM.jpg",
+        "releaseInfo": "1985",
+        "type": "movie"
+      },
+      {
+        "description": "A broken memory.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1247970",
+        "imdbRating": "N/A",
+        "name": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Mayhem",
+        "poster": "https://image.tmdb.org/t/p/w500/qf7uP8d31M2bbXWXR8DSBXXvqOp.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/a9jBEm8wb4XJIvAdFJlAVgVxbB5.jpg",
+        "description": "A chronicle of the rise and fall of O.J. Simpson, whose high-profile murder trial exposed the extent of American racial tensions, revealing a fractured and divided nation.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt5275892",
+        "imdbRating": "8.4",
+        "name": "O.J.: Made in America",
+        "poster": "https://image.tmdb.org/t/p/w500/nFmg2G4IJ0x9mALXkYFN8Gw0Dw5.jpg",
+        "releaseInfo": "2016",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/jqcKHIV4sCzvCffzQmuOJfG4jiQ.jpg",
+        "description": "British progressive rock band Pink Floyd perform at the ancient Roman Amphitheatre in the ruins of Pompeii, Italy in 1971. Although the band perform a typical live set from the era, there is no audience beyond the basic film crew.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0069090",
+        "imdbRating": "8.0",
+        "name": "Pink Floyd: Live at Pompeii",
+        "poster": "https://image.tmdb.org/t/p/w500/bxjgbHH14nEMx3YtFDLJ04omQhH.jpg",
+        "releaseInfo": "1972",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/pYeiEm55NySzK9ksKlQGlFQNapz.jpg",
+        "description": "Every school day, African-American teenagers William Gates and Arthur Agee travel 90 minutes each way from inner-city Chicago to St. Joseph High School in Westchester, Illinois, a predominately white suburban school well-known for the excellence of its basketball program. Gates and Agee dream of NBA stardom, and with the support of their close-knit families, they battle the social and physical obstacles that stand in their way. This acclaimed documentary was shot over the course of five years.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0110057",
+        "imdbRating": "7.6",
+        "name": "Hoop Dreams",
+        "poster": "https://image.tmdb.org/t/p/w500/gLzHl2XBtVwycl8DxdOXRHPm8G3.jpg",
+        "releaseInfo": "1994",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/1jLaJPdu7dMl0Nk3vLuafDx9PWS.jpg",
+        "description": "In this chilling and groundbreaking documentary, former Indonesian death squad leaders reenact their real-life mass killings in the style of various film genres. As they recreate their past atrocities, the line between reality and performance blurs, exposing the lingering impact of Indonesia's 1965-66 anti-communist purge and the unsettling psychology of its perpetrators.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt2375605",
+        "imdbRating": "7.7",
+        "name": "The Act of Killing",
+        "poster": "https://image.tmdb.org/t/p/w500/sp5B7Tz5ttsgOLnIlCP5uEhtesI.jpg",
+        "releaseInfo": "2012",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/birfwAyzq34B6FZemYZ5LC5Qhxi.jpg",
+        "description": "In 2001, Andrew Bagby, a medical resident, is murdered not long after breaking up with his girlfriend. Soon after, when she announces she's pregnant, one of Andrew's many close friends, Kurt Kuenne, begins this film, a gift to the child.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1152758",
+        "imdbRating": "8.1",
+        "name": "Dear Zachary: A Letter to a Son About His Father",
+        "poster": "https://image.tmdb.org/t/p/w500/yYVHGe7U55Ojx11y5A82phPpCHv.jpg",
+        "releaseInfo": "2008",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bTi7ggNJeNpmyHAaehtDXp9cmdm.jpg",
+        "description": "This documentary about teenagers living on the streets in Seattle began as a magazine article. The film follows nine teenagers who discuss how they live by panhandling, prostitution, and petty theft.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0088196",
+        "imdbRating": "7.7",
+        "name": "Streetwise",
+        "poster": "https://image.tmdb.org/t/p/w500/fW9z3HXWYTKzlqE3CYMMxaXyyy2.jpg",
+        "releaseInfo": "1984",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/hiqB5fFZ230MeFAGLPahoy06UOE.jpg",
+        "description": "A love letter from a young mother to her daughter, the film tells the story of Waad al-Kateab’s life through five years of the uprising in Aleppo, Syria as she falls in love, gets married and gives birth to Sama, all while cataclysmic conflict rises around her.  Her camera captures incredible stories of loss, laughter and survival as Waad wrestles with an impossible choice– whether or not to flee the city to protect her daughter’s life, when leaving means abandoning the struggle for freedom for which she has already sacrificed so much.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt9617456",
+        "imdbRating": "8.3",
+        "name": "For Sama",
+        "poster": "https://image.tmdb.org/t/p/w500/mDna51F8QfrJFZOgPGQUz3VKqsB.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/pVspyFNl8uE8jAoY3C973XkjTgB.jpg",
+        "description": "This film documents the coal miners' strike against the Brookside Mine of the Eastover Mining Company in Harlan County, Kentucky in June, 1973. Eastover's refusal to sign a contract (when the miners joined with the United Mine Workers of America) led to the strike, which lasted more than a year and included violent battles between gun-toting company thugs/scabs and the picketing miners and their supportive women-folk. Director Barbara Kopple puts the strike into perspective by giving us some background on the historical plight of the miners and some history of the UMWA.  Preserved by the Academy Film Archive in partnership with New York Women in Film & Television in 2004.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0074605",
+        "imdbRating": "7.5",
+        "name": "Harlan County U.S.A.",
+        "poster": "https://image.tmdb.org/t/p/w500/p0cyMNsoP5ap0omfhakhImBWTRw.jpg",
+        "releaseInfo": "1977",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/986n9SAXsuxpPJzFAWK3azPknX0.jpg",
+        "description": "As the Russian invasion begins, a team of Ukrainian journalists trapped in the besieged city of Mariupol struggle to continue their work documenting the war's atrocities.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt24082438",
+        "imdbRating": "8.1",
+        "name": "20 Days in Mariupol",
+        "poster": "https://image.tmdb.org/t/p/w500/zIRp1IeuPh4GgqFCH3y0DQuY9xP.jpg",
+        "releaseInfo": "2023",
+        "type": "movie"
+      },
+      {
+        "description": "About the first Komsomol members.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0383327",
+        "imdbRating": "9.5",
+        "name": "Twenty Years Later",
+        "poster": "https://image.tmdb.org/t/p/w500/oASrjDsoTd3cwHYLZRxXp2a3r3.jpg",
+        "releaseInfo": "1966",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/eozLsgdW5VyUEdPDuDaBD4VB86o.jpg",
+        "description": "An Indonesian man with a communist background named Ramli was brutally murdered when the \"Communist\" purge occurred in 1965. His remaining family members lived in fear and silence until the making of this documentary. Adi, a brother of his, decided to revisit the horrific incident and visited the men who were responsible for the killings and one survivor of the purge. These meetings uncovered sadistic details of the murders and exposed raw emotions and reactions of the killers' family members about what happened in the past - much to Adi's disappointment.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt3521134",
+        "imdbRating": "7.8",
+        "name": "The Look of Silence",
+        "poster": "https://image.tmdb.org/t/p/w500/7TakQLT8gyzIMG8hX8RLTd5qROQ.jpg",
+        "releaseInfo": "2014",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/c0QYwNyeURswT7fxmR2mlfpdk0l.jpg",
+        "description": "A paralysingly beautiful documentary with a global vision—an odyssey through landscape and time—that attempts to capture the essence of life.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0103767",
+        "imdbRating": "8.2",
+        "name": "Baraka",
+        "poster": "https://image.tmdb.org/t/p/w500/ldEuJQ4z7zEvL7iXraESWBUfQcz.jpg",
+        "releaseInfo": "1992",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/z9S7Z0NDbXcqhDCoPMv6ixeXZ6V.jpg",
+        "description": "Filmmaking icon Agnès Varda, the award-winning director regarded by many as the grandmother of the French new wave, turns the camera on herself with this unique autobiographical documentary. Composed of film excerpts and elaborate dramatic re-creations, Varda's self-portrait recounts the highs and lows of her professional career, the many friendships that affected her life and her longtime marriage to cinematic giant Jacques Demy.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1129435",
+        "imdbRating": "7.7",
+        "name": "The Beaches of Agnès",
+        "poster": "https://image.tmdb.org/t/p/w500/mqTFhLpdyMNLBvmN5KFhCOFWWIp.jpg",
+        "releaseInfo": "2008",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/84E96lyR81OvUjCimcrfuzn9er5.jpg",
+        "description": "Takes us to locations all around the US and shows us the heavy toll that modern technology is having on humans and the earth. The visual tone poem contains neither dialogue nor a vocalized narration: its tone is set by the juxtaposition of images and the exceptional music by Philip Glass.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0085809",
+        "imdbRating": "7.9",
+        "name": "Koyaanisqatsi",
+        "poster": "https://image.tmdb.org/t/p/w500/6zCNciRcob8lwuydVXgq0esla8L.jpg",
+        "releaseInfo": "1983",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xvh6gngqMwgyyfmR4mtaLxnCTy.jpg",
+        "description": "Chronicles the events immediately surrounding the CIA- supported coup itself.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0074187",
+        "imdbRating": "7.8",
+        "name": "The Battle of Chile: Part II",
+        "poster": "https://image.tmdb.org/t/p/w500/566lwvXAEGoRp7QGspqH8ByBTrF.jpg",
+        "releaseInfo": "1976",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ijGipE4DDF5YX3P0vg8JU6CmKSt.jpg",
+        "description": "The chronicle of the political tension in Chile in 1973 and of the violent counter revolution against the democratically elected government of Salvador Allende.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0072685",
+        "imdbRating": "7.4",
+        "name": "The Battle of Chile: Part I",
+        "poster": "https://image.tmdb.org/t/p/w500/6rJnhieQrm5HRt5AGgqxxXrnPKB.jpg",
+        "releaseInfo": "1975",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/nQ7uBnLum3SB5LbCCBTKBYWnEzL.jpg",
+        "description": "A group of young adults visit a boarded up campsite named Crystal Lake where they soon encounter the mysterious Jason Voorhees and his deadly intentions.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0758746",
+        "imdbRating": "5.8",
+        "name": "Friday the 13th",
+        "poster": "https://image.tmdb.org/t/p/w500/88wlJ4teYlck4hJ2bnlxBrAVh0m.jpg",
+        "releaseInfo": "2009",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/2hthvh4L1pHYZ5alepSqIAFYrRv.jpg",
+        "description": "David Attenborough takes viewers on a breathtaking journey showing there is nowhere more vital for our survival, more full of life, wonder, or surprise, than the ocean. Through spectacular sequences featuring coral reefs, kelp forests and the open ocean, Attenborough shares why a healthy ocean keeps the entire planet stable and flourishing.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt33022710",
+        "imdbRating": "8.0",
+        "name": "Ocean with David Attenborough",
+        "poster": "https://image.tmdb.org/t/p/w500/oAKzcqUCP3EK7rgAx9Jj8Futv8O.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/yZKLgaHKmJCrMsg5e1naV4JqY6b.jpg",
+        "description": "Amid the failing counteroffensive, a journalist follows a Ukrainian platoon on their mission to traverse one mile of heavily fortified forest and liberate a strategic village from Russian occupation. But the farther they advance through their destroyed homeland, the more they realize that this war may never end.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt34964205",
+        "imdbRating": "7.9",
+        "name": "2000 Meters to Andriivka",
+        "poster": "https://image.tmdb.org/t/p/w500/s1TC3QebWWWJ6CceqbBgAvJde8t.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/wXsDDQ4JEdvzL19DUsbsKzlPq9f.jpg",
+        "description": "Three young men bond together to escape volatile families in their Rust Belt hometown. As they face adult responsibilities, unexpected revelations threaten their decade-long friendship.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7476236",
+        "imdbRating": "7.7",
+        "name": "Minding the Gap",
+        "poster": "https://image.tmdb.org/t/p/w500/uOu2YgrryHD1UlngykzTodAxGdC.jpg",
+        "releaseInfo": "2018",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/4VVw78ytllyGkc8C7yjNATGq56i.jpg",
+        "description": "The daily lives and routine of 37 families living in a huge 12-story building in Copacabana, Rio de Janeiro: their drama, aspirations, intimate revelations, loneliness, dreams...",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0333388",
+        "imdbRating": "8.1",
+        "name": "Master, a Building in Copacabana",
+        "poster": "https://image.tmdb.org/t/p/w500/n3Nf5XD3PjoQoX0z41bNBwOC8Kx.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/6xOMUJbcmke5Zlyg4MJRPrmlCPB.jpg",
+        "description": "An intimate documentary that looks at the vicious cycles of drug addiction and street crime in one of the roughest parts of New Jersey.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt15119154",
+        "imdbRating": "8.2",
+        "name": "Life of Crime: 1984-2020",
+        "poster": "https://image.tmdb.org/t/p/w500/3HwH3RTBB7mS3RjCyfKuxxqiySO.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/2AI3pSt5sbAEav6isVDIeCuiZql.jpg",
+        "description": "Laura and Fabrizio have been meeting every summer in the forest by her parent's summer home. Fabrizio is a solitary boy with only his dog for company; Laura a sweet but unconfident child. This summer new aspects enter into their story as both are growing up. Laura is falling in love with Fabrizio, while he displays a new sexual awareness of her masked by his malice. Things develop further when they meet Sylvia who, unlike the innocent Laura, is confident and assertive. Fabrizio develops a fascination with her, eventually bribing Laura to fetch her to the forest to join them in play.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0076749",
+        "imdbRating": "5.3",
+        "name": "Playing with Love",
+        "poster": "https://image.tmdb.org/t/p/w500/nu5uj47KSF73VPEiIRYdPLJ96j7.jpg",
+        "releaseInfo": "1977",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/qgQPajFB3gt58dwJX9A13P3rJIQ.jpg",
+        "description": "After rocketing to global fame, singer-songwriter Noah Kahan returns to his Vermont roots to get back in tune with himself.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt37172278",
+        "imdbRating": "8.3",
+        "name": "Noah Kahan: Out of Body",
+        "poster": "https://image.tmdb.org/t/p/w500/8VtZAonOgK8hae7FwOZCSg7XmCu.jpg",
+        "releaseInfo": "2026",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/698FjyzLdpgXmUSr63LaRwblTmx.jpg",
+        "description": "Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history's most fearsome creatures.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt8041270",
+        "imdbRating": "6.6",
+        "name": "Jurassic World Dominion",
+        "poster": "https://image.tmdb.org/t/p/w500/jbAvCACjLf1ZG0unB2tdmx5HAf1.jpg",
+        "releaseInfo": "2022",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/sS3jaC2SXoeYmjAuqPeoeelPZqP.jpg",
+        "description": "The remarkable story of Brazilian racing driver Ayrton Senna, charting his physical and spiritual achievements on the track and off, his quest for perfection, and the mythical status he has since attained, is the subject of Senna, a documentary feature that spans the racing legend's years as an F1 driver, from his opening season in 1984 to his untimely death a decade later.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1424432",
+        "imdbRating": "8.1",
+        "name": "Senna",
+        "poster": "https://image.tmdb.org/t/p/w500/nZbLCbRoP6iJq5sr8daHQzjnzFh.jpg",
+        "releaseInfo": "2010",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/byRNEm1QwfQC1Mn0K4gLM2fIfWO.jpg",
+        "description": "A cameraman wanders around with a camera slung over his shoulder, documenting urban life with dazzling inventiveness.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0019760",
+        "imdbRating": "7.8",
+        "name": "Man with a Movie Camera",
+        "poster": "https://image.tmdb.org/t/p/w500/vJgAdgJWX54v0oXfIvhwjlZnmgn.jpg",
+        "releaseInfo": "1929",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/yvafnYvrxnwD3MrXcc18sUrkHqU.jpg",
+        "description": "Varda focuses her eye on gleaners: those who scour already-reaped fields for the odd potato or turnip. Her investigation leads from forgotten corners of the French countryside to off-hours at the green markets of Paris, following those who insist on finding a use for that which society has cast off, whether out of necessity or activism.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0247380",
+        "imdbRating": "7.6",
+        "name": "The Gleaners and I",
+        "poster": "https://image.tmdb.org/t/p/w500/6IdCTKi4Eu7i897jpe59wIDGCri.jpg",
+        "releaseInfo": "2000",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/noOz8qEQKBJZ7aEk7VboOUsJyR2.jpg",
+        "description": "Martin Scorsese's documentary intertwines footage from The Band's incredible farewell tour with probing backstage interviews and featured performances by Eric Clapton, Bob Dylan, Joni Mitchell, Van Morrison, and other rock legends.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0077838",
+        "imdbRating": "7.7",
+        "name": "The Last Waltz",
+        "poster": "https://image.tmdb.org/t/p/w500/2K7CFH0AIHnGrA4yQjPCoIB5CmQ.jpg",
+        "releaseInfo": "1978",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8Tvq2tkvr8LslXJpwjWPEap4BNa.jpg",
+        "description": "Marlon Riggs, with assistance from other gay Black men, especially poet Essex Hemphill, celebrates Black men loving Black men as a revolutionary act. The film intercuts footage of Hemphill reciting his poetry, Riggs telling the story of his growing up, scenes of men in social intercourse and dance, and various comic riffs, including a visit to the \"Institute of Snap!thology,\" where men take lessons in how to snap their fingers: the sling snap, the point snap, the diva snap.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0103099",
+        "imdbRating": "6.6",
+        "name": "Tongues Untied",
+        "poster": "https://image.tmdb.org/t/p/w500/wbrcRd695aB8D6pkWh0hSurKRbO.jpg",
+        "releaseInfo": "1990",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/2DgKCfO49b8KwF18bWPS1Efpjpt.jpg",
+        "description": "Five broken cameras – and each one has a powerful tale to tell. Embedded in the bullet-ridden remains of digital technology is the story of Emad Burnat, a farmer from the Palestinian village of Bil’in, which famously chose nonviolent resistance when the Israeli army encroached upon its land to make room for Jewish colonists. Emad buys his first camera in 2005 to document the birth of his fourth son, Gibreel. Over the course of the film, he becomes the peaceful archivist of an escalating struggle as olive trees are bulldozed, lives are lost, and a wall is built to segregate burgeoning Israeli settlements.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt2125423",
+        "imdbRating": "7.5",
+        "name": "Five Broken Cameras",
+        "poster": "https://image.tmdb.org/t/p/w500/xPNfzTzvjbcpMUTaGxnk15njMg3.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/lqtzWKCpejXdKb22cav5bB6MqSR.jpg",
+        "description": "During the last forty years, the photographer Sebastião Salgado has been travelling through the continents, in the footsteps of an ever-changing humanity. He has witnessed the major events of our recent history: international conflicts, starvations and exodus… He is now embarking on the discovery of pristine territories, of the wild fauna and flora, of grandiose landscapes: a huge photographic project which is a tribute to the planet's beauty. Salgado's life and work are revealed to us by his son, Juliano, who went with him during his last journeys, and by Wim Wenders, a photographer himself.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt3674140",
+        "imdbRating": "8.1",
+        "name": "The Salt of the Earth",
+        "poster": "https://image.tmdb.org/t/p/w500/jRmQNj8NacAHJnzwfvFvglKSGB6.jpg",
+        "releaseInfo": "2014",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/swo2Z70xnO8FPWbYR7IjzrY3Xff.jpg",
+        "description": "Students flooded Columbia University’s lawn to create the Gaza Solidarity Encampment in order to pressure their university to divest from the US and Israeli weapons companies. The film follows the central organizers of the encampment as they are thrust into the spotlight, face violent police repression and suspension, congressional pressure, and a media firestorm, all while fighting to attain their goal of divestment at any cost.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt35423402",
+        "imdbRating": "7.8",
+        "name": "The Encampments",
+        "poster": "https://image.tmdb.org/t/p/w500/4lSuKAurAjmSkrtLYhsPv5ewlSe.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/6i0P1F5cDzHkcyO4GUNGlwhU5tQ.jpg",
+        "description": "A documentary that chronicles the making of The Boy and the Heron, filmed with exclusive access to Studio Ghibli across an astonishing seven years.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt32408421",
+        "imdbRating": "7.8",
+        "name": "Hayao Miyazaki and the Heron",
+        "poster": "https://image.tmdb.org/t/p/w500/Bw7jGthm637GqlRq5rT04GJrKL.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/tbSjemOf1nXPOjWELdaeZ7qj1iX.jpg",
+        "description": "Filmed over nearly five years in twenty-five countries on five continents, and shot on seventy-millimetre film, Samsara transports us to the varied worlds of sacred grounds, disaster zones, industrial complexes, and natural wonders.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0770802",
+        "imdbRating": "8.1",
+        "name": "Samsara",
+        "poster": "https://image.tmdb.org/t/p/w500/qodkea4k0pNUmNTl5TJO2PdTqgW.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/zS1OiCw3opLQYxjmhqhOQ7D7YyD.jpg",
+        "description": "\"Ars longa, vita brevis\" – art is long, life is short. This is one of Japanese music icon Ryuichi Sakamoto's favorite quotes, and the message that he leaves for viewers at the end of his final concert film, shot before he succumbed to cancer in March 2023. Consisting of only Sakamoto and his piano, Opus features the final live performances of 20 songs that Sakamoto meticulously curated to encapsulate his distinguished 40-year career.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt28490873",
+        "imdbRating": "7.7",
+        "name": "Ryuichi Sakamoto | Opus",
+        "poster": "https://image.tmdb.org/t/p/w500/fw0NchjBAQKz90klk4xNlw0xxuy.jpg",
+        "releaseInfo": "2023",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/anw7ONmtm1BrHd1Du0GQ5FoNd6r.jpg",
+        "description": "The life of internationally renowned artist and activist Nan Goldin is told through her slideshows, intimate interviews, ground-breaking photography, and rare footage of her personal fight to hold the Sackler family accountable for the overdose crisis.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt21374850",
+        "imdbRating": "7.2",
+        "name": "All the Beauty and the Bloodshed",
+        "poster": "https://image.tmdb.org/t/p/w500/cvO51xxtIUHc5w5ZgFsigiFaUaO.jpg",
+        "releaseInfo": "2022",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/CKGSEnFTpcxPJM5TzTFUJz53s.jpg",
+        "description": "Recounted mostly through animation to protect his identity, Amin looks back over his past as a child refugee from Afghanistan as he grapples with a secret he’s kept hidden for 20 years.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt8430054",
+        "imdbRating": "7.7",
+        "name": "Flee",
+        "poster": "https://image.tmdb.org/t/p/w500/vlMIbqOpYG553J1kOJXA7mwQvE6.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/A2fQstUG5OwJuq8DlwBXJKgQzNn.jpg",
+        "description": "Fourteen years after his first visit, Louis Theroux meets some of the growing community of religious-nationalist Israelis who have settled in the occupied West Bank.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt36640622",
+        "imdbRating": "8.4",
+        "name": "Louis Theroux: The Settlers",
+        "poster": "https://image.tmdb.org/t/p/w500/iT1J9zYzEY069wF546RJmuYO5m4.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/kwwuAQpPvewf4voKVMN98KcXEPM.jpg",
+        "description": "Documents the lives of infamous fakers Elmyr de Hory and Clifford Irving. De Hory, who later committed suicide to avoid more prison time, made his name by selling forged works of art by painters like Picasso and Matisse. Irving was infamous for writing a fake autobiography of Howard Hughes. Welles moves between documentary and fiction as he examines the fundamental elements of fraud and the people who commit fraud at the expense of others.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0072962",
+        "imdbRating": "7.4",
+        "name": "F for Fake",
+        "poster": "https://image.tmdb.org/t/p/w500/fVeIDxS73CrosoeVOaefQuCUGZg.jpg",
+        "releaseInfo": "1973",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/YlPZHMV67Mucl1WCnKYpiHeFB9.jpg",
+        "description": "In 1970, right after the triumphant premiere of Stephen Sondheim’s groundbreaking concept musical Company, the renowned composer and lyricist, his director Harold Prince, the show’s stars, and a large pit orchestra all went into a Manhattan recording studio as part of a time-honored Broadway tradition: the making of the original cast album. What ensued was a marathon session in which all involved pushed themselves to the limit.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0293475",
+        "imdbRating": "7.2",
+        "name": "Original Cast Album: Company",
+        "poster": "https://image.tmdb.org/t/p/w500/2kqkqG154DXzUOE9n9wXpfMLIao.jpg",
+        "releaseInfo": "1970",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/c0gtBfDyOrba9e5wnFjrxn8rxQr.jpg",
+        "description": "A collection of stories about and images of our world, offering an immersion to the core of what it means to be human. Through these stories full of love and happiness, as well as hatred and violence, it brings us face to face with the Other, making us reflect on our lives. From stories of everyday experiences to accounts of the most unbelievable lives, these poignant encounters share a rare sincerity and underline who we are – our darker side, but also what is most noble in us, and what is universal. Our Earth is shown at its most sublime through never-before-seen aerial images accompanied by soaring music, resulting in an ode to the beauty of the world, providing a moment to draw breath and for introspection. This film is a politically engaged work which allows us to embrace the human condition and to reflect on the meaning of our existence.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt3327994",
+        "imdbRating": "8.4",
+        "name": "Human",
+        "poster": "https://image.tmdb.org/t/p/w500/l02W63OGQKYugJrs3Uw8nA9gii4.jpg",
+        "releaseInfo": "2015",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/k7bPM2CFFpJfGgSmY1B9EG9xmnI.jpg",
+        "description": "Between light and darkness stands Olfa, a Tunisian woman and the mother of four daughters. One day, her two older daughters disappear. To fill in their absence, the filmmaker Kaouther Ben Hania invites professional actresses and invents a unique cinema experience that will lift the veil on Olfa and her daughters' life stories. An intimate journey of hope, rebellion, violence, transmission and sisterhood that will question the very foundations of our societies.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt27502426",
+        "imdbRating": "7.4",
+        "name": "Four Daughters",
+        "poster": "https://image.tmdb.org/t/p/w500/iSpJ6fg1OOSO30IUkZskZDufVzN.jpg",
+        "releaseInfo": "2023",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/hHL4pwGzYS4njLpXhIjfc9skAQJ.jpg",
+        "description": "The story of life on our planet by the man who has seen more of the natural world than any other. In more than 90 years, Attenborough has visited every continent on the globe, exploring the wild places of our planet and documenting the living world in all its variety and wonder. Addressing the biggest challenges facing life on our planet, the film offers a powerful message of hope for future generations.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11989890",
+        "imdbRating": "8.4",
+        "name": "David Attenborough: A Life on Our Planet",
+        "poster": "https://image.tmdb.org/t/p/w500/zSKwyUDKDHiFU5syTTvQRDcGBPS.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bdSZ5SutGPvFPpRKZNcF1au6owe.jpg",
+        "description": "American Movie documents the story of filmmaker Mark Borchardt, his mission, and his dream. Spanning over two years of intense struggle with his film, his family, financial decline, and spiritual crisis, American Movie is a portrayal of ambition, obsession, excess, and one man's quest for the American Dream.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0181288",
+        "imdbRating": "7.5",
+        "name": "American Movie",
+        "poster": "https://image.tmdb.org/t/p/w500/y8dJgWr1HeW0RRxwANDWvgIXdsF.jpg",
+        "releaseInfo": "1999",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/1uecj8izDDjvZ4syzJQCOKRBjaa.jpg",
+        "description": "Working from the text of James Baldwin’s unfinished final novel, director Raoul Peck creates a meditation on what it means to be Black in the United States.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt5804038",
+        "imdbRating": "7.7",
+        "name": "I Am Not Your Negro",
+        "poster": "https://image.tmdb.org/t/p/w500/zwd0Zti7BvY1mO0mTPzM0fRrtc6.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xi7frd8JRME37yCsSEf6orYiQ0K.jpg",
+        "description": "This impressionistic portrait of the 1964 Tokyo Summer Olympics pays as much attention to the crowds and workers as it does to the actual competitive events. Highlights include an epic pole-vaulting match between West Germany and America, and the final marathon race through Tokyo's streets. Two athletes are highlighted: Ethiopian marathon runner Abebe Bikila, who receives his second gold medal, and runner Ahamed Isa from Chad, representing a country younger than he is.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0059817",
+        "imdbRating": "7.7",
+        "name": "Tokyo Olympiad",
+        "poster": "https://image.tmdb.org/t/p/w500/bjN7zlN5vq6bgvetojjM82qWwLE.jpg",
+        "releaseInfo": "1965",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/lns7roobSPQQTF54oSPzkT3qH1q.jpg",
+        "description": "A woman narrates the thoughts of a world traveler, meditations on time and memory expressed in words and images from places as far-flung as Japan, Guinea-Bissau, Iceland, and San Francisco.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0084628",
+        "imdbRating": "7.5",
+        "name": "Sans Soleil",
+        "poster": "https://image.tmdb.org/t/p/w500/2ZmVbnecEeGoZCimxMhpY0Nz7eh.jpg",
+        "releaseInfo": "1983",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/jaB7VzHKoPm5U4ck0KsFJ75dqp3.jpg",
+        "description": "Filmmaker Werner Herzog combs through the film archives of volcanologists Katia and Maurice Krafft to create a film that celebrates their legacy.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt19383190",
+        "imdbRating": "7.7",
+        "name": "The Fire Within: A Requiem for Katia and Maurice Krafft",
+        "poster": "https://image.tmdb.org/t/p/w500/i1LgOPrUq40dvCVo5oWX0XNqoQa.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/aXLcNxJI2JDdASNL6ZaNI0jWl2s.jpg",
+        "description": "50 years after the legendary fest, Barak Goodman’s electric retelling of Woodstock, from the point of view of those who were on the ground, evokes the freedom, passion, community, and joy the three-day music festival created.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt9185816",
+        "imdbRating": "7.3",
+        "name": "Woodstock: Three Days That Defined a Generation",
+        "poster": "https://image.tmdb.org/t/p/w500/ejPrzjG17UrYHjUn8xE3EAYnoDl.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/cLZxnkj75cGBK1tLTMyIudOZYZk.jpg",
+        "description": "Michael Moore's view on how the Bush administration allegedly used the tragic events on 9/11 to push forward its agenda for unjust wars in Afghanistan and Iraq.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0361596",
+        "imdbRating": "7.1",
+        "name": "Fahrenheit 9/11",
+        "poster": "https://image.tmdb.org/t/p/w500/cZ7M343iuiMDc36fSeSm699XQFv.jpg",
+        "releaseInfo": "2004",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/d8GnSzK7hE4mmcv3A2UxQrYxYkF.jpg",
+        "description": "Filmmaker Catarina Vasconcelos sifts through the memories of her ancestors. Her naval officer grandfather, Henrique, who married her grandmother, Beatriz, on her 21st birthday, spent extended periods at sea, leaving her with six children. This is the beginning of a generational saga.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11625100",
+        "imdbRating": "6.5",
+        "name": "The Metamorphosis of Birds",
+        "poster": "https://image.tmdb.org/t/p/w500/qsXOh2SG9yMb8i5zwCBVqByYJPg.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/1LYWnmr5K3Hs3XEZ323bY0dBZsK.jpg",
+        "description": "During the same summer as Woodstock, over 300,000 people attended the Harlem Cultural Festival, celebrating African American music and culture, and promoting Black pride and unity. The footage from the festival sat in a basement, unseen for over 50 years, keeping this incredible event in America's history lost — until now.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7378922",
+        "imdbRating": "7.6",
+        "name": "Summer of Soul (...Or, When the Revolution Could Not Be Televised)",
+        "poster": "https://image.tmdb.org/t/p/w500/8kNwhqUGvpzWJd60O1Qvb8G6psK.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/lj79NEheTtAqHXjNvWaIPjd7ERe.jpg",
+        "description": "Twenty-five years after the verdict in the Rodney King trial sparked several days of protests, violence and looting in Los Angeles, LA 92 immerses viewers in that tumultuous period through stunning and rarely seen archival footage.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt6794424",
+        "imdbRating": "7.7",
+        "name": "LA 92",
+        "poster": "https://image.tmdb.org/t/p/w500/oT7OmkAoVnYDa8XbGipCEj6PVmN.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/1mlfORlfu2PtZnlEB3gMKqJy7Qp.jpg",
+        "description": "This movie chronicles the life and times of R. Crumb. Robert Crumb is the cartoonist/artist who drew Keep On Truckin', Fritz the Cat, and played a major pioneering role in the genesis of underground comix. Through interviews with his mother, two brothers, wife, ex-wife and ex-girlfriends, as well as selections from his vast quantity of graphic art, we are treated to a darkly comic ride through one man's subconscious mind.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0109508",
+        "imdbRating": "7.5",
+        "name": "Crumb",
+        "poster": "https://image.tmdb.org/t/p/w500/9ocTHdBCJdwJ65Tubg3lYlfMxEY.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/szUQKOq6m62n5h0eYrNxWM1oy6Y.jpg",
+        "description": "A chronicle of Bob Dylan's strange evolution between 1961 and 1966 from folk singer to protest singer to \"voice of a generation\" to rock star.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0367555",
+        "imdbRating": "7.8",
+        "name": "No Direction Home: Bob Dylan",
+        "poster": "https://image.tmdb.org/t/p/w500/lqOo4nyRS56Goi8InZqLFKGEJR5.jpg",
+        "releaseInfo": "2005",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/t5dzF5wHcra6cBsqMC8n5KeR25R.jpg",
+        "description": "Many times during his presidency, Lyndon B. Johnson said that ultimate victory in the Vietnam War depended upon the U.S. military winning the \"hearts and minds\" of the Vietnamese people. Filmmaker Peter Davis uses Johnson's phrase in an ironic context in this anti-war documentary, filmed and released while the Vietnam War was still under way, juxtaposing interviews with military figures like U.S. Army Chief of Staff William C. Westmoreland with shocking scenes of violence and brutality.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0071604",
+        "imdbRating": "7.7",
+        "name": "Hearts and Minds",
+        "poster": "https://image.tmdb.org/t/p/w500/yXnpP2RAZbG3DQufUGcOM5hU4cF.jpg",
+        "releaseInfo": "1974",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/54HEQPoD7zWGGaCusDnDBG3aCFO.jpg",
+        "description": "We live in a world where the powerful deceive us. We know they lie. They know we know they lie. They do not care. We say we care, but we do nothing, and nothing ever changes. It is normal. Welcome to the post-truth world. How we got to where we are now…",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt6156350",
+        "imdbRating": "7.4",
+        "name": "HyperNormalisation",
+        "poster": "https://image.tmdb.org/t/p/w500/tTqI2xoB7cGO7HASB22Sss6x44J.jpg",
+        "releaseInfo": "2016",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/1rWqDwDLssO1bDDAcPMcbUsHpcH.jpg",
+        "description": "Hammersmith Odeon, London, July 3, 1973. British singer David Bowie performs his alter ego Ziggy Stardust for the very last time. A decadent show, a hallucinogenic collage of kitsch, pop irony and flamboyant excess: a musical symbiosis of feminine passion and masculine dominance that defines Bowie's art and the glam rock genre.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0086643",
+        "imdbRating": "7.4",
+        "name": "Ziggy Stardust and the Spiders from Mars",
+        "poster": "https://image.tmdb.org/t/p/w500/dz4erM8bFxDjMpZmKLWKS6ryHER.jpg",
+        "releaseInfo": "1983",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/vrx9KIwXm7nxz49Fs9iTjPgxq7A.jpg",
+        "description": "After the death of her daughter at the hand of her boyfriend, Marisela Escobedo began to fight for justice not only against the murderer but also against the corrupt Mexican judicial system.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt13206564",
+        "imdbRating": "8.9",
+        "name": "The Three Deaths of Marisela Escobedo",
+        "poster": "https://image.tmdb.org/t/p/w500/4E7nNHIchHWzpETfwAERxFuviO6.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/4g5IcgWKESnkWfLJYyOYTjD3SsJ.jpg",
+        "description": "Shortly after the Gulf War, oil fires were raging all through Kuwait. In the week before this sea of fire would be extinguished, Werner Herzog filmed this apocalyptic landscape with its murky skies, scorched earth and capricious flames.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0104706",
+        "imdbRating": "7.9",
+        "name": "Lessons of Darkness",
+        "poster": "https://image.tmdb.org/t/p/w500/rSQaIbOQj6SUSOxr3BEiAmCoj1P.jpg",
+        "releaseInfo": "1992",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/mHG7dpLb0ZScSY3LpP443IHRmjy.jpg",
+        "description": "Rising pop star Mima Kirigoe quits singing to pursue a career as an actress. After she takes up a role on a popular detective show, her handlers and collaborators begin turning up murdered. Harboring feelings of guilt and haunted by visions of her former self, Mima's reality and fantasy meld into a frenzied paranoia.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0156887",
+        "imdbRating": "8.3",
+        "name": "Perfect Blue",
+        "poster": "https://image.tmdb.org/t/p/w500/6WTiOCfDPP8XV4jqfloiVWf7KHq.jpg",
+        "releaseInfo": "1998",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/s9oWvDQoVka7Zisi3rmJ3Lj9WA.jpg",
+        "description": "Incarcerated men defy the odds to expose a cover-up in one of America’s deadliest prison systems.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt35307139",
+        "imdbRating": "6.9",
+        "name": "The Alabama Solution",
+        "poster": "https://image.tmdb.org/t/p/w500/gultnK0rYs4xLLYhxQ9ZnvPfVAn.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/4vyuayVVu8ulqV2vW9z39pzGDZF.jpg",
+        "description": "In the year following the 9/11 terrorist attacks, young journalist Claude Baechtold finds himself in the war zone of Afghanistan. Not entirely voluntarily, the avowed anti-militarist is dragged by two fearless reporters on a round trip through the entire country.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt28815636",
+        "imdbRating": "8.4",
+        "name": "Riverboom",
+        "poster": "https://image.tmdb.org/t/p/w500/o2Qh8gbt1efpTXCwuuHDR4N4mde.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/3oRwn7WIMt4Vtw65mnydDQHthwQ.jpg",
+        "description": "A doomed love triangle between intrepid French scientists Katia and Maurice Krafft, and their beloved volcanoes.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt16227014",
+        "imdbRating": "7.5",
+        "name": "Fire of Love",
+        "poster": "https://image.tmdb.org/t/p/w500/9smEX8UP84yb2GisLwyAyQKvCWS.jpg",
+        "releaseInfo": "2022",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8RafTGqYqAN9FJzvC75USKmJCso.jpg",
+        "description": "Two South Africans set out to discover what happened to their unlikely musical hero, the mysterious 1970s rock 'n' roller, Rodriguez.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt2125608",
+        "imdbRating": "7.9",
+        "name": "Searching for Sugar Man",
+        "poster": "https://image.tmdb.org/t/p/w500/ucM98HuBHSWmn44oiE83hIDc6VB.jpg",
+        "releaseInfo": "2012",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/a94DIhurJk2QAhU9yBobvNsxBvM.jpg",
+        "description": "Cem Kaya’s dense documentary essay celebrates 60 years of Turkish music in Germany. An alternative post-war history that is at the same time a musical Who’s Who – from Yüksel Özkasap to Derdiyoklar and Muhabbet.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt13588944",
+        "imdbRating": "8.1",
+        "name": "Love, Deutschmarks and Death",
+        "poster": "https://image.tmdb.org/t/p/w500/lDhJTlhRo3GcaKmR0aDAosVmNiH.jpg",
+        "releaseInfo": "2022",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/w4uYP6ebNaLQIjsHcjQhjz3BB2m.jpg",
+        "description": "Director Agnès Varda and photographer/muralist JR journey through rural France and form an unlikely friendship.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt5598102",
+        "imdbRating": "7.6",
+        "name": "Faces Places",
+        "poster": "https://image.tmdb.org/t/p/w500/1NX6NTj9FiiJwEgRUmEifSzE7Na.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/hAlB9MaamrP1eDhGA4AkjSAPxAf.jpg",
+        "description": "Follows the story of \"Grizzly Man\" Timothy Treadwell and what the thirteen summers in a National Park in Alaska were like in his attempt to protect the grizzly bears. The film is full of unique images and a look into the spirit of a man who sacrificed himself for nature.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0427312",
+        "imdbRating": "7.5",
+        "name": "Grizzly Man",
+        "poster": "https://image.tmdb.org/t/p/w500/zuZWpcuye25rpsiZ4XzsAvmLDHG.jpg",
+        "releaseInfo": "2005",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/szd1nXObfjY8Co8olPaB9QAnPLA.jpg",
+        "description": "This documentary is set in the New Marilyn night club in Tokyo, Japan - where the hosts are transgender men. They can only make their living as hosts in a nightclub with other wannabes like them. The young women who come there often have relationships with them but the underlying fear is whether such a relationship can withstand the pressures on a girl to get married and have children. All three boys deal with this in different ways. These three hosts, the Shinjuku Boys, take us into their lives.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0114427",
+        "imdbRating": "6.9",
+        "name": "Shinjuku Boys",
+        "poster": "https://image.tmdb.org/t/p/w500/btX1xT0k4Zd9nD1Kl8P00C85JUt.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/hc9GwSmb0G4brW1xTfLwuwY5e4N.jpg",
+        "description": "Harvey Milk was an outspoken human rights activist and one of the first openly gay U.S. politicians elected to public office; even after his assassination in 1978, he continues to inspire disenfranchised people around the world.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0088275",
+        "imdbRating": "7.3",
+        "name": "The Times of Harvey Milk",
+        "poster": "https://image.tmdb.org/t/p/w500/icHnX0RALT9Mn8CVhtqBl04jqXi.jpg",
+        "releaseInfo": "1984",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/7Ud7QIJo21odjCaev6V4md9sK16.jpg",
+        "description": "Experience the meteoric rise of Oasis through rare footage and untold stories as the band reunites for Oasis Live '25, chronicling their journey from Manchester streets to global rock stardom.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt36152310",
+        "imdbRating": "N/A",
+        "name": "Don't Look Back in Anger",
+        "poster": "https://image.tmdb.org/t/p/w500/bZI6PLsq9ZLg1yYXEgwFDUmWnoR.jpg",
+        "releaseInfo": "2026",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/94PXfCDB6TrTx1YwuUjzIpVXT2i.jpg",
+        "description": "A documentary about World War I with never-before-seen footage to commemorate the centennial of Armistice Day, and the end of the war.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7905466",
+        "imdbRating": "7.8",
+        "name": "They Shall Not Grow Old",
+        "poster": "https://image.tmdb.org/t/p/w500/yMGfJeTXUdIjOqjS0jJfjgYEuYC.jpg",
+        "releaseInfo": "2018",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/sOFwEeWmlQufAQwLH7OXnw2oLlj.jpg",
+        "description": "A horrific triple child murder leads to an indictment and trial of three nonconformist boys based on questionable evidence.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0117293",
+        "imdbRating": "7.6",
+        "name": "Paradise Lost: The Child Murders at Robin Hood Hills",
+        "poster": "https://image.tmdb.org/t/p/w500/h65fwEQTv9zRNyEuExE1wAk5CQ2.jpg",
+        "releaseInfo": "1996",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/kwccaxm4rN5eVVZzkRIkac8Lba9.jpg",
+        "description": "As a visually radical memoir, CAMERAPERSON draws on the remarkable footage that filmmaker Kirsten Johnson has shot and reframes it in ways that illuminate moments and situations that have personally affected her. What emerges is an elegant meditation on the relationship between truth and the camera frame, as Johnson transforms scenes that have been presented on Festival screens as one kind of truth into another kind of story—one about personal journey, craft, and direct human connection.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt5375040",
+        "imdbRating": "6.7",
+        "name": "Cameraperson",
+        "poster": "https://image.tmdb.org/t/p/w500/p1Od99QxnzCB9vKu9uxkZQlPZQ5.jpg",
+        "releaseInfo": "2016",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/gOBKWe6lHlt8srk11TFlDuBtl0H.jpg",
+        "description": "The enthralling, against-all-odds story that transfixed the world in 2018: the daring rescue of twelve boys and their coach from deep inside a flooded cave in Northern Thailand.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt9098872",
+        "imdbRating": "8.0",
+        "name": "The Rescue",
+        "poster": "https://image.tmdb.org/t/p/w500/kC7fVtCkJACwPBaRr2hlj2whfKX.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/3n3Wo9hPpipFqUXCNiftVyXSw13.jpg",
+        "description": "It's 1974. Muhammad Ali is 32 and thought by many to be past his prime. George Foreman is ten years younger and the heavyweight champion of the world. Promoter Don King wants to make a name for himself and offers both fighters five million dollars apiece to fight one another, and when they accept, King has only to come up with the money. He finds a willing backer in Mobutu Sese Suko, the dictator of Zaire, and the \"Rumble in the Jungle\" is set, including a musical festival featuring some of America's top black performers, like James Brown and B.B. King.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0118147",
+        "imdbRating": "7.6",
+        "name": "When We Were Kings",
+        "poster": "https://image.tmdb.org/t/p/w500/yBkZK1JZOOJ3q5Jj1H9UP9T8YuV.jpg",
+        "releaseInfo": "1996",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/87NFGpptRN7xnI3VfERAZEwbh7C.jpg",
+        "description": "A documentary of insect life in meadows and ponds, using incredible close-ups, slow motion, and time-lapse photography. It includes bees collecting nectar, ladybugs eating mites, snails mating, spiders wrapping their catch, a scarab beetle relentlessly pushing its ball of dung uphill, endless lines of caterpillars, an underwater spider creating an air bubble to live in, and a mosquito hatching.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0117040",
+        "imdbRating": "7.6",
+        "name": "Microcosmos",
+        "poster": "https://image.tmdb.org/t/p/w500/OPoiGrzNr5FWoczXH5Gs1cReec.jpg",
+        "releaseInfo": "1996",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8QAqAqZY6qoIWBuL7aoA6QuR6Jn.jpg",
+        "description": "The secret life of a young World of Warcraft gamer is vividly reimagined when his online friends contact his family after his death.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt19811010",
+        "imdbRating": "8.1",
+        "name": "The Remarkable Life of Ibelin",
+        "poster": "https://image.tmdb.org/t/p/w500/73vRLcc0syVTMXmXyztUWaPJiK3.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/nS2TyztoBfgRsDMz61A8jSvFIYB.jpg",
+        "description": "This 2005 documentary film chronicles the life of Daniel Johnston, a manic-depressive genius singer/songwriter/artist, from childhood up to the present, with an emphasis on his mental illness and how it manifested itself in demonic self-obsession.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0436231",
+        "imdbRating": "7.7",
+        "name": "The Devil and Daniel Johnston",
+        "poster": "https://image.tmdb.org/t/p/w500/7c5FUlodgZl52tMlpw2G64kqttt.jpg",
+        "releaseInfo": "2006",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xYb2xZXTmsf0MSV08jLEDXK4Fjc.jpg",
+        "description": "Oscar-winning composer Ryuichi Sakamoto weaves man-made and natural sounds together in his works. His anti-nuclear activism grew after the 2011 Fukushima disaster, and his career only paused after a 2014 cancer diagnosis.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt6578572",
+        "imdbRating": "7.4",
+        "name": "Ryuichi Sakamoto: CODA",
+        "poster": "https://image.tmdb.org/t/p/w500/3HoDechba9wJhTUPOZTwxJBkh1Z.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/qSiVTAtDU0kJd8KjHHpMfGusIMt.jpg",
+        "description": "Featuring performances by popular artists of the 1960s, this concert film highlights the music of the 1967 California festival. Although not all musicians who performed at the Monterey Pop Festival are on film, some of the notable acts include the Mamas and the Papas, Simon & Garfunkel, Jefferson Airplane, the Who, Otis Redding, and the Jimi Hendrix Experience. Hendrix's post-performance antics -- lighting a guitar on fire, breaking it and tossing a part into the audience -- are captured.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0064689",
+        "imdbRating": "7.3",
+        "name": "Monterey Pop",
+        "poster": "https://image.tmdb.org/t/p/w500/wEB3c5Y5spAHOQaFWcsfFky3SWb.jpg",
+        "releaseInfo": "1968",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/gKW9lQc8418OyyAXLKE0qGuh5Or.jpg",
+        "description": "In a quaint Scottish village in the Highlands, contenders from around the globe gather to compete for the title of World Porridge Champion armed only with oats, salt and water. As the ailing Porridge Chieftain's tenure ends, he embarks on a mission to find a successor. Amidst intense rivalries and the charm of eccentric locals, this documentary delves into the legacy of the village and unveils a captivating culinary spectacle.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt35932869",
+        "imdbRating": "7.4",
+        "name": "The Golden Spurtle",
+        "poster": "https://image.tmdb.org/t/p/w500/3nsFrrmaUGyoiqAMRolkqPPWv01.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/jQzQm6YPBab5ucysHaGnGzfXKCh.jpg",
+        "description": "A testament to NASA's Apollo program of the 1960s and '70s. Composed of actual NASA footage of the missions and astronaut interviews, the documentary offers the viewpoint of the individuals who braved the remarkable journey to the moon and back.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0097372",
+        "imdbRating": "7.8",
+        "name": "For All Mankind",
+        "poster": "https://image.tmdb.org/t/p/w500/7k8ylisWiEGxdRSlAf6v4PWiAjH.jpg",
+        "releaseInfo": "1989",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/iytQNneOp4lNSKktRh9T6Fo3UXk.jpg",
+        "description": "A portrait of Ennio Morricone, the most popular and prolific film composer of the 20th century, the one most loved by the international public, a two-time Oscar winner and the author of over five hundred unforgettable scores.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt3031654",
+        "imdbRating": "8.3",
+        "name": "Ennio",
+        "poster": "https://image.tmdb.org/t/p/w500/lEuLAubp74HYztEyNYpEx3AoqOu.jpg",
+        "releaseInfo": "2022",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/r80zWzxQn5pMAPgDHd4CiKIGOyU.jpg",
+        "description": "Veteran naturalist Sir David Attenborough tells the story of a remarkable group of gorillas, from his first encounter in the '70s to the present day.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt39314348",
+        "imdbRating": "7.7",
+        "name": "A Gorilla Story: Told by David Attenborough",
+        "poster": "https://image.tmdb.org/t/p/w500/5X6VyjG0YYMbJu94l6xEY2YQvss.jpg",
+        "releaseInfo": "2026",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/qw0nzEPtZ3TVz3kEerwFsz0IX7e.jpg",
+        "description": "High up on the Tibetan plateau. Amongst unexplored and inaccessible valleys lies one of the last sanctuaries of the wild world, where rare and undiscovered fauna lives.  Vincent Munier, one of the world’s most renowned wildlife photographers takes the adventurer and novelist Sylvain Tesson (In the Forest of Siberia) with him on his latest mission. For several weeks, they’ll explore these valleys searching for unique animals and try to spot the snow leopard, one of the rarest and most difficult big cats to approach.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11937680",
+        "imdbRating": "7.9",
+        "name": "The Velvet Queen",
+        "poster": "https://image.tmdb.org/t/p/w500/sWGaJQDoJFbkshYdABhctrAtx7N.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/loBoMl5j8gxiuOvMB2EJRoIIJDa.jpg",
+        "description": "The band Fugazi is documented over a period of more than ten years (1987-1998) through performance footage and interviews with the band and their fans.  Director Jem Cohen's relationship with band member Ian MacKaye extends back to the 1970s when the two met in high school in Washington, D.C.. The film takes its title from the Fugazi song of the same name, from their 1993 album, In on the Kill Taker.  Editing of the film was done by both Cohen and the members of the band over the course of five years. It was shot from 1987 through 1998 on super 8, 16mm and video and is composed mainly of footage of concerts, interviews with the band members, practices, tours and time spent in the studio recording their 1995 album, Red Medicine.  The film also includes portraits of fans as well as interviews with them at various Fugazi shows around the United States throughout the years.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0230334",
+        "imdbRating": "6.9",
+        "name": "Instrument",
+        "poster": "https://image.tmdb.org/t/p/w500/5f3gPdJeYyTIrFPKT08Yhe2vYTg.jpg",
+        "releaseInfo": "1999",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/nEo7B55t79RhcbOjLo6Zcbig4Ku.jpg",
+        "description": "Using hidden cameras and never-before-seen footage, Earthlings chronicles the day-to-day practices of the largest industries in the world, all of which rely entirely on animals for profit.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0358456",
+        "imdbRating": "8.1",
+        "name": "Earthlings",
+        "poster": "https://image.tmdb.org/t/p/w500/fcRUYYyDWLJPlX7D6RPtQwdU7G2.jpg",
+        "releaseInfo": "2005",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/muaflceN4wem4NTHXifCRj8upMh.jpg",
+        "description": "Follows the behind-the-scenes work of Studio Ghibli, focusing on the notable figures Hayao Miyazaki, Isao Takahata, and Toshio Suzuki.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt3204392",
+        "imdbRating": "7.6",
+        "name": "The Kingdom of Dreams and Madness",
+        "poster": "https://image.tmdb.org/t/p/w500/ice7zuzzwcuKO5SJG7aTqYZC3EI.jpg",
+        "releaseInfo": "2013",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/A37wxjHIy75UhpAi5K0p8iFRQgC.jpg",
+        "description": "Impersonal and beautiful images of Akerman's life in New York are combined with letters from her loving but manipulative mother, read by Akerman herself.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0076452",
+        "imdbRating": "7.0",
+        "name": "News from Home",
+        "poster": "https://image.tmdb.org/t/p/w500/nWqWaEySdo8hAKJsd1IS9mdnZpF.jpg",
+        "releaseInfo": "1977",
+        "type": "movie"
+      },
+      {
+        "description": "On July 21, 1969 some strange phenomena occurred in parts of the USA and made many Americans go crazy. This documentary tries to find what really happened.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt6617184",
+        "imdbRating": "N/A",
+        "name": "Apollo 11 ½",
+        "poster": "https://image.tmdb.org/t/p/w500/kvfvqJwQKqdiOBCB3BKXYTZLiXj.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/flxau5Iu7bChQHsESqvGZ3FQRaI.jpg",
+        "description": "A cybersecurity expert becomes a whistleblower after uncovering secrets about aliens, putting him on the run from a corporation. Meanwhile, a meteorologist experiencing strange phenomena joins forces with him to prove there's life beyond our understanding.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt15047880",
+        "imdbRating": "7.4",
+        "name": "Disclosure Day",
+        "poster": "https://image.tmdb.org/t/p/w500/AnJ8IQJI23hNpYXVNaythu061Ru.jpg",
+        "releaseInfo": "2026",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/2vclk5TTxXQk0hz3cY3Llbe10AU.jpg",
+        "description": "Jonas Mekas weaves an elegiac diary film from his 1971–72 return to Lithuania, chronicling a visit to his birthplace of Semeniškiai after decades in exile. Blending personal memory with documentary observation, the film becomes both a portrait of homecoming and a meditation on displacement, family, and the passage of time.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0069172",
+        "imdbRating": "7.0",
+        "name": "Reminiscences of a Journey to Lithuania",
+        "poster": "https://image.tmdb.org/t/p/w500/vnnVqci7fGZFDXBLnxP9nHUCI2m.jpg",
+        "releaseInfo": "1972",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/7xZdsIpgyDJtxEctCOM2xDmauwA.jpg",
+        "description": "The Amazon rain forest, 1979. The crew of Fitzcarraldo (1982), a film directed by German director Werner Herzog, soon finds itself with problems related to casting, tribal struggles and accidents, among many other setbacks; but nothing compared to dragging a huge steamboat up a mountain, while Herzog embraces the path of a certain madness to make his vision come true.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0083702",
+        "imdbRating": "7.6",
+        "name": "Burden of Dreams",
+        "poster": "https://image.tmdb.org/t/p/w500/qJuD9yZ7Mn9QCVqKO9WarNNYo4R.jpg",
+        "releaseInfo": "1982",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/dFSutwRIKqk1MgFyTNv7GblgEi2.jpg",
+        "description": "An experimental documentary that explores Saudi Arabia's relationship with the U.S. and the role this has played in the war in Afghanistan.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt4393514",
+        "imdbRating": "7.6",
+        "name": "Bitter Lake",
+        "poster": "https://image.tmdb.org/t/p/w500/8TIXHoByfOPv7d88cM4OGxhTUx7.jpg",
+        "releaseInfo": "2015",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/3G0xVewAccMul25pPQxbmfOIS4J.jpg",
+        "description": "From a prolific career in film and television, Anton Yelchin left an indelible legacy as an actor. Through his journals and other writings, his photography, the original music he wrote, and interviews with his family, friends, and colleagues, this film looks not just at Anton's impressive career, but at a broader portrait of the man.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt9351746",
+        "imdbRating": "7.4",
+        "name": "Love, Antosha",
+        "poster": "https://image.tmdb.org/t/p/w500/AntNP1sX7qKBT7hSYM4248RKMaL.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/stONLu1vcrJqgx8MTWP3mkScZUD.jpg",
+        "description": "From its distinctive neighborhoods to its architectural homes, Los Angeles has been the backdrop to countless movies. In this dazzling work, Andersen takes viewers on a whirlwind tour through the metropolis' real and cinematic history, investigating the myriad stories and legends that have come to define it, and meticulously, judiciously revealing the real city that lives beneath.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0379357",
+        "imdbRating": "7.6",
+        "name": "Los Angeles Plays Itself",
+        "poster": "https://image.tmdb.org/t/p/w500/wmzGSQktsLf2JvfkhBaLSdG4G3Z.jpg",
+        "releaseInfo": "2004",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/vRPeW53YKw6faz5fekbMcQ9PLNw.jpg",
+        "description": "In her early twenties, Hiam Abbass left her native Palestinian village to follow her dream of becoming an actress in Europe, leaving behind her mother, grandmother, and seven sisters. Thirty years later, her filmmaker daughter Lina returns with her to the village and questions for the first time her mother’s bold choices, her chosen exile and the way the women in their family influenced both their lives.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt22857256",
+        "imdbRating": "7.9",
+        "name": "Bye Bye Tiberias",
+        "poster": "https://image.tmdb.org/t/p/w500/xHm0kf7NdBlHDX4dj72UqudLJm3.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/k5wG09wKslKid7EqxJ351oFytFx.jpg",
+        "description": "Acclaimed filmmaker Werner Herzog travels to Antarctica, where he finds a desolate, beautiful landscape, largely untouched by human hands, and a group of truly unique people who risk their lives to study it. Centered at McMurdo Station, the United States' largest Antarctic research center, Herzog explores the minds of the scientists willing to abandon civilization and endure volatile conditions to learn more about the continent's wildlife and awe-inspiring natural wonders.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1093824",
+        "imdbRating": "7.5",
+        "name": "Encounters at the End of the World",
+        "poster": "https://image.tmdb.org/t/p/w500/gZVQoVCCFhqWoeskAcMtPHjTbro.jpg",
+        "releaseInfo": "2007",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ljVwCo2TwcYZu0fn0lgKxPicaPM.jpg",
+        "description": "This revealing portrait of Cuba follows the lives of Fidel Castro and three Cuban families affected by his policies over the last four decades.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7320560",
+        "imdbRating": "7.4",
+        "name": "Cuba and the Cameraman",
+        "poster": "https://image.tmdb.org/t/p/w500/qaHgQmUAAsB7FzMFQZUp6MfG1r2.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/b88Q3GbYfKQAakyKDG2Vhw4BJ3A.jpg",
+        "description": "Based on the life stories of the eccentric aunt and first cousin of Jackie Onassis raised as Park Avenue débutantes but who withdrew from New York society, taking shelter at their Long Island summer home, \"Grey Gardens.\" As their wealth and contact with the outside world dwindled, so did their grasp on reality.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0758751",
+        "imdbRating": "6.8",
+        "name": "Grey Gardens",
+        "poster": "https://image.tmdb.org/t/p/w500/9iO11PLhIGCzN6n2V92XcANQ8M9.jpg",
+        "releaseInfo": "2009",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/wlANdDl0ukKYiM474Y9k1k6xCJf.jpg",
+        "description": "Through examining Fini Straubinger, an old woman who has been deaf and blind since her teens, and her work on behalf of other deaf-blind people, this film shows how the deaf-blind struggle to understand and accept a world from which they are almost wholly isolated.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0067324",
+        "imdbRating": "7.5",
+        "name": "Land of Silence and Darkness",
+        "poster": "https://image.tmdb.org/t/p/w500/wzruxvZEYZzaFOuL1Ufwe5PYG0t.jpg",
+        "releaseInfo": "1971",
+        "type": "movie"
+      },
+      {
+        "description": "Sediq and Yousof work for the small electricity distribution sub-station in the district of Char Qala-e-Wazirabad. From day to day, they have to deal with the electricity shortage and repair the derelict installations. The film follows them as they're working and reveals life in a popular neighbourhood of Kabul.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1529323",
+        "imdbRating": "N/A",
+        "name": "Dream of Light",
+        "poster": "https://image.tmdb.org/t/p/w500/oWM8RWNZ1OiC0GsFpA7bg61slnB.jpg",
+        "releaseInfo": "2006",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ipXrm6SEjfNkD8FKfj9VLUE9fUU.jpg",
+        "description": "The definitive film on the climb that captured headlines and ignited imaginations worldwide. Tommy Caldwell and Kevin Jorgeson ascend the hardest big wall of all time: a 19 day ascent of The Dawn Wall, on the 3,000 foot vertical face of El Capitan, in Yosemite National Park. The film travels deeper than the climb, digging into the history of the climbers and painting an intimate portrait of Caldwell's harrowing life experiences that culminated in a single-minded drive to complete this impossible climb. The Dawn Wall is a heart-warming and inspiring movie that celebrates perseverance, camaraderie, and the universal spirit of dreaming big, and never giving up.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7286916",
+        "imdbRating": "8.0",
+        "name": "The Dawn Wall",
+        "poster": "https://image.tmdb.org/t/p/w500/bZQCNGb1II5eWASBhEgJBGxOPUM.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/x4yZrzpiVhdWV6Q5KURqiezChbV.jpg",
+        "description": "A profile of Istanbul and its unique people, seen through the eyes of the most mysterious and beloved animal humans have ever known, the Cat.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt4420704",
+        "imdbRating": "7.5",
+        "name": "Kedi",
+        "poster": "https://image.tmdb.org/t/p/w500/o7SB4YELcuVGUMIXeunWZ8rbx4h.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xD3ePiiueSrWp4aXtZNrWhzLrlh.jpg",
+        "description": "Christopher Reeve portrayed the Man of Steel in four Superman films and played dozens of other roles that displayed his talent and range as an actor, before being injured in a near-fatal horse-riding accident in 1995 that left him paralyzed from the neck down. After becoming a quadriplegic, he became a charismatic leader and activist in the quest to find a cure for spinal cord injuries, as well as a passionate advocate for disability rights and care.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt27902121",
+        "imdbRating": "8.1",
+        "name": "Super/Man: The Christopher Reeve Story",
+        "poster": "https://image.tmdb.org/t/p/w500/73WchlI0Hj4HQd0T2KOztKquOek.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/z2uuQasY4gQJ8VDAFki746JWeQJ.jpg",
+        "description": "Follow Alex Honnold as he attempts to become the first person to ever free solo climb Yosemite's 3,000 foot high El Capitan wall. With no ropes or safety gear, this would arguably be the greatest feat in rock climbing history.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7775622",
+        "imdbRating": "7.9",
+        "name": "Free Solo",
+        "poster": "https://image.tmdb.org/t/p/w500/v4QfYZMACODlWul9doN9RxE99ag.jpg",
+        "releaseInfo": "2018",
+        "type": "movie"
+      },
+      {
+        "description": "The work of the US police force and the problem of fighting rising crime across the country.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0860931",
+        "imdbRating": "N/A",
+        "name": "The Thin Blue Line",
+        "poster": "https://image.tmdb.org/t/p/w500/toJRzlXOSZYWW5IUk7DrZJv7kHF.jpg",
+        "releaseInfo": "1966",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/vNYnOjQJykFModnm0e7jpnVTryG.jpg",
+        "description": "An unpredictable documentary from a fascinating storyteller, Agnès Varda’s last film sheds light on her experience as a director, bringing a personal insight to what she calls \"cine-writing,\" traveling from Rue Daguerre in Paris to Los Angeles and Beijing.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt9530198",
+        "imdbRating": "7.9",
+        "name": "Varda by Agnès",
+        "poster": "https://image.tmdb.org/t/p/w500/99xU63PePSbtffV5CUqPQYu84XY.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "description": "When it comes to self-promotion, no one can beat Blackout Problems: On their website and social media clips, white roses, gas masks and burning shopping wagons. On YouTube, the well-designed studio documentary \"Dark Days\", thick with pathos, is a gripping introduction to the third long player by the Munich-based band.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt993760",
+        "imdbRating": "10.0",
+        "name": "DARK DAYS",
+        "poster": "https://image.tmdb.org/t/p/w500/yJX1SmzfiHkstym2KE7Kz2mLoNu.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "description": "Sara, a young ballet dancer, drifts through boredom as a constrained classical dancer until she meets Jean, a West African plumber from the opposite side of town with natural simplicity and freedom in his dance movements. Curiosity leads towards an explosion of awakening in both her dance and personal worlds.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0340161",
+        "imdbRating": "10.0",
+        "name": "Homework",
+        "poster": "https://image.tmdb.org/t/p/w500/rqfM8i0u1rNCMCQ6BrG7fsAsNp7.jpg",
+        "releaseInfo": "2004",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/zqozj1iNBpmgR3GfL1omnptjO5A.jpg",
+        "description": "Down the road from Woodstock in the early 1970s, a revolution blossomed in a ramshackle summer camp for disabled teenagers, transforming their young lives and igniting a landmark movement.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt8923484",
+        "imdbRating": "7.2",
+        "name": "Crip Camp: A Disability Revolution",
+        "poster": "https://image.tmdb.org/t/p/w500/iALSypN3MhC6kBVwc9VpuJUlm1j.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/wQiXDEzfU8pydakr5yZ01bhlN30.jpg",
+        "description": "A short kid from a Canadian army base becomes the international pop culture darling of the 1980s—only to find the course of his life altered by a stunning diagnosis. What happens when an incurable optimist confronts an incurable disease?",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt19853258",
+        "imdbRating": "7.8",
+        "name": "STILL: A Michael J. Fox Movie",
+        "poster": "https://image.tmdb.org/t/p/w500/fDO4gYZxvdsIrHKzsSAbc3N7Wfg.jpg",
+        "releaseInfo": "2023",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/dqm09gnToqrjuQ3x5nwHzobS2Y9.jpg",
+        "description": "Some of the world's most majestic birds display delightfully captivating mating rituals, from flashy dancing to flaunting their colorful feathers.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11101698",
+        "imdbRating": "7.7",
+        "name": "Dancing with the Birds",
+        "poster": "https://image.tmdb.org/t/p/w500/uzc72pDxEZ6ziC4n7IUX9YQorDO.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/df5iAHuH2brY9zXMeeRuL2AAE6O.jpg",
+        "description": "Romance brings two warring families together in this historical drama. As citizens fight for independence in 1810s Lithuania, Tadeusz, the son of a murderer, and Zosia, a young woman, come together for a wedding against a backdrop of changing politics, ancient traditions, and the uncertain future of a country.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0170351",
+        "imdbRating": "5.5",
+        "name": "The Last Days",
+        "poster": "https://image.tmdb.org/t/p/w500/kWomf1J9CNZmD0P9IntFEGlAe12.jpg",
+        "releaseInfo": "1999",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ysDodI3uMTo8K1ghlUU3kNFHkMr.jpg",
+        "description": "Here and Elsewhere takes its name from the contrasting footage it shows of the fedayeen and of a French family watching television at home. Originally shot by the Dziga Vertov Group as a film on Palestinian freedom fighters, Godard later reworked the material alongside Anne-Marie Miéville.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0071646",
+        "imdbRating": "6.7",
+        "name": "Here and Elsewhere",
+        "poster": "https://image.tmdb.org/t/p/w500/yxdBS1jF7HF1GryHwCZSvLPukpL.jpg",
+        "releaseInfo": "1976",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/A7AjlQTR1UlaNSYwwPRQ5gQTHyf.jpg",
+        "description": "A raw and emotionally revealing look at one of the most iconic artists of our time during a transformational period in her life as she learns to embrace her role not only as a songwriter and performer, but as a woman harnessing the full power of her voice.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11388580",
+        "imdbRating": "7.8",
+        "name": "Miss Americana",
+        "poster": "https://image.tmdb.org/t/p/w500/z1HiEB1UEfdA5fPkngekjQ2vlCC.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bSgSJfkTutcllEvhDDWtMGgdl2b.jpg",
+        "description": "A cinematic odyssey featuring never-before-seen footage exploring David Bowie's creative and musical journey.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt9883832",
+        "imdbRating": "7.5",
+        "name": "Moonage Daydream",
+        "poster": "https://image.tmdb.org/t/p/w500/tJCZI1tO0sYIV0mGo0Awcr996vm.jpg",
+        "releaseInfo": "2022",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/rzEynyUJypcvxUFOdVQwwWyMeHn.jpg",
+        "description": "Scandinavia, 1846. A poor young girl forced to sell matchsticks desperately lights one match to survive the winter night. She is drawn into a dream world where the flames of fire give her hope for a better life, while the cold creeps closer. Based on H.C. Andersen's short story.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt8451932",
+        "imdbRating": "7.8",
+        "name": "Little Match Girl",
+        "poster": "https://image.tmdb.org/t/p/w500/rindoIaDTvBEr0Mml1qMO5AsajN.jpg",
+        "releaseInfo": "2018",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/k4MZdogt1DZX0b2tlkr17EFUvP5.jpg",
+        "description": "Through deeply personal interviews with her siblings and an examination of the photographs, letters, and belongings left behind, Mariska assembles a new portrait of her mother Jayne Mansfield, an extraordinary and complex woman.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt36464353",
+        "imdbRating": "8.0",
+        "name": "My Mom Jayne",
+        "poster": "https://image.tmdb.org/t/p/w500/6KpfMouMavYr1UwTz6612YhYjbs.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/o7gPznINZLwFIDBuibZ8rDRKBvc.jpg",
+        "description": "Tony Silver and Henry Chalfant's PBS documentary tracks the rise and fall of subway graffiti in New York in the late 1970s and early 1980s.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0177262",
+        "imdbRating": "7.5",
+        "name": "Style Wars",
+        "poster": "https://image.tmdb.org/t/p/w500/vgW7eMrK8Y8u91vG9R9iff4tsIP.jpg",
+        "releaseInfo": "1984",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/hTUveXKSPA7jWZ08MaXaHSvY6lO.jpg",
+        "description": "After running away from her abusive mother, a streetwise teen seeks refuge with her father, but he rejects her when he learns that she's pregnant.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1657510",
+        "imdbRating": "6.6",
+        "name": "Gimme Shelter",
+        "poster": "https://image.tmdb.org/t/p/w500/eEvqFlmn7d8prqRVaFJ5pjJFHuB.jpg",
+        "releaseInfo": "2013",
+        "type": "movie"
+      },
+      {
+        "description": "A tale of real-life British aviation pioneer Amy Johnson, the first woman to fly from Britain to Australia, who would later mysteriously disappear.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0133367",
+        "imdbRating": "8.3",
+        "name": "Amy",
+        "poster": "https://image.tmdb.org/t/p/w500/bNTFjT71tMxbdOQDp2vMKjqIlRI.jpg",
+        "releaseInfo": "1984",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/gZwQip2KQRDNZZOEDe0Yi25tW9Z.jpg",
+        "description": "Grave robbing, torture, possessed nuns, and a satanic Sabbath: Benjamin Christensen's legendary film uses a series of dramatic vignettes to explore the scientific hypothesis that the witches of the Middle Ages suffered the same hysteria as turn-of-the-century psychiatric patients. But the film itself is far from serious-- instead it's a witches' brew of the scary, gross, and darkly humorous.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0013257",
+        "imdbRating": "7.6",
+        "name": "Häxan",
+        "poster": "https://image.tmdb.org/t/p/w500/3LtaPLlwlA5HX2FjqAb8lsaBI8P.jpg",
+        "releaseInfo": "1922",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/m85Ns8BthzdQYlUPEjwy8KOvvtG.jpg",
+        "description": "A story of two coalitions – ACT UP and TAG (Treatment Action Group) – whose activism and innovation turned AIDS from a death sentence into a manageable condition. Despite having no scientific training, these self-made activists infiltrated the pharmaceutical industry and helped identify promising new drugs, moving them from experimental trials to patients in record time.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt2124803",
+        "imdbRating": "6.8",
+        "name": "How to Survive a Plague",
+        "poster": "https://image.tmdb.org/t/p/w500/azlN2LO5OtJVeSokkK408xMtt1n.jpg",
+        "releaseInfo": "2012",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/cXN62FQwOoBcKlIJ9uE3Cn5wHAc.jpg",
+        "description": "In this hilarious arcade showdown, a humble novice goes head-to-head against the reigning Donkey Kong champ in a confrontation that rocks the gaming world to its processors! For over 20 years, Billy Mitchell has owned the throne of the Donkey Kong world. No one could beat his top score until now. Newcomer Steve Wiebe claims to have beaten the unbeatable, but Mitchell isn't ready to relinquish his crown without a fight. Go behind the barrels as the two battle it out in a vicious war to earn the title of the true King of Kong.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0923752",
+        "imdbRating": "7.7",
+        "name": "The King of Kong: A Fistful of Quarters",
+        "poster": "https://image.tmdb.org/t/p/w500/wACtXGiO08EBbJhqsD2nUzPsrKe.jpg",
+        "releaseInfo": "2007",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/mhhzbMnIIdVFOeBzKtLXk66Vbo3.jpg",
+        "description": "The story of the tortuous struggle against the silence of the victims of the dictatorship imposed by General Franco after the victory of the rebel side in the Spanish Civil War (1936-1975). In a democratic country, but still ideologically divided, the survivors seek justice as they organize the so-called “Argentinian lawsuit” and denounce the legally sanctioned pact of oblivion that intends to hide the crimes they were subjects of.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt8099236",
+        "imdbRating": "8.0",
+        "name": "The Silence of Others",
+        "poster": "https://image.tmdb.org/t/p/w500/1mokbbJue9a60PJy1r1lyra8RjD.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/AorzxxnM7A0LLWJrgOBNF5JEyM7.jpg",
+        "description": "The documentary's title translates as \"to be and to have\", the two auxiliary verbs in the French language. It is about a primary school in the commune of Saint-Étienne-sur-Usson, Puy-de-Dôme, France, the population of which is just over 200. The school has one small class of mixed ages (from four to twelve years), with a dedicated teacher, Georges Lopez, who shows patience and respect for the children as we follow their story through a single school year.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0318202",
+        "imdbRating": "7.3",
+        "name": "To Be and to Have",
+        "poster": "https://image.tmdb.org/t/p/w500/mqB5QPNCmbF8DgsZqmyGQAGktUE.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/g6u77538Cw3NmkyntUARo5Iq57A.jpg",
+        "description": "Examines the evolution of the Black Power Movement in US society from 1967 to 1975. It features footage of the movement shot by Swedish journalists in the United States during that period and includes the appearances of Angela Davis, Bobby Seale, Huey P. Newton, Eldridge Cleaver, and other activists, artists, and leaders central to the movement.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1592527",
+        "imdbRating": "7.5",
+        "name": "The Black Power Mixtape 1967-1975",
+        "poster": "https://image.tmdb.org/t/p/w500/z3LVY25oZCoJ3kjWylF9Jht4E4T.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/tCW0uGWwfZzRkupNFdI0yUo4A0w.jpg",
+        "description": "Notorious killer whale Tilikum is responsible for the deaths of three individuals, including a top killer whale trainer. Blackfish shows the sometimes devastating consequences of keeping such intelligent and sentient creatures in captivity.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt2545118",
+        "imdbRating": "7.8",
+        "name": "Blackfish",
+        "poster": "https://image.tmdb.org/t/p/w500/kCk4mDFE96Mn1AYfEcbxkIiw7ND.jpg",
+        "releaseInfo": "2013",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/qrzBXIXXtA2PVU7uMVnOE268NV6.jpg",
+        "description": "Visionary musician and artist Brian Eno — known for producing David Bowie, U2, Talking Heads, among many others; pioneering the genre of ambient music; and releasing over 40 solo and collaboration albums — reveals his creative processes in this groundbreaking generative documentary: a film that’s different every time it’s shown.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt19854690",
+        "imdbRating": "6.0",
+        "name": "Eno",
+        "poster": "https://image.tmdb.org/t/p/w500/6ruB0J7iPWu5LIrxhcqNieu1yE5.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/7jzCLnt5IDGDHhNAKTfbq1In4dM.jpg",
+        "description": "His unforgettable scores are an essential part of some of the most beloved movies of our time, over a career that spans decades. See and hear maestro John Williams' own story, with insights from filmmakers, musicians, and others he has inspired, complete with rare behind-the-scenes looks at the making of movie history.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt26420234",
+        "imdbRating": "8.1",
+        "name": "Music by John Williams",
+        "poster": "https://image.tmdb.org/t/p/w500/dIZ3SzuT3YuAWX1fjdxDevbwQBX.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/7BtEvieL4QRNW3j7OAw6Zv2CDap.jpg",
+        "description": "A luxury condo manager leads a staff of workers to seek payback on the Wall Street swindler who defrauded them. With only days until the billionaire gets away with the perfect crime, the unlikely crew of amateur thieves enlists the help of petty crook Slide to steal the $20 million they’re sure is hidden in the penthouse.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0471042",
+        "imdbRating": "6.1",
+        "name": "Tower Heist",
+        "poster": "https://image.tmdb.org/t/p/w500/jQrroNwP8hbFiUlNMs20emauwPE.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/sC5FzA4DfQr6ML3rSKL3E3v5as8.jpg",
+        "description": "Journalist Shiori Ito embarks on a courageous investigation of her own sexual assault in an improbable attempt to prosecute her high-profile offender. Her quest becomes a landmark case in Japan, exposing the country's outdated judicial and societal systems.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt30227076",
+        "imdbRating": "7.6",
+        "name": "Black Box Diaries",
+        "poster": "https://image.tmdb.org/t/p/w500/wX95ps6Haijvt7evwSwqx1gs88e.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/qjLkeDuzGO6GxKyUHFq0UsDTK7M.jpg",
+        "description": "In 1992, teenager Sandi Tan shot Singapore's first indie road movie with her enigmatic American mentor Georges – who then vanished with all the footage. Twenty years later, the 16mm film is recovered, sending Tan, now a novelist in Los Angeles, on a personal odyssey in search of Georges' vanishing footprints.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7472352",
+        "imdbRating": "7.2",
+        "name": "Shirkers",
+        "poster": "https://image.tmdb.org/t/p/w500/spd1fZNePSQFRhNam66jx3ZMoxF.jpg",
+        "releaseInfo": "2018",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/q3rUkRlFBzf0XfjeKrfonQiLfr1.jpg",
+        "description": "When nomadic beekeepers break Honeyland’s basic rule (take half of the honey, but leave half to the bees), the last female beehunter in Europe must save the bees and restore natural balance.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt8991268",
+        "imdbRating": "7.9",
+        "name": "Honeyland",
+        "poster": "https://image.tmdb.org/t/p/w500/3IxGhQEzLWOxkZlcNMAIiYlOT8D.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/tCKmhgt72QgfbyDb3S6FL6m9Wd3.jpg",
+        "description": "In Chile's Atacama Desert, astronomers peer deep into the cosmos in search for answers concerning the origins of life. Nearby, a group of women sift through the sand searching for body parts of loved ones, dumped unceremoniously by Pinochet's regime.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1556190",
+        "imdbRating": "7.4",
+        "name": "Nostalgia for the Light",
+        "poster": "https://image.tmdb.org/t/p/w500/j8NsCokx3dveFDL1YAvJPWHkrDx.jpg",
+        "releaseInfo": "2010",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/9qE7PmY2AWTyqmhYsyjpDIL9eyo.jpg",
+        "description": "A former military officer makes a film about a man he encountered in Tanjong Rhu, a secluded cruising ground.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1363483",
+        "imdbRating": "5.0",
+        "name": "The Casuarina Cove",
+        "poster": "https://image.tmdb.org/t/p/w500/9eRbmXUJ8GWUqWtx2vWhrRn4tkb.jpg",
+        "releaseInfo": "2009",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/s4WgUHG8RieewPBL44i8hYrBy2m.jpg",
+        "description": "After a bleak childhood, Jane Eyre goes out into the world to become a governess. As she lives happily in her new position at Thornfield Hall, she meets the dark, cold, and abrupt master of the house, Edward Rochester. Jane and her employer grow close in friendship and she soon finds herself falling in love with him. Happiness seems to have found Jane at last, but could Rochester's terrible secret be about to destroy it forever?",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0116684",
+        "imdbRating": "6.9",
+        "name": "Jane Eyre",
+        "poster": "https://image.tmdb.org/t/p/w500/2vyt97wy8dEJYILoDoiPwTzLnzK.jpg",
+        "releaseInfo": "1996",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/6jnnQRIAGKx1K9ffqFqH0Xv9t96.jpg",
+        "description": "Founded in 1930, Troisgros has held three Michelin stars for 55 years. The children of the fourth generation, Marie-Pierre and Michel's sons are continuing the family business: César runs the Michelin-starred restaurant, \"Le Bois sans feuilles\" (\"The Leafless Wood\"), and Léo is in charge of one of the other two Troisgros restaurants, \"La Colline du colombier\" (\"The Dovecote Hill\"). From the daily market to the cheese maturing cellars, via the vineyard, the cattle farm and the vegetable garden adjacent to the restaurant, Menus-Plaisirs is an intimate, sensory journey through the kitchens of one of the world's most prestigious restaurants.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt28494786",
+        "imdbRating": "7.1",
+        "name": "Menus-Plaisirs, les Troisgros",
+        "poster": "https://image.tmdb.org/t/p/w500/9uauZgPWrD61gb4gMH6tFNPFAbI.jpg",
+        "releaseInfo": "2023",
+        "type": "movie"
+      },
+      {
+        "description": "Daguerréotypes filmmaker Agnès Varda made this short video of a daguerreotype exhibit in 2005.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt14260098",
+        "imdbRating": "N/A",
+        "name": "Daguerreotypes, Photographics Objects",
+        "poster": "https://via.placeholder.com/500x750?text=No+Poster",
+        "releaseInfo": "2005",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/1h815ydN8AvrRmNU48eXu4EanO.jpg",
+        "description": "Revered sushi chef Jiro Ono strives for perfection in his work, while his eldest son, Yoshikazu, has trouble living up to his father's legacy.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1772925",
+        "imdbRating": "7.7",
+        "name": "Jiro Dreams of Sushi",
+        "poster": "https://image.tmdb.org/t/p/w500/iVrkM4jSJw1IsOpW5jTtY5QxVqj.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/9Y5hD8cPFBHRvFbvRFYFXQKUn4X.jpg",
+        "description": "A stark and graphic portrayal of the conditions that existed at the State Prison for the Criminally Insane at Bridgewater, Massachusetts, and documents the various ways the inmates are treated by the guards, social workers, and psychiatrists.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0062374",
+        "imdbRating": "7.2",
+        "name": "Titicut Follies",
+        "poster": "https://image.tmdb.org/t/p/w500/hAJOSqWB4FeVV7yi0fRSYFoCwvM.jpg",
+        "releaseInfo": "1967",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/biRLtgt3t8MwxeLRRJkf1BsHoeq.jpg",
+        "description": "A group of righteous assassins called The Collective take aim at a highly sophisticated human trafficking ring backed by a network of untouchable billionaires. With their backs against the wall, The Collective has no choice but to put their most important mission in the hands of rookie assassin, Sam Alexander.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt23556408",
+        "imdbRating": "5.5",
+        "name": "The Collective",
+        "poster": "https://image.tmdb.org/t/p/w500/Ah9H6Sj434nJiZpTPQrovHaEePV.jpg",
+        "releaseInfo": "2023",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/kJ9pyy4MuoJfhK9ec7RFKGRfmVF.jpg",
+        "description": "Behind the scenes of Sarah McLachlan’s legendary all-women music festival and features interviews with performers including Bonnie Raitt, Erykah Badu, Olivia Rodrigo, and Emmylou Harris.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt32915874",
+        "imdbRating": "7.9",
+        "name": "Lilith Fair: Building a Mystery",
+        "poster": "https://image.tmdb.org/t/p/w500/PCI5HmNXRb9gx8BYTIUbThaymz.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/mr4wCG5QgLEk03buTHlZxkFFIhs.jpg",
+        "description": "Carved from over 1,200 hours of footage spanning the band’s career, Pearl Jam: Twenty is the definitive portrait of Pearl Jam. Part concert film, part intimate insider-hang, and part testimonial to the power of music.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1417592",
+        "imdbRating": "7.8",
+        "name": "Pearl Jam Twenty",
+        "poster": "https://image.tmdb.org/t/p/w500/d38PBlEsj5W9Od581GuWLeTuy4F.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/dycEWazNQfuodZYguTliNVxl0Rz.jpg",
+        "description": "When Danish filmmaker Lea Glob first portrayed Apolonia Sokol in 2009, she appeared to be leading a storybook life. The talented Apolonia was born in an underground theater in Paris and grew up in an artists’ community—the ultimate bohemian existence. In her 20s, she studied at the Beaux-Arts de Paris, one of the most prestigious art academies in Europe. Over the years, Lea Glob kept returning to film the charismatic Apolonia and a special bond developed between the two young women.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt22768450",
+        "imdbRating": "6.6",
+        "name": "Apolonia, Apolonia",
+        "poster": "https://image.tmdb.org/t/p/w500/mflhHTFqeYgVSNvQoTmlBY0XJDT.jpg",
+        "releaseInfo": "2023",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/73yBuG9gH1GWCooeXaFxUoNXziL.jpg",
+        "description": "On September 15, 1963, a bomb destroyed a black church in Birmingham, Alabama, killing four young girls who were there for Sunday school. It was a crime that shocked the nation--and a defining moment in the history of the civil-rights movement. Spike Lee re-examines the full story of the bombing, including a revealing interview with former Alabama Governor George Wallace.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0118540",
+        "imdbRating": "7.1",
+        "name": "4 Little Girls",
+        "poster": "https://image.tmdb.org/t/p/w500/7kbV3fDjuy9dQmcuZuT9NKNAEix.jpg",
+        "releaseInfo": "1997",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/c5tVT0VEJoPwvzfX9di9SUZBq71.jpg",
+        "description": "Actor Jane Birkin talks about her friendship with director Agnes Varda, and about their work on 'Jane B. Par Agnes V.' and Kung-Fu Master!'.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1401417",
+        "imdbRating": "N/A",
+        "name": "Agnes V. by Jane B.",
+        "poster": "https://image.tmdb.org/t/p/w500/1kX9h9Avx4ZDpk4M0EedQMpqRdN.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/dAM73mT6T8Vci5collkYIhqxj1t.jpg",
+        "description": "Girl next door, activist, so-called traitor, fitness tycoon, Oscar winner: Jane Fonda has lived a life of controversy, tragedy and transformation – and she’s done it all in the public eye. An intimate look at one woman’s singular journey.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7689958",
+        "imdbRating": "7.1",
+        "name": "Jane Fonda in Five Acts",
+        "poster": "https://image.tmdb.org/t/p/w500/lgOfQqfOeMt2dGsD8u0XcBOvfpo.jpg",
+        "releaseInfo": "2018",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/wOXCi4Kp3c2YkvPPIonTlsjkMfP.jpg",
+        "description": "Never-before-seen footage and intimate interviews celebrate the life and legacy of iconic Mexican American singer Selena Quintanilla and her family band.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt34963797",
+        "imdbRating": "9.0",
+        "name": "Selena y Los Dinos: A Family's Legacy",
+        "poster": "https://image.tmdb.org/t/p/w500/9dNDTnc2KsX7g73V5l1D0YCAQqa.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/2pBDP2Ip5mQemw3PYTjDLYv9XI9.jpg",
+        "description": "A courageous pastor uses his underground network to rescue and aid North Korean families as they risk their lives to embrace freedom.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt25470468",
+        "imdbRating": "7.8",
+        "name": "Beyond Utopia",
+        "poster": "https://image.tmdb.org/t/p/w500/fcyCtyXabv0X8TInqoL9yq5DCdb.jpg",
+        "releaseInfo": "2023",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/auWHYen6cZMdPHIqaWzARn38jvi.jpg",
+        "description": "A documentary film about the Brazilian town of Toritama, the self-proclaimed capital of jeans. The workers of the city’s self-managed small businesses only get one real break from their self-exploiting lives in the textile business: the annual Carnival.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt9786006",
+        "imdbRating": "8.3",
+        "name": "Waiting for the Carnival",
+        "poster": "https://image.tmdb.org/t/p/w500/pePGCu7krrUcg4EDgV6Wi9hiSYP.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/eUZHhgwv0zwR3LPadxeBNfh7VCw.jpg",
+        "description": "An in-depth look at the Canadian rock band Rush, chronicling the band's musical evolution from their progressive rock sound of the '70s to their current heavy rock style.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1545103",
+        "imdbRating": "7.5",
+        "name": "Rush: Beyond the Lighted Stage",
+        "poster": "https://image.tmdb.org/t/p/w500/5su3xR3k0doJmUYIVk8O5QnXnxn.jpg",
+        "releaseInfo": "2010",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/t4HWzRhhcmPCARtVh0Hr8o9OSK8.jpg",
+        "description": "Filmmaker S.R. Bindler profiles Texas contestants trying to win a truck by keeping one hand on it longer than everyone else.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0116481",
+        "imdbRating": "7.6",
+        "name": "Hands on a Hardbody: The Documentary",
+        "poster": "https://image.tmdb.org/t/p/w500/snyLQ21YGNWHNcDSNUIouzBFObh.jpg",
+        "releaseInfo": "1997",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/mrzu45wossOMSMPQ1YbwUpHirb0.jpg",
+        "description": "Through dramatic reconstruction and documentary asides, the spirit of Italian poet, playwright, journalist, aristocrat and army officer Gabriele D’Annunzio is captured, presenting the nascent fascism in his attempts to forge a new state in the aftermath of the First World War.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt34383611",
+        "imdbRating": "8.2",
+        "name": "Fiume o Morte!",
+        "poster": "https://image.tmdb.org/t/p/w500/aiKa7N1s3Elci85Kvj5wrze92f5.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "description": "A young man covers for his autistic brother when a neighbour's horse goes missing.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt10217942",
+        "imdbRating": "N/A",
+        "name": "Dig",
+        "poster": "https://image.tmdb.org/t/p/w500/mGJQ2a3mZkRwNo8G5c9jzuV0TAB.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/csuz4zkcyckKn5dVVRkOhCmkWJs.jpg",
+        "description": "This searing investigative work shadows a group of activists risking unimaginable peril to confront the ongoing anti-LGBTQ program raging in the repressive and closed Russian republic. Unfettered access and a remarkable approach to protecting anonymity exposes this under-reported atrocity–and an extraordinary group of people confronting evil.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11394200",
+        "imdbRating": "6.9",
+        "name": "Welcome to Chechnya",
+        "poster": "https://image.tmdb.org/t/p/w500/wR1b8w3fFPQR5wpbkekviLmo4wW.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8R5O9zdkUkkQ9T79XOsoz4seZhL.jpg",
+        "description": "A zesty paean of praise to the greater glories of garlic. This lip-smacking foray into the history, consumption, cultivation and culinary/curative powers of the stinking rose features chef Alice Waters of Chez Panisse, and a flavorful musical soundtrack.  Preserved by the Academy Film Archive in 1999.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0080776",
+        "imdbRating": "7.5",
+        "name": "Garlic Is as Good as Ten Mothers",
+        "poster": "https://image.tmdb.org/t/p/w500/gcgRpoF7WKcGAXpEGtqRdVo9b7u.jpg",
+        "releaseInfo": "1980",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/orq7v7J0Esq9TWpKitCXPbevOdW.jpg",
+        "description": "Sex always gets in the way of friendships between men and women. At least, that's what Harry Burns believes. So when Harry meets Sally Albright and a deep friendship blossoms between them, Harry's determined not to let his attraction to Sally destroy it. But when a night of weakness ends in a morning of panic, can the pair avoid succumbing to Harry's fears by remaining friends and admitting they just might be the perfect match for each other?",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0098635",
+        "imdbRating": "7.4",
+        "name": "When Harry Met Sally...",
+        "poster": "https://image.tmdb.org/t/p/w500/rFOiFUhTMtDetqCGClC9PIgnC1P.jpg",
+        "releaseInfo": "1989",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/pQ254oBfXJUemlbAcqpbTiG4OeV.jpg",
+        "description": "An Iranian filmmaker participates in a series of video calls with a young Palestinian photojournalist who describes her life confined in Gaza during the current regional conflict.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt36598711",
+        "imdbRating": "7.2",
+        "name": "Put Your Soul on Your Hand and Walk",
+        "poster": "https://image.tmdb.org/t/p/w500/xC6FfKOMCkC1KlT3GCY3H9Ev6FB.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/fNefgkrnYuXkKVq2bCYnZLBbHS0.jpg",
+        "description": "A documentary about how a dominant cultural and demographic institution both sustains their traditional activities and adapts to the digital revolution.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt6209282",
+        "imdbRating": "6.4",
+        "name": "Ex Libris: The New York Public Library",
+        "poster": "https://image.tmdb.org/t/p/w500/5UAtolZFuOFYqUpHcDYamsVKWvb.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/cMoiIk3tD6qshxccYRjjym7l5YV.jpg",
+        "description": "An Israeli film director interviews fellow veterans of the 1982 invasion of Lebanon to reconstruct his own memories of his term of service in that conflict.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1185616",
+        "imdbRating": "7.7",
+        "name": "Waltz with Bashir",
+        "poster": "https://image.tmdb.org/t/p/w500/zQaCv7lKwHsh0YSHkt1QNjIOZ1c.jpg",
+        "releaseInfo": "2008",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ooO63D7oYf0SVpN8OOHaH8Oz4Wo.jpg",
+        "description": "When a Swedish teen rapper finds a rabid fanbase via the internet, international superstar Yung Lean is born. But as his fame grows, darkness settles in, blurring the line between reality and his own vivid imagination.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11872780",
+        "imdbRating": "8.0",
+        "name": "Yung Lean: In My Head",
+        "poster": "https://image.tmdb.org/t/p/w500/y9uw6XHEf08O7BbqYQV2jfd2M0p.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/sn5dvn1g977bejLHGyMUlXeEXn7.jpg",
+        "description": "Pier Paolo Pasolini sets out to interview Italians about sex, apparently their least favorite thing to talk about in public: he asks children if they know where babies come from; asks old and young women if they support gender equality; asks both sexes if a woman's virginity still matters, what do they think of homosexuality, if divorce should be legal, or if they support the recent abolition of brothels. He interviews blue-collar workers, intellectuals, college students, rural farmers, the bourgeoisie, and every other kind of people, painting a vivid portrait of a rapidly-industrializing Italy, hanging between modernity and tradition — toward both of which Pasolini shows equal distrust.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0057960",
+        "imdbRating": "8.2",
+        "name": "Love Meetings",
+        "poster": "https://image.tmdb.org/t/p/w500/olOuK4gkrYzgo7xJWR1EugZ2vdS.jpg",
+        "releaseInfo": "1965",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/nygE2StzDJDBAkAxTJHqgJ79CFW.jpg",
+        "description": "Documentary on poor people living in a slum in Rio de Janeiro, on the occasion of New Year's Eve of 1999.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0273100",
+        "imdbRating": "7.9",
+        "name": "Babilônia 2000",
+        "poster": "https://image.tmdb.org/t/p/w500/yzkuRcozZMDGFGYPt9ShzQ4uCnQ.jpg",
+        "releaseInfo": "2001",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/i6THTq8VgAzReacsJN6cypoZgmR.jpg",
+        "description": "Venturing from Venice Beach to Watts, Varda looks at the murals of LA as backdrop to and mirror of the city’s many cultures. She casts a curious eye on graffiti and photorealism, roller disco & gang violence, evangelical Christians, Hare Krishnas, artists, angels and ordinary Angelenos.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0081204",
+        "imdbRating": "7.4",
+        "name": "Mur Murs",
+        "poster": "https://image.tmdb.org/t/p/w500/dFU0gAIUeSS0k96it0LhCNN8v9R.jpg",
+        "releaseInfo": "1982",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/godZeVdLEH6YFOBPajdLkAvhy5l.jpg",
+        "description": "In June 2013, Laura Poitras and reporter Glenn Greenwald flew to Hong Kong for the first of many meetings with Edward Snowden. She brought her camera with her.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt4044364",
+        "imdbRating": "7.7",
+        "name": "Citizenfour",
+        "poster": "https://image.tmdb.org/t/p/w500/nOVhX69EAxtSKEEnr5UcSd5UVci.jpg",
+        "releaseInfo": "2014",
+        "type": "movie"
+      },
+      {
+        "description": "The emotional journeys of two women victimized by corruption and injustice in Mexico and of the love, dignity and resistance that allowed them to survive.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0283394",
+        "imdbRating": "5.7",
+        "name": "Tempestad",
+        "poster": "https://image.tmdb.org/t/p/w500/5w7aZ9yZZ1dsAAyzb9014yM3e6B.jpg",
+        "releaseInfo": "1978",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/9vYYgAxMk5dihLVJhnneUbTL2Wb.jpg",
+        "description": "Filmmaker Martin Scorsese interviews his mother and father about their life in New York and family history back in Sicily.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0071680",
+        "imdbRating": "6.8",
+        "name": "Italianamerican",
+        "poster": "https://image.tmdb.org/t/p/w500/5mznNfhBuABFctEuw2p0NHlEaZ2.jpg",
+        "releaseInfo": "1974",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/dFFdQgTtvL2X02xuGpDwn6SqFiL.jpg",
+        "description": "Using archival footage, cabinet conversation recordings, and an interview of the 85-year-old Robert McNamara, The Fog of War depicts his life, from working as a WWII whiz-kid military officer, to being the Ford Motor Company's president, to managing the Vietnam War as defense secretary for presidents Kennedy and Johnson.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0317910",
+        "imdbRating": "7.7",
+        "name": "The Fog of War",
+        "poster": "https://image.tmdb.org/t/p/w500/m1dEnkrdJGBSLeAyJepuGrU9sNI.jpg",
+        "releaseInfo": "2003",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/s6kv8ULRwnLMINd0srRPu2eefwx.jpg",
+        "description": "Makhmalbaf puts an advertisement in the papers calling for an open casting for his next movie. However when hundreds of people show up, he decides to make a movie about the casting and the screen tests of the would-be actors.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0114329",
+        "imdbRating": "6.7",
+        "name": "Salaam Cinema",
+        "poster": "https://image.tmdb.org/t/p/w500/sMomuldengOiGtSJonjqcRmzrTF.jpg",
+        "releaseInfo": "1995",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/tEyWHYvNh60MsQbPIuZf46rsWo5.jpg",
+        "description": "An exploration of the cinematic history of the folk horror, from its beginnings in the UK in the late sixties; through its proliferation on British television in the seventies and its many manifestations, culturally specific, in other countries; to its resurgence in the last decade.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt13938338",
+        "imdbRating": "7.6",
+        "name": "Woodlands Dark and Days Bewitched: A History of Folk Horror",
+        "poster": "https://image.tmdb.org/t/p/w500/hW1TFe8Q6W4p6hxFbWOTWvwoySg.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ttOBvac1oW0OCCfFzZlXh3NeKyl.jpg",
+        "description": "Long-lost footage from Elvis Presley's legendary Las Vegas residency in the 1970s woven together with rare 16mm footage from Elvis on Tour, and 8mm from the Graceland archive, plus recordings of Elvis telling \"his side of the story\" rediscovered during Baz Luhrmann's research for his 2022 film, Elvis.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt35003538",
+        "imdbRating": "8.3",
+        "name": "EPiC: Elvis Presley in Concert",
+        "poster": "https://image.tmdb.org/t/p/w500/2K2NH5dforjT9kLcUC0eeBpdZkC.jpg",
+        "releaseInfo": "2026",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/9vFMRabZKwF4BTlrIqn7ltaUUMJ.jpg",
+        "description": "The true story of William Wilberforce and his courageous quest to end the British slave trade. Along the way, Wilberforce meets intense opposition, but his minister urges him to see the cause through.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0454776",
+        "imdbRating": "6.9",
+        "name": "Amazing Grace",
+        "poster": "https://image.tmdb.org/t/p/w500/zr48JEuwxcYM03NcdJU6qWMHPtq.jpg",
+        "releaseInfo": "2006",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/6KDpjoCxlNapSzqUdagloiQqljh.jpg",
+        "description": "Virunga in the Democratic Republic of the Congo is Africa’s oldest national park, a UNESCO world heritage site, and a contested ground among insurgencies seeking to topple the government that see untold profits in the land. Among this ongoing power struggle, Virunga also happens to be the last natural habitat for the critically endangered mountain gorilla. The only thing standing in the way of the forces closing in around the gorillas: a handful of passionate park rangers and journalists fighting to secure the park’s borders and expose the corruption of its enemies. Filled with shocking footage, and anchored by the surprisingly deep and gentle characters of the gorillas themselves, Virunga is a galvanizing call to action around an ongoing political and environmental crisis in the Congo.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt3455224",
+        "imdbRating": "7.9",
+        "name": "Virunga",
+        "poster": "https://image.tmdb.org/t/p/w500/7ULqkiqpxWfQxNHRq5PeZjJQ3f6.jpg",
+        "releaseInfo": "2014",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/rSuqSerMzqMtgX7fX50Hl55ficF.jpg",
+        "description": "Those who knew iconic funnyman John Candy best share his story, in their own words, through never-before-seen archival footage, imagery, and interviews.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt26683420",
+        "imdbRating": "7.9",
+        "name": "John Candy: I Like Me",
+        "poster": "https://image.tmdb.org/t/p/w500/mNEJdx9WSXeyMmkuQfTeY4zouNx.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/57cjCSZiyBN7ME3N9Cp1s85rE2i.jpg",
+        "description": "In its first 25 years only 10 people have finished The Barkley Marathons. Based on a historic prison escape, this cult like race tempts people from around the world to test their limits of physical and mental endurance in this documentary that contemplates the value of pain.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt2400291",
+        "imdbRating": "7.4",
+        "name": "The Barkley Marathons: The Race That Eats Its Young",
+        "poster": "https://image.tmdb.org/t/p/w500/1ugzwqaN5mcIgigfI1J3T1Zedym.jpg",
+        "releaseInfo": "2014",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/n1BjnpeFJ8hVXae8SIlkjJ7BkJO.jpg",
+        "description": "Hailed as one of the most innovative and intimate documentaries of all time, experience Kurt Cobain like never before in the only ever fully authorized portrait of the famed music icon. Academy Award nominated filmmaker Brett Morgen expertly blends Cobain's personal archive of art, music, never seen before movies, animation and revelatory interviews from his family and closest friends.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt4229236",
+        "imdbRating": "7.6",
+        "name": "Cobain: Montage of Heck",
+        "poster": "https://image.tmdb.org/t/p/w500/hQEkK4WnTtQXIp5QOnVTsK3xYRM.jpg",
+        "releaseInfo": "2015",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/ambKXAJYrDPJK9wBJlIVVWbQbar.jpg",
+        "description": "While investigating the furtive world of illegal doping in sports, director Bryan Fogel connects with renegade Russian scientist Dr. Grigory Rodchenkov—a pillar of his country’s “anti-doping” program. Over dozens of Skype calls, urine samples, and badly administered hormone injections, Fogel and Rodchenkov grow closer despite shocking allegations that place Rodchenkov at the center of Russia’s state-sponsored Olympic doping program.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt6333060",
+        "imdbRating": "7.6",
+        "name": "Icarus",
+        "poster": "https://image.tmdb.org/t/p/w500/x5azMi1KvZWbBbfjmGqpHNGqjH.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/vate7k6MyLQDeFYkHqCrLhRes6m.jpg",
+        "description": "Martin Short looks back on a life fueled by joy in this documentary with classic clips, fresh interviews and star-studded, never-before-seen home movies.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt39382052",
+        "imdbRating": "7.9",
+        "name": "Marty, Life Is Short",
+        "poster": "https://image.tmdb.org/t/p/w500/5u8r3iMUVeVejv8G2PrRvlTbogC.jpg",
+        "releaseInfo": "2026",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/aFK4vzhhtz6P4N4yojKHM5DyzUB.jpg",
+        "description": "Julita expressed her three greatest wishes shortly after getting married: lots of children, a monkey and a castle she can call her own. That all of these wishes have become a reality is probably down to the immense stubbornness of this charismatic and equally hilarious matriarch who has a weakness for collecting crazy objects. When financial circumstances force the family to sell their castle, her adult children are left sifting through a lifetime of peculiarities in search of a few lost bones… Spanish actor and neo director Gustavo Salmerón paints a deliciously absurd family portrait that just happens to reveal a lot about Spain, Catholicism and the economic crisis.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7115920",
+        "imdbRating": "7.3",
+        "name": "Lots of Kids, a Monkey and a Castle",
+        "poster": "https://image.tmdb.org/t/p/w500/1IXufNFOPhRvOnng1f3ElkwxGCp.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/hehaK1jIuTOvRPGPccVivZcZ2Cb.jpg",
+        "description": "While staying at a hotel in England with his grandmother, Helga, a young boy named Luke inadvertently spies on a convention of witches. The Grand High Witch reveals a plan to turn all children into mice via a magical formula. When they discover the eavesdropper, the witches test the formula on him. Now, with the help of Helga and hotel manager Mr Stringer, Luke the mouse must fight back against the witches.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0100944",
+        "imdbRating": "6.9",
+        "name": "The Witches",
+        "poster": "https://image.tmdb.org/t/p/w500/mPYBjVkeHakkPGY7WaKyyNU4RWm.jpg",
+        "releaseInfo": "1990",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/yGtoR1fi3e2xU7N91cb2DKJjtyL.jpg",
+        "description": "Banksy is a graffiti artist with a global reputation whose work can be seen on walls from post-hurricane New Orleans to the separation barrier on the Palestinian West Bank. Fiercely guarding his anonymity to avoid prosecution, Banksy has so far resisted all attempts to be captured on film. Exit Through the Gift Shop tells the incredible true story of how an eccentric French shop keeper turned documentary maker attempted to locate and befriend Banksy, only to have the artist turn the camera back on its owner.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1587707",
+        "imdbRating": "7.5",
+        "name": "Exit Through the Gift Shop",
+        "poster": "https://image.tmdb.org/t/p/w500/ruM5ehUQlHC1Kx3SF18d6klfrAx.jpg",
+        "releaseInfo": "2010",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/4Q3CG0clzmwZWnfdRZFuxs0oj9Q.jpg",
+        "description": "Martin Scorsese presents this very personal and insightful new feature-length documentary about British filmmakers Michael Powell and Emeric Pressburger.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt19895822",
+        "imdbRating": "7.7",
+        "name": "Made in England: The Films of Powell and Pressburger",
+        "poster": "https://image.tmdb.org/t/p/w500/36oj0KFSY4j0GdQ1EicVPcN0ppb.jpg",
+        "releaseInfo": "2024",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/K6O04LC7yMfvJNd65RCPKKINzV.jpg",
+        "description": "L, a student in India witness to the government's violent response to university protests, writes letters to her estranged lover while he is away.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt14812784",
+        "imdbRating": "7.5",
+        "name": "A Night of Knowing Nothing",
+        "poster": "https://image.tmdb.org/t/p/w500/34tv7dVLl1arMD1ZB4v07GYqsAb.jpg",
+        "releaseInfo": "2022",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/o3cMdKm2NN2TtF9Gx7epPODNUBy.jpg",
+        "description": "Three decades after German-American pilot Dieter Dengler was shot down over Laos, he returns to the places where he was held prisoner during the early years of the Vietnam War. Accompanied by director Werner Herzog, Dengler describes in unusually candid detail his captivity, the friendships he made, and his daring escape. Not willing to stop there, Herzog even persuades his subject to re-enact certain tortures, with the help of some willing local villagers.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0145046",
+        "imdbRating": "7.5",
+        "name": "Little Dieter Needs to Fly",
+        "poster": "https://image.tmdb.org/t/p/w500/2sLpyYytu0Dbymzs3skxOCRHKkl.jpg",
+        "releaseInfo": "1997",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/lFb1Ey6HqCdc2D74Zt5kr7EpQKT.jpg",
+        "description": "Constructed from over 500 hours of never-before-seen footage, this documentary centers on the personal life and career of the controversial football player Diego Maradona who played for SSC Napoli and Argentina in the 1980s.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt5433114",
+        "imdbRating": "7.4",
+        "name": "Diego Maradona",
+        "poster": "https://image.tmdb.org/t/p/w500/3eBZxi0xcXBnEYq4m4YTVf0eHWX.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/y5Y12Pds6Z4ipLg482Azhp4xb9x.jpg",
+        "description": "In this fascinating Oscar-nominated documentary, American guitarist Ry Cooder brings together a group of legendary Cuban folk musicians (some in their 90s) to record a Grammy-winning CD in their native city of Havana. The result is a spectacular compilation of concert footage from the group's gigs in Amsterdam and New York City's famed Carnegie Hall, with director Wim Wenders capturing not only the music -- but also the musicians' life stories.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0186508",
+        "imdbRating": "7.5",
+        "name": "Buena Vista Social Club",
+        "poster": "https://image.tmdb.org/t/p/w500/b8psTDXSelHiab1I7L8rFdYs0IC.jpg",
+        "releaseInfo": "1999",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/uuKaiG4G0Zqdl7rfSIHcXsfRkeU.jpg",
+        "description": "When a local drug dealer shoots a dishonest cop in self-defense, lawyer and renegade undercover cop join forces to clear him. But when their investigation leads them into a maze of greed and corruption, they learn that in a town where everything is for sale, anything can happen.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0096087",
+        "imdbRating": "5.8",
+        "name": "Shakedown",
+        "poster": "https://image.tmdb.org/t/p/w500/bj0bTImQPWkBBD3Kh2ArqAqEnv5.jpg",
+        "releaseInfo": "1988",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bbDMy8ou6N8yL5VidQpzo6kZZVk.jpg",
+        "description": "Supersonic charts the meteoric rise of Oasis from the council estates of Manchester to some of the biggest concerts of all time in just three short years.  This palpable, raw and moving film shines a light on one of the most genre and generation-defining British bands that has ever existed and features candid new interviews with Noel and Liam Gallagher, their mother, and members of the band and road crew.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt5213534",
+        "imdbRating": "7.4",
+        "name": "Supersonic",
+        "poster": "https://image.tmdb.org/t/p/w500/gMHLEKTB22J212To1gSnundcIhH.jpg",
+        "releaseInfo": "2016",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/fQExn029sEcpXvpKJQIQdEwKv5d.jpg",
+        "description": "The wife of a pastor who preaches against homosexuality embarks on an affair with a female writer.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1575539",
+        "imdbRating": "6.9",
+        "name": "Elena Undone",
+        "poster": "https://image.tmdb.org/t/p/w500/m4SDHYqLbYHnq5Lb6XPZPHgBbID.jpg",
+        "releaseInfo": "2010",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/4HF5VEbnPlc4AdqDxebQmwYsbBE.jpg",
+        "description": "Doubling as a cartography of the ever-changing city, Bill Cunningham New York portrays the secluded pioneer of street fashion with grace and heart.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1621444",
+        "imdbRating": "7.6",
+        "name": "Bill Cunningham New York",
+        "poster": "https://image.tmdb.org/t/p/w500/ex1m4lIAcdxJLBojN90fD3HoxlU.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/s5e27x7tREwWQFQLcqFr8MCb8Fl.jpg",
+        "description": "The geographical dead center of North America and the beloved birthplace of Guy Maddin, Winnipeg, is the frosty and mysterious star of Maddin’s film. Fact, fantasy and memory are woven seamlessly together in this work, conjuring a city as delightful as it is fearsome.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1093842",
+        "imdbRating": "6.9",
+        "name": "My Winnipeg",
+        "poster": "https://image.tmdb.org/t/p/w500/nytcKOHE4CF7OlSej4zpIVEbCy7.jpg",
+        "releaseInfo": "2008",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/3r5ALuBZak2zx3NZr698B8OLFPd.jpg",
+        "description": "Using home videos recorded by her voice coach, Diana takes us through the story of her life.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7188868",
+        "imdbRating": "7.6",
+        "name": "Diana: In Her Own Words",
+        "poster": "https://image.tmdb.org/t/p/w500/9AvP1lvt8lZemhsdQ71Y0cwwaB8.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/AcHVBUCOJy1zTN66ypulFFzEE2M.jpg",
+        "description": "With exclusive access to his extraordinary unseen and unheard personal archive including hundreds of hours of audio recorded over the course of his life, this is the definitive Marlon Brando cinema documentary. Charting his exceptional career as an actor and his extraordinary life away from the stage and screen with Brando himself as your guide, the film will fully explore the complexities of the man by telling the story uniquely from Marlon's perspective, entirely in his own voice. No talking heads, no interviewees, just Brando on Brando and life.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt4145178",
+        "imdbRating": "7.5",
+        "name": "Listen to Me Marlon",
+        "poster": "https://image.tmdb.org/t/p/w500/yhqIuN7VC5ZpBDyRnwyVRNR6CC3.jpg",
+        "releaseInfo": "2015",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/70uUnpfe7en9x011UjpZoub101l.jpg",
+        "description": "This is not a film about gun control. It is a film about the fearful heart and soul of the United States, and the 280 million Americans lucky enough to have the right to a constitutionally protected Uzi. From a look at the Columbine High School security camera tapes to the home of Oscar-winning NRA President Charlton Heston, from a young man who makes homemade napalm with The Anarchist's Cookbook to the murder of a six-year-old girl by another six-year-old. Bowling for Columbine is a journey through the US, through our past, hoping to discover why our pursuit of happiness is so riddled with violence.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0310793",
+        "imdbRating": "7.5",
+        "name": "Bowling for Columbine",
+        "poster": "https://image.tmdb.org/t/p/w500/4XsiTsZcNCRSkee1o0fdr5OqYRT.jpg",
+        "releaseInfo": "2002",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/dmg5FvoJJlmxDTzp0xmho3gEGDO.jpg",
+        "description": "Award-winning journalist Daniela Arbex examines the horrors of the Colônia psychiatric hospital, where more than 60,000 people were killed over decades.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt6410688",
+        "imdbRating": "8.0",
+        "name": "Brazilian Holocaust",
+        "poster": "https://image.tmdb.org/t/p/w500/76muwL3vWeojBD5N2ARsgFrtXPx.jpg",
+        "releaseInfo": "2016",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/jIU24L8jxL5UzavytzVyaslLWHO.jpg",
+        "description": "FOO FIGHTERS BACK AND FORTH chronicles the 16 year history of the Foo Fighters: from the band's very first songs created as cassette demos Dave Grohl recorded during his tenure as Nirvana's drummer, through its ascent to their Grammy-winning, multi-platinum, arena and stadium headlining status as one of the biggest rock bands on the planet.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1853563",
+        "imdbRating": "7.6",
+        "name": "Foo Fighters: Back and Forth",
+        "poster": "https://image.tmdb.org/t/p/w500/9t11iPy8Mo5O4yHorqcKXXDLwtt.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/mA03GgESjKMCUAiCywyx6I7kSZx.jpg",
+        "description": "Paul McCartney forms new band Wings after Beatles breakup. Archival home footage shows his life with Linda, who influenced his music. The film follows Wings from formation through the 1970s, during which McCartney wrote hit songs.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt26931594",
+        "imdbRating": "7.4",
+        "name": "Man on the Run",
+        "poster": "https://image.tmdb.org/t/p/w500/6wHOJ6pAkj0RWCZx8U4dqsrlQpa.jpg",
+        "releaseInfo": "2026",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/nMbK6zeHGjKtph5odcyHrNkVmLP.jpg",
+        "description": "Depeche Mode: M captures the band's 2023 Mexico City shows, blending concert footage with interstitial elements, exploring music, mortality, and Mexican culture's relationship with death.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt36590288",
+        "imdbRating": "8.1",
+        "name": "Depeche Mode: M",
+        "poster": "https://image.tmdb.org/t/p/w500/qz0EgfYwfrqhC2yTIqNkSY4P2Jo.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/uYo84MtnPcECYvmNUtEBv2wUrE0.jpg",
+        "description": "In Manhattan's Central Park, a film crew directed by William Greaves is shooting a screen test with various pairs of actors. It's a confrontation between a couple: he demands to know what's wrong, she challenges his sexual orientation. Cameras shoot the exchange, and another camera records Greaves and his crew. Sometimes we watch the crew discussing this scene, its language, and the process of making a movie. Is there such a thing as natural language? Are all things related to sex? The camera records distractions - a woman rides horseback past them; a garrulous homeless vet who sleeps in the park chats them up. What's the nature of making a movie?",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0296881",
+        "imdbRating": "6.9",
+        "name": "Symbiopsychotaxiplasm: Take One",
+        "poster": "https://image.tmdb.org/t/p/w500/wMRtQ3A4pOmG2dXKOxx9tTerFi6.jpg",
+        "releaseInfo": "1971",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/p6GI3J6CfxhxwYmvHpBtYRVi7iq.jpg",
+        "description": "Pina is a feature-length dance film in 3D with the ensemble of the Tanztheater Wuppertal Pina Bausch, featuring the unique and inspiring art of the great German choreographer, who died in the summer of 2009.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1440266",
+        "imdbRating": "7.4",
+        "name": "Pina",
+        "poster": "https://image.tmdb.org/t/p/w500/mKKtIJYtaGwcgpMfnVR2byYhfz9.jpg",
+        "releaseInfo": "2011",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/vTM2VGFFdgsaP8PEgogmVPoIAlg.jpg",
+        "description": "Like all musicians in 2021, Nick Cave was unable to connect with his audience in person. He uses this concert film to break the vocal and instrumental silence, talk about himself and perform songs from “Ghosteen” and “Carnage”, with help from Warren Ellis.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt15721828",
+        "imdbRating": "7.2",
+        "name": "This Much I Know to Be True",
+        "poster": "https://image.tmdb.org/t/p/w500/amYrP5cL5Q2uKJP5RM027ZUzFyQ.jpg",
+        "releaseInfo": "2022",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/5oQXOe2v2NjnsO2Cx5OtpA4zFIV.jpg",
+        "description": "A look at the life of activist, musician, and cultural icon Kathleen Hanna, who formed the punk band Bikini Kill and pioneered the \"riot grrrl\" movement of the 1990s.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt1785612",
+        "imdbRating": "7.1",
+        "name": "The Punk Singer",
+        "poster": "https://image.tmdb.org/t/p/w500/d8k0rBZKAh15dGw6NQVMO25zhuw.jpg",
+        "releaseInfo": "2013",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/3KzghZrRLcAdMHzBE9DCFSjdvxn.jpg",
+        "description": "This 2004 documentary by Werner Herzog diaries the struggle of a passionate English inventor to design and test a unique airship during its maiden flight above the jungle canopy.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0435776",
+        "imdbRating": "7.0",
+        "name": "The White Diamond",
+        "poster": "https://image.tmdb.org/t/p/w500/oYSEPp5uyXZ0UXNhTGQtwvGUGKC.jpg",
+        "releaseInfo": "2004",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/tPlNfNT2CIZBKPewrsRoGCgZtG6.jpg",
+        "description": "Drawn from a never before seen cache of personal footage spanning decades, this is an intimate portrait of the Sri Lankan artist and musician who continues to shatter conventions.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt3041550",
+        "imdbRating": "7.7",
+        "name": "Matangi / Maya / M.I.A.",
+        "poster": "https://image.tmdb.org/t/p/w500/h0O3e35W0xnkEaL8iXYvqYkZrRB.jpg",
+        "releaseInfo": "2018",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/x0FZZWBE7Sp5Vz5ncn4wb8JyG5c.jpg",
+        "description": "In an intimate and joyful story of love in the face of loss, celebrated poets Andrea Gibson and Megan Falley find strength—and unexpected hilarity—in what might be their final year together.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt34966013",
+        "imdbRating": "7.4",
+        "name": "Come See Me in the Good Light",
+        "poster": "https://image.tmdb.org/t/p/w500/5AFbcDGT78cLZTyHTSDBohczjuO.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/x9mNdys0lpj4A5RnulpFnffzQ2F.jpg",
+        "description": "It explores Rita Lee's personal life and her creative process, revealing her musical talent and her ability to transform on stage. Rita herself guides the narrative through past interviews she gave throughout her career and current testimonies.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt36261475",
+        "imdbRating": "8.3",
+        "name": "Ritas",
+        "poster": "https://image.tmdb.org/t/p/w500/unqAMlRU1WVRomfdQHtgoK5TMBO.jpg",
+        "releaseInfo": "2025",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/mjf3c6oWvsaEOipue79mAA31Ic1.jpg",
+        "description": "Experience the iconic rock band's legacy in the first major documentary to tell their story. Directed with the era’s avant-garde spirit by Todd Haynes, this kaleidoscopic oral history combines exclusive interviews with dazzling archival footage.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7230750",
+        "imdbRating": "6.8",
+        "name": "The Velvet Underground",
+        "poster": "https://image.tmdb.org/t/p/w500/9uRF6vERWfhlSZKc1sAJTTdG2Ix.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/bYZM4DoHrmzY3oq2qrcXAYQmLNp.jpg",
+        "description": "A prestigious Stockholm museum's chief art curator finds himself in times of both professional and personal crisis as he attempts to set up a controversial new exhibit.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt4995790",
+        "imdbRating": "6.8",
+        "name": "The Square",
+        "poster": "https://image.tmdb.org/t/p/w500/pefcv5VNspSK4Dt8doei5bJmmln.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "description": "Top Rated Letterboxd Documentary Film.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0324401",
+        "imdbRating": "6.7",
+        "name": "Wind from the East",
+        "poster": "https://image.tmdb.org/t/p/w500/qISyIRMih5cYIgsFH0hWZQSlC30.jpg",
+        "releaseInfo": "1959",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/pQfqBfO1UIXz3rSOJN6WbyDW4k4.jpg",
+        "description": "This raucous journey into the heart of democracy captures an unusual rite of passage: 1,100 teenage boys from across Texas coming together to build a representative government from the ground up.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11095742",
+        "imdbRating": "7.1",
+        "name": "Boys State",
+        "poster": "https://image.tmdb.org/t/p/w500/cuvt3ImM3wQdijib7OeIH48uRfQ.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/rsNlLP0LKa20YG3NGS0KmMNOyGP.jpg",
+        "description": "A film that describes the love-hate relationship between Werner Herzog and Klaus Kinski, the deep trust between the director and the actor, and their independently and simultaneously hatched plans to murder one another.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0200849",
+        "imdbRating": "7.3",
+        "name": "My Best Fiend",
+        "poster": "https://image.tmdb.org/t/p/w500/osoW8CtE9zuCK7Bre0cnVsoXQjY.jpg",
+        "releaseInfo": "1999",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/l1mDEz7bOFz466QBo6ipSXP3Ge0.jpg",
+        "description": "A look at the life and legend of Sir Alex Ferguson, from his working-class roots in Glasgow through to his career as one of the greatest football managers of all time. While recovering from a traumatic brain haemorrhage in 2018, Sir Alex intimately recounts vivid details of his life and career to his son, including his legendary 26-year tenure as manager of Manchester United.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt8999372",
+        "imdbRating": "7.5",
+        "name": "Sir Alex Ferguson: Never Give In",
+        "poster": "https://image.tmdb.org/t/p/w500/knoiXr69RksDX4sDApXo9TUNfR1.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/1FIK6rehI7ZMVRv3MDY5GHiYa9M.jpg",
+        "description": "A funny, intimate and heartbreaking portrait of one of the world’s most beloved and inventive comedians, Robin Williams, told largely through his own words. Celebrates what he brought to comedy and to the culture at large, from the wild days of late-1970s L.A. to his death in 2014.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt7689966",
+        "imdbRating": "7.9",
+        "name": "Robin Williams: Come Inside My Mind",
+        "poster": "https://image.tmdb.org/t/p/w500/ak9DZnzInl9oIUlXxsFsUd37ueh.jpg",
+        "releaseInfo": "2018",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/uhhTABBddHoOTV0BarymFTgOee6.jpg",
+        "description": "The life of Canadian mountain climber Marc-André Leclerc as he pushes the boundaries of climbing while on an expedition to Patagonia.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11790780",
+        "imdbRating": "7.8",
+        "name": "The Alpinist",
+        "poster": "https://image.tmdb.org/t/p/w500/tYbSGAVbyACEExptLu63CxCGm4O.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/a6Ha2K2VGQVDEPL76oN8qLVnqAH.jpg",
+        "description": "Exuberant, eye-opening movie that serves up a dazzling hundred-year history of the role of gay men and lesbians have had on the silver screen. Film contains fabulous footage from 120 films showing the changing face of cinema sexuality, from cruel stereotypes to covert love to the activist triumphs of the 1990s.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0112651",
+        "imdbRating": "7.2",
+        "name": "The Celluloid Closet",
+        "poster": "https://image.tmdb.org/t/p/w500/x0DSh3uMeQk6EG1DHjGJUywN7C0.jpg",
+        "releaseInfo": "1996",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/1ZnVWcwNScrznz9GPHiVMdckyGC.jpg",
+        "description": "The shadows of screams climb beyond the hills.  It has happened before. But this will be the last time.  The last few sense it, withdrawing deep into the forest.  They cry out into the black, as the shadows pass away, into the ground.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt6381052",
+        "imdbRating": "6.7",
+        "name": "Sleep Has Her House",
+        "poster": "https://image.tmdb.org/t/p/w500/xIFdTSIe3KVb2rxgBwfaWNdrFwx.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/6L2KQtzSm9BJWpNIAcIwQ8QG0nk.jpg",
+        "description": "The life and career of an actor, artist, and icon. His own journey through his own camera.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt6739646",
+        "imdbRating": "7.4",
+        "name": "I Am Heath Ledger",
+        "poster": "https://image.tmdb.org/t/p/w500/96ScsrVx2tAlWuiZYgqwcuGYdYK.jpg",
+        "releaseInfo": "2017",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/4MYtYsSGzQUUYQqHGWBNeEkT91s.jpg",
+        "description": "Part documentary, part concert film, part fever dream, this film captures the troubled spirit of America in 1975 and the joyous music that Dylan performed during the fall of that year.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt9577852",
+        "imdbRating": "7.0",
+        "name": "Rolling Thunder Revue: A Bob Dylan Story by Martin Scorsese",
+        "poster": "https://image.tmdb.org/t/p/w500/ixxELBgYj9OH8hz0XCrcZOJpIx9.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/lNfCPWJnFppNThDVZBcPgrsJBoS.jpg",
+        "description": "A further investigation into the arrest of three teenagers convicted of killing three young boys in Arkansas who spent nearly 20 years in prison before being released after new DNA evidence indicated they may be innocent.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt2028530",
+        "imdbRating": "7.4",
+        "name": "Paradise Lost 3: Purgatory",
+        "poster": "https://image.tmdb.org/t/p/w500/5Ix8SvMu5MllsXLtD0dvZR0vDi2.jpg",
+        "releaseInfo": "2012",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/xfTLqhyq1zoFql7X6h37j6DIvVQ.jpg",
+        "description": "Take a stroll down Sesame Street and witness the birth of the most influential children's show in television history. From the iconic furry characters to the classic songs you know by heart, learn how a gang of visionary creators changed the world.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt5618690",
+        "imdbRating": "7.4",
+        "name": "Street Gang: How We Got to Sesame Street",
+        "poster": "https://image.tmdb.org/t/p/w500/o5o7Lubqk0HDxtLR2aCEoO3P6lp.jpg",
+        "releaseInfo": "2021",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/6pqgrpjMJVQpRExb9N6hW7ixUmj.jpg",
+        "description": "Delving into a century of genre films that by turns utilized, caricatured, exploited, sidelined, and finally embraced them, this is the untold history of black Americans in Hollywood through their connection to the horror genre.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt9567548",
+        "imdbRating": "6.8",
+        "name": "Horror Noire: A History of Black Horror",
+        "poster": "https://image.tmdb.org/t/p/w500/iTNvR1IwF9v3a7e9MVooT3ZR1GG.jpg",
+        "releaseInfo": "2019",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/8zK62AqZABy7eQfhf4nH2d2hUph.jpg",
+        "description": "A study of the psychology of a champion ski-flyer, whose full-time occupation is carpentry.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt0070136",
+        "imdbRating": "7.2",
+        "name": "The Great Ecstasy of Woodcarver Steiner",
+        "poster": "https://image.tmdb.org/t/p/w500/adKS727o4EkX0pxdfNo3B3bDdah.jpg",
+        "releaseInfo": "1974",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/qhG2hGAf4kgNUphdvsOZMn4z6QY.jpg",
+        "description": "With this inventive portrait, director Kirsten Johnson seeks a way to keep her 86-year-old father alive forever. Utilizing moviemaking magic and her family’s dark humor, she celebrates Dr. Dick Johnson’s last years by staging fantasies of death and beyond. Together, dad and daughter confront the great inevitability awaiting us all.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt11394180",
+        "imdbRating": "7.1",
+        "name": "Dick Johnson Is Dead",
+        "poster": "https://image.tmdb.org/t/p/w500/vnfI34kmi3fcdgP7HZjIgGOJHGY.jpg",
+        "releaseInfo": "2020",
+        "type": "movie"
+      },
+      {
+        "background": "https://image.tmdb.org/t/p/original/f1YohZe2PDV5OgTPwNVvRhhV935.jpg",
+        "description": "In 1989, five black and Latino teenagers from Harlem were arrested and later convicted of raping a white woman in New York City's Central Park. They spent between 6 and 13 years in prison before a serial rapist confessed that he alone had committed the crime, leading to their convictions being overturned. Set against a backdrop of a decaying city beset by violence and racial tension, this is the story of that horrific crime, the rush to judgment by the police, a media clamoring for sensational stories and an outraged public, and the five lives upended by this miscarriage of justice.",
+        "genres": [
+          "Documentary"
+        ],
+        "id": "tt2380247",
+        "imdbRating": "7.0",
+        "name": "The Central Park Five",
+        "poster": "https://image.tmdb.org/t/p/w500/aKlQ8Sjr07OkCLuYkRYtpVSMm3e.jpg",
+        "releaseInfo": "2012",
+        "type": "movie"
+      }
+    ],
+    "name": "Letterboxd Official: Top 250 Documentary Films",
+    "timestamp": 1786233511843
+  },
   "custom_mdblist_christmas_1786231513847": {
     "description": "MDBList by jbeasley74: 1,500+ Holiday & Christmas Movie Classics.",
     "id": "custom_mdblist_christmas_1786231513847",
