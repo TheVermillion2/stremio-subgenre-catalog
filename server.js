@@ -650,17 +650,17 @@ async function queryGeminiForMovies(promptText, apiKey, preferredModel = '', isL
   You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
   Format: [{"title": "Movie Title 1", "year": 1999}]`
     : `You are an expert film database curator. The user will give you a custom movie sub-genre, list theme, or search request.
-Return a high-quality, comprehensive list of the best 70 to 100 real, existing movies matching the theme. Dig deep into film history and iconic cinema.
-You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
-Format:
-[
-  {"title": "Movie Title 1", "year": 1999},
-  {"title": "Movie Title 2", "year": 2005}
-]`;
+  Return a high-quality, comprehensive list of 150 to 200 real, existing movies matching the theme. Dig deep into film history, iconic cinema, classics, and hidden gems across all decades.
+  You MUST return ONLY a raw JSON array format with NO markdown code block formatting (do NOT write \`\`\`json).
+  Format:
+  [
+    {"title": "Movie Title 1", "year": 1999},
+    {"title": "Movie Title 2", "year": 2005}
+  ]`;
 
   const modelsToTry = preferredModel && preferredModel !== 'gemini-1.5-pro'
-    ? [preferredModel, 'gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'] 
-    : ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-2.0-flash'];
+    ? [preferredModel, 'gemini-2.0-flash', 'gemini-1.5-flash-latest', 'gemini-1.5-flash-8b'] 
+    : ['gemini-2.0-flash', 'gemini-1.5-flash-latest', 'gemini-1.5-flash-8b'];
 
   let lastError;
   for (const model of modelsToTry) {
@@ -782,166 +782,55 @@ async function searchTmdbMovie(title, year, apiKey) {
 function getFallbackMoviesForPrompt(name = '', prompt = '') {
   const text = (name + ' ' + prompt).toLowerCase();
   
-  if (text.includes('hood') || text.includes('street') || text.includes('urban crime') || text.includes('underworld')) {
+  // 1. Zombie, Vampire & Outbreak Sagas
+  if (text.includes('zombie') || text.includes('vampire') || text.includes('outbreak') || text.includes('undead')) {
     return [
-      { title: "Boyz n the Hood", year: 1991 },
-      { title: "Menace II Society", year: 1993 },
-      { title: "Poetic Justice", year: 1993 },
-      { title: "Juice", year: 1992 },
-      { title: "Set It Off", year: 1996 },
-      { title: "New Jack City", year: 1991 },
-      { title: "Dead Presidents", year: 1995 },
-      { title: "Paid in Full", year: 2002 },
-      { title: "Friday", year: 1995 },
-      { title: "Belly", year: 1998 },
-      { title: "Clockers", year: 1995 },
-      { title: "King of New York", year: 1990 },
-      { title: "Fresh", year: 1994 },
-      { title: "Sugar Hill", year: 1994 },
-      { title: "Deep Cover", year: 1992 },
-      { title: "South Central", year: 1992 },
-      { title: "Do the Right Thing", year: 1989 },
-      { title: "Jason's Lyric", year: 1994 },
-      { title: "Baby Boy", year: 2001 },
-      { title: "Shottas", year: 2002 }
-    ];
-  }
-  if (text.includes('romance') || text.includes('rom-com') || text.includes('love')) {
-    return [
-      { title: "Love & Basketball", year: 2000 },
-      { title: "Brown Sugar", year: 2002 },
-      { title: "The Best Man", year: 1999 },
-      { title: "Love Jones", year: 1997 },
-      { title: "Poetic Justice", year: 1993 },
-      { title: "Beyond the Lights", year: 2014 },
-      { title: "Two Can Play That Game", year: 2001 },
-      { title: "The Wood", year: 1999 },
-      { title: "Boomerang", year: 1992 },
-      { title: "Just Wright", year: 2010 },
-      { title: "About Last Night", year: 2014 },
-      { title: "Deliver Us from Eva", year: 2003 },
-      { title: "Soul Food", year: 1997 },
-      { title: "Waiting to Exhale", year: 1995 }
-    ];
-  }
-  if (text.includes('comedy') || text.includes('house party') || text.includes('cookout')) {
-    return [
-      { title: "Friday", year: 1995 },
-      { title: "Next Friday", year: 2000 },
-      { title: "Barbershop", year: 2002 },
-      { title: "House Party", year: 1990 },
-      { title: "Girls Trip", year: 2017 },
-      { title: "Think Like a Man", year: 2012 },
-      { title: "Soul Plane", year: 2004 },
-      { title: "Booty Call", year: 1997 },
-      { title: "Don't Be a Menace to South Central", year: 1996 },
-      { title: "Class Act", year: 1992 },
-      { title: "Money Talks", year: 1997 },
-      { title: "House Party 2", year: 1991 }
-    ];
-  }
-  if (text.includes('black horror') || text.includes('social suspense') || text.includes('peele')) {
-    return [
-      { title: "Get Out", year: 2017 },
-      { title: "Us", year: 2019 },
-      { title: "Nope", year: 2022 },
-      { title: "Candyman", year: 1992 },
-      { title: "Tales from the Hood", year: 1995 },
-      { title: "His House", year: 2020 },
-      { title: "Antebellum", year: 2020 },
-      { title: "Spell", year: 2020 },
-      { title: "The Blackening", year: 2022 },
-      { title: "Bones", year: 2001 },
-      { title: "Vampire in Brooklyn", year: 1995 }
-    ];
-  }
-  if (text.includes('afrofuturism') || text.includes('black sci-fi')) {
-    return [
-      { title: "Black Panther", year: 2018 },
-      { title: "They Cloned Tyrone", year: 2023 },
+      { title: "28 Days Later", year: 2002 },
+      { title: "Dawn of the Dead", year: 2004 },
+      { title: "Train to Busan", year: 2016 },
+      { title: "Shaun of the Dead", year: 2004 },
+      { title: "World War Z", year: 2013 },
+      { title: "Zombieland", year: 2009 },
+      { title: "Dracula", year: 1992 },
+      { title: "Interview with the Vampire", year: 1994 },
       { title: "Blade", year: 1998 },
-      { title: "Attack the Block", year: 2011 },
-      { title: "Spider-Man: Into the Spider-Verse", year: 2018 },
-      { title: "Fast Color", year: 2018 },
-      { title: "The Brother from Another Planet", year: 1984 },
-      { title: "See You Yesterday", year: 2019 }
+      { title: "From Dusk Till Dawn", year: 1996 },
+      { title: "Let the Right One In", year: 2008 },
+      { title: "30 Days of Night", year: 2007 },
+      { title: "I Am Legend", year: 2007 },
+      { title: "The Lost Boys", year: 1987 },
+      { title: "Night of the Living Dead", year: 1968 }
     ];
   }
-  if (text.includes('hip-hop') || text.includes('musical') || text.includes('music')) {
+
+  // 2. Horror (Supernatural, Hauntings, Slashers, Occult, A24 Elevated)
+  if (text.includes('horror') || text.includes('slasher') || text.includes('haunting') || text.includes('possession') || text.includes('demonic') || text.includes('occult')) {
     return [
-      { title: "Straight Outta Compton", year: 2015 },
-      { title: "8 Mile", year: 2002 },
-      { title: "Hustle & Flow", year: 2005 },
-      { title: "Notorious", year: 2009 },
-      { title: "Krush Groove", year: 1985 },
-      { title: "CB4", year: 1993 },
-      { title: "Get Rich or Die Tryin'", year: 2005 },
-      { title: "All Eyez on Me", year: 2017 },
-      { title: "Beat Street", year: 1984 }
+      { title: "The Exorcist", year: 1973 },
+      { title: "The Shining", year: 1980 },
+      { title: "Halloween", year: 1978 },
+      { title: "A Nightmare on Elm Street", year: 1984 },
+      { title: "Scream", year: 1996 },
+      { title: "Hereditary", year: 2018 },
+      { title: "The Conjuring", year: 2013 },
+      { title: "Get Out", year: 2017 },
+      { title: "It", year: 2017 },
+      { title: "The Texas Chain Saw Massacre", year: 1974 },
+      { title: "Poltergeist", year: 1982 },
+      { title: "Insidious", year: 2010 },
+      { title: "Midsommar", year: 2019 },
+      { title: "Sinister", year: 2012 },
+      { title: "The Thing", year: 1982 },
+      { title: "Saw", year: 2004 },
+      { title: "The Babadook", year: 2014 },
+      { title: "Smile", year: 2022 },
+      { title: "Talk to Me", year: 2022 },
+      { title: "Alien", year: 1979 }
     ];
   }
-  if (text.includes('biopic') || text.includes('history') || text.includes('civil rights')) {
-    return [
-      { title: "Malcolm X", year: 1992 },
-      { title: "Selma", year: 2014 },
-      { title: "Hidden Figures", year: 2016 },
-      { title: "Judas and the Black Messiah", year: 2021 },
-      { title: "Ray", year: 2004 },
-      { title: "Ali", year: 2001 },
-      { title: "42", year: 2013 },
-      { title: "The Hurricane", year: 1999 },
-      { title: "One Night in Miami...", year: 2020 }
-    ];
-  }
-  if (text.includes('blaxploitation')) {
-    return [
-      { title: "Shaft", year: 1971 },
-      { title: "Super Fly", year: 1972 },
-      { title: "Coffy", year: 1973 },
-      { title: "Foxy Brown", year: 1974 },
-      { title: "Black Caesar", year: 1973 },
-      { title: "Dolemite", year: 1975 },
-      { title: "Black Dynamite", year: 2009 },
-      { title: "Cleopatra Jones", year: 1973 }
-    ];
-  }
-  if (text.includes('martial arts') || text.includes('kung fu')) {
-    return [
-      { title: "Enter the Dragon", year: 1973 },
-      { title: "Fist of Legend", year: 1994 },
-      { title: "Drunken Master II", year: 1994 },
-      { title: "Ip Man", year: 2008 },
-      { title: "Crouching Tiger, Hidden Dragon", year: 2000 },
-      { title: "The 36th Chamber of Shaolin", year: 1978 },
-      { title: "Fearless", year: 2006 },
-      { title: "Hero", year: 2002 },
-      { title: "Kung Fu Hustle", year: 2004 }
-    ];
-  }
-  if (text.includes('heist') || text.includes('caper')) {
-    return [
-      { title: "Heat", year: 1995 },
-      { title: "The Town", year: 2010 },
-      { title: "Ocean's Eleven", year: 2001 },
-      { title: "Inside Man", year: 2006 },
-      { title: "Baby Driver", year: 2017 },
-      { title: "Inception", year: 2010 },
-      { title: "Set It Off", year: 1996 },
-      { title: "Den of Thieves", year: 2018 }
-    ];
-  }
-  if (text.includes('cyberpunk') || text.includes('dystopian')) {
-    return [
-      { title: "Blade Runner 2049", year: 2017 },
-      { title: "The Matrix", year: 1999 },
-      { title: "Ghost in the Shell", year: 1995 },
-      { title: "Akira", year: 1988 },
-      { title: "Dredd", year: 2012 },
-      { title: "Minority Report", year: 2002 },
-      { title: "Total Recall", year: 1990 }
-    ];
-  }
-  if (text.includes('found footage') || text.includes('tech paranoia') || text.includes('paranoia')) {
+
+  // 3. Found Footage & Tech Horror
+  if (text.includes('found footage') || text.includes('screenlife') || text.includes('vhs') || text.includes('tech horror')) {
     return [
       { title: "The Blair Witch Project", year: 1999 },
       { title: "Paranormal Activity", year: 2007 },
@@ -958,79 +847,120 @@ function getFallbackMoviesForPrompt(name = '', prompt = '') {
       { title: "Hell House LLC", year: 2015 },
       { title: "Grave Encounters", year: 2011 },
       { title: "Chronicle", year: 2012 },
-      { title: "The Taking of Deborah Logan", year: 2014 },
-      { title: "Host", year: 2020 },
-      { title: "Cam", year: 2018 }
+      { title: "Host", year: 2020 }
     ];
   }
-  if (text.includes('single-location') || text.includes('chamber') || text.includes('locked')) {
+
+  // 4. Psychological Thrillers & Suspense
+  if (text.includes('psychological') || text.includes('suspense') || text.includes('thriller') || text.includes('mind twist') || text.includes('stalker')) {
     return [
-      { title: "12 Angry Men", year: 1957 },
-      { title: "Cube", year: 1997 },
-      { title: "Saw", year: 2004 },
-      { title: "Buried", year: 2010 },
-      { title: "Exam", year: 2009 },
-      { title: "Panic Room", year: 2002 },
-      { title: "Rope", year: 1948 },
-      { title: "The Hateful Eight", year: 2015 },
-      { title: "Coherence", year: 2013 },
-      { title: "Phone Booth", year: 2002 },
-      { title: "Devil", year: 2010 },
-      { title: "Room 1408", year: 2007 },
-      { title: "The Platform", year: 2019 }
+      { title: "Se7en", year: 1995 },
+      { title: "The Silence of the Lambs", year: 1991 },
+      { title: "Shutter Island", year: 2010 },
+      { title: "Zodiac", year: 2007 },
+      { title: "American Psycho", year: 2000 },
+      { title: "Nightcrawler", year: 2014 },
+      { title: "Gone Girl", year: 2014 },
+      { title: "Prisoners", year: 2013 },
+      { title: "Black Swan", year: 2010 },
+      { title: "Memento", year: 2000 },
+      { title: "The Sixth Sense", year: 1999 },
+      { title: "Misery", year: 1990 }
     ];
   }
-  if (text.includes('suburban') || text.includes('coming-of-age') || text.includes('80s youth')) {
+
+  // 5. Heists & Crime Underworld
+  if (text.includes('heist') || text.includes('bank robbery') || text.includes('underworld') || text.includes('mafia') || text.includes('cartel')) {
     return [
-      { title: "Stand by Me", year: 1986 },
-      { title: "The Goonies", year: 1985 },
-      { title: "Super 8", year: 2011 },
-      { title: "Dazed and Confused", year: 1993 },
-      { title: "The Breakfast Club", year: 1985 },
-      { title: "Ferris Bueller's Day Off", year: 1986 },
-      { title: "Fast Times at Ridgemont High", year: 1982 },
-      { title: "Superbad", year: 2007 },
-      { title: "Mid90s", year: 2018 },
-      { title: "E.T. the Extra-Terrestrial", year: 1982 }
+      { title: "Heat", year: 1995 },
+      { title: "The Town", year: 2010 },
+      { title: "Ocean's Eleven", year: 2001 },
+      { title: "Inside Man", year: 2006 },
+      { title: "Baby Driver", year: 2017 },
+      { title: "Inception", year: 2010 },
+      { title: "Set It Off", year: 1996 },
+      { title: "Den of Thieves", year: 2018 },
+      { title: "Goodfellas", year: 1990 },
+      { title: "The Godfather", year: 1972 }
     ];
   }
-  if (text.includes('grindhouse') || text.includes('revenge') || text.includes('payback')) {
+
+  // 6. 90s Hood Classics
+  if (text.includes('hood') || text.includes('hood classic') || text.includes('street saga') || text.includes('urban drama')) {
     return [
-      { title: "Kill Bill: Vol. 1", year: 2003 },
-      { title: "Kill Bill: Vol. 2", year: 2004 },
-      { title: "Planet Terror", year: 2007 },
-      { title: "Death Proof", year: 2007 },
-      { title: "Machete", year: 2010 },
-      { title: "John Wick", year: 2014 },
-      { title: "Payback", year: 1999 },
-      { title: "Death Wish", year: 1974 },
-      { title: "I Spit on Your Grave", year: 2010 },
-      { title: "Revenge", year: 2017 }
+      { title: "Boyz n the Hood", year: 1991 },
+      { title: "Menace II Society", year: 1993 },
+      { title: "Poetic Justice", year: 1993 },
+      { title: "Juice", year: 1992 },
+      { title: "Set It Off", year: 1996 },
+      { title: "New Jack City", year: 1991 },
+      { title: "Dead Presidents", year: 1995 },
+      { title: "Paid in Full", year: 2002 },
+      { title: "Friday", year: 1995 },
+      { title: "Belly", year: 1998 },
+      { title: "Clockers", year: 1995 },
+      { title: "King of New York", year: 1990 }
     ];
   }
-  if (text.includes('buddy cop') || text.includes('neon 80s') || text.includes('cop')) {
+
+  // 7. Biopics & History
+  if (text.includes('biopic') || text.includes('civil rights') || text.includes('historical figure') || text.includes('true story')) {
     return [
-      { title: "Lethal Weapon", year: 1987 },
-      { title: "Lethal Weapon 2", year: 1989 },
-      { title: "48 Hrs.", year: 1982 },
-      { title: "Beverly Hills Cop", year: 1984 },
-      { title: "Tango & Cash", year: 1989 },
-      { title: "Bad Boys", year: 1995 },
-      { title: "Die Hard", year: 1988 },
-      { title: "Red Heat", year: 1988 },
-      { title: "Rush Hour", year: 1998 }
+      { title: "Malcolm X", year: 1992 },
+      { title: "Selma", year: 2014 },
+      { title: "Hidden Figures", year: 2016 },
+      { title: "Judas and the Black Messiah", year: 2021 },
+      { title: "Ray", year: 2004 },
+      { title: "Ali", year: 2001 },
+      { title: "42", year: 2013 },
+      { title: "The Hurricane", year: 1999 }
     ];
   }
-  if (text.includes('space horror') || text.includes('cosmic')) {
+
+  // 8. Martial Arts & Kung Fu
+  if (text.includes('martial arts') || text.includes('kung fu') || text.includes('wuxia') || text.includes('bruce lee')) {
     return [
-      { title: "Alien", year: 1979 },
-      { title: "Event Horizon", year: 1997 },
-      { title: "Aliens", year: 1986 },
-      { title: "Life", year: 2017 },
-      { title: "Pandorum", year: 2009 },
-      { title: "The Thing", year: 1982 }
+      { title: "Enter the Dragon", year: 1973 },
+      { title: "Fist of Legend", year: 1994 },
+      { title: "Drunken Master II", year: 1994 },
+      { title: "Ip Man", year: 2008 },
+      { title: "Crouching Tiger, Hidden Dragon", year: 2000 },
+      { title: "The 36th Chamber of Shaolin", year: 1978 }
     ];
   }
+
+  // 9. Black Romance & Rom-Coms
+  if (text.includes('romance') || text.includes('rom-com') || text.includes('love story')) {
+    return [
+      { title: "Love & Basketball", year: 2000 },
+      { title: "Brown Sugar", year: 2002 },
+      { title: "The Best Man", year: 1999 },
+      { title: "Love Jones", year: 1997 },
+      { title: "Beyond the Lights", year: 2014 },
+      { title: "The Wood", year: 1999 }
+    ];
+  }
+
+  // 10. Comedy & House Party
+  if (text.includes('comedy') || text.includes('house party') || text.includes('cookout')) {
+    return [
+      { title: "Friday", year: 1995 },
+      { title: "Next Friday", year: 2000 },
+      { title: "Barbershop", year: 2002 },
+      { title: "House Party", year: 1990 },
+      { title: "Girls Trip", year: 2017 },
+      { title: "Think Like a Man", year: 2012 }
+    ];
+  }
+
+  return [
+    { title: "Inception", year: 2010 },
+    { title: "The Dark Knight", year: 2008 },
+    { title: "Pulp Fiction", year: 1994 },
+    { title: "Fight Club", year: 1999 },
+    { title: "Goodfellas", year: 1990 }
+  ];
+}
   if (text.includes('time loop') || text.includes('quantum')) {
     return [
       { title: "Edge of Tomorrow", year: 2014 },
