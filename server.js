@@ -117,6 +117,29 @@ async function saveConfig() {
 }
 
 // Preset Sub-genres definition with optimized TMDB Genre/Keyword IDs & Queries
+const LIVE_FEEDS = [
+  {
+    id: 'trending_week',
+    name: '🔥 Trending Movies This Week',
+    description: 'Live auto-updating feed of the top trending movies worldwide over the last 7 days.'
+  },
+  {
+    id: 'top_rated',
+    name: '⭐ Top Rated All-Time (IMDb Top 250)',
+    description: 'Live auto-updating catalog of top-rated cinema masterpieces of all time.'
+  },
+  {
+    id: 'now_playing',
+    name: '🎬 Now Playing in Theaters',
+    description: 'Live auto-updating list of movies currently playing in movie theaters worldwide.'
+  },
+  {
+    id: 'upcoming',
+    name: '🚀 Upcoming Box Office Releases',
+    description: 'Live auto-updating list of upcoming theatrical releases and box office premieres.'
+  }
+];
+
 const SUBGENRES = [
   {
     id: 'cyberpunk',
@@ -271,8 +294,79 @@ function fetchJson(url) {
   });
 }
 
-// Fetch 100 movies from TMDB for active subgenre or query
+async function getLiveFeedMovies(feedType, apiKeyStr) {
+  const apiKey = apiKeyStr || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+  let endpoint = '';
+  let feedName = '';
+
+  if (feedType === 'trending_week') {
+    endpoint = 'https://api.themoviedb.org/3/trending/movie/week';
+    feedName = '🔥 Trending Movies This Week';
+  } else if (feedType === 'top_rated') {
+    endpoint = 'https://api.themoviedb.org/3/movie/top_rated';
+    feedName = '⭐ Top Rated All-Time';
+  } else if (feedType === 'now_playing') {
+    endpoint = 'https://api.themoviedb.org/3/movie/now_playing';
+    feedName = '🎬 Now Playing in Theaters';
+  } else if (feedType === 'upcoming') {
+    endpoint = 'https://api.themoviedb.org/3/movie/upcoming';
+    feedName = '🚀 Upcoming Box Office Releases';
+  } else {
+    return [];
+  }
+
+  console.log(`[TMDB Live Feed] Fetching live feed for: ${feedName}...`);
+  let allMovies = [];
+
+  for (let page = 1; page <= 10; page++) {
+    const url = `${endpoint}?api_key=${apiKey}&page=${page}`;
+    const res = await fetchJson(url);
+    if (res && res.results && res.results.length > 0) {
+      allMovies.push(...res.results);
+      if (page >= res.total_pages) break;
+    } else {
+      break;
+    }
+  }
+
+  const stremioMetas = [];
+  const chunkSize = 10;
+  for (let i = 0; i < allMovies.length; i += chunkSize) {
+    const chunk = allMovies.slice(i, i + chunkSize);
+    const batchMetas = await Promise.all(
+      chunk.map(async (m) => {
+        let externalId = `tt${m.id}`;
+        try {
+          const extRes = await fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${apiKey}`);
+          if (extRes && extRes.imdb_id) externalId = extRes.imdb_id;
+        } catch (err) {}
+
+        return {
+          id: externalId,
+          type: 'movie',
+          name: m.title || m.original_title,
+          poster: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster',
+          background: m.backdrop_path ? `https://image.tmdb.org/t/p/original${m.backdrop_path}` : null,
+          description: m.overview || 'No description available.',
+          releaseInfo: m.release_date ? m.release_date.substring(0, 4) : 'N/A',
+          imdbRating: m.vote_average ? m.vote_average.toFixed(1) : 'N/A',
+          genres: [feedName]
+        };
+      })
+    );
+    stremioMetas.push(...batchMetas);
+  }
+
+  console.log(`[TMDB Live Feed] Successfully loaded ${stremioMetas.length} movies for live feed: ${feedName}`);
+  return stremioMetas;
+}
+
+// Fetch movies from TMDB for active subgenre or query
 async function getMoviesForSubgenre(subgenreId, options = {}) {
+  if (['trending_week', 'top_rated', 'now_playing', 'upcoming'].includes(subgenreId)) {
+    return await getLiveFeedMovies(subgenreId, options.apiKey);
+  }
+
   const apiKey = options.apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
   const currentSubgenre = SUBGENRES.find(s => s.id === subgenreId) || SUBGENRES[0];
 
@@ -593,8 +687,8 @@ app.post('/api/config', async (req, res) => {
   saveConfig();
   
   if (activeSubgenre && !collections[activeSubgenre]) {
-    // Generate new TMDB collection if we don't have it
-    const activeObj = SUBGENRES.find(s => s.id === activeSubgenre) || SUBGENRES[0];
+    // Generate new TMDB collection or live feed if we don't have it
+    const activeObj = SUBGENRES.find(s => s.id === activeSubgenre) || LIVE_FEEDS.find(l => l.id === activeSubgenre) || SUBGENRES[0];
     const movies = await getMoviesForSubgenre(activeSubgenre);
     collections[activeSubgenre] = {
       name: activeObj.name,

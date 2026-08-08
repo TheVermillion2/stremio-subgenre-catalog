@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         fetch('/api/config').then(r => r.json())
       ]);
 
-      subgenres = subRes;
+      subgenres = Array.isArray(subRes) ? subRes : (subRes.subgenres || []);
+      liveFeeds = subRes.liveFeeds || [];
       collections = colRes;
       currentConfig = confRes;
       localStorage.setItem('subgenre_collections', JSON.stringify(collections));
@@ -135,6 +136,28 @@ document.addEventListener('DOMContentLoaded', async () => {
             selectCollection(id);
           }
         });
+        subgenreListEl.appendChild(card);
+      });
+    }
+
+    // Render Live Auto-Updating Feeds
+    if (liveFeeds && liveFeeds.length > 0) {
+      const headingLive = document.createElement('h4');
+      headingLive.innerText = '🔥 Live Auto-Updating Feeds';
+      headingLive.style.margin = '15px 0 5px 0';
+      headingLive.style.color = '#f59e0b';
+      subgenreListEl.appendChild(headingLive);
+
+      liveFeeds.forEach(lf => {
+        const card = document.createElement('div');
+        card.className = 'subgenre-card';
+        card.style.borderLeft = '3px solid #f59e0b';
+        card.innerHTML = `
+          <h5>${lf.name}</h5>
+          <p>${lf.description}</p>
+          <button class="btn btn-accent btn-full" style="margin-top: 10px; padding: 5px; font-size: 0.85rem;">⚡ Add Live Feed</button>
+        `;
+        card.addEventListener('click', () => buildFromTemplate(lf.id));
         subgenreListEl.appendChild(card);
       });
     }
