@@ -476,11 +476,30 @@ async function getMoviesForSubgenre(subgenreId, options = {}) {
 // Stremio Addon Protocol Manifest
 app.get('/manifest.json', (req, res) => {
   const collectionIds = Object.keys(collections);
-  const catalogs = collectionIds.map(id => ({
-    type: 'movie',
-    id: id,
-    name: collections[id].name
-  }));
+  const catalogs = [];
+
+  // Add Catalogs for both movies and TV series
+  collectionIds.forEach(id => {
+    const col = collections[id];
+    const hasMovies = col.movies && col.movies.some(m => m.type !== 'series');
+    const hasSeries = col.movies && col.movies.some(m => m.type === 'series');
+
+    if (hasSeries) {
+      catalogs.push({
+        type: 'series',
+        id: id,
+        name: col.name
+      });
+    }
+
+    if (hasMovies || !hasSeries) {
+      catalogs.push({
+        type: 'movie',
+        id: id,
+        name: col.name
+      });
+    }
+  });
 
   // Provide a default empty catalog if none exist to prevent Stremio errors
   if (catalogs.length === 0) {
@@ -491,11 +510,21 @@ app.get('/manifest.json', (req, res) => {
     });
   }
 
-  // Inject the AI Search catalog at position #1
+  // Inject AI Search catalogs for both TV Series and Movies
+  catalogs.unshift({
+    type: 'series',
+    id: 'ai_search_series',
+    name: '🤖 AI TV Series Curator',
+    extra: [
+      { name: 'search', isRequired: true },
+      { name: 'skip', isRequired: false }
+    ]
+  });
+
   catalogs.unshift({
     type: 'movie',
     id: 'ai_search',
-    name: '≡ƒñû AI Movie Search Curator',
+    name: '🤖 AI Movie Search Curator',
     extra: [
       { name: 'search', isRequired: true },
       { name: 'skip', isRequired: false }
@@ -504,11 +533,11 @@ app.get('/manifest.json', (req, res) => {
 
   const manifest = {
     id: 'org.subgenre.auto.catalog',
-    version: '2.1.0',
-    name: '≡ƒñû AI Movie Search Curator & Custom Genres',
-    description: 'Instant AI Movie Search & Auto-updating Custom Playlists!',
+    version: '2.5.0',
+    name: '🤖 AI Movie & TV Show Curator',
+    description: 'Instant AI Movie & TV Show Search, Auto-updating Custom Playlists & Trailers!',
     resources: ['catalog', 'meta'],
-    types: ['movie'],
+    types: ['movie', 'series'],
     catalogs: catalogs,
     idPrefixes: ['tt']
   };
@@ -524,39 +553,38 @@ function sortMoviesByYear(movies) {
   });
 }
 
-// Stremio Catalog Endpoint
-app.get('/catalog/movie/:id*', async (req, res) => {
+// Stremio Catalog Endpoint for both Movies & TV Series
+app.get('/catalog/:type/:id*', async (req, res) => {
   try {
     const rawPath = req.params.id + (req.params[0] || '');
     const parts = rawPath.replace(/\.json$/, '').split('/');
     const id = parts[0];
+    const type = req.params.type;
     const extraStr = parts[1] || '';
     
     // Handle Live AI Search Catalog
-    if (id === 'ai_search') {
+    if (id === 'ai_search' || id === 'ai_search_series') {
       const params = new URLSearchParams(extraStr);
       const query = params.get('search');
       const skip = parseInt(params.get('skip') || '0', 10);
       
       if (!query) return res.json({ metas: [] });
       
-      const cacheKey = query.toLowerCase().trim();
+      const cacheKey = `${type}_${query.toLowerCase().trim()}`;
       
-      // Serve from cache if available (cache lasts for 24 hours in memory)
       if (searchCache[cacheKey] && (Date.now() - searchCache[cacheKey].timestamp < 86400000)) {
-        console.log(`[AI Search] Serving cached results for: "${query}", skip: ${skip}`);
+        console.log(`[AI Search] Serving cached results for ${type}: "${query}", skip: ${skip}`);
         const metas = searchCache[cacheKey].movies.slice(skip, skip + 50);
         return res.json({ metas });
       }
       
-      console.log(`[AI Search] New search request for: "${query}"`);
+      console.log(`[AI Search] New search request for ${type}: "${query}"`);
       const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
       
       try {
-        const rawMovies = await queryGeminiForMovies(query, config.geminiApiKey, '', true);
-        // Parallelize all lookups at once for lightning-fast TV response
+        const rawItems = await queryGeminiForMovies(query, config.geminiApiKey, '', true);
         const batch = await Promise.all(
-          rawMovies.slice(0, 25).map(m => searchTmdbMovie(m.title, m.year, tmdbKey))
+          rawItems.slice(0, 25).map(m => searchTmdbMovie(m.title, m.year, tmdbKey))
         );
         const stremioMetas = batch.filter(Boolean);
         
@@ -579,35 +607,27 @@ app.get('/catalog/movie/:id*', async (req, res) => {
       return res.json({ metas: [] });
     }
 
-    // Check cache age
-    const now = Date.now();
-    const cacheAge = collection.timestamp ? (now - collection.timestamp) / (1000 * 60 * 60) : 999;
-    
-    // Serve from cache if fresh or if it's an AI custom genre
-    if ((collection.movies && collection.movies.length > 0 && cacheAge < config.refreshIntervalHours) || collection.isCustomAI) {
-      console.log(`[Stremio Request] Serving cached collection ${id} (${collection.movies.length} movies) sorted newest first`);
-      return res.json({ metas: sortMoviesByYear(collection.movies) });
+    let items = collection.movies || [];
+    if (type === 'series') {
+      const seriesItems = items.filter(m => m.type === 'series');
+      if (seriesItems.length > 0) items = seriesItems;
+    } else if (type === 'movie') {
+      const movieItems = items.filter(m => m.type !== 'series');
+      if (movieItems.length > 0) items = movieItems;
     }
 
-    // If it's a standard TMDB list and needs refresh
-    console.log(`[Stremio Request] Refreshing collection ${id} from TMDB...`);
-    const movies = await getMoviesForSubgenre(collection.tmdbId || id);
-    collection.movies = movies;
-    collection.timestamp = Date.now();
-    saveCollections();
-
-    res.json({ metas: movies });
+    console.log(`[Stremio Request] Serving collection ${id} (${type}, ${items.length} items)`);
+    res.json({ metas: sortMoviesByYear(items) });
   } catch (e) {
     console.error('Error serving catalog:', e.message);
     res.status(500).json({ metas: [] });
   }
 });
 
-// Stremio Meta Detail Endpoint (Optional fallback)
-app.get('/meta/movie/:id.json', (req, res) => {
+// Stremio Meta Detail Endpoint for Movies & TV Series
+app.get(['/meta/:type/:id.json', '/meta/movie/:id.json'], (req, res) => {
   const id = req.params.id;
   let found = null;
-  // Search across all collections for the meta
   for (const collectionId in collections) {
     found = collections[collectionId].movies.find(m => m.id === id);
     if (found) break;
@@ -851,8 +871,8 @@ Format:
   throw lastError || new Error('All Gemini API models failed. Please check your API key.');
 }
 
-// Search TMDB by Title + Year to resolve IMDb IDs and rich metadata
-async function searchTmdbMovie(title, year, apiKey) {
+// Search TMDB by Title + Year to resolve IMDb IDs and rich metadata for Movies & TV Shows
+async function searchTmdbMovie(title, year, apiKey, preferredType = null) {
   const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
   try {
     let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
@@ -865,7 +885,7 @@ async function searchTmdbMovie(title, year, apiKey) {
       res = await fetchJson(fallbackUrl);
     }
 
-    if (res && res.results && res.results.length > 0) {
+    if (res && res.results && res.results.length > 0 && preferredType !== 'series') {
       const m = res.results[0];
       let externalId = `tt${m.id}`;
       try {
@@ -882,6 +902,34 @@ async function searchTmdbMovie(title, year, apiKey) {
         description: m.overview || 'No description available.',
         releaseInfo: m.release_date ? m.release_date.substring(0, 4) : String(year || 'N/A'),
         imdbRating: m.vote_average ? m.vote_average.toFixed(1) : 'N/A'
+      };
+    }
+
+    // Try TV Series Search
+    let tvSearchUrl = `https://api.themoviedb.org/3/search/tv?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
+    if (year) tvSearchUrl += `&first_air_date_year=${year}`;
+    let tvRes = await fetchJson(tvSearchUrl);
+    if ((!tvRes || !tvRes.results || tvRes.results.length === 0) && year) {
+      tvRes = await fetchJson(`https://api.themoviedb.org/3/search/tv?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`);
+    }
+
+    if (tvRes && tvRes.results && tvRes.results.length > 0) {
+      const s = tvRes.results[0];
+      let externalId = `tt${s.id}`;
+      try {
+        const extRes = await fetchJson(`https://api.themoviedb.org/3/tv/${s.id}/external_ids?api_key=${tmdbKey}`);
+        if (extRes && extRes.imdb_id) externalId = extRes.imdb_id;
+      } catch (err) {}
+
+      return {
+        id: externalId,
+        type: 'series',
+        name: s.name || s.original_name,
+        poster: s.poster_path ? `https://image.tmdb.org/t/p/w500${s.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster',
+        background: s.backdrop_path ? `https://image.tmdb.org/t/p/original${s.backdrop_path}` : null,
+        description: s.overview || 'No description available.',
+        releaseInfo: s.first_air_date ? s.first_air_date.substring(0, 4) : String(year || 'N/A'),
+        imdbRating: s.vote_average ? s.vote_average.toFixed(1) : 'N/A'
       };
     }
   } catch (e) {
@@ -986,27 +1034,44 @@ app.get('/api/movies/:id', (req, res) => {
   }
 });
 
-// Endpoint to fetch Full Movie Details, YouTube Trailers, and User Reviews
-app.get('/api/movie-details/:id', async (req, res) => {
+// Endpoint to fetch Full Movie/TV Details, YouTube Trailers, and User Reviews
+app.get(['/api/movie-details/:id', '/api/show-details/:id'], async (req, res) => {
   const { id } = req.params;
   const apiKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
 
   try {
     let tmdbId = id;
+    let isTvShow = false;
 
-    // If ID starts with 'tt', resolve it via TMDB find endpoint first
-    if (id.startsWith('tt')) {
-      const findRes = await fetchJson(`https://api.themoviedb.org/3/find/${id}?api_key=${apiKey}&external_source=imdb_id`);
-      if (findRes && findRes.movie_results && findRes.movie_results.length > 0) {
-        tmdbId = findRes.movie_results[0].id;
+    // Check if item exists in local collections to know if type is series
+    for (const collectionId in collections) {
+      const found = collections[collectionId].movies ? collections[collectionId].movies.find(m => m.id === id) : null;
+      if (found && found.type === 'series') {
+        isTvShow = true;
+        break;
       }
     }
 
+    // If ID starts with 'tt', resolve it via TMDB find endpoint
+    if (id.startsWith('tt')) {
+      const findRes = await fetchJson(`https://api.themoviedb.org/3/find/${id}?api_key=${apiKey}&external_source=imdb_id`);
+      if (findRes) {
+        if (findRes.tv_results && findRes.tv_results.length > 0 && (isTvShow || !findRes.movie_results || findRes.movie_results.length === 0)) {
+          tmdbId = findRes.tv_results[0].id;
+          isTvShow = true;
+        } else if (findRes.movie_results && findRes.movie_results.length > 0) {
+          tmdbId = findRes.movie_results[0].id;
+        }
+      }
+    }
+
+    const endpointType = isTvShow ? 'tv' : 'movie';
+
     // Fetch Details, Videos (Trailers), and Reviews in parallel
     const [detailsRes, videosRes, reviewsRes] = await Promise.all([
-      fetchJson(`https://api.themoviedb.org/3/movie/${tmdbId}?api_key=${apiKey}`),
-      fetchJson(`https://api.themoviedb.org/3/movie/${tmdbId}/videos?api_key=${apiKey}`),
-      fetchJson(`https://api.themoviedb.org/3/movie/${tmdbId}/reviews?api_key=${apiKey}`)
+      fetchJson(`https://api.themoviedb.org/3/${endpointType}/${tmdbId}?api_key=${apiKey}`),
+      fetchJson(`https://api.themoviedb.org/3/${endpointType}/${tmdbId}/videos?api_key=${apiKey}`),
+      fetchJson(`https://api.themoviedb.org/3/${endpointType}/${tmdbId}/reviews?api_key=${apiKey}`)
     ]);
 
     // Find official YouTube Trailer
@@ -1023,7 +1088,7 @@ app.get('/api/movie-details/:id', async (req, res) => {
     let reviews = [];
     if (reviewsRes && reviewsRes.results) {
       reviews = reviewsRes.results.slice(0, 4).map(r => ({
-        author: r.author || 'Anonymous Movie Critic',
+        author: r.author || 'Anonymous Critic',
         avatar: r.author_details && r.author_details.avatar_path ? 
                 (r.author_details.avatar_path.startsWith('/http') ? r.author_details.avatar_path.slice(1) : `https://image.tmdb.org/t/p/w185${r.author_details.avatar_path}`) : null,
         rating: r.author_details && r.author_details.rating ? r.author_details.rating : null,
@@ -1036,13 +1101,13 @@ app.get('/api/movie-details/:id', async (req, res) => {
       details: {
         id: id,
         tmdbId: tmdbId,
-        title: detailsRes.title || detailsRes.original_title,
+        title: detailsRes.title || detailsRes.name || detailsRes.original_title || detailsRes.original_name,
         tagline: detailsRes.tagline || '',
         overview: detailsRes.overview || 'No synopsis available.',
         poster: detailsRes.poster_path ? `https://image.tmdb.org/t/p/w500${detailsRes.poster_path}` : null,
         background: detailsRes.backdrop_path ? `https://image.tmdb.org/t/p/original${detailsRes.backdrop_path}` : null,
-        releaseDate: detailsRes.release_date || '',
-        runtime: detailsRes.runtime ? `${detailsRes.runtime} mins` : '',
+        releaseDate: detailsRes.release_date || detailsRes.first_air_date || '',
+        runtime: detailsRes.runtime ? `${detailsRes.runtime} mins` : (detailsRes.episode_run_time && detailsRes.episode_run_time.length > 0 ? `${detailsRes.episode_run_time[0]} mins/ep` : ''),
         rating: detailsRes.vote_average ? detailsRes.vote_average.toFixed(1) : 'N/A',
         voteCount: detailsRes.vote_count || 0,
         genres: detailsRes.genres ? detailsRes.genres.map(g => g.name) : [],
@@ -1054,8 +1119,8 @@ app.get('/api/movie-details/:id', async (req, res) => {
     });
 
   } catch (error) {
-    console.error(`Error fetching movie details for ${id}:`, error.message);
-    res.status(500).json({ error: 'Failed to fetch movie details' });
+    console.error(`Error fetching details for ${id}:`, error.message);
+    res.status(500).json({ error: 'Failed to fetch details' });
   }
 });
 
