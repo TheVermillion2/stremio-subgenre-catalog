@@ -624,16 +624,68 @@ app.get('/catalog/:type/:id*', async (req, res) => {
   }
 });
 
-// Stremio Meta Detail Endpoint for Movies & TV Series
-app.get(['/meta/:type/:id.json', '/meta/movie/:id.json'], (req, res) => {
-  const id = req.params.id;
+// Stremio Meta Detail Endpoint for Movies & TV Series (with Native YouTube Trailer Streams)
+app.get(['/meta/:type/:id.json', '/meta/movie/:id.json', '/meta/series/:id.json'], async (req, res) => {
+  const { type, id } = req.params;
   let found = null;
+
   for (const collectionId in collections) {
-    found = collections[collectionId].movies.find(m => m.id === id);
-    if (found) break;
+    if (collections[collectionId].movies) {
+      found = collections[collectionId].movies.find(m => m.id === id);
+      if (found) break;
+    }
   }
+
   if (found) {
-    res.json({ meta: found });
+    const meta = { ...found };
+
+    // Fetch and embed YouTube trailer stream if missing
+    if (!meta.trailerStreams || meta.trailerStreams.length === 0) {
+      try {
+        const apiKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+        let tmdbId = id;
+        let isTv = type === 'series' || meta.type === 'series';
+
+        if (id.startsWith('tt')) {
+          const findRes = await fetchJson(`https://api.themoviedb.org/3/find/${id}?api_key=${apiKey}&external_source=imdb_id`);
+          if (findRes) {
+            if (findRes.tv_results && findRes.tv_results.length > 0 && isTv) {
+              tmdbId = findRes.tv_results[0].id;
+            } else if (findRes.movie_results && findRes.movie_results.length > 0) {
+              tmdbId = findRes.movie_results[0].id;
+            }
+          }
+        }
+
+        const endpoint = isTv ? 'tv' : 'movie';
+        const videosRes = await fetchJson(`https://api.themoviedb.org/3/${endpoint}/${tmdbId}/videos?api_key=${apiKey}`);
+        if (videosRes && videosRes.results) {
+          const trailer = videosRes.results.find(v => v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser')) ||
+                          videosRes.results.find(v => v.site === 'YouTube');
+          if (trailer) {
+            meta.trailerStreams = [
+              {
+                title: 'Official YouTube Trailer',
+                ytId: trailer.key
+              }
+            ];
+            meta.trailers = [
+              {
+                source: trailer.key,
+                type: 'Trailer'
+              }
+            ];
+            meta.behaviorHints = {
+              defaultVideoId: `ytId:${trailer.key}`
+            };
+          }
+        }
+      } catch (err) {
+        console.error(`Trailer lookup error for ${id}:`, err.message);
+      }
+    }
+
+    return res.json({ meta });
   } else {
     res.status(404).json({ error: 'Meta not found' });
   }
