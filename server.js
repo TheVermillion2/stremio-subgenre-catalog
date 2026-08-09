@@ -533,10 +533,10 @@ app.get('/manifest.json', (req, res) => {
 
   const manifest = {
     id: 'org.subgenre.auto.catalog',
-    version: '2.5.0',
+    version: '2.6.0',
     name: '🤖 AI Movie & TV Show Curator',
-    description: 'Instant AI Movie & TV Show Search, Auto-updating Custom Playlists & Trailers!',
-    resources: ['catalog', 'meta'],
+    description: 'Instant AI Movie & TV Show Search, Auto-updating Custom Playlists & Native Trailers!',
+    resources: ['catalog', 'meta', 'stream'],
     types: ['movie', 'series'],
     catalogs: catalogs,
     idPrefixes: ['tt']
@@ -688,6 +688,55 @@ app.get(['/meta/:type/:id.json', '/meta/movie/:id.json', '/meta/series/:id.json'
     return res.json({ meta });
   } else {
     res.status(404).json({ error: 'Meta not found' });
+  }
+});
+
+// Stremio Stream Endpoint for YouTube Trailer Streams
+app.get(['/stream/:type/:id.json', '/stream/movie/:id.json', '/stream/series/:id.json'], async (req, res) => {
+  const { type, id } = req.params;
+  const rawId = id.replace(/\.json$/, '');
+  const apiKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+
+  console.log(`[Stremio Stream Request] Type: ${type}, ID: ${rawId}`);
+
+  try {
+    let tmdbId = rawId;
+    let isTv = type === 'series';
+
+    // If ID starts with 'tt', resolve via TMDB find endpoint
+    if (rawId.startsWith('tt')) {
+      const findRes = await fetchJson(`https://api.themoviedb.org/3/find/${rawId}?api_key=${apiKey}&external_source=imdb_id`);
+      if (findRes) {
+        if (findRes.tv_results && findRes.tv_results.length > 0 && (isTv || !findRes.movie_results || findRes.movie_results.length === 0)) {
+          tmdbId = findRes.tv_results[0].id;
+          isTv = true;
+        } else if (findRes.movie_results && findRes.movie_results.length > 0) {
+          tmdbId = findRes.movie_results[0].id;
+        }
+      }
+    }
+
+    const endpoint = isTv ? 'tv' : 'movie';
+    const videosRes = await fetchJson(`https://api.themoviedb.org/3/${endpoint}/${tmdbId}/videos?api_key=${apiKey}`);
+    const streams = [];
+
+    if (videosRes && videosRes.results) {
+      const trailers = videosRes.results.filter(v => v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser'));
+      const allYoutube = videosRes.results.filter(v => v.site === 'YouTube');
+      const selected = trailers.length > 0 ? trailers : allYoutube;
+
+      selected.slice(0, 3).forEach(v => {
+        streams.push({
+          title: `🎬 Trailer: ${v.name || 'Official YouTube Trailer'}`,
+          ytId: v.key
+        });
+      });
+    }
+
+    res.json({ streams });
+  } catch (err) {
+    console.error(`Stream lookup error for ${rawId}:`, err.message);
+    res.json({ streams: [] });
   }
 });
 
