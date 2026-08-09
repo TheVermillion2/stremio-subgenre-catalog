@@ -63612,5 +63612,3056 @@
       }
     ],
     "timestamp": 1786238540421
+  },
+  "custom_black_directors_1786241276442": {
+    "id": "custom_black_directors_1786241276442",
+    "name": "BLACK DIRECTORS",
+    "description": "Official Letterboxd Collection: Top 250 Films by Black Directors (234 movies).",
+    "isCustomAI": true,
+    "movies": [
+      {
+        "id": "tt9362722",
+        "type": "movie",
+        "name": "Spider-Man: Across the Spider-Verse",
+        "poster": "https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kVd3a9YeLGkoeR50jGEXM6EqseS.jpg",
+        "description": "After reuniting with Gwen Stacy, Brooklyn\u2019s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse's very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+        "releaseInfo": "2023",
+        "imdbRating": "8.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0097216",
+        "type": "movie",
+        "name": "Do the Right Thing",
+        "poster": "https://image.tmdb.org/t/p/w500/63rmSDPahrH7C1gEFYzRuIBAN9W.jpg",
+        "background": "https://image.tmdb.org/t/p/original/oYOZay9hyW3uI5paKWLIYkWZlzv.jpg",
+        "description": "Sal is the Italian owner of a pizzeria in Brooklyn. A neighborhood local, Buggin' Out, becomes upset when he sees that the pizzeria's Wall of Fame exhibits only Italian actors. Buggin' Out believes a pizzeria in a black neighborhood should showcase black actors, but Sal disagrees. The wall becomes a symbol of racism and hate to Buggin' Out and to other people in the neighborhood, and tensions rise.",
+        "releaseInfo": "1989",
+        "imdbRating": "7.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt4633694",
+        "type": "movie",
+        "name": "Spider-Man: Into the Spider-Verse",
+        "poster": "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8mnXR9rey5uQ08rZAvzojKWbDQS.jpg",
+        "description": "Struggling to find his place in the world while juggling school and family, Brooklyn teenager Miles Morales is unexpectedly bitten by a radioactive spider and develops unfathomable powers just like the one and only Spider-Man. While wrestling with the implications of his new abilities, Miles discovers a super collider created by the madman Wilson \"Kingpin\" Fisk, causing others from across the Spider-Verse to be inadvertently transported to his dimension.",
+        "releaseInfo": "2018",
+        "imdbRating": "8.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0104797",
+        "type": "movie",
+        "name": "Malcolm X",
+        "poster": "https://image.tmdb.org/t/p/w500/o2s9ow0uRRm1BcF3teznk5twd90.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kPdAZIqPgegqbv4QF1FshbVXNrx.jpg",
+        "description": "A tribute to the controversial black activist and leader of the struggle for black liberation. He hit bottom during his imprisonment in the '50s, he became a Black Muslim and then a leader in the Nation of Islam. His assassination in 1965 left a legacy of self-determination and racial pride.",
+        "releaseInfo": "1992",
+        "imdbRating": "7.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt4975722",
+        "type": "movie",
+        "name": "Moonlight",
+        "poster": "https://image.tmdb.org/t/p/w500/qLnfEmPrDjJfPyyddLJPkXmshkp.jpg",
+        "background": "https://image.tmdb.org/t/p/original/jm1oD3eB08LImSwL1LrzF9AJQ5b.jpg",
+        "description": "The tender, heartbreaking story of a young man\u2019s struggle to find himself, told across three defining chapters in his life as he experiences the ecstasy, pain, and beauty of falling in love, while grappling with his own sexuality.",
+        "releaseInfo": "2016",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt2024544",
+        "type": "movie",
+        "name": "12 Years a Slave",
+        "poster": "https://image.tmdb.org/t/p/w500/xdANQijuNrJaw1HA61rDccME4Tm.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4Bb1kMIfrT2tYRZ9M6Jhqy6gkeF.jpg",
+        "description": "In the pre-Civil War United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery. Facing cruelty as well as unexpected kindnesses Solomon struggles not only to stay alive, but to retain his dignity. In the twelfth year of his unforgettable odyssey, Solomon\u2019s chance meeting with a Canadian abolitionist will forever alter his life.",
+        "releaseInfo": "2013",
+        "imdbRating": "7.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1813757",
+        "type": "movie",
+        "name": "Who Killed Captain Alex?",
+        "poster": "https://image.tmdb.org/t/p/w500/2GYBwJJMOrWsEmJRvRl48mQDyTI.jpg",
+        "background": "https://image.tmdb.org/t/p/original/dezFPyUmRguvXr8ot6HSXGaCGrV.jpg",
+        "description": "Recognized as Uganda\u2019s first action film, Who Killed Captain Alex? is about the aftermath of a police raid in Kampala in which a police captain is killed.",
+        "releaseInfo": "2010",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt5052448",
+        "type": "movie",
+        "name": "Get Out",
+        "poster": "https://image.tmdb.org/t/p/w500/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg",
+        "background": "https://image.tmdb.org/t/p/original/o8dPH0ZSIyyViP6rjRX1djwCUwI.jpg",
+        "description": "Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family's overly accommodating behavior as nervous attempts to deal with their daughter's interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.",
+        "releaseInfo": "2017",
+        "imdbRating": "7.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0092716",
+        "type": "movie",
+        "name": "Camp de Thiaroye",
+        "poster": "https://image.tmdb.org/t/p/w500/oKfFcrlQCTKaB6KU5VuJVt0yBc5.jpg",
+        "background": "https://image.tmdb.org/t/p/original/tFxCMJM4Uw4yxyvulEaUkFEJCtL.jpg",
+        "description": "A Senegalese platoon of soldiers from the French Free Army are returned from combat in France and held for a temporary time in a military encampment with barbed wire fences and guard towers in the desert. Among their numbers are Sergeant Diatta, the charismatic leader of the troop who was educated in Paris and has a French wife and child, and Pays, a Senegalese soldier left in a state of shock from the war and concentration camps and who can only speak in guttural screams and grunts.",
+        "releaseInfo": "1988",
+        "imdbRating": "7.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt31193180",
+        "type": "movie",
+        "name": "Sinners",
+        "poster": "https://image.tmdb.org/t/p/w500/fWPgbnt2LSqkQ6cdQc0SZN9CpLm.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nAxGnGHOsfzufThz20zgmRwKur3.jpg",
+        "description": "Trying to leave their troubled lives behind, twin brothers return to their hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
+        "releaseInfo": "2025",
+        "imdbRating": "7.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1826747",
+        "type": "movie",
+        "name": "Mangrove",
+        "poster": "https://image.tmdb.org/t/p/w500/uKzsziGc04NGRa7ceK06Ivvhzac.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zX5zQhwFc1FxnSzayxCIZXvIxFs.jpg",
+        "description": "A young woman returns with her son to an isolated beach on the pacific coast in southern Mexico to find peace with her ghosts.",
+        "releaseInfo": "2011",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0068280",
+        "type": "movie",
+        "name": "Black Girl",
+        "poster": "https://image.tmdb.org/t/p/w500/f4yXrwpqH1SeAg9bfmCyDWTuajH.jpg",
+        "background": "https://image.tmdb.org/t/p/original/aAcYmUjvp7bxJV7E5ePvdfKphme.jpg",
+        "description": "An aspiring dancer and her two wicked sisters resent their mother's love for a foster daughter.",
+        "releaseInfo": "1972",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0080125",
+        "type": "movie",
+        "name": "West Indies: The Fugitive Slaves of Liberty",
+        "poster": "https://image.tmdb.org/t/p/w500/px8QJjA5i0l8r9kWov2FNpkpP47.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fxHzWHbTp6G4qjg9KKO9c0A2ig4.jpg",
+        "description": "Aboard a giant slave ship in an abandoned Citro\u00ebn factory, the history of the West Indies is traced through several centuries of French oppression. The ship becomes a stage for the people to tell stories via song and dance\u2014from their enslavement to their displacement in Metropolitan France.",
+        "releaseInfo": "1979",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0887143",
+        "type": "movie",
+        "name": "Hyenas",
+        "poster": "https://image.tmdb.org/t/p/w500/YrS8oANBDZe2D8cttsrLv3jOre.jpg",
+        "background": "https://image.tmdb.org/t/p/original/l6qgfOzQCjQptp1EI4BT9cFPdMu.jpg",
+        "description": "Roving clans of shape-shifting human/hyena creatures prowl and hunt for human prey. They are hunted by one man seeking revenge for the death of his loved ones.",
+        "releaseInfo": "2010",
+        "imdbRating": "3.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0118125",
+        "type": "movie",
+        "name": "The Watermelon Woman",
+        "poster": "https://image.tmdb.org/t/p/w500/mBBqKfkvzSk6Rk7bfRXU9kR916N.jpg",
+        "background": "https://image.tmdb.org/t/p/original/l0YhkeRNks3mPdjxd2VgAFtKplB.jpg",
+        "description": "A young black lesbian filmmaker probes into the life of The Watermelon Woman, a 1930s black actress who played 'mammy' archetypes.",
+        "releaseInfo": "1997",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0139654",
+        "type": "movie",
+        "name": "Training Day",
+        "poster": "https://image.tmdb.org/t/p/w500/bUeiwBQdupBLQthMCHKV7zv56uv.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nuO8o9ltxhI7AZQxePavEZ4TyHa.jpg",
+        "description": "On his first day on the job as a narcotics officer, a rookie cop works with a rogue detective who isn't what he appears.",
+        "releaseInfo": "2001",
+        "imdbRating": "7.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0101507",
+        "type": "movie",
+        "name": "Boyz n the Hood",
+        "poster": "https://image.tmdb.org/t/p/w500/v4ox4aSCNT5vyLXl4Q71JiWwCXW.jpg",
+        "background": "https://image.tmdb.org/t/p/original/w9Buzxn7RjbttP2xm9leMfMdyCP.jpg",
+        "description": "In the middle of the Los Angeles ghetto, drugs, robberies and shootings dominate everyday life. During these times, Furious tries to raise his son Tre to be a decent person. Tre's friends, on the other hand, have little regard for the law and drag the entire neighborhood into a street war...",
+        "releaseInfo": "1991",
+        "imdbRating": "7.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1233334",
+        "type": "movie",
+        "name": "Pariah",
+        "poster": "https://image.tmdb.org/t/p/w500/lX9Ss9LH3bsAoGWDvsPv4zZG9fa.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fRN20mOGFGI8j9hAEIhbpTpSpsS.jpg",
+        "description": "A Brooklyn teenager juggles conflicting identities and risks friendship, heartbreak, and family in a desperate search for sexual expression.",
+        "releaseInfo": "2011",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt9784798",
+        "type": "movie",
+        "name": "Judas and the Black Messiah",
+        "poster": "https://image.tmdb.org/t/p/w500/iIgr75GoqFxe1X5Wz9siOODGe9u.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fatz1aegtBGh7KS0gipcsw9MqUn.jpg",
+        "description": "Bill O'Neal infiltrates the Black Panthers on the orders of FBI Agent Mitchell and J. Edgar Hoover. As Black Panther Chairman Fred Hampton ascends\u2014falling for a fellow revolutionary en route\u2014a battle wages for O\u2019Neal\u2019s soul.",
+        "releaseInfo": "2021",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0062285",
+        "type": "movie",
+        "name": "Soleil O",
+        "poster": "https://image.tmdb.org/t/p/w500/l23NdXYuqkhFiXZHAES3XJkfBkN.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bvDRdtBp839qFnNhMb2gMoSjRuy.jpg",
+        "description": "An educated native of Mauritania tries to find work in Paris but encounters difficulty because of his race.",
+        "releaseInfo": "1973",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0095545",
+        "type": "movie",
+        "name": "Looking for Langston",
+        "poster": "https://image.tmdb.org/t/p/w500/tzrBH6tU5xSeFZc9UqsdxdXrH8s.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kOBuCMcQCeoVcTaLHtiEFPkFjY7.jpg",
+        "description": "A black and white, fantasy-like recreation of high-society gay men during the Harlem Renaissance, with archival footage and photographs intercut with a story. A wake is going on, with mourners gathered around a coffin. Downstairs is an elegant bar where tuxedoed men dance and talk. One of them has a dream in which he comes upon Beauty, who seems to reject him, although when he awakes, Beauty is sleeping beside him. His story and his visits to the jazz and dance club are framed by voices reading from the poetry and essays of Hughes and others. The text is rarely explicit, but the freedom of gay Black men in the 1920s in Harlem is suggested and celebrated visually.",
+        "releaseInfo": "1989",
+        "imdbRating": "5.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0285891",
+        "type": "movie",
+        "name": "Personal Problems",
+        "poster": "https://image.tmdb.org/t/p/w500/jICYJWiDK53aUVcaqsKiNkTPTmC.jpg",
+        "background": "https://image.tmdb.org/t/p/original/t6n5vm7UaJ8CJCBZ7GC6DfoTW4i.jpg",
+        "description": "An \u201cexperimental soap opera\u201d centered on a Harlem nurse, her husband, her father-in-law, and her lover.",
+        "releaseInfo": "1980",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt2149221",
+        "type": "movie",
+        "name": "The Story of Lovers Rock",
+        "poster": "https://image.tmdb.org/t/p/w500/wu4dImuKsAhI3tH5mTQ9HsShb6z.jpg",
+        "background": "https://image.tmdb.org/t/p/original/cFBsHpOat63CEcfZUjyjcYUK5ma.jpg",
+        "description": "In the 70s and 80s Britain was rife with racial tension and police harassment particularly against black British youths. These youths were the rebel generation who were also searching for an identity. They created a music - a sub genre of reggae known as Lovers Rock. This music became a global brand through artists like UB40 and Maxi Priest. The music brought a level of intimacy between young people that was unique. It was also 'girl power' music that empowered a generation of young women. Through comedy, live performance, dance, interviews and archive the film takes you back to an untold era of British cultural, music and political history.",
+        "releaseInfo": "2011",
+        "imdbRating": "6.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1190536",
+        "type": "movie",
+        "name": "Black Dynamite",
+        "poster": "https://image.tmdb.org/t/p/w500/u3oWQDz0JggzzsVlsuHY7XVxp5Y.jpg",
+        "background": "https://image.tmdb.org/t/p/original/gpcJuvH1tRWfdGv6ysWVRN3EZXL.jpg",
+        "description": "This is the story of 1970s African-American action legend Black Dynamite. The Man killed his brother, pumped heroin into local orphanages, and flooded the ghetto with adulterated malt liquor. Black Dynamite was the one hero willing to fight The Man all the way from the blood-soaked city streets to the hallowed halls of the Honky House.",
+        "releaseInfo": "2009",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1392170",
+        "type": "movie",
+        "name": "The Hunger Games",
+        "poster": "https://image.tmdb.org/t/p/w500/yXCbOiVDCxO71zI7cuwBRXdftq8.jpg",
+        "background": "https://image.tmdb.org/t/p/original/yVBQ65YBYZ9UhzJ4NGdRgeXtyTL.jpg",
+        "description": "In a dystopian society where the Capitol forces each district to send two young tributes to fight to the death in a televised spectacle, a girl volunteers to take her sister\u2019s place, setting the stage for a struggle of survival and defiance.",
+        "releaseInfo": "2012",
+        "imdbRating": "7.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0223027",
+        "type": "movie",
+        "name": "Compensation",
+        "poster": "https://image.tmdb.org/t/p/w500/k2SXL3KcW0PEjl8SC6mZoBuNPul.jpg",
+        "background": "https://image.tmdb.org/t/p/original/mE8LriPHNhagJmSXitcCojoKHQb.jpg",
+        "description": "The life of a deaf African American woman in the early 1900s parallels with another living in the 1990s.",
+        "releaseInfo": "1999",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt2334649",
+        "type": "movie",
+        "name": "Fruitvale Station",
+        "poster": "https://image.tmdb.org/t/p/w500/oXSy3nEKFtfw5iRxdG8ouEFAnxs.jpg",
+        "background": "https://image.tmdb.org/t/p/original/u0nAnvRdzAGgDYLyfIbAUBDOcpb.jpg",
+        "description": "Oakland, California. Young Afro-American Oscar Grant crosses paths with family members, friends, enemies and strangers before facing his fate on the platform at Fruitvale Station, in the early morning hours of New Year's Day 2009.",
+        "releaseInfo": "2013",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0150117",
+        "type": "movie",
+        "name": "Chocolate Babies",
+        "poster": "https://image.tmdb.org/t/p/w500/izmpQc1fbASmudcPXAqeJ3k0pGO.jpg",
+        "background": "https://image.tmdb.org/t/p/original/wdpd45vmIa4Y463N7Fp4PGgTGnq.jpg",
+        "description": "Through a campaign of fabulous surprise attacks, an underground band of radical queer HIV+ activists, addicts, and drag queens take to the streets of New York City to combat conservative politicians and government apathy towards the AIDS crisis.",
+        "releaseInfo": "1996",
+        "imdbRating": "5.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt23055660",
+        "type": "movie",
+        "name": "Nickel Boys",
+        "poster": "https://image.tmdb.org/t/p/w500/lu2vmmtStmTNMmSZl2LgrrQpLZo.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kmLssINCNdXnIDjWkBsk6LUNSbe.jpg",
+        "description": "Chronicles the powerful friendship between two young Black teenagers navigating the harrowing trials of reform school together in Florida.",
+        "releaseInfo": "2024",
+        "imdbRating": "6.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0070726",
+        "type": "movie",
+        "name": "The Spook Who Sat by the Door",
+        "poster": "https://image.tmdb.org/t/p/w500/r0E4QfwxjuOvmpGlNuHgpNf9bSa.jpg",
+        "background": "https://image.tmdb.org/t/p/original/7dgMnjdRsxvzoZYejz9WiDsSJYs.jpg",
+        "description": "A black man plays Uncle Tom in order to gain access to CIA training, then uses that knowledge to plot a new American Revolution.",
+        "releaseInfo": "1973",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0416991",
+        "type": "movie",
+        "name": "Moolaad\u00e9",
+        "poster": "https://image.tmdb.org/t/p/w500/9S7lWdLExHw6LP3Vq7smiyGY5MR.jpg",
+        "background": "https://image.tmdb.org/t/p/original/3v7Y2bx5gSSlQGBUz9O0QX9RyRB.jpg",
+        "description": "When a woman shelters a group of girls from suffering female genital mutilation, she starts a conflict that tears her village apart.",
+        "releaseInfo": "2004",
+        "imdbRating": "7.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0076263",
+        "type": "movie",
+        "name": "Killer of Sheep",
+        "poster": "https://image.tmdb.org/t/p/w500/z1CqJKI6gmdAMprD1NOYSCHVXEv.jpg",
+        "background": "https://image.tmdb.org/t/p/original/r763vsubExGcDJypctYuLLJmhB.jpg",
+        "description": "An African-American man working at a slaughterhouse in the Watts area of Los Angeles leads a dissatisfied and listless existence.",
+        "releaseInfo": "1978",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0196848",
+        "type": "movie",
+        "name": "The Little Girl Who Sold the Sun",
+        "poster": "https://image.tmdb.org/t/p/w500/7GRjr9ygPP3SR3C22Vwoel70wE7.jpg",
+        "background": "https://image.tmdb.org/t/p/original/gTO6uo0DWd8euaKaMoYjwQM3ELy.jpg",
+        "description": "A young girl with a physical disability arrives in Dakar and challenges the convention of boys selling newspapers on the street.",
+        "releaseInfo": "1999",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt7349662",
+        "type": "movie",
+        "name": "BlacKkKlansman",
+        "poster": "https://image.tmdb.org/t/p/w500/8jxqAvSDoneSKRczaK8v9X5gqBp.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ot3eZ9XfOF42a3zFWluMPWkfCHB.jpg",
+        "description": "Colorado Springs, late 1970s. Ron Stallworth, an African American police officer, and Flip Zimmerman, his Jewish colleague, run an undercover operation to infiltrate the Ku Klux Klan.",
+        "releaseInfo": "2018",
+        "imdbRating": "7.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt2948372",
+        "type": "movie",
+        "name": "Soul",
+        "poster": "https://image.tmdb.org/t/p/w500/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/rQaHA74pevnGsxcKGaoZVGWe9TC.jpg",
+        "description": "Joe Gardner is a middle school teacher with a love for jazz music. After a successful audition at the Half Note Club, he suddenly gets into an accident that separates his soul from his body and is transported to the You Seminar, a center in which souls develop and gain passions before being transported to a newborn child. Joe must enlist help from the other souls-in-training, like 22, a soul who has spent eons in the You Seminar, in order to get back to Earth.",
+        "releaseInfo": "2020",
+        "imdbRating": "8.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0100791",
+        "type": "movie",
+        "name": "To Sleep with Anger",
+        "poster": "https://image.tmdb.org/t/p/w500/k97OYGAbHIP6MNuOOGDUgYDnncW.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zR9JPzQljgjmcxM0caE316VsBv9.jpg",
+        "description": "An enigmatic drifter from the South comes to visit an old acquaintance who now lives in South-Central LA.",
+        "releaseInfo": "1990",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt14330672",
+        "type": "movie",
+        "name": "Goodbye Julia",
+        "poster": "https://image.tmdb.org/t/p/w500/yQv7V4gTf6mI7OPUS7jWCDStPcr.jpg",
+        "background": "https://image.tmdb.org/t/p/original/cfB7VJF9LXrZRkMZLaa6Yhxo1Fb.jpg",
+        "description": "A retired singer from northern Sudan, Mona, burdened by guilt for covering up a man's death, hires his southern widow, Julia, as her maid. Unable to confess her role in the tragedy, she hopes to move forward, but the country's growing unrest threatens to reveal her secret.",
+        "releaseInfo": "2023",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0109504",
+        "type": "movie",
+        "name": "Crooklyn",
+        "poster": "https://image.tmdb.org/t/p/w500/iFqe07F78SO0SIBzWcK4I5MwNvP.jpg",
+        "background": "https://image.tmdb.org/t/p/original/mIKuvEhBvDf9LGxE9x6m0hDR9Au.jpg",
+        "description": "From Spike Lee comes this vibrant semi-autobiographical portrait of a school-teacher, her stubborn jazz-musician husband and their five kids living in '70s Brooklyn.",
+        "releaseInfo": "1994",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0107554",
+        "type": "movie",
+        "name": "Menace II Society",
+        "poster": "https://image.tmdb.org/t/p/w500/nS7yqmSVeNoH22VXj69JoFCxW1h.jpg",
+        "background": "https://image.tmdb.org/t/p/original/s5PP0ryxAo12jzvPntSEybahpCw.jpg",
+        "description": "A young street hustler attempts to escape the rigors and temptations of the ghetto in a quest for a better life.",
+        "releaseInfo": "1993",
+        "imdbRating": "7.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt7125860",
+        "type": "movie",
+        "name": "If Beale Street Could Talk",
+        "poster": "https://image.tmdb.org/t/p/w500/76NfwnaZI43gOQove0LU9O23Qjz.jpg",
+        "background": "https://image.tmdb.org/t/p/original/9QKt21sUUrcNmlCkLKDFUaTodCh.jpg",
+        "description": "After her fiance is falsely imprisoned, a pregnant African-American woman sets out to clear his name and prove his innocence.",
+        "releaseInfo": "2018",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt31121295",
+        "type": "movie",
+        "name": "Deep Cover",
+        "poster": "https://image.tmdb.org/t/p/w500/yYfaChljpg6eo9ZlFyTmI81PMZC.jpg",
+        "background": "https://image.tmdb.org/t/p/original/lOje1iz4VYWELYWRkZAwI7oIJd0.jpg",
+        "description": "Kat is an improv comedy teacher beginning to question if she\u2019s missed her shot at success. When an undercover cop offers her the role of a lifetime, she recruits two of her students to infiltrate London\u2019s gangland by impersonating dangerous criminals.",
+        "releaseInfo": "2025",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt15893750",
+        "type": "movie",
+        "name": "Rye Lane",
+        "poster": "https://image.tmdb.org/t/p/w500/int5eEKNc8g0V5i3XYaPeaC6paD.jpg",
+        "background": "https://image.tmdb.org/t/p/original/3di4noZGr04O2lyqgDgWNbyW1wA.jpg",
+        "description": "Two twenty-somethings, both reeling from bad break-ups, connect over the course of an eventful day in South London \u2013 helping each other deal with their nightmare exes, and potentially restoring their faith in romance.",
+        "releaseInfo": "2023",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0086977",
+        "type": "movie",
+        "name": "Bless Their Little Hearts",
+        "poster": "https://image.tmdb.org/t/p/w500/9gKsQG2vvqnnwDVGiU9FoKoxXqW.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ndwdIu4B25vLfUY2kYv69acWtl1.jpg",
+        "description": "Charlie Banks, chronically unemployed, struggles to find dignity and a meaning for life in the impoverished Los Angeles neighborhood of Watts.",
+        "releaseInfo": "1984",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0067048",
+        "type": "movie",
+        "name": "Emita\u00ef",
+        "poster": "https://image.tmdb.org/t/p/w500/vbswsABhv4DcgrmBuN8s7wLU3at.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4xH6yTZObleu51MWhkzRVxu3P5.jpg",
+        "description": "As World War II rages in Europe, a conflict arises between the French and the Diola-speaking tribe of Africa, prompting the village women to organize their men to sit beneath a tree to pray.",
+        "releaseInfo": "1973",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0259484",
+        "type": "movie",
+        "name": "Paid in Full",
+        "poster": "https://image.tmdb.org/t/p/w500/oiG5BObjENJjEacFdWw1KfK3TFx.jpg",
+        "background": "https://image.tmdb.org/t/p/original/jtWjSUOPiU69kiUaGwDChTklAU8.jpg",
+        "description": "Ace is an impressionable young man working for a dry cleaning business. His friend, drug dealer Mitch, goes to prison. In an unrelated incident, he finds some cocaine in a pants pocket. Soon, Ace finds himself dealing cocaine for Lulu. Via lucky breaks and solid interpersonal skills, Ace moves to the top of the Harlem drug world. Of course, unfaithful employees and/or rivals conspire to bring about Ace's fall.",
+        "releaseInfo": "2002",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt6044414",
+        "type": "movie",
+        "name": "Bad Black",
+        "poster": "https://image.tmdb.org/t/p/w500/blZ3CHVVCPFbbKHPrAUXH6Exq6T.jpg",
+        "background": "https://image.tmdb.org/t/p/original/iApQghyYUFlLqW2MAN2tjaWVqQh.jpg",
+        "description": "A mild-mannered doctor is trained in the art of ass-kicking commando vengeance by a no-nonsense ghetto kid in an effort to regain a family heirloom from Uganda\u2019s toughest gang.",
+        "releaseInfo": "2016",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1440292",
+        "type": "movie",
+        "name": "Submarine",
+        "poster": "https://image.tmdb.org/t/p/w500/nbzXX3CYtKUBrPeMcG7PVoLQHXB.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zaa2noUk2Dm6IgdTWWEe4WpL08o.jpg",
+        "description": "15-year-old deep-thinking Welsh schoolboy Oliver Tate struggles to initiate and maintain a relationship with Jordana, his devilish, dark-haired classmate at their Swansea high school. As his parents' marriage begins to fall apart, similar problems arise in his relationship with Jordana.",
+        "releaseInfo": "2011",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0181517",
+        "type": "movie",
+        "name": "Drylongso",
+        "poster": "https://image.tmdb.org/t/p/w500/jU4owOePxmgOZH4z3XCaso8FDWZ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hPZyM4ZzNxYr68WWwiwTJYJJiMm.jpg",
+        "description": "A young woman in a photography class begins taking pictures of black men out of fear they will soon be extinct.",
+        "releaseInfo": "1999",
+        "imdbRating": "6.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0215545",
+        "type": "movie",
+        "name": "Bamboozled",
+        "poster": "https://image.tmdb.org/t/p/w500/oAg1mUUxdWJNLa6t1gctbQhXHVN.jpg",
+        "background": "https://image.tmdb.org/t/p/original/p7e7OZwPxDQTYE4l4EFuYkCloLU.jpg",
+        "description": "Frustrated when network brass reject his sitcom idea, producer Pierre Delacroix pitches the worst idea he can think of in an attempt to get fired: a 21st century minstrel show. The network not only airs it, but it becomes a smash hit.",
+        "releaseInfo": "2000",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1209138",
+        "type": "movie",
+        "name": "Crazy World",
+        "poster": "https://image.tmdb.org/t/p/w500/kd99VxEBwHe61eXicctgCxQLyki.jpg",
+        "background": null,
+        "description": "Taiwanese movie",
+        "releaseInfo": "1981",
+        "imdbRating": "6.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0400063",
+        "type": "movie",
+        "name": "Sometimes in April",
+        "poster": "https://image.tmdb.org/t/p/w500/jDr1iXVPKSdzPMb1QeGwacEL9Vq.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hYj5nrBz6BO5lhNBfAME0nbpUT7.jpg",
+        "description": "Two brothers are divided by marriage and fate during the 100 horrifying days of the 1994 Rwandan genocide.",
+        "releaseInfo": "2005",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0086213",
+        "type": "movie",
+        "name": "Sugar Cane Alley",
+        "poster": "https://image.tmdb.org/t/p/w500/yfMn3alwmu237SWjvcuRXTWbgky.jpg",
+        "background": "https://image.tmdb.org/t/p/original/i4t0UsvWI7REsaZqnjQ2iui2XZv.jpg",
+        "description": "Martinique, in the early 1930s. Young Jos\u00e9 and his grandmother live in a small village. Nearly everyone works cutting cane and barely earning a living. The overseer can fine a worker for the smallest infraction. The way to advance is to do well in school. Jos\u00e9 studies hard and succeeds in an exam allowing him to attend school in the capital. With only a partial scholarship, the tuition is very costly. Jos\u00e9 and his grandmother move to Fort-de-France to make Jos\u00e9's studies easier...",
+        "releaseInfo": "1983",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0307901",
+        "type": "movie",
+        "name": "25th Hour",
+        "poster": "https://image.tmdb.org/t/p/w500/uW7tTRElr2tRhmAVESzvHy4ByXg.jpg",
+        "background": "https://image.tmdb.org/t/p/original/mpfRchw4jh2cEBajB9EJltTnDH2.jpg",
+        "description": "On the eve of a seven-year prison sentence, a New York drug dealer spends his final day of freedom confronting his past, his relationships, and the choices that led to his downfall in a city still reeling from 9/11.",
+        "releaseInfo": "2002",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0084269",
+        "type": "movie",
+        "name": "Losing Ground",
+        "poster": "https://image.tmdb.org/t/p/w500/zSZT7ndjNUsskQq9IWosW3a9cbk.jpg",
+        "background": "https://image.tmdb.org/t/p/original/6tAH0LR2DJUlfznqlEkoSAjQVHi.jpg",
+        "description": "Sara, a cold college professor, and her husband, an ecstatic painter, spend a summer away from the city, straining their rocky relationship.",
+        "releaseInfo": "1982",
+        "imdbRating": "6.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0393162",
+        "type": "movie",
+        "name": "Coach Carter",
+        "poster": "https://image.tmdb.org/t/p/w500/y3HOTTyM5nLsdUzXFtFCohG28qj.jpg",
+        "background": "https://image.tmdb.org/t/p/original/n4CvA50GBtIPrSqCl8nMNZCliYI.jpg",
+        "description": "Based on a true story, in which Richmond High School head basketball coach Ken Carter made headlines in 1999 for benching his undefeated team due to poor academic results.",
+        "releaseInfo": "2005",
+        "imdbRating": "7.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0212772",
+        "type": "movie",
+        "name": "The Annihilation of Fish",
+        "poster": "https://image.tmdb.org/t/p/w500/dqGte38Hj2icZybCgA7bl7spf7q.jpg",
+        "background": "https://image.tmdb.org/t/p/original/jH24K1lB6u7DzTHurPRM0TjYxDJ.jpg",
+        "description": "A Jamaican widower recently released from a mental institution and a former housewife with an imagined lover in the form of 19th-century composer Giacomo Puccini become the unlikely tenants of an eccentric widow in Los Angeles.",
+        "releaseInfo": "1999",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt32083311",
+        "type": "movie",
+        "name": "On Becoming a Guinea Fowl",
+        "poster": "https://image.tmdb.org/t/p/w500/6lMOpD8XVLKaB5uCsJXt1Fo7XNh.jpg",
+        "background": "https://image.tmdb.org/t/p/original/f2sHokGVEOcJI1Fkgdf21XYhok.jpg",
+        "description": "On an empty road in the middle of the night, Shula stumbles across the body of her uncle. As funeral proceedings begin around them, she and her cousins bring to light the buried secrets of their middle-class Zambian family.",
+        "releaseInfo": "2024",
+        "imdbRating": "7.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0075335",
+        "type": "movie",
+        "name": "One Way or Another",
+        "poster": "https://image.tmdb.org/t/p/w500/gfPfLR8smK7jArxPjcxiVztZMbV.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nDVwWowq6f3atlrUkHk9Q3Ke5Vo.jpg",
+        "description": "Set during a retreat of Christian Democrat politicians who practice spiritual exercises together, it is an allegory of corrupted power. Disturbing, claustrophobic settings are the background to a series of mysterious crimes.",
+        "releaseInfo": "1976",
+        "imdbRating": "7.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt16377816",
+        "type": "movie",
+        "name": "Mars One",
+        "poster": "https://image.tmdb.org/t/p/w500/mrEHCuGyXpkBpQW5Xqt5kaHOyap.jpg",
+        "background": "https://image.tmdb.org/t/p/original/mYA6m2kruLxmqAApVcX8uMc0jNJ.jpg",
+        "description": "A middle-class Black family in Brazil copes with the election of a far-right extremist president. The mother believes that she's cursed after an unexpected encounter, while her husband puts all of his hopes into their son's soccer career.",
+        "releaseInfo": "2022",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0069214",
+        "type": "movie",
+        "name": "Sambizanga",
+        "poster": "https://image.tmdb.org/t/p/w500/isnDnTWjOE9EJqsKXvCwZQrIkeE.jpg",
+        "background": "https://image.tmdb.org/t/p/original/2mI4KyQsqwsWqXKupLhRXQ6sTDL.jpg",
+        "description": "Domingos is a member of an African liberation movement, arrested by the Portuguese secret police, after bloody events in Angola. His wife goes from a prison station to another, trying in vain to find out where he is.",
+        "releaseInfo": "1973",
+        "imdbRating": "7.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt6213284",
+        "type": "movie",
+        "name": "I Am Not a Witch",
+        "poster": "https://image.tmdb.org/t/p/w500/tWkbuUHugbckItwcyCf8uq1utOJ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/m9kePbuGNYASSNjzqPQjrP6J7b1.jpg",
+        "description": "Convicted of witchcraft, 8-year-old Shula is brought to live in a penal colony where witches do hard labour in service of the government.",
+        "releaseInfo": "2017",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0063646",
+        "type": "movie",
+        "name": "The Story of a Three-Day Pass",
+        "poster": "https://image.tmdb.org/t/p/w500/vWKwTXl75x4DFb5oQdnOLXc2buz.jpg",
+        "background": "https://image.tmdb.org/t/p/original/v8RntTt1q5FX8XC3xo2sEfKeJ3W.jpg",
+        "description": "Turner, a black American soldier, is given three days leave in Paris. Not knowing what to do with himself, he goes to a nightclub where he meets a French girl named Miriam. Their romance blossoms, but their love affair is darkened by Turner's impending departure and the specter of racial prejudice.",
+        "releaseInfo": "1968",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0119572",
+        "type": "movie",
+        "name": "Love Jones",
+        "poster": "https://image.tmdb.org/t/p/w500/iuwimPkDm7kfptKm5zlK0pIzqXM.jpg",
+        "background": "https://image.tmdb.org/t/p/original/e9ZX5bzErTNVACJ4bBRlCmmsPMJ.jpg",
+        "description": "Darius Lovehall is a young black poet in Chicago who starts dating Nina Moseley, a beautiful and talented photographer. While trying to figure out if they've got a \"love thing\" or are just \"kicking it,\" they hang out with their friends, talking about love and sex. Then Nina tests the strength of Darius' feelings and sets a chain of romantic complications into motion.",
+        "releaseInfo": "1997",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt11160650",
+        "type": "movie",
+        "name": "On the Count of Three",
+        "poster": "https://image.tmdb.org/t/p/w500/mv5v3xtiRqpMyP1XWRnRl5s38lV.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nzDMlEi6h2HMyRDU02eGsa9hncm.jpg",
+        "description": "Val has reached a place where he feels the only way out is to end things. But he considers himself a bit of a failure\u2014his effectiveness lacking\u2014so he figures he could use some help. As luck would have it, Val\u2019s best friend, Kevin, is recovering from a failed suicide attempt, so he seems like the perfect partner for executing this double suicide plan. But before they go, they have some unfinished business to attend to.",
+        "releaseInfo": "2022",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1707386",
+        "type": "movie",
+        "name": "Les Mis\u00e9rables",
+        "poster": "https://image.tmdb.org/t/p/w500/6CuzBs2Lb8At7qQr64mLXg2RYRb.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bsG8LkZx1ijrcf3fP6AvBlGTxkX.jpg",
+        "description": "An adaptation of the successful stage musical based on Victor Hugo's classic novel set in 19th-century France. Jean Valjean, a man imprisoned for stealing bread, must flee a relentless policeman named Javert. The pursuit consumes both men's lives, and soon Valjean finds himself in the midst of the student revolutions in France.",
+        "releaseInfo": "2012",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt3076658",
+        "type": "movie",
+        "name": "Creed",
+        "poster": "https://image.tmdb.org/t/p/w500/1BfTsk5VWuw8FCocAhCyqnRbEzq.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kODNw6GJNdgldUMEhKPlCw8wQCr.jpg",
+        "description": "The former World Heavyweight Champion Rocky Balboa serves as a trainer and mentor to Adonis Johnson, the son of his late friend and former rival Apollo Creed.",
+        "releaseInfo": "2015",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt32141377",
+        "type": "movie",
+        "name": "28 Years Later: The Bone Temple",
+        "poster": "https://image.tmdb.org/t/p/w500/kK1BGkG3KAvWB0WMV1DfOx9yTMZ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hHDNOlATHhre4eZ7aYz5cdyJLik.jpg",
+        "description": "Dr. Kelson finds himself in a shocking new relationship - with consequences that could change the world as they know it - and Spike's encounter with Jimmy Crystal becomes a nightmare he can't escape.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt32547691",
+        "type": "movie",
+        "name": "Pressure",
+        "poster": "https://image.tmdb.org/t/p/w500/gFjEggtrejCN79r6SXRjM269OtG.jpg",
+        "background": "https://image.tmdb.org/t/p/original/apfyLCPVFttB8oXcsLJ7q0NSFLx.jpg",
+        "description": "In the tense 72 hours before D-Day, and the fate of the free world hanging in the balance, General Dwight D. Eisenhower and Captain James Stagg face an impossible choice\u2014launch the largest and most dangerous seaborne invasion in history or risk losing the war altogether.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt27759823",
+        "type": "movie",
+        "name": "Red, White and Blue",
+        "poster": "https://image.tmdb.org/t/p/w500/4h1fIQ1b5P21N7tt5dZWDNOjYD7.jpg",
+        "background": "https://image.tmdb.org/t/p/original/o8iExrxPoJaTrMF0dWVNkj7ar1U.jpg",
+        "description": "A young mother from Arkansas is forced to travel across state lines in search of an urgent and necessary abortion.",
+        "releaseInfo": "2024",
+        "imdbRating": "7.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0370036",
+        "type": "movie",
+        "name": "A Dessert for Constance",
+        "poster": "https://image.tmdb.org/t/p/w500/oRAr4RyqMHoLz7s5JoBbCpHYD9g.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bKwTNbtBl7Brtfo3GNc0REd8ohS.jpg",
+        "description": "Bokolo and Mamadou, sweepers in the city of Paris, are looking for a way to pay for the return home of one of their sick comrades. When they find an old book of recipes in the trash, they discover a passion for French cuisine and decide to participate in a televised cooking competition.",
+        "releaseInfo": "1981",
+        "imdbRating": "6.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0101561",
+        "type": "movie",
+        "name": "Chameleon Street",
+        "poster": "https://image.tmdb.org/t/p/w500/dSCOaTdPtzNzPAzsvp0nOW5QocE.jpg",
+        "background": "https://image.tmdb.org/t/p/original/wE2koUdIZPVQERB3GqrUEdplV6s.jpg",
+        "description": "William Douglas Street is bored with his life. Working for his father is getting to him, his wife wants more money, and he's had enough. His solution is to re-invent himself. He becomes a chameleon, taking on whatever role suits the situation. From reporter to doctor to lawyer, he impersonates anyone he feels a need to be and he can earn money being.",
+        "releaseInfo": "1991",
+        "imdbRating": "6.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1398426",
+        "type": "movie",
+        "name": "Straight Outta Compton",
+        "poster": "https://image.tmdb.org/t/p/w500/1CiLJx8Xtv3TbbFj6k7BboSmKgC.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8r9RoGfwGmn1pn0G3sbvHHemSWF.jpg",
+        "description": "In 1987, five young men, using brutally honest rhymes and hardcore beats, put their frustration and anger about life in the most dangerous place in America into the most powerful weapon they had: their music.  Taking us back to where it all began, Straight Outta Compton tells the true story of how these cultural rebels\u2014armed only with their lyrics, swagger, bravado and raw talent\u2014stood up to the authorities that meant to keep them down and formed the world\u2019s most dangerous group, N.W.A.  And as they spoke the truth that no one had before and exposed life in the hood, their voice ignited a social revolution that is still reverberating today.",
+        "releaseInfo": "2015",
+        "imdbRating": "7.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0063268",
+        "type": "movie",
+        "name": "Mandabi",
+        "poster": "https://image.tmdb.org/t/p/w500/8L5GJMgWUfyuIwtKSvoa7Ovejk3.jpg",
+        "background": "https://image.tmdb.org/t/p/original/z5ZyAtLhK5eistltd8ibpBp4qSz.jpg",
+        "description": "A money order from a relative in Paris throws the life of a Senegalese family man out of order. He deals with corruption, greed, problematic family members, the locals and the changing from his traditional way of living to a more modern one.",
+        "releaseInfo": "1968",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0101730",
+        "type": "movie",
+        "name": "Precious",
+        "poster": "https://image.tmdb.org/t/p/w500/iLoKPaFDZ8nNFZKcYUPgZIcxoXU.jpg",
+        "background": null,
+        "description": "A 17 year old girl runs away form home and finds shelter with a 50 year old man with a psychiatric past.",
+        "releaseInfo": "1991",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0070820",
+        "type": "movie",
+        "name": "Touki Bouki",
+        "poster": "https://image.tmdb.org/t/p/w500/kcBYKHyg9GcQqa6DWq0AuQDhtPI.jpg",
+        "background": "https://image.tmdb.org/t/p/original/7DlEixaKiNJyK0tHri0AEUAQrk8.jpg",
+        "description": "Mory, a cowherd, and Anta, a university student, try to make money in order to go to Paris and leave their boring past behind.",
+        "releaseInfo": "1973",
+        "imdbRating": "6.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt30827810",
+        "type": "movie",
+        "name": "I Love Boosters",
+        "poster": "https://image.tmdb.org/t/p/w500/4pNKIUFy7tkZiBx0rnSmG9ysRy.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fBZ9cWUI1yB9Fcs2eoYZ4mmMUmI.jpg",
+        "description": "A group of shoplifters take aim at a cutthroat fashion maven by stealing from her stores and reselling them at a lower price \u2014 what they call 'fashion-forward philanthropy'.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1020072",
+        "type": "movie",
+        "name": "Selma",
+        "poster": "https://image.tmdb.org/t/p/w500/2QyUcitU0hrxy6B2zkyJ0EhNlqm.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bTnUxw2qH4oBGDMM0w4r6KQ11BD.jpg",
+        "description": "\"Selma,\" as in Alabama, the place where segregation in the South was at its worst, leading to a march that ended in violence, forcing a famous statement by President Lyndon B. Johnson that ultimately led to the signing of the Voting Rights Act.",
+        "releaseInfo": "2014",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt12427158",
+        "type": "movie",
+        "name": "A Thousand and One",
+        "poster": "https://image.tmdb.org/t/p/w500/yW97MlBddOeiw17zUSf2iWvOmkr.jpg",
+        "background": "https://image.tmdb.org/t/p/original/7NTGZTzqWHgBJeoNaWsAxvHtRy4.jpg",
+        "description": "Struggling but unapologetically living on her own terms, Inez is moving from shelter to shelter in mid-1990s New York City. With her 6-year-old son Terry in foster care and unable to leave him again, she kidnaps him so they can build their life together. As the years go by, their family grows and Terry becomes a smart yet quiet teenager, but the secret that has defined their lives threatens to destroy the home they have so improbably built.",
+        "releaseInfo": "2023",
+        "imdbRating": "6.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt28523838",
+        "type": "movie",
+        "name": "Exhibiting Forgiveness",
+        "poster": "https://image.tmdb.org/t/p/w500/gGlvpqgmyJovSA0Ny0D0gvUZFV6.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ov8g2TwuzNknrD64mGhtSZnqdtn.jpg",
+        "description": "A Black artist on the path to success is derailed by an unexpected visit from his estranged father, a recovering addict desperate to reconcile. Together, they struggle and learn that forgetting might be a greater challenge than forgiving.",
+        "releaseInfo": "2024",
+        "imdbRating": "5.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10642834",
+        "type": "movie",
+        "name": "The Forty-Year-Old Version",
+        "poster": "https://image.tmdb.org/t/p/w500/ilMExVn5xyfIWAnqngqAB0OFsE5.jpg",
+        "background": "https://image.tmdb.org/t/p/original/71kAv6hJ8G9zmjZJQhWUtC9ubp.jpg",
+        "description": "Desperate for a breakthrough as she nears the big 4-0, struggling New York City playwright Radha finds inspiration by reinventing herself as a rapper.",
+        "releaseInfo": "2020",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0814666",
+        "type": "movie",
+        "name": "Bamako",
+        "poster": "https://image.tmdb.org/t/p/w500/5QC4URE5MKnzBwk8vNNtvMoLIxl.jpg",
+        "background": "https://image.tmdb.org/t/p/original/7A3eqkMybEi8QjiwxIfVUSrzt1A.jpg",
+        "description": "Caught in the stranglehold of debt and structural adjustment, Africa is fighting for its survival. In the face of disaster, representatives of African society bring an action against international financial institutions. The trial takes place in Bamako, in the yard of a house, among its inhabitants.",
+        "releaseInfo": "2007",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt7414162",
+        "type": "movie",
+        "name": "Coffee With Cinnamon",
+        "poster": "https://image.tmdb.org/t/p/w500/1TMIJKVNRA57RgMq8jmFOMNdYre.jpg",
+        "background": "https://image.tmdb.org/t/p/original/6tkGb0tomGmjKSunul2MjcxJ5as.jpg",
+        "description": "Five friends drink beer and chat at Violeta's house. Bit by bit, their stories of love, loss and suffering are told, revealing the acts of love and friendship that helped them through the hardest times of their lives.",
+        "releaseInfo": "2018",
+        "imdbRating": "7.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt2396589",
+        "type": "movie",
+        "name": "Mudbound",
+        "poster": "https://image.tmdb.org/t/p/w500/tf21kSKepMOlnorszWaiFwksKU4.jpg",
+        "background": "https://image.tmdb.org/t/p/original/m0CrcOOSUK6Ylf0pkGfGX0BdDq7.jpg",
+        "description": "In the post\u2013World War II South, two families are pitted against a barbaric social hierarchy and an unrelenting landscape as they simultaneously fight the battle at home and the battle abroad.",
+        "releaseInfo": "2017",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt3409392",
+        "type": "movie",
+        "name": "Timbuktu",
+        "poster": "https://image.tmdb.org/t/p/w500/tCpHpn8msgonS9HVDMkrcSZh4an.jpg",
+        "background": "https://image.tmdb.org/t/p/original/3cQO2X0vRpMYwNhoZURSCxUpCPh.jpg",
+        "description": "Just outside of the Malian city of Timbuktu, now occupied by militant Islamic rebels who impose the Sharia on civilians and inconvenience their daily life, a cattleman kills a fisherman.",
+        "releaseInfo": "2014",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt15376894",
+        "type": "movie",
+        "name": "Saint Omer",
+        "poster": "https://image.tmdb.org/t/p/w500/ekr25uuxlH7kg3KLhLLZcDZ15xd.jpg",
+        "background": "https://image.tmdb.org/t/p/original/aX1VH6SowCM3IezI09VqZjIuWiS.jpg",
+        "description": "A novelist attends the trial of a woman accused of killing her 15-month-old daughter by abandoning her to the rising tide on a beach in northern France. But as the trial continues, her own family history, doubts, and fears about motherhood are steadily dislodged as the life story of the accused is gradually revealed.",
+        "releaseInfo": "2022",
+        "imdbRating": "6.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0117603",
+        "type": "movie",
+        "name": "Set It Off",
+        "poster": "https://image.tmdb.org/t/p/w500/wpiARyUqTfabzakAXHMIUY6Tl1A.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8ebAtpx6YVfRGrxPrs4nTTWSbT9.jpg",
+        "description": "Four inner-city Black women, determined to end their constant struggle, decide to live by one rule \u2014 get what you want or die trying. So the four women take back their lives and take out some banks in the process.",
+        "releaseInfo": "1996",
+        "imdbRating": "7.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0104057",
+        "type": "movie",
+        "name": "Daughters of the Dust",
+        "poster": "https://image.tmdb.org/t/p/w500/sk5qednzLeDZMIhto6Oa9QFKOon.jpg",
+        "background": "https://image.tmdb.org/t/p/original/l8ofJ0ErKaL5F3JKmYVn4aa4i1w.jpg",
+        "description": "In 1902, a Gullah family on the Sea Islands off South Carolina decide whether to migrate to the mainland, risking their unique cultural heritage.",
+        "releaseInfo": "1991",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0337953",
+        "type": "movie",
+        "name": "D.E.B.S.",
+        "poster": "https://image.tmdb.org/t/p/w500/30zIKKN9Y9w1na5F5NAUeZHm2y.jpg",
+        "background": "https://image.tmdb.org/t/p/original/i3e6gHIaw3i3j8N9YFGSNbLLlfD.jpg",
+        "description": "A quartet of girls from a prep high school are recruited by a secret paramilitary academy to conduct cloak-and-dagger missions. Short film later expanded into a feature film with the same name.",
+        "releaseInfo": "2003",
+        "imdbRating": "6.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1723811",
+        "type": "movie",
+        "name": "Shame",
+        "poster": "https://image.tmdb.org/t/p/w500/cAWLz9kFv4xc6IsEXTj2DrcqD55.jpg",
+        "background": "https://image.tmdb.org/t/p/original/AOSzhQfsXIqHPl9JgQvGkBPhYm.jpg",
+        "description": "Brandon, a thirty-something man living in New York, eludes intimacy with women but feeds his deepest desires with a compulsive addiction to sex. When his younger sister temporarily moves into his apartment, stirring up bitter memories of their shared painful past, Brandon's life, like his fragile mind, gets out of control.",
+        "releaseInfo": "2011",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10365870",
+        "type": "movie",
+        "name": "Eyimofe (This Is My Desire)",
+        "poster": "https://image.tmdb.org/t/p/w500/kWt6xCyoCIpLr7mbTpxeN6St46o.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ytuH5IHyZjGO3bGfWhavqfTXJml.jpg",
+        "description": "A man and a woman in Lagos want to escape their everyday lives, but extricating themselves is no easy task. Two stories narrated with tenderness and restraint that only fleetingly touch, the dream of migrating to Europe floating above them all the while.",
+        "releaseInfo": "2021",
+        "imdbRating": "6.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt23561236",
+        "type": "movie",
+        "name": "American Fiction",
+        "poster": "https://image.tmdb.org/t/p/w500/57MFWGHarg9jid7yfDTka4RmcMU.jpg",
+        "background": "https://image.tmdb.org/t/p/original/3mpgltEMgPf8zFtPnAWdDVN8ZT1.jpg",
+        "description": "A novelist fed up with the establishment profiting from \"Black\" entertainment uses a pen name to write a book that propels him into the heart of hypocrisy and the madness he claims to disdain.",
+        "releaseInfo": "2023",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1798684",
+        "type": "movie",
+        "name": "Southpaw",
+        "poster": "https://image.tmdb.org/t/p/w500/kSQ49Fi3NVTqGGXILmxV2T2pdkG.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zT9iYKMtmU82Jo44WbiuMOW7jRi.jpg",
+        "description": "Billy \"The Great\" Hope, the reigning junior middleweight boxing champion, has an impressive career, a loving wife and daughter, and a lavish lifestyle. However, when tragedy strikes, Billy hits rock bottom, losing his family, his house and his manager. He soon finds an unlikely savior in Tick Willis, a former fighter who trains the city's toughest amateur boxers. With his future on the line, Hope fights to reclaim the trust of those he loves the most.",
+        "releaseInfo": "2015",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt5688932",
+        "type": "movie",
+        "name": "Sorry to Bother You",
+        "poster": "https://image.tmdb.org/t/p/w500/peTl1V04E9ppvhgvNmSX0r2ALqO.jpg",
+        "background": "https://image.tmdb.org/t/p/original/x832ykgj3fx0Q0MFKEno77XM47e.jpg",
+        "description": "In an alternate present-day version of Oakland, black telemarketer Cassius Green discovers a magical key to professional success \u2013 which propels him into a macabre universe.",
+        "releaseInfo": "2018",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0102592",
+        "type": "movie",
+        "name": "One False Move",
+        "poster": "https://image.tmdb.org/t/p/w500/x5xCkGw4jutMcc8nmWLKNzbDKht.jpg",
+        "background": "https://image.tmdb.org/t/p/original/iwOolqARbddbajguEIxM2ClP3aw.jpg",
+        "description": "Following a series of drug deals and murders, three criminals -- Fantasia, Ray Malcolm and Pluto -- travel from Los Angeles to Houston, finally arriving in a small Arkansas town to go into hiding. Two detectives from the LAPD, who are already on the case, contact the town's sheriff, Dale Dixon, to alert him of the fugitives' presence in the area. Underestimating Dixon, the criminals have no idea what they are about to face.",
+        "releaseInfo": "1992",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0066550",
+        "type": "movie",
+        "name": "Watermelon Man",
+        "poster": "https://image.tmdb.org/t/p/w500/7jKQ7goaKwlpDz40ZrgoXWHg26n.jpg",
+        "background": "https://image.tmdb.org/t/p/original/pbpd9rg7suUml8GXvQmzkaYwZBi.jpg",
+        "description": "A racist insurance agent lives in a typical suburban neighborhood, but his bigoted world of taunting and harassing black people on and off the job is turned upside down when his skin inexplicably turns dark overnight.",
+        "releaseInfo": "1970",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt9620288",
+        "type": "movie",
+        "name": "King Richard",
+        "poster": "https://image.tmdb.org/t/p/w500/2dfujXrxePtYJPiPHj1HkAFQvpu.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ljCKYCSRMNyZNyke5Lc1I8nW5b2.jpg",
+        "description": "The story of how Richard Williams served as a coach to his daughters Venus and Serena, who will soon become two of the most legendary tennis players in history.",
+        "releaseInfo": "2021",
+        "imdbRating": "7.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt18382328",
+        "type": "movie",
+        "name": "Earth Mama",
+        "poster": "https://image.tmdb.org/t/p/w500/pA20kQaKxPvUbPeXyyc6ENJEEuN.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nLQ7jOeBmCQEETS3FCtZDWvYYtA.jpg",
+        "description": "A pregnant single mother, with two children in foster care, embraces her Bay Area community as she fights to reclaim her family.",
+        "releaseInfo": "2023",
+        "imdbRating": "5.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0381707",
+        "type": "movie",
+        "name": "White Chicks",
+        "poster": "https://image.tmdb.org/t/p/w500/aHTUpo45qy9QYIOnVITGGqLoVcA.jpg",
+        "background": "https://image.tmdb.org/t/p/original/85k0kaoRgGmF6ACq0M61AFxhjLN.jpg",
+        "description": "Two FBI agent brothers, Marcus and Kevin Copeland, accidentally foil a drug bust. To avoid being fired they accept a mission escorting a pair of socialites to the Hamptons--but when the girls are disfigured in a car accident, they refuse to go. Left without options, Marcus and Kevin decide to pose as the sisters, transforming themselves from black men into rich European-American women.",
+        "releaseInfo": "2004",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt7533152",
+        "type": "movie",
+        "name": "The Boy Who Harnessed the Wind",
+        "poster": "https://image.tmdb.org/t/p/w500/yOr7RxHw15MMXNxGMXSmngDqHyI.jpg",
+        "background": "https://image.tmdb.org/t/p/original/lB8mrGjgOxVuiGzBNbHfUrFw02d.jpg",
+        "description": "Against all the odds, a thirteen year old boy in Malawi invents an unconventional way to save his family and village from famine.",
+        "releaseInfo": "2019",
+        "imdbRating": "7.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1825683",
+        "type": "movie",
+        "name": "Black Panther",
+        "poster": "https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+        "background": "https://image.tmdb.org/t/p/original/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg",
+        "description": "King T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantle to join with ex-girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan 'special forces') and an American secret agent, to prevent Wakanda from being dragged into a world war.",
+        "releaseInfo": "2018",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt13652142",
+        "type": "movie",
+        "name": "Magazine Dreams",
+        "poster": "https://image.tmdb.org/t/p/w500/vSidx9NHKuQIPEQ4yI9b9zkTeh3.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bgfqWW9mLs24hXuqiIcxU1j7Fgd.jpg",
+        "description": "Aspiring bodybuilder Killian Maddox struggles to find human connection in an exploration of celebrity and violence. Nothing deters him from his fiercely protected dream of superstardom, not even the doctors who warn him of the permanent damage he causes to himself with his quest.",
+        "releaseInfo": "2025",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1719634",
+        "type": "movie",
+        "name": "Snow on tha Bluff",
+        "poster": "https://image.tmdb.org/t/p/w500/vXGArJcQG14TcLVsmFO8BEEI7Ar.jpg",
+        "background": "https://image.tmdb.org/t/p/original/o8TJBedg2RGRwzGfSg0qhcSTpYD.jpg",
+        "description": "When Curtis Snow steals a video camera from some college kids during a dope deal, he gives the camera to his best friend, Pancho, and they start documenting their lives. At first its business as usual for Curtis. He robs dope boys, he runs from the cops, he sells drugs, all while trying to provide for his two-year-old son. But when one of the dealers he ripped off comes for revenge, Curt\u2019s life starts to spiral out of control.",
+        "releaseInfo": "2012",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0114609",
+        "type": "movie",
+        "name": "Tales from the Hood",
+        "poster": "https://image.tmdb.org/t/p/w500/glPNCcI7V8zTTI3BG0iIUJJcwXN.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bfoOP1RN7N6FzF0MQYx3v5yi3WU.jpg",
+        "description": "A strange mortician tells four horrific tales to three drug dealers that he traps in a local funeral parlor.",
+        "releaseInfo": "1995",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0454848",
+        "type": "movie",
+        "name": "Inside Man",
+        "poster": "https://image.tmdb.org/t/p/w500/ffMUgkDZICNiyaws1Jkv8qG8uFW.jpg",
+        "background": "https://image.tmdb.org/t/p/original/tOkSenL74N23O4S7wjJSUHz7Aeh.jpg",
+        "description": "When an armed, masked gang enter a Manhattan bank, lock the doors and take hostages, the detective assigned to effect their release enters negotiations preoccupied with corruption charges he is facing.",
+        "releaseInfo": "2006",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt5580266",
+        "type": "movie",
+        "name": "The Hate U Give",
+        "poster": "https://image.tmdb.org/t/p/w500/2icwBom0t5nmOuZI9FVXF3gkMK0.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kH8xW7K2Gp1KOXoeewcLPkfqZ8K.jpg",
+        "description": "Raised in a poverty-stricken slum, a 16-year-old girl named Starr now attends a suburban prep school. After she witnesses a police officer shoot her unarmed best friend, she's torn between her two very different worlds as she tries to speak her truth.",
+        "releaseInfo": "2018",
+        "imdbRating": "8.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0112857",
+        "type": "movie",
+        "name": "Devil in a Blue Dress",
+        "poster": "https://image.tmdb.org/t/p/w500/yZ9vNEKOkd0GWWozsopW3SqflYQ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/n6SFCz0OsyZ800ZSlaD5WpNmqCj.jpg",
+        "description": "In late 1940s Los Angeles, Easy Rawlins is an unemployed black World War II veteran with few job prospects. At a bar, Easy meets DeWitt Albright, a mysterious white man looking for someone to investigate the disappearance of a missing white woman named Daphne Monet, who he suspects is hiding out in one of the city's black jazz clubs. Strapped for money and facing house payments, Easy takes the job, but soon finds himself in over his head.",
+        "releaseInfo": "1995",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt9873892",
+        "type": "movie",
+        "name": "They Cloned Tyrone",
+        "poster": "https://image.tmdb.org/t/p/w500/hnzXoDaK346U4ByfvQenu2DZnTg.jpg",
+        "background": "https://image.tmdb.org/t/p/original/9mXBHMSDLi0Ty0HXcnLtQnqNBmI.jpg",
+        "description": "A series of eerie events thrusts an unlikely trio onto the trail of a nefarious government conspiracy lurking directly beneath their neighborhood.",
+        "releaseInfo": "2023",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt4960748",
+        "type": "movie",
+        "name": "Till",
+        "poster": "https://image.tmdb.org/t/p/w500/cmDs0CYlgioyP2AQQTTmavt3uoO.jpg",
+        "background": "https://image.tmdb.org/t/p/original/xFKjWcxEumvwEhovqTDzoDCmD45.jpg",
+        "description": "The true story of Mamie Till Mobley's relentless pursuit of justice for her 14-year-old son, Emmett Till, who, in 1955, was lynched while visiting his cousins in Mississippi.",
+        "releaseInfo": "2022",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt8093700",
+        "type": "movie",
+        "name": "The Woman King",
+        "poster": "https://image.tmdb.org/t/p/w500/438QXt1E3WJWb3PqNniK0tAE5c1.jpg",
+        "background": "https://image.tmdb.org/t/p/original/p5kb4VwnK0bkxsOmME3SBKAcBoe.jpg",
+        "description": "The story of the Agojie, the all-female unit of warriors who protected the African Kingdom of Dahomey in the 1800s with skills and a fierceness unlike anything the world has ever seen, and General Nanisca as she trains the next generation of recruits and readies them for battle against an enemy determined to destroy their way of life.",
+        "releaseInfo": "2022",
+        "imdbRating": "7.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt2077703",
+        "type": "movie",
+        "name": "Aya of Yop City",
+        "poster": "https://image.tmdb.org/t/p/w500/eK4vyU14EqJpDFOAEfXqyWdmIYz.jpg",
+        "background": "https://image.tmdb.org/t/p/original/qEk7FddqvBxUwW84rAsstOq62gb.jpg",
+        "description": "While Aya has dreams of becoming a doctor, her two best friends, Adjoua and Bintou, just like to hang out and spend their evenings dancing, drinking and flirting with boys. Their ambition is to follow Plan C: Combs, Clothes and Chasing Men! But big trouble comes to town when Adjoua realizes she\u2019s pregnant, and the baby\u2019s father is the spoiled son of one of the richest and most feared men in the whole country.",
+        "releaseInfo": "2013",
+        "imdbRating": "7.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0108041",
+        "type": "movie",
+        "name": "Sankofa",
+        "poster": "https://image.tmdb.org/t/p/w500/t5PTcnhZgHzL7HUZKQP95UQDD5o.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8Kg9PV1NRIwS6emC46NcUwHCmDW.jpg",
+        "description": "On a photo shoot in Ghana, an American model slips back in time, becomes enslaved on a plantation and bears witness to the agony of her ancestral past.",
+        "releaseInfo": "1993",
+        "imdbRating": "5.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10199586",
+        "type": "movie",
+        "name": "Atlantics",
+        "poster": "https://image.tmdb.org/t/p/w500/zRnZM6HqglFK31MYyrTSQVlj1dQ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kWkAWQQrlI5Rq2CtC5aYac9dx9V.jpg",
+        "description": "Arranged to marry a rich man, young Ada is crushed when her true love goes missing at sea during a migration attempt \u2014 until a miracle reunites them.",
+        "releaseInfo": "2019",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10612922",
+        "type": "movie",
+        "name": "One Night in Miami...",
+        "poster": "https://image.tmdb.org/t/p/w500/1DLUb9PTDqXMSgsD7RmiJs7ZJIx.jpg",
+        "background": "https://image.tmdb.org/t/p/original/yUyuDacqA0IhWqEbPQPXBsEIbPX.jpg",
+        "description": "In the aftermath of Cassius Clay's defeat of Sonny Liston in 1964, the boxer meets with Malcolm X, Sam Cooke and Jim Brown to change the course of history in the segregated South.",
+        "releaseInfo": "2020",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0112688",
+        "type": "movie",
+        "name": "Clockers",
+        "poster": "https://image.tmdb.org/t/p/w500/c79uqLJleho2a7OQayfrW5Ypphf.jpg",
+        "background": "https://image.tmdb.org/t/p/original/xhYs4yaBnDNM3utncVzLmFVpAmK.jpg",
+        "description": "Strike is a young city drug pusher under the tutelage of drug lord Rodney Little. When a night manager at a fast-food restaurant is found with four bullets in his body, Strike\u2019s older brother turns himself in as the killer. Detective Rocco Klein doesn\u2019t buy the story, however, setting out to find the truth, and it seems that all the fingers point toward Strike & Rodney.",
+        "releaseInfo": "1995",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0072820",
+        "type": "movie",
+        "name": "Cooley High",
+        "poster": "https://image.tmdb.org/t/p/w500/pObzSME61i5IszazNQm3cqLMAGZ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/iChv2RTNJhouwCdk6ESlm4OC9l6.jpg",
+        "description": "In the mid-1960s, a group of high school friends who live on the Near North Side of Chicago enjoy life to the fullest...parties, hanging out, meeting new friends. Then life changes for two of the guys when they are falsely arrested in connection with stealing a Cadillac. We follow their lives through to the dramatic end of high school.",
+        "releaseInfo": "1975",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0094349",
+        "type": "movie",
+        "name": "Yeelen",
+        "poster": "https://image.tmdb.org/t/p/w500/xjckmcnKK6Ex6wHrVydu4F21h3t.jpg",
+        "background": "https://image.tmdb.org/t/p/original/qNYWkqaVzgJm2dkGW5TlPMW18eO.jpg",
+        "description": "A young man with magical powers journeys to his uncle to request help in fighting his sorcerer father.",
+        "releaseInfo": "1987",
+        "imdbRating": "6.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt9646768",
+        "type": "movie",
+        "name": "In the Heart of the World",
+        "poster": "https://image.tmdb.org/t/p/w500/1HkRUou95J23ctVla2aKy8RsNpp.jpg",
+        "background": "https://image.tmdb.org/t/p/original/moqMeaQBAZiPsEwOSlleBLz21b3.jpg",
+        "description": "The inhabitants of the Brazilian city of Contagem yearn for a better life. At the core of it all is Selma, a woman dreaming about the heart of the world: it could be anywhere, as long as it's a place where to feel happier.",
+        "releaseInfo": "2019",
+        "imdbRating": "6.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0246765",
+        "type": "movie",
+        "name": "Lumumba",
+        "poster": "https://image.tmdb.org/t/p/w500/evopdRBKjj85zttxMcrZ5xujaS8.jpg",
+        "background": "https://image.tmdb.org/t/p/original/6n1sWAEe4IMVPC6t9lgEHLC40zr.jpg",
+        "description": "The true story of the rise to power and brutal assassination of the formerly vilified and later redeemed leader of the independent Congo, Patrice Lumumba. Using newly discovered historical evidence, Haitian-born and later Congo-raised writer and director Raoul Peck renders an emotional and tautly woven account of the mail clerk and beer salesman with a flair for oratory and an uncompromising belief in the capacity of his homeland to build a prosperous nation independent of its former Belgian overlords. Lumumba emerges here as the heroic sacrificial lamb dubiously portrayed by the international media and led to slaughter by commercial and political interests in Belgium, the United States, the international community, and Lumumba's own administration; a true story of political intrigue and murder where political entities, captains of commerce, and the military dovetail in their quest for economic and political hegemony.",
+        "releaseInfo": "2000",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0103312",
+        "type": "movie",
+        "name": "Young Soul Rebels",
+        "poster": "https://image.tmdb.org/t/p/w500/oYpHWPhXipnYriluFBqmbeP31ND.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8yXe5XUup7wY6abokTRlcYPRbHF.jpg",
+        "description": "Two disc jockeys have a friend's murder to solve in the fringe-group melting pot of 1977 London.",
+        "releaseInfo": "1991",
+        "imdbRating": "5.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10954984",
+        "type": "movie",
+        "name": "Nope",
+        "poster": "https://image.tmdb.org/t/p/w500/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
+        "background": "https://image.tmdb.org/t/p/original/yRutvYkM3OP8N9oqqfjSK1VC7fs.jpg",
+        "description": "Residents in a lonely gulch of inland California bear witness to an uncanny, chilling discovery.",
+        "releaseInfo": "2022",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0158493",
+        "type": "movie",
+        "name": "Belly",
+        "poster": "https://image.tmdb.org/t/p/w500/i4QhjdZXxdOpKOhc9kh4qqWjRWr.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bmyugjdRl1aEOfBePwUpykIY3x3.jpg",
+        "description": "Tommy Bundy and Sincere are best friends as well as infamous and ruthless criminals and shot-callers in the hood. Respected by many but feared by all.  As the police are closing in on them and new players are looking for a come up, will their reign last?",
+        "releaseInfo": "1998",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0116404",
+        "type": "movie",
+        "name": "Get on the Bus",
+        "poster": "https://image.tmdb.org/t/p/w500/7p8FvHMSr11LQw9Xv6dPJdrBeU2.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nITF6wXK8Icm3FitDNw54bGNaHv.jpg",
+        "description": "Fifteen Black men gather in South Central LA to take a cross-country bus trip to attend the Million Man March in Washington, DC in October 1995. Among the attendees are an eclectic set of characters, including a laid-off aircraft worker, a man whose at-risk son is handcuffed to him, a Black Republican, a former gangsta, a Hollywood actor, a cop of mixed racial background, and a white bus driver. All make the trek discussing issues surrounding the March, including manhood, religion, politics, sexuality, and race.",
+        "releaseInfo": "1996",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt6133130",
+        "type": "movie",
+        "name": "Professor Marston and the Wonder Women",
+        "poster": "https://image.tmdb.org/t/p/w500/tbrzHlnE8dNpllLWEe9bwDGNzLe.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ecinn4iRxpQs4mW7Y7n0b41Qgbe.jpg",
+        "description": "The unconventional life of Dr. William Marston, the Harvard psychologist and inventor who helped invent the modern lie detector test and co-created Wonder Woman in 1941.",
+        "releaseInfo": "2017",
+        "imdbRating": "7.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0093200",
+        "type": "movie",
+        "name": "Hollywood Shuffle",
+        "poster": "https://image.tmdb.org/t/p/w500/xidkzvrJfBeZ6wVcVOxobZruiR7.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nF4OKHPBAbVzqP4RQ5SknzD93T7.jpg",
+        "description": "Aspiring actor and hot-dog stand employee Bobby Taylor catches the ire of his grandmother for auditioning for a role in the regrettably titled exploitation film \"Jivetime Jimmy's Revenge.\" When Tinseltown Studios casts Taylor in the title role, he has a series of conflicted dreams satirizing African-American stereotypes in Hollywood, and must reconcile his career goals with his desire to remain a positive role model for his little brother.",
+        "releaseInfo": "1987",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0101891",
+        "type": "movie",
+        "name": "The Five Heartbeats",
+        "poster": "https://image.tmdb.org/t/p/w500/mmNKtRPFVfyUKCe8e89pGkeBlRK.jpg",
+        "background": "https://image.tmdb.org/t/p/original/7VxkSN5vAdYovqyrdGnxgwNyxQD.jpg",
+        "description": "In the early 1960s, a quintet of hopeful, young African-American men form an amateur vocal group called The Five Heartbeats. After an initially rocky start, the group improves, turns pro, and rises to become a top flight music sensation. Along the way, however, the guys learn many hard lessons about the reality of the music industry.",
+        "releaseInfo": "1991",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1446192",
+        "type": "movie",
+        "name": "Rise of the Guardians",
+        "poster": "https://image.tmdb.org/t/p/w500/yfzmfWGjcmyugH6FZ13WcsUGiNj.jpg",
+        "background": "https://image.tmdb.org/t/p/original/sDPk862OKB0Ckkvebo4M2k5AKly.jpg",
+        "description": "When an evil spirit known as Pitch lays down the gauntlet to take over the world, the immortal Guardians must join forces for the first time to protect the hopes, beliefs and imagination of children all over the world.",
+        "releaseInfo": "2012",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt11316680",
+        "type": "movie",
+        "name": "Trees of Peace",
+        "poster": "https://image.tmdb.org/t/p/w500/2McwkzqZ5uOZsBOGEjCDRni8Qf7.jpg",
+        "background": "https://image.tmdb.org/t/p/original/eEHwJClQufZYfjs28GibQEHf7vJ.jpg",
+        "description": "Four women from different backgrounds forge an unbreakable sisterhood while trapped and in hiding during the genocide in Rwanda.",
+        "releaseInfo": "2021",
+        "imdbRating": "7.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0180254",
+        "type": "movie",
+        "name": "Top of the Heap",
+        "poster": "https://image.tmdb.org/t/p/w500/3cKGFUMrAaydM7QjK6K7Oim3jFA.jpg",
+        "background": "https://image.tmdb.org/t/p/original/5xhktTeDf8See35wCI5iIM2SKGN.jpg",
+        "description": "A Black cop is pushed over the edge when he is passed over for a promotion, leading him on a violent personal crusade against criminals punctuated by feverish psychedelic dream visions.",
+        "releaseInfo": "1972",
+        "imdbRating": "6.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt2671706",
+        "type": "movie",
+        "name": "Fences",
+        "poster": "https://image.tmdb.org/t/p/w500/8NvnB8aeWQvBEz2ruN4g313j991.jpg",
+        "background": "https://image.tmdb.org/t/p/original/j2kgVOyp4dxlqohU5QJTrDHfbRD.jpg",
+        "description": "In 1950s Pittsburgh, a frustrated African-American father struggles with the constraints of poverty, racism, and his own inner demons as he tries to raise a family.",
+        "releaseInfo": "2016",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt30005147",
+        "type": "movie",
+        "name": "The Day I Met You",
+        "poster": "https://image.tmdb.org/t/p/w500/9Mh2O27rU3DLxGHrJ9tOvDh6KtJ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/53MeVT4P2JW80o4hyyO34Wy5ID4.jpg",
+        "description": "Zeca tries to get up early to catch the bus and arrive an hour and a half later at the neighboring town\u2019s school, where he works as a librarian. Waking up early is evermore difficult: something prevents him from maintaining his routine. One day, Zeca meets Louisa.",
+        "releaseInfo": "2024",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0124718",
+        "type": "movie",
+        "name": "He Got Game",
+        "poster": "https://image.tmdb.org/t/p/w500/kd8hRaysUQOz7AvSorZDJHuihcJ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/eW9vrzXW0r8glKx6p27i1iQblsr.jpg",
+        "description": "A basketball player's father must try to convince him to go to a college so he can get a shorter prison sentence.",
+        "releaseInfo": "1998",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0427309",
+        "type": "movie",
+        "name": "The Great Debaters",
+        "poster": "https://image.tmdb.org/t/p/w500/nuF3DDlZzNb2qq0tEsYU0zpXf8K.jpg",
+        "background": "https://image.tmdb.org/t/p/original/waOYBThLihaTKUFOAzjvhPjBmrS.jpg",
+        "description": "The true story of a brilliant but politically radical debate team coach who uses the power of words to transform a group of underdog African-American college students into a historical powerhouse that took on the Harvard elite.",
+        "releaseInfo": "2007",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0120036",
+        "type": "movie",
+        "name": "Rosewood",
+        "poster": "https://image.tmdb.org/t/p/w500/5EeTYDXdrpD9mZSSwsrFbqgok9U.jpg",
+        "background": "https://image.tmdb.org/t/p/original/mvBQh4Qy9YRf9ckAGPmNkOQAyUq.jpg",
+        "description": "Spurred by a white woman's lie, vigilantes destroy a black Florida town and slay inhabitants in 1923.",
+        "releaseInfo": "1997",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt4513316",
+        "type": "movie",
+        "name": "Novitiate",
+        "poster": "https://image.tmdb.org/t/p/w500/ntsyazWKclgwObVftWVVAEBcvRq.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4MLjm9ghDgx2cccqdKDRhBla9VT.jpg",
+        "description": "In the early 1960s, during the Vatican II era, a young woman training to become a nun struggles with issues of faith, sexuality and the changing church.",
+        "releaseInfo": "2017",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt6876160",
+        "type": "movie",
+        "name": "Long Way Home",
+        "poster": "https://image.tmdb.org/t/p/w500/wJgMIQrcajmCcu0hnrFyBtBAiXT.jpg",
+        "background": null,
+        "description": "The Holvak family house the escaped convict named Craw that the son befriends. Reverend Holvak's faith is tested and young Ramey faces a choice between a friendship and his family.",
+        "releaseInfo": "1975",
+        "imdbRating": "N/A",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1462764",
+        "type": "movie",
+        "name": "Indiana Jones and the Dial of Destiny",
+        "poster": "https://image.tmdb.org/t/p/w500/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg",
+        "background": "https://image.tmdb.org/t/p/original/57JocxmicOoAMhkUSmdKBlpZWMT.jpg",
+        "description": "Finding himself in a new era, and approaching retirement, Indy wrestles with fitting into a world that seems to have outgrown him. But as the tentacles of an all-too-familiar evil return in the form of an old rival, Indy must don his hat and pick up his whip once more to make sure an ancient and powerful artifact doesn't fall into the wrong hands.",
+        "releaseInfo": "2023",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0064579",
+        "type": "movie",
+        "name": "The Learning Tree",
+        "poster": "https://image.tmdb.org/t/p/w500/kxA20n5Oiy4Xx9nAqeXAMJ00S2K.jpg",
+        "background": "https://image.tmdb.org/t/p/original/she3ghUOGCIOiG00TN5cg5fkV8w.jpg",
+        "description": "The story, set in Kansas during the 1920's, covers less than a year in the life of a black teenager, and documents the veritable deluge of events which force him into sudden manhood. The family relationships and enmities, the fears, frustrations and ambitions of the black teenager in small-town America are explored with a strong statement about human values.",
+        "releaseInfo": "1969",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt31830814",
+        "type": "movie",
+        "name": "Forgive Us All",
+        "poster": "https://image.tmdb.org/t/p/w500/bT7sMDsvWNeIGgZ6ZsisNdBcHdq.jpg",
+        "background": "https://image.tmdb.org/t/p/original/l3qnMiVwuWxBikOpBcYpUHKUBdN.jpg",
+        "description": "In a post-apocalyptic world, a virus has transformed humans into violently deranged cannibals. A bereaved mother has lost everything and takes refuge in an isolated mountain cabin, until a desperate wounded stranger arrives with a story of hope.",
+        "releaseInfo": "2025",
+        "imdbRating": "5.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0077309",
+        "type": "movie",
+        "name": "Ceddo",
+        "poster": "https://image.tmdb.org/t/p/w500/etYZJDjlFDFWEl57RiurNUiqwXV.jpg",
+        "background": "https://image.tmdb.org/t/p/original/x3JHGnvJgffqnsfR18hlSE9XX5g.jpg",
+        "description": "The Ceddo people try to preserve their traditional African culture against the onslaught of Islam, Christianity, and the slave trade. When King Demba War sides with the Muslims, the Ceddo kidnap his daughter, Princess Dior Yacine, to protest their forcible conversion to Islam.",
+        "releaseInfo": "1978",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt34379307",
+        "type": "movie",
+        "name": "Is God Is",
+        "poster": "https://image.tmdb.org/t/p/w500/rCYQGHdoz7qwYsb6wXETJfUfDLX.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kmS3arkEsybCEw0ddWhDVQxCXf5.jpg",
+        "description": "Two sisters embark on an epic quest for revenge, confronting a charged family history that pushes them to extraordinary lengths.",
+        "releaseInfo": "2026",
+        "imdbRating": "5.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0318346",
+        "type": "movie",
+        "name": "Cane River",
+        "poster": "https://image.tmdb.org/t/p/w500/gW8M74YOQT2TOhESX7wnZMWm1RY.jpg",
+        "background": "https://image.tmdb.org/t/p/original/5vGe1vJYMaS2Ipl5jns05Aj2Ryv.jpg",
+        "description": "A budding, forbidden romance lays bare the tensions between two black communities, both descended from slaves but of disparate opportunity\u2014the light-skinned, property-owning Creoles and the darker-skinned, more disenfranchised families of the area.",
+        "releaseInfo": "1982",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0068323",
+        "type": "movie",
+        "name": "Buck and the Preacher",
+        "poster": "https://image.tmdb.org/t/p/w500/uffsVLJUP6tPSm8nugTiu6ITpbL.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4gzZmRCppUx0aXXqwfUztKukSzS.jpg",
+        "description": "A wagon master and a con-man preacher help freed slaves dogged by cheap-labor agents out West.",
+        "releaseInfo": "1972",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt3328442",
+        "type": "movie",
+        "name": "Residue",
+        "poster": "https://image.tmdb.org/t/p/w500/5HP7Ix4gEeDRbiTlJJf7gvzCuJD.jpg",
+        "background": "https://image.tmdb.org/t/p/original/wFiKryjJtSXP3tUr2JpFeXtxuRd.jpg",
+        "description": "The government cover-up of the causes behind a massive explosion in a futuristic UK metropolis spur photo journalist Jennifer Preston on to search for the truth and in the process blow open a paranormal phenomenon haunting the city.",
+        "releaseInfo": "2015",
+        "imdbRating": "5.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0097243",
+        "type": "movie",
+        "name": "A Dry White Season",
+        "poster": "https://image.tmdb.org/t/p/w500/6Wx9oZ7WUoootNLv70EDq6nyDqW.jpg",
+        "background": "https://image.tmdb.org/t/p/original/2SPjdXnbyFBUjG7NjkrDfyFnGpW.jpg",
+        "description": "During the 1976 Soweto uprising, a white school teacher's life and values are threatened when he asks questions about the death of a young black boy who died in police custody.",
+        "releaseInfo": "1989",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt11378946",
+        "type": "movie",
+        "name": "Michael",
+        "poster": "https://image.tmdb.org/t/p/w500/zm0KAbOjlt9eR5y7vDiL2dEOwMl.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ufSwlnECLoUbBjPrFqEQcWBzHwc.jpg",
+        "description": "The story of Michael Jackson, one of the most influential artists the world has ever known, and his life beyond the music. His journey from the discovery of his extraordinary talent as the lead of the Jackson Five, to the visionary artist whose creative ambition fueled a relentless pursuit to become the biggest entertainer in the world, highlighting both his life off-stage and some of the most iconic performances from his early solo career.",
+        "releaseInfo": "2026",
+        "imdbRating": "8.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1639901",
+        "type": "movie",
+        "name": "A Screaming Man",
+        "poster": "https://image.tmdb.org/t/p/w500/q90ysGM6CQmHnUTGGU4x5TBv4hn.jpg",
+        "background": "https://image.tmdb.org/t/p/original/5hv5VSNlt9maW6KewGq5qNSs24E.jpg",
+        "description": "Adam Ousmane is a pool attendant at a local resort. When the new managers decide to downsize, Adam loses his job to his own son, Abdel. Shattered by the turn of events, Adam is pressured into contributing to the Chadian war effort. With no money to speak of, the only asset he can donate is his son.",
+        "releaseInfo": "2010",
+        "imdbRating": "6.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0110091",
+        "type": "movie",
+        "name": "I Like It Like That",
+        "poster": "https://image.tmdb.org/t/p/w500/aCxh21UPLHi7Pxm9ykH1GNx39OW.jpg",
+        "background": "https://image.tmdb.org/t/p/original/vay1nnmwRbS6HUPjCEhWHzUkq8x.jpg",
+        "description": "After her husband is arrested for looting, Lisette struggles for independence while dealing with her transgender sibling, her critical mother-in-law and assorted neighborhood eccentrics.",
+        "releaseInfo": "1994",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0120768",
+        "type": "movie",
+        "name": "The Negotiator",
+        "poster": "https://image.tmdb.org/t/p/w500/dUMHEymATOGbs2K3E4dmNSVBgFQ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/y4TbQOC9DCzZop9HwKuX73rKbYO.jpg",
+        "description": "The police try to arrest expert hostage negotiator Danny Roman, who insists he's being framed for his partner's murder in what he believes is an elaborate conspiracy. Thinking there's evidence in the Internal Affairs offices that might clear him, he takes everyone in the office hostage and demands that another well-known negotiator be brought in to handle the situation and secretly investigate the conspiracy.",
+        "releaseInfo": "1998",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0168786",
+        "type": "movie",
+        "name": "Antwone Fisher",
+        "poster": "https://image.tmdb.org/t/p/w500/j9lCK1aFXqMO3hzhGiqCNU8coIX.jpg",
+        "background": "https://image.tmdb.org/t/p/original/83xzg9g16CulQbYISZRF64EoeSY.jpg",
+        "description": "A sailor prone to violent outbursts is sent to a naval psychiatrist for help. Refusing at first to open up, the young man eventually breaks down and reveals a horrific childhood. Through the guidance of his doctor, he confronts his painful past and begins a quest to find the family he never knew.",
+        "releaseInfo": "2002",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt11380884",
+        "type": "movie",
+        "name": "Farewell Amor",
+        "poster": "https://image.tmdb.org/t/p/w500/evH5FR3TGbRDWfftpdpQf5jIq5T.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fZ7c5VDBIcWD6APnEObOJvW7Kh7.jpg",
+        "description": "Reunited after a 17-year separation, Walter, an Angolan immigrant, is joined in the U.S. by his wife and teenage daughter. Now absolute strangers sharing a one-bedroom apartment, they discover a shared love of dance that may help overcome the emotional distance between them.",
+        "releaseInfo": "2020",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt31956415",
+        "type": "movie",
+        "name": "Freakier Friday",
+        "poster": "https://image.tmdb.org/t/p/w500/9wV65OmsjLAqBfDnYTkMPutXH8j.jpg",
+        "background": "https://image.tmdb.org/t/p/original/yQy9Y3p5INwkfTuHSnzYnz4MCV3.jpg",
+        "description": "Years after Tess and Anna endured an identity crisis, Anna now has a daughter of her own and a soon-to-be stepdaughter. As they navigate the myriad challenges that come when two families merge, Tess and Anna discover lightning might indeed strike twice.",
+        "releaseInfo": "2025",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt9051908",
+        "type": "movie",
+        "name": "Living",
+        "poster": "https://image.tmdb.org/t/p/w500/zUJcp0rpUqp2GSk7t9jvAiZsXtM.jpg",
+        "background": "https://image.tmdb.org/t/p/original/vxxCUHZlPuwepCeZMYLmbXCdOP1.jpg",
+        "description": "London, 1953. Mr. Williams, a veteran civil servant, is an important cog within the city's bureaucracy as it struggles to rebuild in the aftermath of World War II. Buried under paperwork at the office and lonely at home, his life has long felt empty and meaningless. Then a devastating medical diagnosis forces him to take stock, and to try and grasp some fulfilment before it passes permanently beyond reach.",
+        "releaseInfo": "2022",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0104573",
+        "type": "movie",
+        "name": "Juice",
+        "poster": "https://image.tmdb.org/t/p/w500/hfXFPMhNjLnCugBHMN0nrtKW7Ra.jpg",
+        "background": "https://image.tmdb.org/t/p/original/54xcERdFHlRny2FJ9NC4koForkR.jpg",
+        "description": "Four Harlem friends -- Bishop, Q, Steel and Raheem -- dabble in petty crime, but they decide to go big by knocking off a convenience store. Bishop, the magnetic leader of the group, has the gun. But Q has different aspirations. He wants to be a DJ and happens to have a gig the night of the robbery. Unfortunately for him, Bishop isn't willing to take no for answer in a game where everything's for keeps.",
+        "releaseInfo": "1992",
+        "imdbRating": "7.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt8286894",
+        "type": "movie",
+        "name": "Rafiki",
+        "poster": "https://image.tmdb.org/t/p/w500/letzgJyVmYYahcYNCYhzn75TyyE.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zMiQpwUGpdnC6goSl5ulL7kmkMg.jpg",
+        "description": "Kena and Ziki long for something more. Despite the political rivalry between their families, the girls resist and remain close friends, supporting each other to pursue their dreams in a conservative society. When love blossoms between them, the two girls will be forced to choose between happiness and safety.",
+        "releaseInfo": "2018",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt13846546",
+        "type": "movie",
+        "name": "Lingui, the Sacred Bonds",
+        "poster": "https://image.tmdb.org/t/p/w500/5Cg39mHfs9u8UiqZJZy5uYANWgG.jpg",
+        "background": "https://image.tmdb.org/t/p/original/89AXcAOeR3I0QH9wMFkxAQyBaid.jpg",
+        "description": "On the outskirts of the capital of Chad, determined single mother Amina works tirelessly to provide for herself and her 15-year old daughter Maria. When Amina discovers Maria is pregnant and does not want a child, the two women begin to seek out an abortion, condemned by both religion and law. In the process, mother and daughter forge a connection stronger than any they\u2019ve ever known.",
+        "releaseInfo": "2021",
+        "imdbRating": "6.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0161100",
+        "type": "movie",
+        "name": "The Wood",
+        "poster": "https://image.tmdb.org/t/p/w500/yEWMSJHkzMLgsTgsvR5TxuP3lBt.jpg",
+        "background": "https://image.tmdb.org/t/p/original/645iJzNG9A8FqKQ3BhPblKWI2Nm.jpg",
+        "description": "In the panicky, uncertain hours before his wedding, a groom with prenuptial jitters and his two best friends reminisce about growing up together in the middle-class African-American neighborhood of Inglewood, California. Flashing back to the twenty-something trio's childhood exploits, the memories capture the mood and nostalgia of the '80s era.",
+        "releaseInfo": "1999",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt34888871",
+        "type": "movie",
+        "name": "Little Brother",
+        "poster": "https://image.tmdb.org/t/p/w500/hIJpXb7Xaje2mebN9ylsS7blQzP.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bdwv8Hsu4Bnz8aRbH5MQ9clQ0DG.jpg",
+        "description": "A tightly wound realtor's picture-perfect life gets an extreme makeover when his lovably chaotic \"little brother\" suddenly reappears.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0112819",
+        "type": "movie",
+        "name": "Dead Presidents",
+        "poster": "https://image.tmdb.org/t/p/w500/eGfsSXizR11tTHVo0kuOOFPAxZt.jpg",
+        "background": "https://image.tmdb.org/t/p/original/c8H6Xi9im1tT6HP9PA9HpFE3sOy.jpg",
+        "description": "On the streets they call cash dead presidents. And that's just what a Vietnam veteran is after when he returns home from the war only to find himself drawn into a life of crime. With the aid of his fellow vets he plans the ultimate heist -- a daring robbery of an armored car filled with unmarked U.S. currency!",
+        "releaseInfo": "1995",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0111681",
+        "type": "movie",
+        "name": "Welcome II the Terrordome",
+        "poster": "https://image.tmdb.org/t/p/w500/ii97IHefRu6wbKQygXYS0lmZ3ah.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nQK3VjcISUIipwYbzZPywc93GI6.jpg",
+        "description": "Spike and his sister Anjela live in the Terrordome, a huge ghetto that all the blacks have been forced to live in. Jodie, Spike's pregnant white girlfriend, ran away from an abusive white boyfriend who, after seeing her with Spike, sets up a trap for her. Spike's 11-year old nephew Hector dies as a result of this trap, and Anjela, finding the body of her son, goes on a police-killing rampage. Her apprehension sets off tension between Spike and his brother-in-law, as a race war broods inside the Terrordome.",
+        "releaseInfo": "1995",
+        "imdbRating": "5.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0104575",
+        "type": "movie",
+        "name": "Just Another Girl on the I.R.T.",
+        "poster": "https://image.tmdb.org/t/p/w500/jjBthOisXwuyUqBd1BAmIzdSf4S.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ogw4HLfdmSqjpZx6k0C4u5l3sFE.jpg",
+        "description": "Chantel Mitchell, a hip, articulate, black high-school girl in Brooklyn, is determined not to become \"just another girl on the IRT\" (the IRT is one of NYC's subway lines). She dreams of medical school, a family, and an escape from the generational poverty and street-corner life her friends seem to have accepted as their lot. But personal and sexual challenges confront Chantel on her way to fulfilling these dreams.",
+        "releaseInfo": "1993",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0416212",
+        "type": "movie",
+        "name": "The Secret Life of Bees",
+        "poster": "https://image.tmdb.org/t/p/w500/m1LGEeoYfc6crbfG8WmTKg9SVqL.jpg",
+        "background": "https://image.tmdb.org/t/p/original/40K8NpPgBqIDukExvG4yWPkYEvO.jpg",
+        "description": "Set in South Carolina in 1964, this is the tale of Lily Owens a 14 year-old girl who is haunted by the memory of her late mother. To escape her lonely life and troubled relationship with her father, Lily flees with Rosaleen, her caregiver and only friend, to a South Carolina town that holds the secret to her mother's past.",
+        "releaseInfo": "2008",
+        "imdbRating": "7.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10121508",
+        "type": "movie",
+        "name": "Test Pattern",
+        "poster": "https://image.tmdb.org/t/p/w500/26TUusJoyE5G1KVpu2IijUi9hbi.jpg",
+        "background": "https://image.tmdb.org/t/p/original/x5t4isLoBmetWszgZRD1LI1VgQX.jpg",
+        "description": "A relationship is put to the test after the girlfriend is sexually assaulted and the boyfriend drives her from hospital to hospital in search of a rape kit.",
+        "releaseInfo": "2021",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt6343314",
+        "type": "movie",
+        "name": "Creed II",
+        "poster": "https://image.tmdb.org/t/p/w500/v3QyboWRoA4O9RbcsqH8tJMe8EB.jpg",
+        "background": "https://image.tmdb.org/t/p/original/9il7qNbeYnPMYlutsVYDsj4hRyb.jpg",
+        "description": "Between personal obligations and training for his next big fight against an opponent with ties to his family's past, Adonis Creed is up against the challenge of his life.",
+        "releaseInfo": "2018",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1200263",
+        "type": "movie",
+        "name": "The Color Purple",
+        "poster": "https://image.tmdb.org/t/p/w500/h5bqIxM8GO4TewJ0u6Rzkg58ssJ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/rSle4ix2IZ6UMgCDY8L3ngdOmSZ.jpg",
+        "description": "A decades-spanning tale of love and resilience and of one woman's journey to independence. Celie faces many hardships in her life, but ultimately finds extraordinary strength and hope in the unbreakable bonds of sisterhood.",
+        "releaseInfo": "2023",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1825157",
+        "type": "movie",
+        "name": "The Double",
+        "poster": "https://image.tmdb.org/t/p/w500/7kNcpmP1Pe9fWLKEbEOX5GEWueC.jpg",
+        "background": "https://image.tmdb.org/t/p/original/19B3vwsPwLzHvSAo9uxC70QEkqW.jpg",
+        "description": "An awkward office drone becomes increasingly unhinged after a charismatic and confident look-alike takes a job at his workplace and seduces the woman he desires.",
+        "releaseInfo": "2014",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt21833464",
+        "type": "movie",
+        "name": "Bruiser",
+        "poster": "https://image.tmdb.org/t/p/w500/1H9RpfmIwDM5norUpYdiOdRkVQi.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hOETTfBMsQDllXnIp1pss7roSRD.jpg",
+        "description": "During summer break, 14-year-old Darious explores the boundaries of his manhood through tumultuous interactions with Malcolm his strict father and a burgeoning mentorship with mysterious drifter Porter.",
+        "releaseInfo": "2022",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10699362",
+        "type": "movie",
+        "name": "Moffie",
+        "poster": "https://image.tmdb.org/t/p/w500/5MmpFYN4DnQLK7J7cVe3tACnQcO.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zfrgXBeGi8AQUcQq56r2OYrMZ6L.jpg",
+        "description": "A young man in 1981 South Africa must complete his brutal and racist two years of compulsory military service while desperately maintaining the secrecy of his homosexuality.",
+        "releaseInfo": "2020",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt9686154",
+        "type": "movie",
+        "name": "You Will Die at Twenty",
+        "poster": "https://image.tmdb.org/t/p/w500/hZjpqUFs3ffevZoLJsvoutpEIrd.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bK2NadJBzYBLr0JZp5m7l1hU9Do.jpg",
+        "description": "Shortly after Muzamil was born, the village's holy man predicts that he will die at age 20. Muzamil's father can't stand the curse and leaves home. Sakina raises her son as a single mother, overly protective. One day, Muzamil turns 19.",
+        "releaseInfo": "2020",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0162677",
+        "type": "movie",
+        "name": "Summer of Sam",
+        "poster": "https://image.tmdb.org/t/p/w500/yvGGA2CbT6xyFVTZUA9f2ok0q5V.jpg",
+        "background": "https://image.tmdb.org/t/p/original/pXXhErx4sn30BuOnhNeGJX8mQ7r.jpg",
+        "description": "Spike Lee's take on the \"Son of Sam\" murders in New York City during the summer of 1977 centering on the residents of an Italian-American Northeast Bronx neighborhood who live in fear and distrust of one another.",
+        "releaseInfo": "1999",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt13650742",
+        "type": "movie",
+        "name": "Suncoast",
+        "poster": "https://image.tmdb.org/t/p/w500/nmPLUp5lVMiGomkN3db1WPeNrz3.jpg",
+        "background": "https://image.tmdb.org/t/p/original/cJOYsYSz3b3u0JpIWLBEfRam1eR.jpg",
+        "description": "While caring for her brother along with her audacious mother, a teenager strikes up an unlikely friendship with an eccentric activist who is protesting one of the most landmark medical cases of all time.",
+        "releaseInfo": "2024",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt32046117",
+        "type": "movie",
+        "name": "The Village Next to Paradise",
+        "poster": "https://image.tmdb.org/t/p/w500/cVWwlwRbA2Cnjzn4e0PDaoPJLu6.jpg",
+        "background": "https://image.tmdb.org/t/p/original/uDKHFgRHteh2MVenrZ9Eh61hrbs.jpg",
+        "description": "In a windy Somali village, a newly assembled family must navigate between their different aspirations and the complex world surrounding them. Love, trust and resilience will power them through their life paths.",
+        "releaseInfo": "2024",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0321353",
+        "type": "movie",
+        "name": "BaadAsssss Cinema",
+        "poster": "https://image.tmdb.org/t/p/w500/f3kNL2XdDm6HVHCxWxVkpuc7aw4.jpg",
+        "background": "https://image.tmdb.org/t/p/original/r3B7E4aQjXQ8Fd4J2q333K56FHS.jpg",
+        "description": "With archive film clips and interviews, this brief look at a frequently overlooked historical period of filmmaking acts as an introduction rather than a complete record. It features interviews with some of the genre's biggest stars, like Fred Williamson, Pam Grier, and Richard Roundtree. Director Melvin Van Peebles discusses the historical importance of his landmark film Sweet Sweetback's Baadasssss Song. For a contemporary perspective, the excitable Quentin Tarantino offers his spirited commentary and author/critic bell hooks provides some scholarly social analysis.",
+        "releaseInfo": "2002",
+        "imdbRating": "6.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt4218572",
+        "type": "movie",
+        "name": "Widows",
+        "poster": "https://image.tmdb.org/t/p/w500/d31SGJSaX29ba5ZUbZcesGoDE7I.jpg",
+        "background": "https://image.tmdb.org/t/p/original/tkri1hMrb1FhWfb2bWpprsvq9Sd.jpg",
+        "description": "A police shootout leaves four thieves dead during an explosive armed robbery attempt in Chicago. Their widows have nothing in common except a debt left behind by their spouses' criminal activities. Hoping to forge a future on their own terms, they join forces to pull off a heist.",
+        "releaseInfo": "2018",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt11394158",
+        "type": "movie",
+        "name": "Miss Juneteenth",
+        "poster": "https://image.tmdb.org/t/p/w500/5aueUTOvA8Y6A4eteDwhgo8ReX8.jpg",
+        "background": "https://image.tmdb.org/t/p/original/n0uefHZH2sX0HxU5Ec1w1tF8n3k.jpg",
+        "description": "Turquoise, a former beauty queen turned hardworking single mother, prepares her rebellious teenage daughter for the \u201cMiss Juneteenth\u201d pageant, hoping to keep her from repeating the same mistakes in life that she did.",
+        "releaseInfo": "2020",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt14906708",
+        "type": "movie",
+        "name": "Pretty Red Dress",
+        "poster": "https://image.tmdb.org/t/p/w500/xdoheMztHSL22fl3ZtKPz3mRfvm.jpg",
+        "background": "https://image.tmdb.org/t/p/original/mRv4XrFpSfcslMYqqohxuBaNJWI.jpg",
+        "description": "Travis has just been released from prison and it quickly becomes apparent that much has changed while he\u2019s been gone. While girlfriend Candice is on the up and auditioning to star in a Tina Turner musical, daughter Kenisha is struggling in school and her relationship with her mum is tense. So, when Travis buys Candice her dream dress for an audition, rather than smoothing over the family\u2019s problems, it ends up creating even more. As secrets and desires left unsaid threaten to spill out, Travis is forced to re-examine who he is and how he wants to be perceived in the world.",
+        "releaseInfo": "2023",
+        "imdbRating": "5.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt13892558",
+        "type": "movie",
+        "name": "Our Father, the Devil",
+        "poster": "https://image.tmdb.org/t/p/w500/xD0RsrVeQTmWTiNH9pORoOom0G5.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hnuyPcbUzFZQBlNsi1EZCn3c2nr.jpg",
+        "description": "An African refugee's quiet existence in a sleepy mountain town in the south of France is upended by the arrival of a charismatic Catholic priest, whom she recognizes as the warlord who slaughtered her family.",
+        "releaseInfo": "2023",
+        "imdbRating": "5.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt11873472",
+        "type": "movie",
+        "name": "Neptune Frost",
+        "poster": "https://image.tmdb.org/t/p/w500/emlTdAiMcJDomw6Tjz2lFCSen8W.jpg",
+        "background": "https://image.tmdb.org/t/p/original/sHJmDOvewSELRmTUbYovR5nSFiJ.jpg",
+        "description": "In the hilltops of Burundi, a group of escaped coltan miners form an anti-colonialist computer hacker collective. From their camp in an otherworldly e-waste dump, they attempt a takeover of the authoritarian regime exploiting the region's natural resources \u2013 and its people. When an intersex runaway and an escaped coltan miner find each other through cosmic forces, their connection sparks glitches within the greater divine circuitry.",
+        "releaseInfo": "2022",
+        "imdbRating": "5.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0203019",
+        "type": "movie",
+        "name": "Men of Honor",
+        "poster": "https://image.tmdb.org/t/p/w500/wNUAnXV1mzOOfvnVBIYsalkk078.jpg",
+        "background": "https://image.tmdb.org/t/p/original/laNHiehbOHYM3y9FVFfqmLuX8X5.jpg",
+        "description": "Against formidable odds -- and an old-school diving instructor embittered by the U.S. Navy's new, less prejudicial policies -- Carl Brashear sets his sights on becoming the Navy's first African-American master diver in this uplifting true story. Their relationship starts out on the rocks, but fate ultimately conspires to bring the men together into a setting of mutual respect, triumph and honor.",
+        "releaseInfo": "2000",
+        "imdbRating": "7.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0106880",
+        "type": "movie",
+        "name": "Fear of a Black Hat",
+        "poster": "https://image.tmdb.org/t/p/w500/4goFB3XTrh4sKumpXkvbdlZZAo8.jpg",
+        "background": "https://image.tmdb.org/t/p/original/5ezE1ThLm4zLUX9VbXFXlXFePwt.jpg",
+        "description": "Chronicling the controversial career of bad boys N.W.H. (Niggaz With Hats), this uproarious 'mockumentary' lampoons all of hardcore rap's hot-button issues. This underground laugh riot recounts the rise, fall and resurrection of a clueless bunch of would-be rappers, Ice Cold, Tone-Def & Tasty Taste performing as N.W.H.",
+        "releaseInfo": "1994",
+        "imdbRating": "6.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt912239",
+        "type": "movie",
+        "name": "Mami Wata",
+        "poster": "https://image.tmdb.org/t/p/w500/2Enx27BMhZW1nQ9CRIyAQDIrZY0.jpg",
+        "background": null,
+        "description": "Gaia and Cristina come from two very different backgrounds. But their friendship is like nature: rebel and pure.",
+        "releaseInfo": "2022",
+        "imdbRating": "N/A",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt7802246",
+        "type": "movie",
+        "name": "The Last Tree",
+        "poster": "https://image.tmdb.org/t/p/w500/x0DHRJfdmdnGdxYVWFZCmQeSboM.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hka1m1XehI2pnSi8a0x0yG5ymsE.jpg",
+        "description": "Femi is a British boy of Nigerian heritage who, after being fostered in rural Lincolnshire, moves to inner-city London to live with his birth mother. Struggling with the unfamiliar culture and values of his new environment, teenage Femi has to figure out which path to adulthood he wants to take.",
+        "releaseInfo": "2019",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt13321244",
+        "type": "movie",
+        "name": "Origin",
+        "poster": "https://image.tmdb.org/t/p/w500/dY0m1fypdNPp61kcmLdsk7KIR7C.jpg",
+        "background": "https://image.tmdb.org/t/p/original/j7JCJsoJ64Ra3YOKePyHcMeyr48.jpg",
+        "description": "While investigating the global phenomenon of caste and its dark influence on society, a journalist faces unfathomable personal loss and uncovers the beauty of human resilience.",
+        "releaseInfo": "2023",
+        "imdbRating": "6.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0403455",
+        "type": "movie",
+        "name": "Roll Bounce",
+        "poster": "https://image.tmdb.org/t/p/w500/lStFr3EHTNbnyOdOk2QDCqYGnlR.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bheeOBdK27vWCYJ7nrhSDRMuw1f.jpg",
+        "description": "In the summer of 1978, a teenager and his group of friends face new challenges when their neighborhood roller-skating rink closes, forcing them to visit a different rink.",
+        "releaseInfo": "2005",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0466856",
+        "type": "movie",
+        "name": "ATL",
+        "poster": "https://image.tmdb.org/t/p/w500/wi9VRukGburXfDwDKqcQQdgFK5S.jpg",
+        "background": "https://image.tmdb.org/t/p/original/9pAL0tNWbkNUJj42khYEK1Gah6Q.jpg",
+        "description": "As four friends prepare for life after high school, different challenges bring about turning points in each of their lives. The dramas unfold and resolve at their local rollerskating rink, Cascade.",
+        "releaseInfo": "2006",
+        "imdbRating": "7.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10696784",
+        "type": "movie",
+        "name": "The Harder They Fall",
+        "poster": "https://image.tmdb.org/t/p/w500/su9WzL7lwUZPhjH6eZByAYFx2US.jpg",
+        "background": "https://image.tmdb.org/t/p/original/d0mpUFKzoPwF1KsdjHpkkaYSvKm.jpg",
+        "description": "Gunning for revenge, outlaw Nat Love saddles up with his gang to take down enemy Rufus Buck, a ruthless crime boss who just got sprung from prison.",
+        "releaseInfo": "2021",
+        "imdbRating": "6.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt14775496",
+        "type": "movie",
+        "name": "Freda",
+        "poster": "https://image.tmdb.org/t/p/w500/yqmkq3q98ipmsAQCO9rciJLPDfK.jpg",
+        "background": "https://image.tmdb.org/t/p/original/g1xnBvnOl5UA3qAsbRJN0YALQpy.jpg",
+        "description": "Freda lives with her mother, sister and little brother in a popular neighbourhood of Haiti. They survive with their little street food shop. The precariousness and violence of their daily life pushes them to do everything they can to escape their situation in the hope of finding a better life.",
+        "releaseInfo": "2021",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt27834531",
+        "type": "movie",
+        "name": "Belle",
+        "poster": "https://image.tmdb.org/t/p/w500/9jOZNmxiWl6gnn40IXYY7GKeX5k.jpg",
+        "background": "https://image.tmdb.org/t/p/original/qkswMUEGRIiPIEf9hFnhPnUbXCN.jpg",
+        "description": "A couple have a peaceful existence in a small provincial town. He is a teacher and she runs an opticians practical. Their life is turned upside when Belle, a friend\u2019s daughter who is lodging with them, is found dead in her room.  The husband becomes the prime suspect as the only one at home at the time.",
+        "releaseInfo": "2025",
+        "imdbRating": "5.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0118663",
+        "type": "movie",
+        "name": "B.A.P.S",
+        "poster": "https://image.tmdb.org/t/p/w500/yi40NrDfdv8vX0aoWvis3CnCVWj.jpg",
+        "background": "https://image.tmdb.org/t/p/original/HDPq5KVV9Yw2H0fhvMug3Oi9Xv.jpg",
+        "description": "Two wannabe Black American princesses aim to marry rich men, who will pay for their world's first combination hair salon and soul food restaurant.",
+        "releaseInfo": "1997",
+        "imdbRating": "5.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0073915",
+        "type": "movie",
+        "name": "Xala",
+        "poster": "https://image.tmdb.org/t/p/w500/4bx6Wceii1OZf0e3qp4EurUFoK7.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ew7DGhmG3vzqEShmZvS5OcKKoEV.jpg",
+        "description": "A rich businessman in Senegal is cursed with crippling erectile dysfunction upon the day of his marriage to his third wife; the only cure is brutal public humiliation.",
+        "releaseInfo": "1975",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt9777644",
+        "type": "movie",
+        "name": "Da 5 Bloods",
+        "poster": "https://image.tmdb.org/t/p/w500/yx4cp1ljJMDSFeEex0Zjv45b55E.jpg",
+        "background": "https://image.tmdb.org/t/p/original/Aq5Zhj9iaTF6BEKNk05dlUxeHKa.jpg",
+        "description": "Four African-American Vietnam veterans return to Vietnam. They are in search of the remains of their fallen squad leader and the promise of buried treasure. These heroes battle forces of humanity and nature while confronted by the lasting ravages of the immorality of the Vietnam War.",
+        "releaseInfo": "2020",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0102175",
+        "type": "movie",
+        "name": "Jungle Fever",
+        "poster": "https://image.tmdb.org/t/p/w500/pw7cOdwCylBuiv6rvosBSkcgKEe.jpg",
+        "background": "https://image.tmdb.org/t/p/original/2YQfKfYX0mvHPnFMP5wiL1kYYBU.jpg",
+        "description": "A successful and married black man contemplates having an affair with a white girl from work. He's quite rightly worried that the racial difference would make an already taboo relationship even worse.",
+        "releaseInfo": "1991",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt3850214",
+        "type": "movie",
+        "name": "Dope",
+        "poster": "https://image.tmdb.org/t/p/w500/n6u00imN7AX2NiyWUc5kTgHXmEf.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4Yihb0wD1Jd2sQtNrKo9TOs8S3l.jpg",
+        "description": "Malcolm is carefully surviving life in a tough neighborhood in Los Angeles while juggling college applications, academic interviews, and the SAT. A chance invitation to an underground party leads him into an adventure that could allow him to go from being a geek, to being dope, to ultimately being himself.",
+        "releaseInfo": "2015",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt30320639",
+        "type": "movie",
+        "name": "Tendaberry",
+        "poster": "https://image.tmdb.org/t/p/w500/4dq7y04pB0UdfMQ6N1bKBm7ryuT.jpg",
+        "background": "https://image.tmdb.org/t/p/original/b95qhQuAJYU6enTE4bp7IJ5Bu5l.jpg",
+        "description": "When her boyfriend returns to Ukraine to care for his ailing father, 23-year-old Dakota must navigate the precarious anxiety of holding onto the past and forging her future in the midst of her South Brooklyn universe.",
+        "releaseInfo": "2024",
+        "imdbRating": "5.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0078078",
+        "type": "movie",
+        "name": "Petey Wheatstraw",
+        "poster": "https://image.tmdb.org/t/p/w500/bQFFMMMupaCAdWcgnBjVVlbK5wq.jpg",
+        "background": "https://image.tmdb.org/t/p/original/gYcHhPDVheL993ZpTUvsZXEGmQ6.jpg",
+        "description": "Petey Wheatstraw is a candidate to become the devil's son-in-law. The storyline is a scaffolding on which Rudy Ray Moore's standup humor can be unfolded. Beginning life as the afterbirth to a watermelon, the young Wheatstraw becomes a martial artist, but is unable to best the evil comedy team of Leroy and Skillet, who also indulge in wholesale murder. Satan restores the comedians' victims to life, and charges Petey with the task of marrying his clock-stoppingly ugly daughter to give him a grandchild. When Petey attempts to default on the deal, he is pursued by the devil's henchmen.",
+        "releaseInfo": "1977",
+        "imdbRating": "5.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt7497366",
+        "type": "movie",
+        "name": "The Burial of Kojo",
+        "poster": "https://image.tmdb.org/t/p/w500/aF2QMXcEmr273ky1rlYgEnIaIUV.jpg",
+        "background": "https://image.tmdb.org/t/p/original/yPmAt061hEDl3ACk1HCMtHdCILF.jpg",
+        "description": "A man is trapped in a mine shaft by his vengeful brother while his daughter embarks on a magical journey to rescue him.",
+        "releaseInfo": "2018",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10638522",
+        "type": "movie",
+        "name": "Talk to Me",
+        "poster": "https://image.tmdb.org/t/p/w500/kdPMUMJzyYAc4roD52qavX0nLIC.jpg",
+        "background": "https://image.tmdb.org/t/p/original/46Os8U0DEPmI0OnvKDxucl6SLVZ.jpg",
+        "description": "When a group of friends discover how to conjure spirits using an embalmed hand, they become hooked on the new thrill, until one of them goes too far and unleashes terrifying supernatural forces.",
+        "releaseInfo": "2023",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt5577494",
+        "type": "movie",
+        "name": "Clemency",
+        "poster": "https://image.tmdb.org/t/p/w500/uQgi5hq29saWiG4DbmQfz2EEnKI.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4LFJwYtjvlWFqri9IwAZxLR0xyx.jpg",
+        "description": "Years of carrying out death row executions have taken a toll on prison warden Bernadine Williams. As she prepares to execute another inmate, Bernadine must confront the psychological and emotional demons her job creates, ultimately connecting her to the man she is sanctioned to kill.",
+        "releaseInfo": "2019",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0120776",
+        "type": "movie",
+        "name": "One True Thing",
+        "poster": "https://image.tmdb.org/t/p/w500/hOYQIMtrqVeHUBe999V1KIqO7Gf.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4IrOhjmbvDcl4czUTB15CLfKtL0.jpg",
+        "description": "A career woman reassesses her parents' lives after she is forced to care for her cancer-stricken mother.",
+        "releaseInfo": "1998",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0116414",
+        "type": "movie",
+        "name": "Girl 6",
+        "poster": "https://image.tmdb.org/t/p/w500/1SSYCOTrHucd9aBCyTfbLWcJ2zD.jpg",
+        "background": "https://image.tmdb.org/t/p/original/wZIFAgcy7Hihvo8d0svFKCDlBQR.jpg",
+        "description": "A struggling actress in New York City takes a job as a phone sex operator.",
+        "releaseInfo": "1996",
+        "imdbRating": "5.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1032817",
+        "type": "movie",
+        "name": "Middle of Nowhere",
+        "poster": "https://image.tmdb.org/t/p/w500/4uhy3iCEBnY2SyXDo4lUpuj5j8N.jpg",
+        "background": "https://image.tmdb.org/t/p/original/2ygeX2Uh9stTu6weVKaYgryDiF.jpg",
+        "description": "The film follows Grace, a young woman whose irresponsible mother blows her college fund on her younger sister's beauty pageant campaign.",
+        "releaseInfo": "2008",
+        "imdbRating": "5.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0455944",
+        "type": "movie",
+        "name": "The Equalizer",
+        "poster": "https://image.tmdb.org/t/p/w500/9u4yW7yPA0BQ2pv9XwiNzItwvp8.jpg",
+        "background": "https://image.tmdb.org/t/p/original/9vAoubhoZE8aSkUZoSfxs3UWZhO.jpg",
+        "description": "McCall believes he has put his mysterious past behind him and dedicated himself to beginning a new, quiet life. But when he meets Teri, a young girl under the control of ultra-violent Russian gangsters, he can\u2019t stand idly by \u2013 he has to help her. Armed with hidden skills that allow him to serve vengeance against anyone who would brutalize the helpless, McCall comes out of his self-imposed retirement and finds his desire for justice reawakened. If someone has a problem, if the odds are stacked against them, if they have nowhere else to turn, McCall will help. He is The Equalizer.",
+        "releaseInfo": "2014",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0108265",
+        "type": "movie",
+        "name": "Swing Kids",
+        "poster": "https://image.tmdb.org/t/p/w500/o85xTgX5ByDewuYo5yOLIsP02CX.jpg",
+        "background": "https://image.tmdb.org/t/p/original/1nJozcSOKcSqjN46hMU1xnWJRZ4.jpg",
+        "description": "The story of a close-knit group of young kids in Nazi Germany who listen to banned swing music from the US. Soon dancing and fun leads to more difficult choices as the Nazis begin tightening the grip on Germany. Each member of the group is forced to face some tough choices about right, wrong, and survival.",
+        "releaseInfo": "1993",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0471367",
+        "type": "movie",
+        "name": "The Bloodiest",
+        "poster": "https://image.tmdb.org/t/p/w500/6gErbNLwgjGmskHqhfOgU7f2Yv.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fKeeSrFswJHfmhTFDnWVHEmMAsa.jpg",
+        "description": "Best friends Majolie and Chouchou are two beautiful young women trying to get ahead in a near-future Cameroon. After accidentally killing a powerful politician during sex, the two come up with a plot to dispose of the body, and get into the glamorous wakes that have taken over the local nightlife.",
+        "releaseInfo": "2005",
+        "imdbRating": "5.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt5439812",
+        "type": "movie",
+        "name": "Zola",
+        "poster": "https://image.tmdb.org/t/p/w500/bJLCPROp9bmNndurwZpVnOioVpB.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zL7CozbpAbGSdhBsuTI847tu5Fo.jpg",
+        "description": "A waitress agrees to accompany an exotic dancer, her put-upon boyfriend, and her mysterious and domineering roommate on a road trip to Florida to seek their fortune at a high-end strip club.",
+        "releaseInfo": "2021",
+        "imdbRating": "6.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt2073520",
+        "type": "movie",
+        "name": "An Oversimplification of Her Beauty",
+        "poster": "https://image.tmdb.org/t/p/w500/igSjDMaviTLS3mrq3r9CzNC46uw.jpg",
+        "background": "https://image.tmdb.org/t/p/original/vDnehd0SXQnjMYo1rApAR4jBPtF.jpg",
+        "description": "A quixotic artist hypothesizes about why he feels bad when a mystery girl stands him up. The event prompts him to ask: what's the content of a momentary feeling? Is it the sum of your experiences? And perhaps more importantly, are your experiences the sum of you?",
+        "releaseInfo": "2012",
+        "imdbRating": "5.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1910605",
+        "type": "movie",
+        "name": "Rags",
+        "poster": "https://image.tmdb.org/t/p/w500/5CfrXWMeGcMlisL1YRCgpFMWiER.jpg",
+        "background": "https://image.tmdb.org/t/p/original/rTHODCYE1nth5sUXwdbZtFhny4M.jpg",
+        "description": "Rags follows the story of Charlie Prince, an orphan living with his acerbic and unloving stepfather and spoiled, simple-minded stepbrothers. Charlie's dream is to be a singer, and while he is vocally talented and can write music, he can't seem to catch a break. Kadee Worth, on the other hand, is the daughter of music mogul Reginald Worth and is an international pop phenomenon. While the world knows her as a glamorous superstar, she is secretly frustrated with singing other people's songs and wearing clothes other people choose for her. Kadee wants the world to hear and see her true talent. Despite every obstacle that gets thrown in their way, once Charlie and Kadee find one another, they each finally get what they have been looking for \u2013 a voice, a stage, an audience and each other.",
+        "releaseInfo": "2012",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt8132778",
+        "type": "movie",
+        "name": "Night of the Kings",
+        "poster": "https://image.tmdb.org/t/p/w500/lkY6Agn4sucxm2VHrPBk7pQah7m.jpg",
+        "background": "https://image.tmdb.org/t/p/original/9ZLij77nEFCQt84LMkdU6Zc0PYV.jpg",
+        "description": "A young man is sent to \"La Maca,\" a prison in the middle of the Ivorian forest ruled by its inmates. As tradition goes with the rising of the red moon, he is designated by the Boss to be the new \"Roman\" and must tell a story to the other prisoners. Learning what fate awaits him, he begins to narrate the mystical life of the legendary outlaw named \"Zama King\" and has no choice but to make his story last until dawn.",
+        "releaseInfo": "2021",
+        "imdbRating": "6.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0162650",
+        "type": "movie",
+        "name": "Shaft",
+        "poster": "https://image.tmdb.org/t/p/w500/5ncvnNPaN73cOqD4muE413sSOyY.jpg",
+        "background": "https://image.tmdb.org/t/p/original/sblTwYXpm6Nrl4qewg3526lBdlK.jpg",
+        "description": "New York police detective John Shaft arrests Walter Wade Jr. for a racially motivated slaying. But the only eyewitness disappears, and Wade jumps bail for Switzerland. Two years later Wade returns to face trial, confident his money and influence will get him acquitted -- especially since he's paid a drug kingpin to kill the witness.",
+        "releaseInfo": "2000",
+        "imdbRating": "6.0",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt5301662",
+        "type": "movie",
+        "name": "Marshall",
+        "poster": "https://image.tmdb.org/t/p/w500/2KfdXsXTCbMie0wB1mSmIX60C2F.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8nh70OvIsJKpfZdTMZoMJMb8aVE.jpg",
+        "description": "Thurgood Marshall, the first African-American Supreme Court Justice, battles through one of his career-defining cases.",
+        "releaseInfo": "2017",
+        "imdbRating": "7.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt30459064",
+        "type": "movie",
+        "name": "Trouble Man",
+        "poster": "https://image.tmdb.org/t/p/w500/v3ETgv42JkchzAYK4ZDI5VvsY3w.jpg",
+        "background": "https://image.tmdb.org/t/p/original/q6DLjPZM7tMeNcLNjgyyRfamnuT.jpg",
+        "description": "Jaxen, a former cop turned Atlanta PI, is hired to find missing R&B star Jahari. His investigation uncovers her disappearance is connected to a larger conspiracy, forcing him to question those around him and his own past.",
+        "releaseInfo": "2025",
+        "imdbRating": "6.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt2235108",
+        "type": "movie",
+        "name": "Dear White People",
+        "poster": "https://image.tmdb.org/t/p/w500/jH3851P2DjjnBsrjphbR1CWRzm6.jpg",
+        "background": "https://image.tmdb.org/t/p/original/aZXtziEpZR1GpPwzIyr2s1dRWsW.jpg",
+        "description": "A campus culture war between Blacks and whites at a predominantly white Ivy League college comes to a head when the staff of a satirical magazine stages an offensive Halloween party.",
+        "releaseInfo": "2014",
+        "imdbRating": "6.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt3331028",
+        "type": "movie",
+        "name": "Imperial Dreams",
+        "poster": "https://image.tmdb.org/t/p/w500/cEEsrLIH8LsGkuaU2Ql2FksewfT.jpg",
+        "background": "https://image.tmdb.org/t/p/original/gUxI1DMkHch1nHygwGCMePvLtuh.jpg",
+        "description": "A 21-year-old reformed gangster's devotion to his family and his future is put to the test when he is released from prison and returns to his old stomping grounds in Watts, Los Angeles.",
+        "releaseInfo": "2014",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0109906",
+        "type": "movie",
+        "name": "The Glass Shield",
+        "poster": "https://image.tmdb.org/t/p/w500/cgvBosSBpjF8ynBi7A1KmMwYoxl.jpg",
+        "background": "https://image.tmdb.org/t/p/original/owgUoV6Hc1tgJcUgUuabbiPI5E.jpg",
+        "description": "J.J. is a rookie in the Sheriff's Department and the first black officer at that station. Racial tensions run high in the department as some of J.J.'s fellow officers resent his presence. His only real friend is the other new trooper, the first female officer to work there, who also suffers similar discrimination in the otherwise all-white male work environment. When J.J. becomes increasingly aware of police corruption during the murder trial of Teddy Woods, whom he helped to arrest, he faces difficult decisions and puts himself into grave personal danger in the service of justice.",
+        "releaseInfo": "1994",
+        "imdbRating": "5.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0075005",
+        "type": "movie",
+        "name": "The Omen",
+        "poster": "https://image.tmdb.org/t/p/w500/mDcjjEu1fMNmsXi4l4D8IftlTix.jpg",
+        "background": "https://image.tmdb.org/t/p/original/5sfbPsenSrbH8pzVMjEd0LUu50Y.jpg",
+        "description": "Immediately after their miscarriage, the US diplomat Robert Thorn adopts the newborn Damien without the knowledge of his wife. Yet what he doesn\u2019t know is that their new son is the son of the devil.",
+        "releaseInfo": "1976",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1327773",
+        "type": "movie",
+        "name": "The Butler",
+        "poster": "https://image.tmdb.org/t/p/w500/pAi8Bl3ZKX6pANPVhNwbhbQANop.jpg",
+        "background": "https://image.tmdb.org/t/p/original/g0nLh5eQjTcffJUavvatBNkaSpy.jpg",
+        "description": "Cecil Gaines was a sharecropper's son who grew up in the 1920s as a domestic servant for the white family who casually destroyed his. Eventually striking out on his own, Cecil becomes a hotel valet of such efficiency and discreteness in the 1950s that he becomes a butler in the White House itself. There, Cecil would serve numerous US Presidents over the decades as a passive witness of history with the American Civil Rights Movement gaining momentum even as his family has troubles of its own. As his wife, Gloria, struggles with alcoholism and his defiant eldest son, Louis, strives for a just world, Cecil must decide whether he should take action in his own way.",
+        "releaseInfo": "2013",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt5109280",
+        "type": "movie",
+        "name": "Raya and the Last Dragon",
+        "poster": "https://image.tmdb.org/t/p/w500/5nVhgCzxKbK47OLIKxCR1syulOn.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zmX7ObPaRfiCmY6LMalUb1bJDKj.jpg",
+        "description": "Long ago, in the fantasy world of Kumandra, humans and dragons lived together in harmony. But when an evil force threatened the land, the dragons sacrificed themselves to save humanity. Now, 500 years later, that same evil has returned and it\u2019s up to a lone warrior, Raya, to track down the legendary last dragon to restore the fractured land and its divided people.",
+        "releaseInfo": "2021",
+        "imdbRating": "7.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt11145118",
+        "type": "movie",
+        "name": "Creed III",
+        "poster": "https://image.tmdb.org/t/p/w500/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg",
+        "background": "https://image.tmdb.org/t/p/original/gOIztYywR291pC4k3IpDq7Vj3Kj.jpg",
+        "description": "After dominating the boxing world, Adonis Creed has thrived in his career and family life. When a childhood friend and former boxing prodigy, Damian Anderson, resurfaces after serving a long sentence in prison, he is eager to prove that he deserves his shot in the ring. The face-off between former friends is more than just a fight. To settle the score, Adonis must put his future on the line to battle Damian \u2014 a fighter with nothing to lose.",
+        "releaseInfo": "2023",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt3704352",
+        "type": "movie",
+        "name": "Bessie",
+        "poster": "https://image.tmdb.org/t/p/w500/kanAZsL3kZwFWRuR6tqLvNrEFco.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8pPoIJJ7ylLULMbpHNWdg8Ab7CF.jpg",
+        "description": "The story of legendary blues performer, Bessie Smith, who rose to fame during the 1920s and '30s.",
+        "releaseInfo": "2015",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0011870",
+        "type": "movie",
+        "name": "Within Our Gates",
+        "poster": "https://image.tmdb.org/t/p/w500/36MR5nOWUZypLY3i32LCjdqxXOQ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/eGhQXfGeNdJfywH6ZmjRwN3f1X8.jpg",
+        "description": "Abandoned by her fianc\u00e9, an educated black woman with a traumatizing past dedicates herself to helping a near bankrupt school for impoverished black children.",
+        "releaseInfo": "1920",
+        "imdbRating": "6.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt4648786",
+        "type": "movie",
+        "name": "Harriet",
+        "poster": "https://image.tmdb.org/t/p/w500/rsUs58bDqpJJxZSOebZOMN9gzw2.jpg",
+        "background": "https://image.tmdb.org/t/p/original/xfW1t2gb5ObNLJbGX9aEfR9w4s8.jpg",
+        "description": "The extraordinary tale of Harriet Tubman's escape from slavery and transformation into one of America's greatest heroes. Her courage, ingenuity and tenacity freed hundreds of slaves and changed the course of history.",
+        "releaseInfo": "2019",
+        "imdbRating": "7.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0114608",
+        "type": "movie",
+        "name": "Tales from the Crypt: Demon Knight",
+        "poster": "https://image.tmdb.org/t/p/w500/8uD5yk0ECebJ59lhvhTBKhUojc.jpg",
+        "background": "https://image.tmdb.org/t/p/original/47WfbtmsreEhNy2OzEDBxk9ZlzG.jpg",
+        "description": "Ex-soldier Frank Brayker is the guardian of an ancient key that can unlock tremendous evil; the sinister Collector is a demon who wants the key so he can initiate the apocalypse. On the run from wicked mercenaries for almost 90 years, Brayker finally stops in at a boarding house in New Mexico where \u2014 with the help of its residents \u2014 he plans to face off against the Collector and his band of ghouls, preventing them from ever seizing the key.",
+        "releaseInfo": "1995",
+        "imdbRating": "6.9",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0138068",
+        "type": "movie",
+        "name": "Ruby Bridges",
+        "poster": "https://image.tmdb.org/t/p/w500/kMZzzR05SvMLLxzYN0kzKNUW30h.jpg",
+        "background": "https://image.tmdb.org/t/p/original/A14ICjXcZO7gwjDg4iGFISEDzlM.jpg",
+        "description": "When six-year-old Ruby Bridges is chosen to be the first African-American to integrate her local elementary school, she is subjected to the true ugliness of racism for the first time.",
+        "releaseInfo": "1998",
+        "imdbRating": "6.8",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt10756184",
+        "type": "movie",
+        "name": "Saloum",
+        "poster": "https://image.tmdb.org/t/p/w500/yEWO77ClYNqNGMg98v2XNzV8Vx1.jpg",
+        "background": "https://image.tmdb.org/t/p/original/r7hzMaElAQrRJV9EhglVg21CtsD.jpg",
+        "description": "Three mercenaries extracting a druglord out of Guinea-Bissau are forced to hide in the mystical region of Saloum, Senegal.",
+        "releaseInfo": "2023",
+        "imdbRating": "6.5",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0065579",
+        "type": "movie",
+        "name": "Cotton Comes to Harlem",
+        "poster": "https://image.tmdb.org/t/p/w500/tW30OfbGhe2uFBw4cr6tKsZwCcl.jpg",
+        "background": "https://image.tmdb.org/t/p/original/l3X1Qgnsckji8uRDP3ZxpXZZqkZ.jpg",
+        "description": "Harlem's African-American population is being ripped off by the Rev. Deke O'Malley, who dishonestly claims that small donations will secure parcels of land in Africa. When New York City police officers Gravedigger Jones and Coffin Ed Johnson look into O'Malley's scam, they learn that the cash is being smuggled inside a bale of cotton. However, the police, O'Malley, and lots of others find themselves scrambling when the money goes missing.",
+        "releaseInfo": "1970",
+        "imdbRating": "6.2",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0120169",
+        "type": "movie",
+        "name": "Soul Food",
+        "poster": "https://image.tmdb.org/t/p/w500/97t6YjxjTpwQ439MJcPiPDrMAg0.jpg",
+        "background": "https://image.tmdb.org/t/p/original/d8JdOTvPHrT5pi4oGcwZ3YAqjP.jpg",
+        "description": "Traditional Sunday dinners at Mama Joe's turn sour when sisters Teri, Bird and Maxine start bringing their problems to the dinner table in this ensemble comedy. When tragedy strikes, it's up to grandson Ahmad to pull the family together and put the soul back into the family's weekly gatherings.",
+        "releaseInfo": "1997",
+        "imdbRating": "6.3",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1197624",
+        "type": "movie",
+        "name": "Law Abiding Citizen",
+        "poster": "https://image.tmdb.org/t/p/w500/fcEXcip7v0O1ndV4VUdFqJSqbOg.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nazre7z7MoUwAqimnrSlMlfLR5t.jpg",
+        "description": "A frustrated man decides to take justice into his own hands after a plea bargain sets one of his family's killers free. He targets not only the killer but also the district attorney and others involved in the deal.",
+        "releaseInfo": "2009",
+        "imdbRating": "7.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0218289",
+        "type": "movie",
+        "name": "F\u00e9licit\u00e9",
+        "poster": "https://image.tmdb.org/t/p/w500/mSC4lJ8C2Zl4oKCLP4u95Vu4sSJ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/7uRjjLRPPvNH3whG1RXPDnhPi7f.jpg",
+        "description": "After a bout of intense jealousy, F\u00e9licit\u00e9 finds herself alone. For one night, as her family dissipates, she relives her torments.",
+        "releaseInfo": "1979",
+        "imdbRating": "4.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0297037",
+        "type": "movie",
+        "name": "Brown Sugar",
+        "poster": "https://image.tmdb.org/t/p/w500/n9SnhQk29094VoLfyiYM4viyCrU.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bRZQqYtGK8y2wypgvVRY338fIxj.jpg",
+        "description": "Sidney and Dre can attribute their lifelong friendship and the launch of their careers to one single childhood instant... witnessing the birth of hip-hop on a New York street corner. Now some 15 years later, she is a revered music critic at a national magazine and he is a successful, though unfulfilled, hip-hop record company executive. Both come to realize that their true life passions will only be fulfilled by remembering what they learned that day on the corner.",
+        "releaseInfo": "2002",
+        "imdbRating": "6.6",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt7616148",
+        "type": "movie",
+        "name": "Luce",
+        "poster": "https://image.tmdb.org/t/p/w500/uxig1ZvVddzXVRYNOAQ6hKtea80.jpg",
+        "background": "https://image.tmdb.org/t/p/original/sXoe5hg2EjXfx2347ocV3y1e5yo.jpg",
+        "description": "A star athlete and top student, Luce's idealized image is challenged by one of his teachers when his unsettling views on political violence come to light, putting a strain on family bonds while igniting intense debates on race and identity.",
+        "releaseInfo": "2019",
+        "imdbRating": "6.4",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt32221196",
+        "type": "movie",
+        "name": "One of Them Days",
+        "poster": "https://image.tmdb.org/t/p/w500/ccn6bFUA5DECjA3Lo0CuJqGNQCv.jpg",
+        "background": "https://image.tmdb.org/t/p/original/t25z4ggC2Uvs3EhI66lxVO2jDp5.jpg",
+        "description": "Best friends and roommates Dreux and Alyssa are about to have One of Them Days. When they discover Alyssa\u2019s boyfriend has blown their rent money, the duo finds themselves going to extremes in a comical race against the clock to avoid eviction and keep their friendship intact.",
+        "releaseInfo": "2025",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt5648882",
+        "type": "movie",
+        "name": "The Burial",
+        "poster": "https://image.tmdb.org/t/p/w500/9ssNSfNKpzZwhbFsnW3wa82m2sG.jpg",
+        "background": "https://image.tmdb.org/t/p/original/aOI3o06xhCgLmA6Bcpm4KRDeMXF.jpg",
+        "description": "When a handshake deal goes sour, funeral home owner Jeremiah O'Keefe enlists charismatic, smooth-talking attorney Willie E. Gary to save his family business. Tempers flare and laughter ensues as the unlikely pair bond while exposing corporate corruption and racial injustice.",
+        "releaseInfo": "2023",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0102526",
+        "type": "movie",
+        "name": "New Jack City",
+        "poster": "https://image.tmdb.org/t/p/w500/k9VjzXyGElRAxXyXgPvtRRSznyL.jpg",
+        "background": "https://image.tmdb.org/t/p/original/u3fFEz0NdoyXL3UUxTPNqeM2vrc.jpg",
+        "description": "A gangster, Nino, is in the Cash Money Brothers, making a million dollars every week selling crack. A cop, Scotty, discovers that the only way to infiltrate the gang is to become a dealer himself.",
+        "releaseInfo": "1991",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt0107840",
+        "type": "movie",
+        "name": "Poetic Justice",
+        "poster": "https://image.tmdb.org/t/p/w500/6jE7Vzh3edBQtbbDcF4AC5gMX2g.jpg",
+        "background": "https://image.tmdb.org/t/p/original/lNvlerKoYwboltmK7hQfgxsYtNP.jpg",
+        "description": "Still grieving after the murder of her boyfriend, hairdresser Justice writes poetry to deal with the pain of her loss. Unable to get to Oakland to attend a convention because of her broken-down car, Justice gets a lift with her friend, Iesha, and Iesha's postal worker boyfriend, Chicago. Along for the ride is Chicago's co-worker, Lucky, to whom Justice grows close after some initial problems. But is she ready to open her heart again?",
+        "releaseInfo": "1993",
+        "imdbRating": "6.7",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      },
+      {
+        "id": "tt1042877",
+        "type": "movie",
+        "name": "Cadillac Records",
+        "poster": "https://image.tmdb.org/t/p/w500/u2GtllItFwaXMLj4uCeKYt9wf4l.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ubgl0v0crnOGYPGkR2hhIwv7Chm.jpg",
+        "description": "The story of sex, violence, race and rock and roll in 1950s Chicago, and the exciting but turbulent lives of some of America's musical legends, including Muddy Waters, Leonard Chess, Little Walter, Howlin' Wolf, Etta James and Chuck Berry.",
+        "releaseInfo": "2008",
+        "imdbRating": "7.1",
+        "genres": [
+          "BLACK DIRECTORS"
+        ]
+      }
+    ],
+    "timestamp": 1786241276442
   }
 }
