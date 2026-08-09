@@ -62316,5 +62316,1301 @@
       }
     ],
     "timestamp": 1786236317418
+  },
+  "custom_imdb_upcoming_calendar_1786238540421": {
+    "id": "custom_imdb_upcoming_calendar_1786238540421",
+    "name": "\ud83d\ude80 IMDb Release Calendar: Upcoming Movies",
+    "description": "Live Auto-Updating Collection: Upcoming movie theatrical & streaming releases (99 movies).",
+    "isCustomAI": true,
+    "movies": [
+      {
+        "id": "tt33764258",
+        "type": "movie",
+        "name": "The Odyssey",
+        "poster": "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+        "background": "https://image.tmdb.org/t/p/original/RMXG8myu1aGlNUsRjtxzmpdMK0.jpg",
+        "description": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
+        "releaseInfo": "2026",
+        "imdbRating": "8.0",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt37287335",
+        "type": "movie",
+        "name": "Obsession",
+        "poster": "https://image.tmdb.org/t/p/w500/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg",
+        "background": "https://image.tmdb.org/t/p/original/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
+        "description": "After breaking the mysterious \"One Wish Willow\" to win his crush's heart, a hopeless romantic finds himself getting exactly what he asked for but soon discovers that some desires come at a dark, sinister price.",
+        "releaseInfo": "2026",
+        "imdbRating": "8.2",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32273171",
+        "type": "movie",
+        "name": "The Death of Robin Hood",
+        "poster": "https://image.tmdb.org/t/p/w500/92Tsfx7SFafOqWsotvrlJbHyehd.jpg",
+        "background": "https://image.tmdb.org/t/p/original/lh3BDkmWJh998n4fQcHYcVi7dpm.jpg",
+        "description": "Grappling with his past after a life of crime and murder, Robin Hood finds himself gravely injured after a battle he thought would be his last. In the hands of a mysterious woman, he is offered a chance at salvation.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.4",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt27419466",
+        "type": "movie",
+        "name": "Moana",
+        "poster": "https://image.tmdb.org/t/p/w500/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg",
+        "background": "https://image.tmdb.org/t/p/original/c6BPbkO5Npt1OdwttAxCFo06wtH.jpg",
+        "description": "Teenage Moana answers the Ocean's call and, for the first time, voyages beyond the reef of her island of Motunui with infamous demigod Maui on an unforgettable journey to restore prosperity to her people.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.0",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32890033",
+        "type": "movie",
+        "name": "Minions & Monsters",
+        "poster": "https://image.tmdb.org/t/p/w500/nz7i42yhLIJ4ve9JKgM6NthoLHO.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kkcwhgSFd81QDlXo8ytrpHPQjhy.jpg",
+        "description": "This is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.3",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt34385135",
+        "type": "movie",
+        "name": "Colony",
+        "poster": "https://image.tmdb.org/t/p/w500/tN799oUR0f1gUKDYdMNrDaY7I51.jpg",
+        "background": "https://image.tmdb.org/t/p/original/jDvxsBemt2Iyslg7qn2WMzgxz23.jpg",
+        "description": "Professor Se-jeong is thrust into a bloody nightmare when a rapidly mutating virus is released during a biotech conference causing authorities to seal the facility. Trapped inside with no escape, Se-jeong along with a small group of survivors must fight to stay alive while the infected undergo horrific transformations.",
+        "releaseInfo": "2026",
+        "imdbRating": "8.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt39143902",
+        "type": "movie",
+        "name": "Leviticus",
+        "poster": "https://image.tmdb.org/t/p/w500/gnAsZvBygplNpp8PtjoTEYv3VPB.jpg",
+        "background": "https://image.tmdb.org/t/p/original/7y8zWGEjs7tresw4Hzkkf4TdkcL.jpg",
+        "description": "Two teenage boys must escape a violent entity that takes the form of the person they desire most:  each other.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.4",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt38190257",
+        "type": "movie",
+        "name": "Your Heart Will Be Broken",
+        "poster": "https://image.tmdb.org/t/p/w500/7wIBfBl2gejt6xHxNSK0reVIm7E.jpg",
+        "background": "https://image.tmdb.org/t/p/original/1x9e0qWonw634NhIsRdvnneeqvN.jpg",
+        "description": "High school student Polina is saved from bullying at her new school and makes a deal with the main bully Bars: he must pretend to be her boyfriend and protect her, and she must do everything he says. During this game, the couple develops real feelings, but her family and classmates have reasons to separate the lovers.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt11378946",
+        "type": "movie",
+        "name": "Michael",
+        "poster": "https://image.tmdb.org/t/p/w500/zm0KAbOjlt9eR5y7vDiL2dEOwMl.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ufSwlnECLoUbBjPrFqEQcWBzHwc.jpg",
+        "description": "The story of Michael Jackson, one of the most influential artists the world has ever known, and his life beyond the music. His journey from the discovery of his extraordinary talent as the lead of the Jackson Five, to the visionary artist whose creative ambition fueled a relentless pursuit to become the biggest entertainer in the world, highlighting both his life off-stage and some of the most iconic performances from his early solo career.",
+        "releaseInfo": "2026",
+        "imdbRating": "8.7",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt19035928",
+        "type": "movie",
+        "name": "Lucky Strike",
+        "poster": "https://image.tmdb.org/t/p/w500/kzRAd7mj39ZY3FGNrDdZjqx56tn.jpg",
+        "background": "https://image.tmdb.org/t/p/original/1ebY06Gc1eUZcCoO7IoD4tWCFxm.jpg",
+        "description": "A wounded American soldier fights to survive behind enemy lines during WWII's Battle of the Bulge against the Germans, relying on his instinct, spy craft and a hand-radio to evade capture and find his way back to his unit.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt29516222",
+        "type": "movie",
+        "name": "Deep Water",
+        "poster": "https://image.tmdb.org/t/p/w500/kjcuS7xaRyqRjVaVcH4t0qHshuX.jpg",
+        "background": "https://image.tmdb.org/t/p/original/szKv713FcUXx6hcfdY369vtkmzr.jpg",
+        "description": "A group of international passengers on a flight from Los Angeles to Shanghai is forced to make an emergency landing in shark-infested waters. The terrified group is forced to work together and overcome their differences if they hope to escape their sinking plane and the frenzy of sharks drawn to the wreckage.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.2",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt34610311",
+        "type": "movie",
+        "name": "The Shadow's Edge",
+        "poster": "https://image.tmdb.org/t/p/w500/cHKo3m8N1fwvEy2ZEr0xGmmMODV.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4BtL2vvEufDXDP4u6xQjjQ1Y2aT.jpg",
+        "description": "Macau Police brings the tracking expert police officer out of retirement to help catch a dangerous group of professional thieves.",
+        "releaseInfo": "2025",
+        "imdbRating": "8.0",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32357218",
+        "type": "movie",
+        "name": "Shelter",
+        "poster": "https://image.tmdb.org/t/p/w500/buPFnHZ3xQy6vZEHxbHgL1Pc6CR.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nHxWyy18SvAZ8jJeemtS8k1UNjM.jpg",
+        "description": "A man living in self-imposed exile on a remote island rescues a young girl from a violent storm, setting off a chain of events that forces him out of seclusion to protect her from enemies tied to his past.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.8",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt36629665",
+        "type": "movie",
+        "name": "Her Private Hell",
+        "poster": "https://image.tmdb.org/t/p/w500/kiFacg75KVjy0AM3S4QmbPas8zL.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hS4FcOM5y71FurkBQgDLTBxmWZh.jpg",
+        "description": "When a mysterious mist engulfs a futuristic metropolis, unleashing a deadly and elusive entity, a troubled young woman searches for her father. Her quest collides with an American GI on a harrowing odyssey to rescue his daughter from Hell.",
+        "releaseInfo": "2026",
+        "imdbRating": "5.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt37654096",
+        "type": "movie",
+        "name": "The Last Sunrise",
+        "poster": "https://image.tmdb.org/t/p/w500/pego3yEZ5SuGvRjESKAguL4Wu7M.jpg",
+        "background": "https://image.tmdb.org/t/p/original/5lB7yPaRhJHQ9dx7AnvPUi0GZDU.jpg",
+        "description": "Ry, a college student with a chronic illness escapes to Mallorca for the summer with her mother, where she unexpectedly falls for a local and begins to embrace living in the moment. But as her condition worsens and long-hidden family secrets come to light, everything she has found before summer's end is threatened.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0241527",
+        "type": "movie",
+        "name": "Harry Potter and the Philosopher's Stone",
+        "poster": "https://image.tmdb.org/t/p/w500/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+        "background": "https://image.tmdb.org/t/p/original/1XAC6RPT01UX9EQGy2JVn5c8pgy.jpg",
+        "description": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard\u2014with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths\u2014and about the villain who's to blame.",
+        "releaseInfo": "2001",
+        "imdbRating": "7.9",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt33071426",
+        "type": "movie",
+        "name": "The Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/rnIOUhzwJDfgQakx8EjoNyItKgs.jpg",
+        "background": "https://image.tmdb.org/t/p/original/1oKLEA9JOhvaBwLpqjROisvWMy7.jpg",
+        "description": "A happily engaged couple is put to the test when an unexpected turn sends their wedding week off the rails.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.9",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt27681354",
+        "type": "movie",
+        "name": "In the Grey",
+        "poster": "https://image.tmdb.org/t/p/w500/dQgIcW6Th08kMRf2HBoYWoFE6OD.jpg",
+        "background": "https://image.tmdb.org/t/p/original/qcIKxhqGMIj8uujsSoSMZWr8QqU.jpg",
+        "description": "A covert team of elite operatives are living in the shadows. When a ruthless despot steals a billion-dollar fortune, they're sent to take it back\u2014an impossible heist that erupts into a deadly game of strategy, deception and survival.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt27165187",
+        "type": "movie",
+        "name": "The End of Oak Street",
+        "poster": "https://image.tmdb.org/t/p/w500/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg",
+        "background": "https://image.tmdb.org/t/p/original/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
+        "description": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.6",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt43669175",
+        "type": "movie",
+        "name": "OK! Madam: Bon Voyage",
+        "poster": "https://image.tmdb.org/t/p/w500/xDbrWXB9yb5aEdt4peVy8OWNP2Y.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ddrLCUT8hqSlEICTTbdlFYB5q4a.jpg",
+        "description": "Six years after the Hawaii airplane hijacking, Mi-yeong finds herself struggling with her rebellious teenage daughter, Nari, and her unemployed husband, Seok-hwan. When Hyun-min, a flight attendant she met during the hijacking, invites her family to his wedding aboard a luxury cruise ship, Mi-yeong eagerly proposes a family holiday. Met with indifference from her husband and daughter, she decides to embark alone, joining Hyun-min's family and Ji-hoon, a charming magician. However, on the eve of the wedding, the celebration turns deadly when armed assailants seize the ship. After Seok-hwan and Nari are kidnapped and brought aboard, Mi-yeong discovers that she is the target of a much larger plot.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt36893729",
+        "type": "movie",
+        "name": "Ice Cream Man",
+        "poster": "https://image.tmdb.org/t/p/w500/c987gxFjXqYOxZEZKcTkS1ONTWH.jpg",
+        "background": "https://image.tmdb.org/t/p/original/75pK9Dj1CheZFItgld9TVvb2P4x.jpg",
+        "description": "An idyllic summer town descends into madness when an ice cream man serves kids sweet delights with horrifying results.",
+        "releaseInfo": "2026",
+        "imdbRating": "5.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt31192372",
+        "type": "movie",
+        "name": "Fall 2: Deadpoint",
+        "poster": "https://image.tmdb.org/t/p/w500/p73G56bJGPa5y52cyqWscHR6NnN.jpg",
+        "background": "https://image.tmdb.org/t/p/original/g4wdPZlhVioK69H8Q0o9Id5QhNs.jpg",
+        "description": "On a perilous climb across Thailand's Mount Kwan, two climbers become trapped thousands of feet above the ground, where vertigo-inducing heights, sheer exposure, and impossible odds turn every moment into a fight for survival.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0910970",
+        "type": "movie",
+        "name": "WALL\u00b7E",
+        "poster": "https://image.tmdb.org/t/p/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg",
+        "description": "After hundreds of years doing what he was built for, WALL\u2022E\u2014 a robot designed to clean up the earth\u2014discovers a new purpose in life when he meets a sleek search robot named EVE. EVE comes to realize that WALL\u2022E has inadvertently stumbled upon the key to the planet's future, and races back to space to report to the humans. Meanwhile, WALL\u2022E chases EVE across the galaxy and sets into motion one of the most imaginative adventures ever brought to the big screen.",
+        "releaseInfo": "2008",
+        "imdbRating": "8.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0245429",
+        "type": "movie",
+        "name": "Spirited Away",
+        "poster": "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+        "background": "https://image.tmdb.org/t/p/original/dyJvKsNs2KP8qQnAXbRwDjblViy.jpg",
+        "description": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+        "releaseInfo": "2001",
+        "imdbRating": "8.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt29356163",
+        "type": "movie",
+        "name": "PAW Patrol: The Dino Movie",
+        "poster": "https://image.tmdb.org/t/p/w500/cxXSF4aY5N2cOGwaga5OnpPFHzk.jpg",
+        "background": "https://image.tmdb.org/t/p/original/upNeU9FNGAvdhnoThvv64Z0MWKn.jpg",
+        "description": "The Paw Patrol lands on a mysterious dinosaur island after a storm, where they meet Rex, a stranded pup. When Humdinger's reckless mining triggers a volcano, the team faces their biggest rescue mission yet to save the island.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.6",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt5311514",
+        "type": "movie",
+        "name": "Your Name.",
+        "poster": "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8x9iKH8kWA0zdkgNdpAew7OstYe.jpg",
+        "description": "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki\u2019s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other.",
+        "releaseInfo": "2016",
+        "imdbRating": "8.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt36103784",
+        "type": "movie",
+        "name": "Kung Fu Soccer",
+        "poster": "https://image.tmdb.org/t/p/w500/6QgJQrClh9ej357yzLWgCxrjAmJ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/J1UgJwRxDQS92kw75KgeVFZMHf.jpg",
+        "description": "The \"Supreme Invincible Cup\" is about to begin, and a host of top teams are about to engage in an unprecedented showdown! But the Kung Fu Women's Soccer Team has been dealt a hellish script right from the start?! Their opponents are all highly skilled, and external pressure is mounting. The schemes on the field are one after another... Can they use their kung fu to turn the tide on the green field?",
+        "releaseInfo": "2026",
+        "imdbRating": "6.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt33978029",
+        "type": "movie",
+        "name": "Ready or Not: Here I Come",
+        "poster": "https://image.tmdb.org/t/p/w500/jRf89HVEtBZiSnOXXWDhZOfuTwW.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fx2cEuadZK28VHKkc0F1nFR96i0.jpg",
+        "description": "Moments after surviving an all-out attack from the Le Domas family, Grace discovers she\u2019s reached the next level of the nightmarish game \u2014 and this time with her estranged sister Faith at her side. Grace has one chance to survive, keep her sister alive, and claim the High Seat of the Council that controls the world. Four rival families are hunting her for the throne, and whoever wins rules it all.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.6",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt43515101",
+        "type": "movie",
+        "name": "All Wishes Come True!",
+        "poster": "https://image.tmdb.org/t/p/w500/wJ9FLxq3Q6D4ve8TUepYsr0PL3p.jpg",
+        "background": "https://image.tmdb.org/t/p/original/lMK3FnMfQ9O3DiC7hi4J2XBzNf.jpg",
+        "description": "Eight grassroot mortals use their street smarts and hilarious schemes to defy powerful gods, earning their title as the \"Eight Immortals.\"",
+        "releaseInfo": "2026",
+        "imdbRating": "8.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0103064",
+        "type": "movie",
+        "name": "Terminator 2: Judgment Day",
+        "poster": "https://image.tmdb.org/t/p/w500/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
+        "background": "https://image.tmdb.org/t/p/original/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+        "description": "Ten years after the events of the original, a reprogrammed T-800 is sent back in time to protect young John Connor from the shape-shifting T-1000. Together with his mother Sarah, he fights to stop Skynet from triggering a nuclear apocalypse.",
+        "releaseInfo": "1991",
+        "imdbRating": "8.2",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt14173636",
+        "type": "movie",
+        "name": "The Invite",
+        "poster": "https://image.tmdb.org/t/p/w500/b7Dr8Chzse8VagexAporUu2RtLx.jpg",
+        "background": "https://image.tmdb.org/t/p/original/kLA1GqiOEyVgXxgNqLoCr7bYcqu.jpg",
+        "description": "Joe and Angela\u2019s marriage is on thin ice. When they invite their enigmatic upstairs neighbors for a dinner party, the night spirals into unexpected places. Have they reignited the spark or lit the match that burns it all down?",
+        "releaseInfo": "2026",
+        "imdbRating": "7.7",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32321803",
+        "type": "movie",
+        "name": "The Get Out",
+        "poster": "https://image.tmdb.org/t/p/w500/zlkeH0s7dDxcnuPcHBqAyXFUxqN.jpg",
+        "background": "https://image.tmdb.org/t/p/original/mDVnHFcxxUJC9TQFVeKh1TJNBzh.jpg",
+        "description": "A nightclub owner is on the verge of leaving his dangerous past behind for retirement with his girlfriend. When masked gunmen rob him and he finds himself squeezed by ruthless cartels, a mysterious newcomer arrives with an interest in buying the business. With danger closing in from all sides, he must navigate a deadly web of deception, power, and survival  -  where escape may no longer be an option.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.3",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt3783958",
+        "type": "movie",
+        "name": "La La Land",
+        "poster": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nlPCdZlHtRNcF6C9hzUH4ebmV1w.jpg",
+        "description": "Mia, an aspiring actress, serves lattes to movie stars in between auditions and Sebastian, a jazz musician, scrapes by playing cocktail party gigs in dingy bars, but as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart.",
+        "releaseInfo": "2016",
+        "imdbRating": "7.9",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt41293342",
+        "type": "movie",
+        "name": "Crayon Shin-chan the Movie: Very Bizarre! My Yokai Vacation",
+        "poster": "https://image.tmdb.org/t/p/w500/15iwqqJVgFfeFh4Y1f8gg9yi2Fw.jpg",
+        "background": "https://image.tmdb.org/t/p/original/3TwUt1vUmbPaUMJSm7luCbDABTB.jpg",
+        "description": "Shin-chan and his family visit his father's home town of Akita in order to view the Omagari Fireworks Festival. When a strange incident to causes the residents of \u201cYokai Land\u201d to begin running wild throughout Akita and the rest of Japan, Shin-chan and company are lured to \u201cYokai Land\u201d for an unusual adventure.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt4772188",
+        "type": "movie",
+        "name": "Flow",
+        "poster": "https://image.tmdb.org/t/p/w500/z2sG41PxfL1hnL1mHbxzSREUtOf.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4XPNNt0zfZKBqxxVWaQALd57UHl.jpg",
+        "description": "A solitary cat, displaced by a great flood, finds refuge on a boat with various species and must navigate the challenges of adapting to a transformed world together.",
+        "releaseInfo": "2024",
+        "imdbRating": "8.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt5700672",
+        "type": "movie",
+        "name": "Train to Busan",
+        "poster": "https://image.tmdb.org/t/p/w500/vNVFt6dtcqnI7hqa6LFBUibuFiw.jpg",
+        "background": "https://image.tmdb.org/t/p/original/brnfCYyz8EMbBrHgmh8sCwBi5i1.jpg",
+        "description": "When a zombie virus pushes Korea into a state of emergency, those trapped on an express train to Busan must fight for their own survival.",
+        "releaseInfo": "2016",
+        "imdbRating": "7.8",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt27369017",
+        "type": "movie",
+        "name": "Hope",
+        "poster": "https://image.tmdb.org/t/p/w500/bcK5naYzzfY0JBCgrPrsrbV6NO1.jpg",
+        "background": "https://image.tmdb.org/t/p/original/i0lipAm0VHFA3EH0CPV0s5LJMIE.jpg",
+        "description": "In the remote South Korean village of Hope Harbor, police chief Bum-seok and officer Sung-ae are called to investigate a mysterious creature wreaking havoc on the community. But all is not as it seems, and perceptions can be misleading. What begins as ignorance plants the seed of disaster, escalating through human conflict into a tragedy of cosmic proportions.",
+        "releaseInfo": "2026",
+        "imdbRating": "8.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt38128726",
+        "type": "movie",
+        "name": "Stop! That! Train!",
+        "poster": "https://image.tmdb.org/t/p/w500/p9f6ePFZZ7oF2Z9lMIw5Hgrnbme.jpg",
+        "background": "https://image.tmdb.org/t/p/original/2qycL8CyXvOkEzrs77i5lm7Cj3W.jpg",
+        "description": "Best friends and train stewardesses Tess and DeeDee trade their dreary shifts on the Stank Rail for the glitzy Glamazonian Express. However, when a catastrophic Stormaganza threatens to crash the high-speed train into Celebration, Florida, the duo in coach must join forces with the snobby first-class attendants, a hot but dimwitted co-conductor, and fabulous US President Judy Gagwell to save the day.",
+        "releaseInfo": "2026",
+        "imdbRating": "5.3",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt37853455",
+        "type": "movie",
+        "name": "One Night Only",
+        "poster": "https://image.tmdb.org/t/p/w500/9LGEqZvzI7Tsosf8srwEY48rZsD.jpg",
+        "background": "https://image.tmdb.org/t/p/original/mfgNUnFB25BNIwe9iPJ17cUN64S.jpg",
+        "description": "Two love-starved strangers crash into each other on the one night of the year when single people are allowed to have sex.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32547691",
+        "type": "movie",
+        "name": "Pressure",
+        "poster": "https://image.tmdb.org/t/p/w500/gFjEggtrejCN79r6SXRjM269OtG.jpg",
+        "background": "https://image.tmdb.org/t/p/original/apfyLCPVFttB8oXcsLJ7q0NSFLx.jpg",
+        "description": "In the tense 72 hours before D-Day, and the fate of the free world hanging in the balance, General Dwight D. Eisenhower and Captain James Stagg face an impossible choice\u2014launch the largest and most dangerous seaborne invasion in history or risk losing the war altogether.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.7",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt35298123",
+        "type": "movie",
+        "name": "Teenage Sex and Death at Camp Miasma",
+        "poster": "https://image.tmdb.org/t/p/w500/5Cz1EJOKpZ8hqvBNZYF9C2zTB2T.jpg",
+        "background": "https://image.tmdb.org/t/p/original/d1n2ySWSanU34eEsluRjfrjRq52.jpg",
+        "description": "After years of slapdash sequels and waning fandom, the Camp Miasma slasher franchise is handed over to an enthusiastic young director for resurrection. But when she visits the original's star, a now-reclusive actress shrouded in mystery, the two women fall into a blood-soaked world of desire, fear, and delirium.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.2",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt35836025",
+        "type": "movie",
+        "name": "Vishwanath & Sons",
+        "poster": "https://image.tmdb.org/t/p/w500/dot8WKCoew5RtrzldAJhqPaF0nQ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/gwjl5ZaW15ZcXPowkYoiDZXGZtH.jpg",
+        "description": "Sanjay Vishwanath is an acclaimed professional handgunner in his 40s with a major stake in fame and wealth. When he comes across a woman named Maddy in her 20s, their dynamic poses many issues that they must come to terms with.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt35892608",
+        "type": "movie",
+        "name": "undertone",
+        "poster": "https://image.tmdb.org/t/p/w500/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
+        "background": "https://image.tmdb.org/t/p/original/4BSJVRQ3EsHMIVZSiKz1l58jDhg.jpg",
+        "description": "The host of a popular paranormal podcast becomes haunted by terrifying recordings mysteriously sent her way.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt36647890",
+        "type": "movie",
+        "name": "The Mortuary Assistant",
+        "poster": "https://image.tmdb.org/t/p/w500/7k7hY1HqUYryPdRio0fuDMaIq4N.jpg",
+        "background": "https://image.tmdb.org/t/p/original/gM1kQRPwOVW1Eos5tVWqcYmHR5S.jpg",
+        "description": "Rebecca Owens, a recent mortuary science graduate takes a night shift job at River Fields Mortuary. Initially, the job seems straightforward \u2014 embalming bodies, completing paperwork, and keeping things tidy. But once Rebecca starts working the night shift, things take a dark turn.",
+        "releaseInfo": "2026",
+        "imdbRating": "5.4",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32393988",
+        "type": "movie",
+        "name": "Insidious: Out of the Further",
+        "poster": "https://image.tmdb.org/t/p/w500/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hD8y787ciNWQ2bn396YrSsOIzdN.jpg",
+        "description": "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt31434030",
+        "type": "movie",
+        "name": "Dracula",
+        "poster": "https://image.tmdb.org/t/p/w500/ykyRfv7JDofLxXLAwtLXaSuaFfM.jpg",
+        "background": "https://image.tmdb.org/t/p/original/be5SIsRGMckO8tU9lrLcIik70Dy.jpg",
+        "description": "In late 15th-century Eastern Europe, Prince Vlad II\u2019s bride is brutally murdered. As a result, he renounces God and damns Heaven itself. Cursed with eternal life, Vlad is reborn as Dracula, an immortal warlord who defies fate in a blood-soaked crusade to wrench his lost love back from death.",
+        "releaseInfo": "2025",
+        "imdbRating": "7.2",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt31434639",
+        "type": "movie",
+        "name": "Warfare",
+        "poster": "https://image.tmdb.org/t/p/w500/l39TlELomwysfsr37vrvCV6rmaQ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/30jbD8Er4aB7FbfUbyZLORMDnJN.jpg",
+        "description": "A platoon of Navy SEALs embarks on a dangerous mission in Ramadi, Iraq, with the chaos and brotherhood of war retold through their memories of the event.",
+        "releaseInfo": "2025",
+        "imdbRating": "7.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32432654",
+        "type": "movie",
+        "name": "Girls Like Girls",
+        "poster": "https://image.tmdb.org/t/p/w500/gbP30EOIwUW0HZY9BwQMTRrk8uX.jpg",
+        "background": "https://image.tmdb.org/t/p/original/f1L2n701wbcjlJ80vx9acAWLRdY.jpg",
+        "description": "Coley, 17, from rural Oregon, navigates intimacy after her mother's passing. Meeting Sonya sparks new feelings, but self-doubt hinders their connection. Sonya, unfamiliar with dating girls, is uncertain. They learn to embrace emotions.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt35050712",
+        "type": "movie",
+        "name": "Saccharine",
+        "poster": "https://image.tmdb.org/t/p/w500/bCHPB5WZy4T0Rerh1GTuQLzU0rF.jpg",
+        "background": "https://image.tmdb.org/t/p/original/7NUx7bQAD4lo9yMDbprvIblhWo2.jpg",
+        "description": "After succumbing to an obscure weight-loss craze involving the eating of human ashes, lovelorn medical student Hana finds herself haunted by the ghost of the person she's eating.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.8",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt34383465",
+        "type": "movie",
+        "name": "Nightborn",
+        "poster": "https://image.tmdb.org/t/p/w500/ddMt3IAgEHE0SWBjm97jR8gKx9B.jpg",
+        "background": "https://image.tmdb.org/t/p/original/jVeYae744cR2ogx9ShQ3qXOcRiZ.jpg",
+        "description": "In Finnish forest, Saga and her husband Jon embark on a new chapter as parents. But Saga's joy is overshadowed by a chilling suspicion about their newborn, unbeknownst to Jon, causing a rift as she alone grapples with the disturbing truth.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.4",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt15678738",
+        "type": "movie",
+        "name": "David",
+        "poster": "https://image.tmdb.org/t/p/w500/bESlrLOrsQ9gKzaGQGHXKOyIUtX.jpg",
+        "background": "https://image.tmdb.org/t/p/original/mZ6J2g6HCV2gj3iuCdSxcyBXq9c.jpg",
+        "description": "From the songs of his mother\u2019s heart to the whispers of a faithful God, David\u2019s story begins in quiet devotion. When the giant Goliath rises to terrorize a nation, a young shepherd armed with only a sling, a few stones, and unshakable faith steps forward. Pursued by power and driven by purpose, his journey tests the limits of loyalty, love, and courage\u2014culminating in a battle not just for a crown, but for the soul of a kingdom.",
+        "releaseInfo": "2025",
+        "imdbRating": "8.0",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32332915",
+        "type": "movie",
+        "name": "I Want Your Sex",
+        "poster": "https://image.tmdb.org/t/p/w500/pR7SIX3AwqdoD96OI44oLG98e7g.jpg",
+        "background": "https://image.tmdb.org/t/p/original/rcBpmEIdSTMnt5Rn4BQeHF4SIL5.jpg",
+        "description": "When fresh-faced Elliot lands an exciting job for renowned artist, icon and provocateur Erika Tracy, his fantasies come true as Erika taps him to become her sexual muse. But Elliot soon finds himself out of his depth as Erika takes him on a journey more profound than he ever could have imagined, into a world of sex, obsession, power, betrayal and murder.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt1756855",
+        "type": "movie",
+        "name": "Coyote vs. Acme",
+        "poster": "https://image.tmdb.org/t/p/w500/qTDRp8d1vzsFekTEgPC7X0jRRKE.jpg",
+        "background": "https://image.tmdb.org/t/p/original/AbQYEHieBJsMheLFKM02rFu0xnc.jpg",
+        "description": "After Acme products fail him one too many times in his dogged pursuit of the Roadrunner, Wile E. Coyote decides to hire a billboard lawyer to sue the Acme Corporation.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt39123115",
+        "type": "movie",
+        "name": "Detective Conan: Fallen Angel of the Highway",
+        "poster": "https://image.tmdb.org/t/p/w500/tqlOfb1ekyVYpDumiL9MsK6uirw.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zT5S4GNs8Eu2gIkGORoN6yC1uE2.jpg",
+        "description": "When a string of deadly highway incidents begin, Conan Edogawa's investigations point towards an orchestrated plot rather than mere accidents. As he uncovers a conspiracy involving hidden identities and advanced technology, the case escalates into a high-speed race against time to stop a calculating mastermind before more lives are lost.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.8",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt41791573",
+        "type": "movie",
+        "name": "Dear You",
+        "poster": "https://image.tmdb.org/t/p/w500/rjmhzdVS3Ia535pFawju857e2Na.jpg",
+        "background": "https://image.tmdb.org/t/p/original/AwmlL79nKTcX5tzAhyoV298xXlz.jpg",
+        "description": "Xiaowei travels to Thailand to find his \"billionaire grandfather\" who is out of contact due to debt problems, but unexpectedly find the one who has been corresponding with his grandmother for years is not her husband.",
+        "releaseInfo": "2026",
+        "imdbRating": "9.2",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0309987",
+        "type": "movie",
+        "name": "The Dreamers",
+        "poster": "https://image.tmdb.org/t/p/w500/gBb7GGaFYPu7nEUYvC8G4LaJJN1.jpg",
+        "background": "https://image.tmdb.org/t/p/original/vaRCS4CCFXcWz1j9GKd6rGLsQQ2.jpg",
+        "description": "When Isabelle and Theo invite Matthew to stay with them, what begins as a casual friendship ripens into a sensual voyage of discovery and desire in which nothing is off limits and everything is possible.",
+        "releaseInfo": "2003",
+        "imdbRating": "7.2",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32338669",
+        "type": "movie",
+        "name": "Mutiny",
+        "poster": "https://image.tmdb.org/t/p/w500/lsYSWqj6i2iyUDJoLA2cazFJYlC.jpg",
+        "background": "https://image.tmdb.org/t/p/original/jUdV706J4d3nUEbfimqVnGZqTbW.jpg",
+        "description": "After witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a one-man crusade to avenge his boss' death only to discover an international conspiracy.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt1673434",
+        "type": "movie",
+        "name": "The Twilight Saga: Breaking Dawn - Part 2",
+        "poster": "https://image.tmdb.org/t/p/w500/7IGdPaKujv0BjI0Zd0m0a4CzEjJ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/qkl57wzSFrpi2sRpoc2mZJbMuLP.jpg",
+        "description": "After the birth of Renesmee, the Cullens gather other vampire clans in order to protect the child from a false allegation that puts the family in front of the Volturi.",
+        "releaseInfo": "2012",
+        "imdbRating": "6.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt31189814",
+        "type": "movie",
+        "name": "Fuze",
+        "poster": "https://image.tmdb.org/t/p/w500/oMFdQE5hMJ9JjhNORegwTo0GKmh.jpg",
+        "background": "https://image.tmdb.org/t/p/original/8wIaBCeGv3UhIn5CJOWQGHT1Cif.jpg",
+        "description": "An unexploded WWII bomb is discovered on a busy construction site in the centre of London. Chaos ensues as the military and police begin a mass evacuation against a ticking clock.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.0",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt2012616",
+        "type": "movie",
+        "name": "Motor City",
+        "poster": "https://image.tmdb.org/t/p/w500/lGovcOtxugJPhfJjFKud9EbWtOA.jpg",
+        "background": "https://image.tmdb.org/t/p/original/l7asYmqOad01F2u0oCMM8nQjoEP.jpg",
+        "description": "In 1970s Detroit, John Miller falls for a local gangster's girl and lands in prison for a crime he didn't commit. With his life ruined, Miller plots revenge against the man who took his girl away.",
+        "releaseInfo": "2026",
+        "imdbRating": "5.9",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt27564844",
+        "type": "movie",
+        "name": "Iron Lung",
+        "poster": "https://image.tmdb.org/t/p/w500/sIwakdbMGS1krtgendTWpxTY9Hw.jpg",
+        "background": "https://image.tmdb.org/t/p/original/seuG9UslSFybML8C4enbrE6Hsyz.jpg",
+        "description": "In a post-apocalyptic future where an event known as \"The Quiet Rapture\" caused all known stars and habitable planets in the universe to disappear, a convict is sent to search an ocean of blood discovered on a desolate moon, using a small submarine nicknamed the \"Iron Lung\".",
+        "releaseInfo": "2026",
+        "imdbRating": "6.9",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt1324999",
+        "type": "movie",
+        "name": "The Twilight Saga: Breaking Dawn - Part 1",
+        "poster": "https://image.tmdb.org/t/p/w500/qs8LsHKYlVRmJbFUiSUhhRAygwj.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hBwDYiOPwXHuwiYGP82ekFNSeBr.jpg",
+        "description": "Bella Swan and Edward Cullen's honeymoon phase is abruptly disrupted by betrayals and unforeseen tragedies that endanger their world.",
+        "releaseInfo": "2011",
+        "imdbRating": "6.2",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32267691",
+        "type": "movie",
+        "name": "Power Ballad",
+        "poster": "https://image.tmdb.org/t/p/w500/sGgX2K0SJqw90Ju8TONdhDVwlzT.jpg",
+        "background": "https://image.tmdb.org/t/p/original/euUEDjof7fVX2t3nYFvLLN9ADK2.jpg",
+        "description": "When Rick, a past-his-prime wedding singer, meets fading boy-band star Danny during a gig, the two bond over music and a late-night jam session. But when Danny turns one of Rick\u2019s songs into the hit that reignites his career, Rick sets out to reclaim the recognition he believes he deserves - even if it means risking everything he cares about.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.0",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0097814",
+        "type": "movie",
+        "name": "Kiki's Delivery Service",
+        "poster": "https://image.tmdb.org/t/p/w500/Aufa4YdZIv4AXpR9rznwVA5SEfd.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ooGaNXI2OYszAajCFdIXLr73E1S.jpg",
+        "description": "A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.",
+        "releaseInfo": "1989",
+        "imdbRating": "7.8",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt21285562",
+        "type": "movie",
+        "name": "The Dog Stars",
+        "poster": "https://image.tmdb.org/t/p/w500/A7i16oDi03qrKep5pBfuTWNUTb.jpg",
+        "background": "https://image.tmdb.org/t/p/original/quAHqi4zBrB5fIfHvgrqiG4xzAC.jpg",
+        "description": "After the world's population has been ravaged by a pandemic, a man lives a lonesome existence in a Colorado airplane hangar with his dog and a dour gunman he has befriended. When a mysterious transmission comes through on the radio while he\u2019s flying his old Cessna, it sparks a hunt for the provenance of the sound.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0094625",
+        "type": "movie",
+        "name": "Akira",
+        "poster": "https://image.tmdb.org/t/p/w500/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fK40VGYIm7hmKrLJ26fgPQU0qRG.jpg",
+        "description": "A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath that only two teenagers and a group of psychics can stop.",
+        "releaseInfo": "1988",
+        "imdbRating": "7.9",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt12824390",
+        "type": "movie",
+        "name": "The Pout-Pout Fish",
+        "poster": "https://image.tmdb.org/t/p/w500/fcDXgGL14qL46It1XOozEjX5Jws.jpg",
+        "background": "https://image.tmdb.org/t/p/original/6qQQhhF87Rm1z2TYhXAmoPiEHME.jpg",
+        "description": "Living on a rundown shipwreck, Mr. Fish one day discovers a hyperactive young sea dragon Pip \u2013 who had mistaken his home for a junkyard \u2013 pilfering his belongings. The heated argument that ensues leaves both their houses in ruin. But there is hope! Embarking on a seemingly impossible quest in search of the mythical 'Shimmer' to grant them a wish, there\u2019s only one problem: someone else is on the hunt...",
+        "releaseInfo": "2026",
+        "imdbRating": "5.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt13539646",
+        "type": "movie",
+        "name": "The Wandering Earth II",
+        "poster": "https://image.tmdb.org/t/p/w500/hEA7bpWw5IRKOW2MVjvx46SWevU.jpg",
+        "background": "https://image.tmdb.org/t/p/original/94cS0mzODEoNIXFT7nhPcI8V4IJ.jpg",
+        "description": "Humans built huge engines on the surface of the earth to find a new home. But the road to the universe is perilous. In order to save earth, young people once again have to step forward to start a race against time for life and death.",
+        "releaseInfo": "2023",
+        "imdbRating": "7.3",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt37436831",
+        "type": "movie",
+        "name": "Cocorico 2",
+        "poster": "https://image.tmdb.org/t/p/w500/3eZwrYd90t5kHLHfS0zxPWH1tWl.jpg",
+        "background": "https://image.tmdb.org/t/p/original/zlxcwTkFet8e6FfGTkbKZfgb3PJ.jpg",
+        "description": "DNA tests before Alice and Fran\u00e7ois's wedding reveal their fathers - an aristocrat and car dealer - aren't as French as they thought.",
+        "releaseInfo": "2026",
+        "imdbRating": "5.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt37969901",
+        "type": "movie",
+        "name": "Torrente for President",
+        "poster": "https://image.tmdb.org/t/p/w500/yrDKwAdZRJjoQ9RZwzRGPpMC7U1.jpg",
+        "background": "https://image.tmdb.org/t/p/original/1I6QPJ2s6lch1WYO54Cv2j2Y8Z4.jpg",
+        "description": "Years have passed since his last adventure, but Jos\u00e9 Luis Torrente, the most politically incorrect former cop in Spain, still sees himself as a national hero.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt38633224",
+        "type": "movie",
+        "name": "The Rope Curse 4: Kuntilanak",
+        "poster": "https://image.tmdb.org/t/p/w500/6u8F23BammMeCWLvWITbFM2Nwbe.jpg",
+        "background": "https://image.tmdb.org/t/p/original/2VDV1ZBHV1PKKBcWjRRCydZO1YR.jpg",
+        "description": "A forbidden exorcism is livestreamed in Indonesia, awakening the legendary female spirit Kuntilanak. What begins as an online spectacle quickly turns deadly. In Taiwan, Mila watches the ritual\u2014and becomes the curse\u2019s first victim. Soon, mysterious deaths and violent possessions follow. When Yulan collapses and is found to have lost part of her soul, it becomes clear that this is not an isolated incident, but a transnational curse. Seeking answers, Mila\u2019s son returns her ashes to Indonesia, hoping to uncover the truth behind her death. Instead, he steps into a nightmare rooted in ancient folklore and unresolved hatred. As supernatural violence escalates, the group realizes that once Kuntilanak is summoned, the curse will not stop\u2014until it claims everything in its path.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt7734244",
+        "type": "movie",
+        "name": "The Magic Faraway Tree",
+        "poster": "https://image.tmdb.org/t/p/w500/udXvLxC5gAqN8SinemyFBEcHpTf.jpg",
+        "background": "https://image.tmdb.org/t/p/original/l2Iv2JVEvzlDu7Hxm7ZCm9QprqR.jpg",
+        "description": "A modern family relocates to the countryside where the children discover a magical tree with eccentric residents. They're transported to fantastical lands, rekindling their family bond through adventures.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.2",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt27530512",
+        "type": "movie",
+        "name": "Toxic",
+        "poster": "https://image.tmdb.org/t/p/w500/fJBAfLiNfovSAb6KjkIndpF3Sm7.jpg",
+        "background": "https://image.tmdb.org/t/p/original/tBRSSfgqOAq7YlG8udcoJIBm2FG.jpg",
+        "description": "As Portuguese rule crumbles in Goa, Raya rises through betrayal and bloodshed to claim the city\u2019s underworld, only to learn that power always demands a price.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt1029234",
+        "type": "movie",
+        "name": "Martyrs",
+        "poster": "https://image.tmdb.org/t/p/w500/sT5ITTlTcnPOeFzHEu5j0hTZUvD.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fO1hwjlUqDe1ixO7eMfxTby62Ut.jpg",
+        "description": "A young woman\u2019s quest for revenge against the people who kidnapped and tortured her as a child leads her and her best friend, also a victim of child abuse, on a terrifying journey into a living hell of depravity.",
+        "releaseInfo": "2008",
+        "imdbRating": "7.3",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt2467700",
+        "type": "movie",
+        "name": "Animal Farm",
+        "poster": "https://image.tmdb.org/t/p/w500/6pzI1DIlxwAFffw9OZcG6cr031U.jpg",
+        "background": "https://image.tmdb.org/t/p/original/1yl7xmTN2iEyiD3gF8M68lBhR39.jpg",
+        "description": "A group of farm animals rise up against their neglectful owner, dreaming of equality and freedom. But as the pigs take control, the revolution turns into tyranny, with truth rewritten and dissent crushed.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.4",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt1502135",
+        "type": "movie",
+        "name": "Secret File",
+        "poster": "https://image.tmdb.org/t/p/w500/gJpGtOq2fGwYDvsk5seQR7DAKBy.jpg",
+        "background": "https://image.tmdb.org/t/p/original/yaq2dIstT8bEuKJadcpSDTPgxcz.jpg",
+        "description": "A secret archive documenting the earliest revolutionary work of the Chinese Communist Party\u2014the \"Central Archives\"\u2014was successfully protected through the resilience and sacrifices of its guardians (both Party members and non-members) amid the turmoil and bloodshed from 1931 to 1949.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt37185884",
+        "type": "movie",
+        "name": "Tom and Jerry: Forbidden Compass",
+        "poster": "https://image.tmdb.org/t/p/w500/5qttWFjsO62k88civZaDMHiBTvy.jpg",
+        "background": "https://image.tmdb.org/t/p/original/9VM1KI9sVZETl0d00FK7CnBzxiw.jpg",
+        "description": "During a chase inside a museum, Tom and Jerry find an ancient magical compass and end up being transported through time. Lost in a distant era, they will need to work together to find a way back home.",
+        "releaseInfo": "2025",
+        "imdbRating": "6.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt37495239",
+        "type": "movie",
+        "name": "The Desert Child",
+        "poster": "https://image.tmdb.org/t/p/w500/8qPtHYpeRgRQUDVYk5M8X37Rkbb.jpg",
+        "background": "https://image.tmdb.org/t/p/original/raTby3MY67GCHiF1S0VSwq01fds.jpg",
+        "description": "14-year-old Sun has written and successfully published a story based on an incredible story told by her late grandfather about a wild child called Hadara, who is saved by a group of ostriches when he becomes separated from his family in a storm, and is then raised in the desert amid a host of wild animals, including his best friend, a desert fox. When Sun is invited to travel to the Sahara by a local community who has heard about her book, she meets Kharouba, a Nomad girl of her own age, and realizes there may be much more to Hadara than just a character in a bedtime story.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.6",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt34959976",
+        "type": "movie",
+        "name": "Ice Skater",
+        "poster": "https://image.tmdb.org/t/p/w500/m93BKabB7Je8WQACed58BXeHNNR.jpg",
+        "background": "https://image.tmdb.org/t/p/original/24hXgpn6rLTracW3baRgF0Gxo6W.jpg",
+        "description": "A survival drama about an ice skater stranded on an ice floe at the Arctic Sea. When the ice floe starts to float towards south and melt, the ice skater must use all means necessary to survive.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt36352591",
+        "type": "movie",
+        "name": "You, Me & Tuscany",
+        "poster": "https://image.tmdb.org/t/p/w500/mJS0IF7Af3WpPRhSTDT6rGpiLzw.jpg",
+        "background": "https://image.tmdb.org/t/p/original/2TWIlmhE06ghspeQLEX1VmnEBiE.jpg",
+        "description": "When a woman crashes at an empty Italian villa, posing as the owner's fianc\u00e9e, she discovers an unexpected romance that could transform her life.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.4",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt33029380",
+        "type": "movie",
+        "name": "Marsupilami",
+        "poster": "https://image.tmdb.org/t/p/w500/rJNHFa07Id2ylQgw0ttzGwpeczE.jpg",
+        "background": "https://image.tmdb.org/t/p/original/qGPJ9AvOUpbpZjM6R7yqBDs4gsk.jpg",
+        "description": "David is tasked to deliver a mysterious package from South America, only to find out he is carrying a baby Marsupilami!",
+        "releaseInfo": "2026",
+        "imdbRating": "6.4",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0113824",
+        "type": "movie",
+        "name": "Whisper of the Heart",
+        "poster": "https://image.tmdb.org/t/p/w500/5FROLD8zpWFs9ja7aYho1uOMJHg.jpg",
+        "background": "https://image.tmdb.org/t/p/original/rphor0XQcYO4CQoQ6auaQm3UPap.jpg",
+        "description": "Shizuku lives a simple life, dominated by her love for stories and writing. One day she notices that all the library books she has have been previously checked out by the same person: \"Seiji Amasawa.\"",
+        "releaseInfo": "1995",
+        "imdbRating": "7.9",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt28553375",
+        "type": "movie",
+        "name": "De Gaulle: R\u00e9sistance",
+        "poster": "https://image.tmdb.org/t/p/w500/tMqAZgh0oT09YQuxN94n0z0BVgt.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ovzRhiBZjaZXTX5dd36yL9BvGyr.jpg",
+        "description": "June, 1940. France collapses and signs the armistice. In the midst of the chaos, one man refuses to give up. Alone against the odds, this unknown general flees to London to save what remains of freedom.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.8",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0064816",
+        "type": "movie",
+        "name": "The Swimming Pool",
+        "poster": "https://image.tmdb.org/t/p/w500/pIR9bZM0bN1TwM1tppP7wZ2eJrL.jpg",
+        "background": "https://image.tmdb.org/t/p/original/pQpGA6XsWlmlAyicVIxVXHIW02P.jpg",
+        "description": "Set in a magnificent villa near a sun-drenched St. Tropez, lovers Jean-Paul and Marianne are spending a happy, lazy summer holiday. Their only concern is to gratify their mutual passion - until the day when Marianne invites her former lover and his beautiful teenage daughter to spend a few days with them. From the first moment, a certain uneasiness and tension begin to develop between the four, which soon escalates in a dangerous love-game.",
+        "releaseInfo": "1969",
+        "imdbRating": "7.0",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt33095251",
+        "type": "movie",
+        "name": "Tony",
+        "poster": "https://image.tmdb.org/t/p/w500/3WN0JWwRI7oGH7Ni2R6poVWej05.jpg",
+        "background": "https://image.tmdb.org/t/p/original/bOqTOVkHAL4z87P0Opf6q5mIeRy.jpg",
+        "description": "A 19-year-old Anthony Bourdain travels to Provincetown and stumbles into the chaotic world of a restaurant kitchen, setting off a summer that will shape the course of his life.",
+        "releaseInfo": "2026",
+        "imdbRating": "8.0",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32299316",
+        "type": "movie",
+        "name": "Dangerous Animals",
+        "poster": "https://image.tmdb.org/t/p/w500/9tk3Si960hg4E49eMt81dS7Qe9Z.jpg",
+        "background": "https://image.tmdb.org/t/p/original/i5kvIf73Vrxu4lYF6rby0yw4FX2.jpg",
+        "description": "A savvy and free-spirited surfer is abducted by a shark-obsessed serial killer. Held captive on his boat, she must figure out how to escape before he carries out a ritualistic feeding to the sharks below.",
+        "releaseInfo": "2025",
+        "imdbRating": "6.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt0070917",
+        "type": "movie",
+        "name": "The Wicker Man",
+        "poster": "https://image.tmdb.org/t/p/w500/wwtrXRL8SiOWxhwLEvw7iBgYh0g.jpg",
+        "background": "https://image.tmdb.org/t/p/original/fK5OHX7OIl57UqAbPiM4F3hc9wr.jpg",
+        "description": "Police sergeant Neil Howie is called to an island village in search of a missing girl whom the locals claim never existed. The investigation is further complicated as Howie\u2019s religious views clash with those of the island\u2019s residents.",
+        "releaseInfo": "1973",
+        "imdbRating": "7.3",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt32212403",
+        "type": "movie",
+        "name": "Sunny Dancer",
+        "poster": "https://image.tmdb.org/t/p/w500/yXdQX7wQSG1TZlGfaSujxazPPtM.jpg",
+        "background": "https://image.tmdb.org/t/p/original/hRsl1RMijpUCtLH3nZzRMnTjFYl.jpg",
+        "description": "Ivy is a teenager in remission from cancer, whose mum and dad insist she attend Children Run Free Camp, a summer retreat for young adults affected by cancer. However, as Ivy is reluctantly dragged through camp experience, she discovers new feelings with new friends.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt36955518",
+        "type": "movie",
+        "name": "Jim Queen and the Quest for Chloroqueer",
+        "poster": "https://image.tmdb.org/t/p/w500/nvmGrOzolKlW1z90rLudSjPm9cG.jpg",
+        "background": "https://image.tmdb.org/t/p/original/vQw05sfFEVCVpysDAU5C8NU1gMO.jpg",
+        "description": "When Heterosis - a mysterious virus that turns gay men straight sweeps through the Parisian gay scene, Jim, the six packed sovereign of the Gym Queens, goes from Pride royalty to social outcast. With only Lucien, a freshly-out twink with more heart than abs, still by his side, Jim must race to find a cure before the disease erases the community that once worshipped him.",
+        "releaseInfo": "2026",
+        "imdbRating": "7.9",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt14883538",
+        "type": "movie",
+        "name": "Arco",
+        "poster": "https://image.tmdb.org/t/p/w500/mWlvHFxTDhq9O5WSOHywa32QIez.jpg",
+        "background": "https://image.tmdb.org/t/p/original/reQELo8rDiLIOoYIA7M6q7KGRW0.jpg",
+        "description": "Ten-year-old Arco lives in a far future. During his first flight in his rainbow suit, he loses control and falls into the past. Iris, a girl his age from 2075, comes to his rescue and tries by any means to help send him back to his own era.",
+        "releaseInfo": "2025",
+        "imdbRating": "7.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt1485763",
+        "type": "movie",
+        "name": "One Piece Film: Strong World",
+        "poster": "https://image.tmdb.org/t/p/w500/z9S39hH4IOX9Hmtn3zho3Wdqem8.jpg",
+        "background": "https://image.tmdb.org/t/p/original/1oaRUHv1zX4mZNX1zq4NcHIg50m.jpg",
+        "description": "20 years after his escape from Impel Down, the legendary pirate Shiki, the Golden Lion, reappears causing massive upheaval to the Marines. During his long seclusion, he was able to come up with a scheme to bring the World Government to his knees. On his way to execute the plan, Shiki crosses paths with the Straw Hat Pirates and becomes so impressed with Nami's knowledge of meteorology that he abducts her to forcedly enlist her into his crew. Luffy and the gang end up on a strange land populated with monstrous beasts as they desperately search for Shiki and Nami.",
+        "releaseInfo": "2009",
+        "imdbRating": "7.4",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt34885279",
+        "type": "movie",
+        "name": "Vanishing Point",
+        "poster": "https://image.tmdb.org/t/p/w500/v6Wq7P2UvgkEIczgS1fiHBzoJ1m.jpg",
+        "background": "https://image.tmdb.org/t/p/original/49CFmJAkesNKgSr8YZHcOiwT0ks.jpg",
+        "description": "On the morning of the winter solstice, Tang Yu's son disappeared in the stairwell; gambler Yuan Wu hid his father's body; and two unsolved cases involving the assault.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.1",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt34625288",
+        "type": "movie",
+        "name": "The Eyes of Others",
+        "poster": "https://image.tmdb.org/t/p/w500/lAxrqKEMbasiHj6C5Dfv5FKQTAD.jpg",
+        "background": "https://image.tmdb.org/t/p/original/eoZGgOb3zbTZXKPbOx5cS6DZYwV.jpg",
+        "description": "In the untamed beauty of the island owned by an extraordinarily wealthy Marquis, Elena's arrival marks the beginning of a passionate love affair. Complicity and transgression, sex and power, in a film inspired by 1960s Italian true crime, where erotic play unfolds into obsession.",
+        "releaseInfo": "2026",
+        "imdbRating": "5.7",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt15181326",
+        "type": "movie",
+        "name": "Dead Man's Wire",
+        "poster": "https://image.tmdb.org/t/p/w500/dgSoeebklY0IGKWbp36r9FwRXlv.jpg",
+        "background": "https://image.tmdb.org/t/p/original/ulw8SrKbDeDrsSVNKPb5211AseI.jpg",
+        "description": "In 1977, former real estate developer Tony Kiritsis puts a dead man's switch on himself and the mortgage banker who did him wrong, demanding $5 million and a personal apology.",
+        "releaseInfo": "2026",
+        "imdbRating": "6.5",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt29330744",
+        "type": "movie",
+        "name": "Batwara 1947",
+        "poster": "https://image.tmdb.org/t/p/w500/u4qctwtUwTEnA1gqQhM84MUygXp.jpg",
+        "background": "https://image.tmdb.org/t/p/original/dYK1TgeitMmRU8Bki3Z75QHS195.jpg",
+        "description": "The story of an elderly Muslim woman who refuses to leave her ancestral home in Lahore, only to have a Hindu refugee family from Lucknow allotted to her house following the events of the 1947 Partition of India and Pakistan.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt33305867",
+        "type": "movie",
+        "name": "Spa Weekend",
+        "poster": "https://image.tmdb.org/t/p/w500/d2Ga7lZI4c19YGcIH09vj9mDZKU.jpg",
+        "background": "https://image.tmdb.org/t/p/original/yRsIAwFLDd7QN3Nde0biOwdtDtr.jpg",
+        "description": "Three friends go on a spa weekend that descends into chaos when their trainwreck friend joins, leading to hilarious consequences.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt33382323",
+        "type": "movie",
+        "name": "The Holy Boy",
+        "poster": "https://image.tmdb.org/t/p/w500/2jpKQ6xhcxaNXOUDeQpyHNUcWr1.jpg",
+        "background": "https://image.tmdb.org/t/p/original/n7wHpEFThBgm15bUH7e07frPJvV.jpg",
+        "description": "A PE teacher moves to a isolated mountain village where the people appear to live in unshakeable serenity, but soon stumbles across a disturbing ritual. Once a week, the locals are freed of their pain by a lonely boy born with the power to heal one's soul just by hugging them. Trying to rescue him from this madness, the man unleashes his dark side.",
+        "releaseInfo": "2025",
+        "imdbRating": "6.8",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt14523706",
+        "type": "movie",
+        "name": "Puella Magi Madoka Magica the Movie -Walpurgisnacht: Rising-",
+        "poster": "https://image.tmdb.org/t/p/w500/g4kCd4rMuN7G3VQQDUT6mLbrBqQ.jpg",
+        "background": "https://image.tmdb.org/t/p/original/xzm3RfWh932rS28WErNC3u8qzVm.jpg",
+        "description": "After the events of Rebellion, the world appears to be in balance\u2014but that peace is fragile. As a new threat connected to Walpurgisnacht emerges, Homura Akemi is forced to face the consequences of her choices and question how far she is willing to go to protect Madoka.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      },
+      {
+        "id": "tt34895535",
+        "type": "movie",
+        "name": "Nimrods",
+        "poster": "https://image.tmdb.org/t/p/w500/tDTfqu5XJbtUwstRRnWaUcoHxM2.jpg",
+        "background": "https://image.tmdb.org/t/p/original/nwkfCcHIqzo5H4rsG4ug5AVdGZM.jpg",
+        "description": "Three friends journey from Kansas City to Los Angeles, mistakenly believing that their band is opening for Green Day on New Year\u2019s Eve.",
+        "releaseInfo": "2026",
+        "imdbRating": "N/A",
+        "genres": [
+          "Upcoming Releases"
+        ]
+      }
+    ],
+    "timestamp": 1786238540421
   }
 }
