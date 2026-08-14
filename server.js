@@ -985,12 +985,23 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
   if (rawId.startsWith('live_') || type === 'tv' || type === 'channel') {
     const channel = liveChannels.find(ch => ch.id === rawId);
     if (channel && channel.streamUrl) {
+      let finalUrl = channel.streamUrl;
+
+      // Ensure Pluto TV HLS stitcher URLs contain required session headers
+      if (finalUrl.includes('pluto.tv/stitch')) {
+        const crypto = require('crypto');
+        const devId = crypto.randomUUID();
+        const sid = crypto.randomUUID();
+        const base = finalUrl.split('?')[0];
+        finalUrl = `${base}?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientDeviceType=0&deviceDNT=0&deviceId=${devId}&deviceLat=0&deviceLon=0&deviceMake=Chrome&deviceModel=Chrome&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=${sid}&userId=`;
+      }
+
       return res.json({
         streams: [
           {
             name: "📺 24/7 LIVE",
-            title: `▶ CLICK TO WATCH LIVE (1080p HD)\n${channel.name} • 24/7 Continuous Stream`,
-            url: channel.streamUrl,
+            title: `▶ Watch Live (1080p HD)\n${channel.name} • 24/7 Continuous Feed`,
+            url: finalUrl,
             isFree: true,
             live: true,
             behaviorHints: {
