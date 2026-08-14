@@ -220,19 +220,33 @@ const SUBGENRES = [
 ];
 
 const COLLECTIONS_FILE = path.join(__dirname, 'data', 'collections.json');
+const LIVE_CHANNELS_FILE = path.join(__dirname, 'data', 'live_channels.json');
 
 // Ensure data dir exists
 if (!fs.existsSync(path.join(__dirname, 'data'))) {
   fs.mkdirSync(path.join(__dirname, 'data'));
 }
 
-// Memory cache for collections
+// Memory cache for collections & live channels
 let collections = {};
+let liveChannels = [];
 let searchCache = {}; // Cache for live AI search queries
 
 const FIREBASE_URL = 'https://stremio-catalogue-3bad5-default-rtdb.firebaseio.com';
 
+function loadLiveChannels() {
+  if (fs.existsSync(LIVE_CHANNELS_FILE)) {
+    try {
+      liveChannels = JSON.parse(fs.readFileSync(LIVE_CHANNELS_FILE, 'utf8')) || [];
+      console.log(`[24/7 Channels] Loaded ${liveChannels.length} live channels from local file.`);
+    } catch (err) {
+      console.error('Failed to load live_channels.json:', err.message);
+    }
+  }
+}
+
 async function loadCollections() {
+  loadLiveChannels();
   let localData = {};
   if (fs.existsSync(COLLECTIONS_FILE)) {
     try {
@@ -572,7 +586,37 @@ function sortMoviesByYear(movies) {
 app.get('/manifest.json', (req, res) => {
   const catalogs = [];
 
-  // 1. Live AI Search catalogs
+  // 1. 24/7 Live Channels Catalog
+  const liveChannelGenres = [
+    "All Channels",
+    "Horror",
+    "Movies",
+    "Crime and Mystery",
+    "Series",
+    "Comedy and Animation",
+    "Sci-Fi and Action",
+    "Docs and Nature",
+    "News and Sports"
+  ];
+
+  catalogs.push({
+    type: 'tv',
+    id: 'cat_247_channels',
+    name: '📺 24/7 Live Channels',
+    extra: [
+      {
+        name: 'genre',
+        options: liveChannelGenres,
+        isRequired: false
+      },
+      {
+        name: 'skip',
+        isRequired: false
+      }
+    ]
+  });
+
+  // 2. Live AI Search catalogs
   catalogs.push({
     type: 'movie',
     id: 'ai_search',
@@ -593,7 +637,7 @@ app.get('/manifest.json', (req, res) => {
     ]
   });
 
-  // 2. Master Categories with Subgenre Dropdowns
+  // 3. Master Categories with Subgenre Dropdowns
   const categorizedSubgenreNames = new Set();
 
   MASTER_CATEGORIES.forEach(cat => {
@@ -632,7 +676,7 @@ app.get('/manifest.json', (req, res) => {
     }
   });
 
-  // 3. Dynamic Custom AI Playlists for any other collections not in master categories
+  // 4. Dynamic Custom AI Playlists for any other collections not in master categories
   const uncategorizedMovieOptions = [];
   const uncategorizedSeriesOptions = [];
 
@@ -693,26 +737,41 @@ app.get('/manifest.json', (req, res) => {
 
   const manifest = {
     id: 'org.subgenre.auto.catalog',
-    version: '3.0.0',
-    name: '🤖 AI Movie & TV Show Curator',
-    description: 'Master Categories, Subgenre Dropdowns, Instant AI Search & Trailers!',
+    version: '3.1.0',
+    name: '🤖 AI Movie, TV & 24/7 Channels',
+    description: '24/7 Live FAST Channels, Master Categories, Subgenre Dropdowns, Instant AI Search & Trailers!',
     resources: ['catalog', 'meta', 'stream'],
-    types: ['movie', 'series'],
+    types: ['movie', 'series', 'tv', 'channel'],
     catalogs: catalogs,
-    idPrefixes: ['tt']
+    idPrefixes: ['tt', 'live_']
   };
   res.json(manifest);
 });
 
-// Stremio Catalog Endpoint for both Movies & TV Series
+// Stremio Catalog Endpoint for Movies, TV Series & 24/7 Live Channels
 app.get('/catalog/:type/:id*', async (req, res) => {
   try {
     const rawPath = req.params.id + (req.params[0] || '');
     const parts = rawPath.replace(/\.json$/, '').split('/');
     const id = parts[0];
     const type = req.params.type;
-    const extraStr = parts[1] || '';
+    const extraStr = parts.slice(1).join('&');
     
+    // Handle 24/7 Live Channels Catalog
+    if (id === 'cat_247_channels' || type === 'tv' || type === 'channel') {
+      const params = new URLSearchParams(extraStr);
+      const selectedGenre = params.get('genre');
+      const skip = parseInt(params.get('skip') || '0', 10);
+
+      let items = [...liveChannels];
+      if (selectedGenre && selectedGenre !== 'All Channels') {
+        items = items.filter(ch => ch.genre === selectedGenre || (ch.genres && ch.genres.includes(selectedGenre)));
+      }
+
+      console.log(`[Stremio 24/7 Channels] Serving ${items.length} live channels (genre: "${selectedGenre || 'All'}", skip: ${skip})`);
+      return res.json({ metas: items.slice(skip, skip + 100) });
+    }
+
     // Handle Live AI Search Catalog
     if (id === 'ai_search' || id === 'ai_search_series') {
       const params = new URLSearchParams(extraStr);
@@ -837,14 +896,24 @@ app.get('/catalog/:type/:id*', async (req, res) => {
   }
 });
 
-// Stremio Meta Detail Endpoint for Movies & TV Series (with Native YouTube Trailer Streams)
-app.get(['/meta/:type/:id.json', '/meta/movie/:id.json', '/meta/series/:id.json'], async (req, res) => {
+// Stremio Meta Detail Endpoint for Movies, TV Series & 24/7 Channels
+app.get(['/meta/:type/:id.json', '/meta/tv/:id.json', '/meta/channel/:id.json', '/meta/movie/:id.json', '/meta/series/:id.json'], async (req, res) => {
   const { type, id } = req.params;
-  let found = null;
+  const rawId = id.replace(/\.json$/, '');
 
+  // 1. Check if ID is a 24/7 Live Channel
+  if (rawId.startsWith('live_') || type === 'tv' || type === 'channel') {
+    const channel = liveChannels.find(ch => ch.id === rawId);
+    if (channel) {
+      return res.json({ meta: channel });
+    }
+  }
+
+  // 2. Lookup in subgenre collections
+  let found = null;
   for (const collectionId in collections) {
     if (collections[collectionId].movies) {
-      found = collections[collectionId].movies.find(m => m.id === id);
+      found = collections[collectionId].movies.find(m => m.id === rawId);
       if (found) break;
     }
   }
@@ -856,11 +925,11 @@ app.get(['/meta/:type/:id.json', '/meta/movie/:id.json', '/meta/series/:id.json'
     if (!meta.trailerStreams || meta.trailerStreams.length === 0) {
       try {
         const apiKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
-        let tmdbId = id;
+        let tmdbId = rawId;
         let isTv = type === 'series' || meta.type === 'series';
 
-        if (id.startsWith('tt')) {
-          const findRes = await fetchJson(`https://api.themoviedb.org/3/find/${id}?api_key=${apiKey}&external_source=imdb_id`);
+        if (rawId.startsWith('tt')) {
+          const findRes = await fetchJson(`https://api.themoviedb.org/3/find/${rawId}?api_key=${apiKey}&external_source=imdb_id`);
           if (findRes) {
             if (findRes.tv_results && findRes.tv_results.length > 0 && isTv) {
               tmdbId = findRes.tv_results[0].id;
@@ -894,7 +963,7 @@ app.get(['/meta/:type/:id.json', '/meta/movie/:id.json', '/meta/series/:id.json'
           }
         }
       } catch (err) {
-        console.error(`Trailer lookup error for ${id}:`, err.message);
+        console.error(`Trailer lookup error for ${rawId}:`, err.message);
       }
     }
 
@@ -904,14 +973,35 @@ app.get(['/meta/:type/:id.json', '/meta/movie/:id.json', '/meta/series/:id.json'
   }
 });
 
-// Stremio Stream Endpoint for YouTube Trailer Streams
-app.get(['/stream/:type/:id.json', '/stream/movie/:id.json', '/stream/series/:id.json'], async (req, res) => {
+// Stremio Stream Endpoint for 24/7 Live Channels & YouTube Trailers
+app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.json', '/stream/movie/:id.json', '/stream/series/:id.json'], async (req, res) => {
   const { type, id } = req.params;
   const rawId = id.replace(/\.json$/, '');
   const apiKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
 
   console.log(`[Stremio Stream Request] Type: ${type}, ID: ${rawId}`);
 
+  // 1. Check if ID is a 24/7 Live Channel
+  if (rawId.startsWith('live_') || type === 'tv' || type === 'channel') {
+    const channel = liveChannels.find(ch => ch.id === rawId);
+    if (channel && channel.streamUrl) {
+      return res.json({
+        streams: [
+          {
+            title: `📺 24/7 Live Stream (1080p HD) - ${channel.name}`,
+            url: channel.streamUrl,
+            isFree: true,
+            live: true,
+            behaviorHints: {
+              notWebReady: false
+            }
+          }
+        ]
+      });
+    }
+  }
+
+  // 2. Fallback to Movie / Series YouTube Trailers
   try {
     let tmdbId = rawId;
     let isTv = type === 'series';

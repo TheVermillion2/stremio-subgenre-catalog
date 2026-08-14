@@ -1,0 +1,408 @@
+[
+  {
+    "id": "live_pluto_horror",
+    "type": "tv",
+    "name": "Pluto TV Horror 24/7",
+    "genre": "Horror",
+    "genres": [
+      "Horror",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/58adffae8cff73be6858e7bb/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/58adffae8cff73be6858e7bb/featuredImage.jpg",
+    "description": "Non-stop spine-chilling horror cinema, terrifying slashers, paranormal hauntings, and creature features streaming 24/7.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/58adffae8cff73be6858e7bb/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_dark_matter_horror",
+    "type": "tv",
+    "name": "Dark Matter TV 24/7",
+    "genre": "Horror",
+    "genres": [
+      "Horror",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5de571ebf7c00c0009cbfdc2/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5de571ebf7c00c0009cbfdc2/featuredImage.jpg",
+    "description": "Curated collection of midnight horror, psychological thrillers, and underground sci-fi nightmares.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5de571ebf7c00c0009cbfdc2/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_pluto_terror",
+    "type": "tv",
+    "name": "Pluto TV Terror 24/7",
+    "genre": "Horror",
+    "genres": [
+      "Horror",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/59b964f40cfbe86561cf2546/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/59b964f40cfbe86561cf2546/featuredImage.jpg",
+    "description": "High-octane gore, supernatural horrors, and non-stop scream fests streaming all day and night.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/59b964f40cfbe86561cf2546/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_pluto_movies",
+    "type": "tv",
+    "name": "Pluto TV Movies 24/7",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/53bfd1a70cb6064f7b49cf52/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/53bfd1a70cb6064f7b49cf52/featuredImage.jpg",
+    "description": "Hollywood blockbusters, critically acclaimed indie favorites, and star-studded cinema 24/7.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/53bfd1a70cb6064f7b49cf52/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_paramount_movie_channel",
+    "type": "tv",
+    "name": "Paramount Movie Channel 24/7",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5cae066ee5aa51a44e5428a1/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5cae066ee5aa51a44e5428a1/featuredImage.jpg",
+    "description": "Iconic movies from Paramount Pictures and classic Hollywood studios streaming non-stop.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5cae066ee5aa51a44e5428a1/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_007_james_bond",
+    "type": "tv",
+    "name": "007 James Bond 24/7",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5dc44578b88dbd00098f6dd0/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5dc44578b88dbd00098f6dd0/featuredImage.jpg",
+    "description": "Non-stop James Bond 007 action, legendary spy thrillers, gadgets, villains, and martinis.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5dc44578b88dbd00098f6dd0/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_cinevault_classics",
+    "type": "tv",
+    "name": "Cinevault Classics 24/7",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5e0e56e01a613600098df49c/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5e0e56e01a613600098df49c/featuredImage.jpg",
+    "description": "Golden Age cinema, vintage Hollywood blockbusters, film noir, and timeless cinematic masterpieces.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5e0e56e01a613600098df49c/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_unsolved_mysteries",
+    "type": "tv",
+    "name": "Unsolved Mysteries 24/7",
+    "genre": "Crime and Mystery",
+    "genres": [
+      "Crime and Mystery",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5cae06e3e5aa51a44e5428a2/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5cae06e3e5aa51a44e5428a2/featuredImage.jpg",
+    "description": "Hosted by Robert Stack. True crime stories, unexplained phenomena, paranormal sightings, and cold cases non-stop.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5cae06e3e5aa51a44e5428a2/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_forensic_files",
+    "type": "tv",
+    "name": "Forensic Files 24/7",
+    "genre": "Crime and Mystery",
+    "genres": [
+      "Crime and Mystery",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5ca7740efdfc32a768ca0ffb/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5ca7740efdfc32a768ca0ffb/featuredImage.jpg",
+    "description": "Real coroners, forensic experts, and detectives solve baffling murder cases using cutting-edge science.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5ca7740efdfc32a768ca0ffb/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_cops_channel",
+    "type": "tv",
+    "name": "COPS 24/7 Channel",
+    "genre": "Crime and Mystery",
+    "genres": [
+      "Crime and Mystery",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5cb8e41712a43b2f56b26859/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5cb8e41712a43b2f56b26859/featuredImage.jpg",
+    "description": "Bad boys, bad boys, watcha gonna do! Raw patrol chases, real arrests, and street police action 24/7.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5cb8e41712a43b2f56b26859/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_court_tv",
+    "type": "tv",
+    "name": "Court TV Live 24/7",
+    "genre": "Crime and Mystery",
+    "genres": [
+      "Crime and Mystery",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5cb65ff613769c0d238b1eb7/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5cb65ff613769c0d238b1eb7/featuredImage.jpg",
+    "description": "Live gavel-to-gavel courtroom coverage of the nation's biggest trials, legal analysis, and verdict tracking.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5cb65ff613769c0d238b1eb7/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_twilight_zone",
+    "type": "tv",
+    "name": "The Twilight Zone 24/7",
+    "genre": "Series",
+    "genres": [
+      "Series",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5f3ae7544062f800078028f0/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5f3ae7544062f800078028f0/featuredImage.jpg",
+    "description": "You are traveling through another dimension. Rod Serling's legendary sci-fi and supernatural anthology series 24/7.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5f3ae7544062f800078028f0/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_doctor_who_classic",
+    "type": "tv",
+    "name": "Classic Doctor Who 24/7",
+    "genre": "Series",
+    "genres": [
+      "Series",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5ce541b0b4b216503c2c31e9/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5ce541b0b4b216503c2c31e9/featuredImage.jpg",
+    "description": "Travel through time and space in the TARDIS with the Doctor across decades of iconic BBC sci-fi adventures.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5ce541b0b4b216503c2c31e9/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_star_trek",
+    "type": "tv",
+    "name": "Star Trek 24/7",
+    "genre": "Series",
+    "genres": [
+      "Series",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5cb8e5c412a43b2f56b2685a/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5cb8e5c412a43b2f56b2685a/featuredImage.jpg",
+    "description": "To boldly go where no one has gone before. Non-stop Star Trek missions, Deep Space Nine, and galaxy exploration.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5cb8e5c412a43b2f56b2685a/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_baywatch",
+    "type": "tv",
+    "name": "Baywatch 24/7",
+    "genre": "Series",
+    "genres": [
+      "Series",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5d8b887cf4544d000969d2f2/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5d8b887cf4544d000969d2f2/featuredImage.jpg",
+    "description": "Sun, sand, red swimsuits, and beach rescues with Mitch Buchannon and the world's most iconic lifeguards.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5d8b887cf4544d000969d2f2/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_nasa_tv",
+    "type": "tv",
+    "name": "NASA TV HD 24/7",
+    "genre": "Docs and Nature",
+    "genres": [
+      "Docs and Nature",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=600",
+    "background": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920",
+    "description": "Live views from the International Space Station, rocket launches, spacewalks, Mars rovers, and cosmic exploration.",
+    "streamUrl": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8"
+  },
+  {
+    "id": "live_pluto_docs",
+    "type": "tv",
+    "name": "Pluto TV Documentaries 24/7",
+    "genre": "Docs and Nature",
+    "genres": [
+      "Docs and Nature",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/59b964950cfbe86561cf2545/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/59b964950cfbe86561cf2545/featuredImage.jpg",
+    "description": "Fascinating true stories, historical events, scientific discoveries, nature, and deep-dive investigative films.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/59b964950cfbe86561cf2545/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_nature_vision",
+    "type": "tv",
+    "name": "NatureVision HD 24/7",
+    "genre": "Docs and Nature",
+    "genres": [
+      "Docs and Nature",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/550742f5341be2000787e9c3/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/550742f5341be2000787e9c3/featuredImage.jpg",
+    "description": "Relaxing natural landscapes, pristine oceans, mountain streams, wildlife, and soothing nature sounds in pure HD.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/550742f5341be2000787e9c3/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_bob_ross",
+    "type": "tv",
+    "name": "Bob Ross: The Joy of Painting 24/7",
+    "genre": "Comedy and Animation",
+    "genres": [
+      "Comedy and Animation",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/59b95f19eeff705b63aa68b2/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/59b95f19eeff705b63aa68b2/featuredImage.jpg",
+    "description": "Relax with the soothing voice and happy little trees of iconic artist Bob Ross streaming 24 hours a day.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/59b95f19eeff705b63aa68b2/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_mst3k",
+    "type": "tv",
+    "name": "Mystery Science Theater 3000 (MST3K) 24/7",
+    "genre": "Comedy and Animation",
+    "genres": [
+      "Comedy and Animation",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/533f114ee11059f13e000003/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/533f114ee11059f13e000003/featuredImage.jpg",
+    "description": "Joel, Mike, and the bots riff on the cheesiest, most hilarious B-movies in cinematic history.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/533f114ee11059f13e000003/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_rifftrax",
+    "type": "tv",
+    "name": "RiffTrax 24/7",
+    "genre": "Comedy and Animation",
+    "genres": [
+      "Comedy and Animation",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/549c7bc2959828d115e44a0e/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/549c7bc2959828d115e44a0e/featuredImage.jpg",
+    "description": "Hilarious movie commentary by the stars of Mystery Science Theater 3000.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/549c7bc2959828d115e44a0e/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_anime_all_day",
+    "type": "tv",
+    "name": "Anime All Day 24/7",
+    "genre": "Comedy and Animation",
+    "genres": [
+      "Comedy and Animation",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5400ae46b0811e7456000004/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5400ae46b0811e7456000004/featuredImage.jpg",
+    "description": "Action-packed shonen, mecha battles, fantasy anime, and classic animation streaming non-stop.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5400ae46b0811e7456000004/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_classic_toons",
+    "type": "tv",
+    "name": "Classic Toons 24/7",
+    "genre": "Comedy and Animation",
+    "genres": [
+      "Comedy and Animation",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5672fb5f3dbe85055b76f62b/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5672fb5f3dbe85055b76f62b/featuredImage.jpg",
+    "description": "Nostalgic retro cartoons: Popeye, Betty Boop, Looney Tunes, and Golden Age animated classics.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5672fb5f3dbe85055b76f62b/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_pluto_scifi",
+    "type": "tv",
+    "name": "Pluto TV Sci-Fi 24/7",
+    "genre": "Sci-Fi and Action",
+    "genres": [
+      "Sci-Fi and Action",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/58adffec8cff73be6858e7bc/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/58adffec8cff73be6858e7bc/featuredImage.jpg",
+    "description": "Intergalactic space battles, cyberpunk thrillers, alien encounters, and dystopian sci-fi cinema 24/7.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/58adffec8cff73be6858e7bc/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_godzilla_channel",
+    "type": "tv",
+    "name": "Godzilla 24/7 Channel",
+    "genre": "Sci-Fi and Action",
+    "genres": [
+      "Sci-Fi and Action",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/64b5952f48ef5a000854c602/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/64b5952f48ef5a000854c602/featuredImage.jpg",
+    "description": "King of the Monsters! Non-stop Godzilla movies, kaiju showdowns, Mothra, King Ghidorah, and Toho classics.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/64b5952f48ef5a000854c602/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_filmrise_action",
+    "type": "tv",
+    "name": "FilmRise Action 24/7",
+    "genre": "Sci-Fi and Action",
+    "genres": [
+      "Sci-Fi and Action",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/5d2df5227bf7913333333333/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/5d2df5227bf7913333333333/featuredImage.jpg",
+    "description": "Martial arts showdowns, high-speed car chases, explosions, and adrenaline-pumping action movies.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5d2df5227bf7913333333333/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_redbull_tv",
+    "type": "tv",
+    "name": "Red Bull TV Live 24/7",
+    "genre": "News and Sports",
+    "genres": [
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://resources.redbull.tv/tv/img/v1/meta-image?width=500",
+    "background": "https://resources.redbull.tv/tv/img/v1/meta-image?width=1920",
+    "description": "Extreme sports, mountain biking, Formula 1, surfing, esports, breakdancing, and thrilling adventures.",
+    "streamUrl": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8"
+  },
+  {
+    "id": "live_cbs_news",
+    "type": "tv",
+    "name": "CBS News 24/7",
+    "genre": "News and Sports",
+    "genres": [
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.pluto.tv/channels/53bfd12f0cb6064f7b49cf51/colorLogoPNG.png",
+    "background": "https://images.pluto.tv/channels/53bfd12f0cb6064f7b49cf51/featuredImage.jpg",
+    "description": "Live breaking news, in-depth investigative reporting, national headlines, and 60 Minutes stories.",
+    "streamUrl": "https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/53bfd12f0cb6064f7b49cf51/master.m3u8?appName=web"
+  },
+  {
+    "id": "live_sky_news",
+    "type": "tv",
+    "name": "Sky News Live HD",
+    "genre": "News and Sports",
+    "genres": [
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600",
+    "background": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1920",
+    "description": "Live UK and global news updates, exclusive interviews, financial markets, and breaking coverage.",
+    "streamUrl": "https://skynewsfeed.akamaized.net/hls/live/2042270/skynews_live1/master.m3u8"
+  }
+]
