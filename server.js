@@ -235,80 +235,10 @@ let searchCache = {}; // Cache for live AI search queries
 
 const FIREBASE_URL = 'https://stremio-catalogue-3bad5-default-rtdb.firebaseio.com';
 
-const GENRE_EPG_SCHEDULES = {
-  "Movies": [
-    { title: "Dune: Part Two (2024)", desc: "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family." },
-    { title: "Oppenheimer (2023)", desc: "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb." },
-    { title: "Blade Runner 2049 (2017)", desc: "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard." },
-    { title: "The Dark Knight (2008)", desc: "When the menace known as the Joker wreaks havoc on Gotham, Batman must accept one of the greatest tests." },
-    { title: "Interstellar (2014)", desc: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival." },
-    { title: "Gladiator (2000)", desc: "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family." },
-    { title: "Pulp Fiction (1994)", desc: "The lives of two mob hitmen, a boxer, and a pair of diner bandits intertwine in four tales of violence and redemption." },
-    { title: "Inception (2010)", desc: "A thief who steals corporate secrets through dream-sharing is given the task of planting an idea." },
-    { title: "Goodfellas (1990)", desc: "The story of Henry Hill and his life in the mob, covering his rise through the criminal underworld." },
-    { title: "Mad Max: Fury Road (2015)", desc: "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland." },
-    { title: "No Country for Old Men (2007)", desc: "Violence ensues after a hunter stumbles upon a drug deal gone wrong and over two million dollars in cash." },
-    { title: "Fight Club (1999)", desc: "An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker." }
-  ],
-  "Sports": [
-    { title: "Live Championship Match: Tournament Final & Highlights", desc: "Continuous live coverage of top championship games, tactical analysis, studio commentary, and pitch action." },
-    { title: "World Sports Tonight: Live Global Roundup", desc: "Comprehensive continuous coverage of today's premier leagues, international tournaments, and breaking highlights." },
-    { title: "Classic Encounters: Iconic Rivalries & Title Matches", desc: "Relive legendary games, dramatic buzzer beaters, iconic goals, and championship celebrations." },
-    { title: "Matchday Live: Game Preview & Tactical Analysis", desc: "Expert studio panel, player interviews, squad previews, and matchday tactical breakdowns." },
-    { title: "Extreme Sports World Tour: Pro Finals", desc: "High-octane racing, freestyle tricks, world records, and adrenaline-fueled extreme athletics." }
-  ],
-  "Horror": [
-    { title: "Terrifier 2 (2022)", desc: "Art the Clown returns to the timid town of Miles County after being resurrected by a sinister entity." },
-    { title: "Hereditary (2018)", desc: "A grieving family is haunted by tragic and disturbing occurrences after the death of their secretive grandmother." },
-    { title: "The Conjuring (2013)", desc: "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse." },
-    { title: "Talk to Me (2023)", desc: "When a group of friends discover how to conjure spirits using an embalmed hand, they become hooked on the new thrill." },
-    { title: "Sinister (2012)", desc: "A true-crime writer discovers a cache of 8mm home movies depicting murders in his newly bought house." },
-    { title: "The Shining (1980)", desc: "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence." }
-  ],
-  "Martial Arts and Action": [
-    { title: "The Raid: Redemption (2011)", desc: "An elite SWAT team becomes trapped in a derelict apartment building run by a ruthless drug lord and his army of killers." },
-    { title: "John Wick: Chapter 4 (2023)", desc: "John Wick uncovers a path to defeating The High Table, facing off against a new enemy with powerful alliances." },
-    { title: "Ip Man (2008)", desc: "During the Japanese invasion of 1937, when a wealthy martial artist is forced to leave his home, he must defend his people." },
-    { title: "Fist of Legend (1994)", desc: "A martial artist returns to Shanghai to avenge his master's death and defend the honor of his school." }
-  ],
-  "Crime and Mystery": [
-    { title: "Mindhunter: Profiles in Terror", desc: "Deep dive into criminal profiling, forensic psychology, and solving cold cases." },
-    { title: "Unsolved Mysteries: The Cold Files", desc: "Investigating baffling disappearances, unexplained crimes, and shocking revelations." },
-    { title: "Extreme Stunts & Dangerous Encounters", desc: "High stakes, wild survival tests, and dangerous natural encounters around the globe." }
-  ]
-};
-
 function getChannelEPG(channel) {
   if (!channel) return null;
-
-  // 1. Direct XMLTV Guide Cache
-  if (epgCache[channel.id]) {
-    return epgCache[channel.id];
-  }
-
-  // 2. Dynamic Rotating EPG Synthesizer (2-hour continuous schedule)
-  const now = new Date();
-  const currentHour = now.getUTCHours();
-  const slotIndex = Math.floor(currentHour / 2);
-
-  let hash = 0;
-  const nameStr = channel.name || channel.id || '';
-  for (let i = 0; i < nameStr.length; i++) {
-    hash = (hash << 5) - hash + nameStr.charCodeAt(i);
-    hash |= 0;
-  }
-  const channelOffset = Math.abs(hash);
-
-  const genreKey = channel.genre || 'Movies';
-  const pool = GENRE_EPG_SCHEDULES[genreKey] || GENRE_EPG_SCHEDULES['Movies'];
-  const curIdx = (slotIndex + channelOffset) % pool.length;
-  const nextIdx = (curIdx + 1) % pool.length;
-
-  return {
-    currentTitle: pool[curIdx].title,
-    currentDesc: pool[curIdx].desc,
-    nextTitle: pool[nextIdx].title
-  };
+  // Return strictly 100% verified real XMLTV guide data
+  return epgCache[channel.id] || null;
 }
 
 async function updateLiveEPG() {
