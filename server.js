@@ -1222,8 +1222,12 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
 
       selected.slice(0, 3).forEach(v => {
         streams.push({
-          title: `🎬 Trailer: ${v.name || 'Official YouTube Trailer'}`,
-          ytId: v.key
+          name: "🎬 YouTube Trailer",
+          title: `🎬 ${v.name || 'Official Trailer'}`,
+          ytId: v.key,
+          behaviorHints: {
+            notWebReady: false
+          }
         });
       });
     }
