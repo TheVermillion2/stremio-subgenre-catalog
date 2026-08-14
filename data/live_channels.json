@@ -1966,5 +1966,1489 @@
     "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
     "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Zona DAZN.",
     "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/24/index.m3u8"
+  },
+  {
+    "id": "live_movie_312_______406p__0",
+    "type": "tv",
+    "name": "312 Кино (406p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.ibb.co/3m9LrLj/k7gIibH.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from 312 Кино (406p).",
+    "streamUrl": "http://176.126.166.43:1935/live/312kino/playlist.m3u8"
+  },
+  {
+    "id": "live_movie__tv_international__1080p__1",
+    "type": "tv",
+    "name": "&TV International (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDTV/images/LOGO_HD/LOGO_HD_image.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from &TV International (1080p).",
+    "streamUrl": "https://amg01117-amg01117c1-amgplt0029.playout.now3.amagi.tv/playlist/amg01117-amg01117c1-amgplt0029/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_abn_bible_movies__720p__2",
+    "type": "tv",
+    "name": "ABN Bible Movies (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/NCqZdaL.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from ABN Bible Movies (720p).",
+    "streamUrl": "https://mediaserver.abnvideos.com/streams/abnbiblemovies.m3u8"
+  },
+  {
+    "id": "live_movie_action_24__1080p___not_24_3",
+    "type": "tv",
+    "name": "Action 24 (1080p) [Not 24/7] (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/8/88/Action24-logo-small.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Action 24 (1080p) [Not 24/7].",
+    "streamUrl": "http://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_actionmax__720p__4",
+    "type": "tv",
+    "name": "ActionMax (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/ActionMax_logo.svg/960px-ActionMax_logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from ActionMax (720p).",
+    "streamUrl": "http://40.160.24.56/ACTIONMAX_SD/index.m3u8"
+  },
+  {
+    "id": "live_movie_aflam__1080p__5",
+    "type": "tv",
+    "name": "Aflam (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/cTLj7Yt.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Aflam (1080p).",
+    "streamUrl": "https://shd-amg-fast.edgenextcdn.net/tx001/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_alien_nation_by_dust__108_6",
+    "type": "tv",
+    "name": "Alien Nation by DUST (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/FxYhME9.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Alien Nation by DUST (1080p).",
+    "streamUrl": "https://dqi7ayt2o24fn.cloudfront.net/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_all_time_movies__576p__7",
+    "type": "tv",
+    "name": "All Time Movies (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ALL_TIME_MOVIES/images/LOGO_HD/image.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from All Time Movies (576p).",
+    "streamUrl": "http://103.175.73.12:8080/live/54/54_0.m3u8"
+  },
+  {
+    "id": "live_movie_amc__720p__8",
+    "type": "tv",
+    "name": "AMC (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AMC (720p).",
+    "streamUrl": "http://23.239.31.26:8989/amc/index.m3u8"
+  },
+  {
+    "id": "live_movie_amc_east__720p__9",
+    "type": "tv",
+    "name": "AMC East (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AMC East (720p).",
+    "streamUrl": "http://190.11.225.124:5000/live/amc_hd/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_amc_europe_bulgary_10",
+    "type": "tv",
+    "name": "AMC Europe Bulgary (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AMC Europe Bulgary.",
+    "streamUrl": "http://212.70.131.37:8000/play/a05k"
+  },
+  {
+    "id": "live_movie_amc_europe_czech_republic_11",
+    "type": "tv",
+    "name": "AMC Europe Czech Republic (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AMC Europe Czech Republic.",
+    "streamUrl": "http://88.212.15.19/live/test_amc_25p/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_amc_europe_hungary_12",
+    "type": "tv",
+    "name": "AMC Europe Hungary (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AMC Europe Hungary.",
+    "streamUrl": "http://88.212.15.19/live/amc_hun/index.m3u8"
+  },
+  {
+    "id": "live_movie_amc_latin_america__1080p__13",
+    "type": "tv",
+    "name": "AMC Latin America (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AMC Latin America (1080p).",
+    "streamUrl": "http://15.204.246.24:8080/AMCHD/index.m3u8"
+  },
+  {
+    "id": "live_movie_amc_latin_america__1080p__14",
+    "type": "tv",
+    "name": "AMC Latin America (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AMC Latin America (1080p).",
+    "streamUrl": "http://45.171.108.253:8888/AMC/index.m3u8"
+  },
+  {
+    "id": "live_movie_amc_latin_america_brazil__15",
+    "type": "tv",
+    "name": "AMC Latin America Brazil (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/AMC_logo_2019.svg/960px-AMC_logo_2019.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AMC Latin America Brazil (720p).",
+    "streamUrl": "http://170.83.49.66:8083/AMCHD/index.m3u8"
+  },
+  {
+    "id": "live_movie_american_horrors__480p__16",
+    "type": "tv",
+    "name": "American Horrors (480p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://image.roku.com/developer_channels/prod/16f5571a82819e8992a748c70b256cbe63105f4b546b73d129668dc2cb701d91.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from American Horrors (480p).",
+    "streamUrl": "http://107.167.7.162:8081/playlist/amhor/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_anmol_cinema__576p__17",
+    "type": "tv",
+    "name": "Anmol Cinema (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://dtil.tmsimg.com/assets/GNLZZGG00260YG8.png?lock=720x540",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Anmol Cinema (576p).",
+    "streamUrl": "http://103.175.73.12:8080/live/271/271_0.m3u8"
+  },
+  {
+    "id": "live_movie_anmol_cinema_2__576p__18",
+    "type": "tv",
+    "name": "Anmol Cinema 2 (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_ANMOL_CINEMA_2/images/LOGO_HD/LOGO_HD_image.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Anmol Cinema 2 (576p).",
+    "streamUrl": "http://103.175.73.12:8080/live/257/257_0.m3u8"
+  },
+  {
+    "id": "live_movie_axn__720p__19",
+    "type": "tv",
+    "name": "AXN (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN (720p).",
+    "streamUrl": "http://45.190.28.50/AXN_HD/index.m3u8"
+  },
+  {
+    "id": "live_movie_axn_adria_20",
+    "type": "tv",
+    "name": "AXN Adria (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Adria.",
+    "streamUrl": "http://5.57.74.130:8000/play/a0at/index.m3u8"
+  },
+  {
+    "id": "live_movie_axn_asia_taiwan__1080p__21",
+    "type": "tv",
+    "name": "AXN Asia Taiwan (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Asia Taiwan (1080p).",
+    "streamUrl": "http://125.227.210.55:4050/VideoInput/play.ts"
+  },
+  {
+    "id": "live_movie_axn_black_czech_republic_22",
+    "type": "tv",
+    "name": "AXN Black Czech Republic (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/Peo1QiZ.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Black Czech Republic.",
+    "streamUrl": "http://88.212.15.19/live/test_black/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_axn_black_poland__576p__23",
+    "type": "tv",
+    "name": "AXN Black Poland (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/Peo1QiZ.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Black Poland (576p).",
+    "streamUrl": "http://185.227.34.179:8080/axn-black/index.m3u8"
+  },
+  {
+    "id": "live_movie_axn_cee_24",
+    "type": "tv",
+    "name": "AXN CEE (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN CEE.",
+    "streamUrl": "http://88.212.15.19/live/axn_hun/index.m3u8"
+  },
+  {
+    "id": "live_movie_axn_cee_czech_republic_25",
+    "type": "tv",
+    "name": "AXN CEE Czech Republic (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN CEE Czech Republic.",
+    "streamUrl": "http://88.212.15.19/live/test_axn/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_axn_latin_america__1080p__26",
+    "type": "tv",
+    "name": "AXN Latin America (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Latin America (1080p).",
+    "streamUrl": "http://138.121.15.230:9002/AXN/index.m3u8"
+  },
+  {
+    "id": "live_movie_axn_latin_america__1080p__27",
+    "type": "tv",
+    "name": "AXN Latin America (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Latin America (1080p).",
+    "streamUrl": "http://15.204.246.24:8080/AXNHD/index.m3u8"
+  },
+  {
+    "id": "live_movie_axn_latin_america_andes___28",
+    "type": "tv",
+    "name": "AXN Latin America Andes (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Latin America Andes (1080p).",
+    "streamUrl": "http://177.234.249.178:8888/AXN/index.m3u8"
+  },
+  {
+    "id": "live_movie_axn_latin_america_mexico_29",
+    "type": "tv",
+    "name": "AXN Latin America Mexico (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Latin America Mexico.",
+    "streamUrl": "http://190.11.225.124:5000/live/axn_hd/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_axn_latin_america_south_30",
+    "type": "tv",
+    "name": "AXN Latin America South (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/AXN_logo_%282015%29.svg/960px-AXN_logo_%282015%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Latin America South.",
+    "streamUrl": "http://45.228.235.116:8000/play/a0iy/index.m3u8"
+  },
+  {
+    "id": "live_movie_axn_movies__720p__31",
+    "type": "tv",
+    "name": "AXN Movies (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/tJQckal.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from AXN Movies (720p).",
+    "streamUrl": "http://50.7.120.34:8080/AXN_BLACK/index.m3u8"
+  },
+  {
+    "id": "live_movie_b4u_movies__576p__32",
+    "type": "tv",
+    "name": "B4U Movies (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/M9kMFJl.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from B4U Movies (576p).",
+    "streamUrl": "http://103.175.73.12:8080/live/43/43_0.m3u8"
+  },
+  {
+    "id": "live_movie_btv_action_33",
+    "type": "tv",
+    "name": "bTV Action (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/hGUXHuT.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from bTV Action.",
+    "streamUrl": "http://213.91.179.28:8000/play/a04n"
+  },
+  {
+    "id": "live_movie_btv_cinema_34",
+    "type": "tv",
+    "name": "bTV Cinema (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/uV81rS4.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from bTV Cinema.",
+    "streamUrl": "http://213.91.179.28:8000/play/a04i"
+  },
+  {
+    "id": "live_movie_btv_lady_35",
+    "type": "tv",
+    "name": "bTV Lady (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/rXBPJ1e.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from bTV Lady.",
+    "streamUrl": "http://213.91.179.28:8000/play/a05i"
+  },
+  {
+    "id": "live_movie_canal__action_europe_czec_36",
+    "type": "tv",
+    "name": "Canal+ Action Europe Czechia (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Canal%2B_Action_2024.svg/1920px-Canal%2B_Action_2024.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Canal+ Action Europe Czechia.",
+    "streamUrl": "http://46.149.191.219:9106/play/a01g"
+  },
+  {
+    "id": "live_movie_canal__cinemas__720p__37",
+    "type": "tv",
+    "name": "Canal+ Cinemas (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/fvPoNEa.jpeg",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Canal+ Cinemas (720p).",
+    "streamUrl": "http://151.80.18.177:86/Canal+_cinema_HD/index.m3u8"
+  },
+  {
+    "id": "live_movie_cctv_6__1080p__38",
+    "type": "tv",
+    "name": "CCTV-6 (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/rFiaef7.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from CCTV-6 (1080p).",
+    "streamUrl": "http://69.30.245.50/live/cctv6.m3u8"
+  },
+  {
+    "id": "live_movie_cctv_storm_theater__1080p_39",
+    "type": "tv",
+    "name": "CCTV-Storm Theater (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/rEttkKm.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from CCTV-Storm Theater (1080p).",
+    "streamUrl": "http://38.75.136.137:98/gslb/dsdqpub/fyjc.m3u8?auth=testpub"
+  },
+  {
+    "id": "live_movie_cctv_the_first_theater__1_40",
+    "type": "tv",
+    "name": "CCTV-The First Theater (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/eFxD3hq.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from CCTV-The First Theater (1080p).",
+    "streamUrl": "http://38.75.136.137:98/gslb/dsdqpub/dyjc.m3u8?auth=testpub"
+  },
+  {
+    "id": "live_movie_cine_mexicano__1080p__41",
+    "type": "tv",
+    "name": "Cine Mexicano (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/BhHKphL.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Cine Mexicano (1080p).",
+    "streamUrl": "http://177.234.249.178:8888/AMERICA/index.m3u8"
+  },
+  {
+    "id": "live_movie_cine_sony__1080p__42",
+    "type": "tv",
+    "name": "Cine Sony (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/bZWoDTg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Cine Sony (1080p).",
+    "streamUrl": "http://177.234.249.178:8888/SONY-MOVIES/index.m3u8"
+  },
+  {
+    "id": "live_movie_cine__classic_43",
+    "type": "tv",
+    "name": "Cine+ Classic (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/y2zeLS3.jpeg",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Cine+ Classic.",
+    "streamUrl": "http://99.27.51.147/CineClassic/index.m3u8"
+  },
+  {
+    "id": "live_movie_cine__emotion__720p__44",
+    "type": "tv",
+    "name": "Cine+ Emotion (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/upYjPvc.jpeg",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Cine+ Emotion (720p).",
+    "streamUrl": "http://145.239.5.177/337/index.m3u8"
+  },
+  {
+    "id": "live_movie_cine__frisson__1080p__45",
+    "type": "tv",
+    "name": "Cine+ Frisson (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/MwFtbnR.jpeg",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Cine+ Frisson (1080p).",
+    "streamUrl": "http://99.27.51.147:8080/CineFrisson/index.m3u8"
+  },
+  {
+    "id": "live_movie_cinecanal__1080p__46",
+    "type": "tv",
+    "name": "Cinecanal (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/CinecanalLA.png/960px-CinecanalLA.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Cinecanal (1080p).",
+    "streamUrl": "http://15.204.246.24:8080/CinecanalHD/index.m3u8"
+  },
+  {
+    "id": "live_movie_cinecanal_pacific__1080p__47",
+    "type": "tv",
+    "name": "Cinecanal Pacific (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/CinecanalLA.png/960px-CinecanalLA.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Cinecanal Pacific (1080p).",
+    "streamUrl": "http://138.121.15.230:9002/CINECANAL/index.m3u8"
+  },
+  {
+    "id": "live_movie_cinecanal_south__1080p__48",
+    "type": "tv",
+    "name": "Cinecanal South (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/CinecanalLA.png/960px-CinecanalLA.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Cinecanal South (1080p).",
+    "streamUrl": "http://45.162.193.35/CINECANAL/index.m3u8"
+  },
+  {
+    "id": "live_movie_cinestar_1_bulgaria_49",
+    "type": "tv",
+    "name": "CineStar 1 Bulgaria (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/t9vVTLH.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from CineStar 1 Bulgaria.",
+    "streamUrl": "http://213.91.179.28:8000/play/a05h"
+  },
+  {
+    "id": "live_movie_de_pelicula_us__720p__50",
+    "type": "tv",
+    "name": "De Pelicula US (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/DPel%C3%ADcula_2021.svg/960px-DPel%C3%ADcula_2021.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from De Pelicula US (720p).",
+    "streamUrl": "http://138.121.15.230:9002/DEPELICULA/index.m3u8"
+  },
+  {
+    "id": "live_movie_dhe__1080p__51",
+    "type": "tv",
+    "name": "DHE (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/nsttoEa.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from DHE (1080p).",
+    "streamUrl": "http://15.204.246.24:8080/DHEHD/index.m3u8"
+  },
+  {
+    "id": "live_movie_diema_52",
+    "type": "tv",
+    "name": "Diema (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=600",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Diema.",
+    "streamUrl": "http://213.91.179.28:8000/play/a045"
+  },
+  {
+    "id": "live_movie_film4_53",
+    "type": "tv",
+    "name": "Film4 (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/X5N8CHf.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Film4.",
+    "streamUrl": "http://88.212.15.19/live/film4_hun/index.m3u8"
+  },
+  {
+    "id": "live_movie_film_cafe_54",
+    "type": "tv",
+    "name": "Film Cafe (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/jaKRnzU.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Film Cafe.",
+    "streamUrl": "http://88.212.15.19/live/film_cafe/index.m3u8"
+  },
+  {
+    "id": "live_movie_film__55",
+    "type": "tv",
+    "name": "Film+ (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/OBYuY3S.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Film+.",
+    "streamUrl": "http://88.212.15.19/live/test_film_plus_25p/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_film__56",
+    "type": "tv",
+    "name": "Film+ (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/OWqzJyy.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Film+.",
+    "streamUrl": "http://88.212.15.19/live/film_plus_hun_atk/index.m3u8"
+  },
+  {
+    "id": "live_movie_filmbox_57",
+    "type": "tv",
+    "name": "FilmBox (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/VyaslIY.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FilmBox.",
+    "streamUrl": "http://46.149.191.219:9100/play/a015"
+  },
+  {
+    "id": "live_movie_filmbox__comedy_czechia_58",
+    "type": "tv",
+    "name": "FILMBOX+ Comedy Czechia (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bcomedy.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ Comedy Czechia.",
+    "streamUrl": "http://88.212.15.19/live/test_filmbox_family_atk_1200/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_filmbox__comedy_magyar____59",
+    "type": "tv",
+    "name": "FILMBOX+ Comedy Magyar & Romania (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bcomedy.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ Comedy Magyar & Romania (576p).",
+    "streamUrl": "http://88.212.15.19/live/test_filmbox_family_hun_atk_1200/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_filmbox__emotion_bulgaria_60",
+    "type": "tv",
+    "name": "FILMBOX+ Emotion Bulgaria (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bemotion.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ Emotion Bulgaria.",
+    "streamUrl": "http://213.91.179.28:8000/play/a04r"
+  },
+  {
+    "id": "live_movie_filmbox__emotion_czechia_61",
+    "type": "tv",
+    "name": "FILMBOX+ Emotion Czechia (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bemotion.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ Emotion Czechia.",
+    "streamUrl": "http://88.212.15.19/live/test_film_boxextra_hd_hevc/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_filmbox__emotion_hungary__62",
+    "type": "tv",
+    "name": "FILMBOX+ Emotion Hungary (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bemotion.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ Emotion Hungary (1080p).",
+    "streamUrl": "http://88.212.15.19/live/test_filmbox_extra_hd_hun_atk_1200/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_filmbox__hits_czechia_63",
+    "type": "tv",
+    "name": "FILMBOX+ Hits Czechia (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bhits.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ Hits Czechia.",
+    "streamUrl": "http://88.212.15.19/live/test_film_boxpremium_hd_hevc/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_filmbox__hits_hungary_64",
+    "type": "tv",
+    "name": "FILMBOX+ Hits Hungary (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bhits.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ Hits Hungary.",
+    "streamUrl": "http://88.212.15.19/live/fb_premium_hungary/index.m3u8"
+  },
+  {
+    "id": "live_movie_filmbox__love___crime_65",
+    "type": "tv",
+    "name": "FILMBOX+ Love & Crime (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Blove-and-crime.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ Love & Crime.",
+    "streamUrl": "http://88.212.15.19/live/test_filmbox_plus_atk_1200/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_filmbox__love___crime_bul_66",
+    "type": "tv",
+    "name": "FILMBOX+ Love & Crime Bulgaria (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Blove-and-crime.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ Love & Crime Bulgaria.",
+    "streamUrl": "http://213.91.179.28:8000/play/a066"
+  },
+  {
+    "id": "live_movie_filmbox__one_bulgaria_67",
+    "type": "tv",
+    "name": "FILMBOX+ One Bulgaria (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bone.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ One Bulgaria.",
+    "streamUrl": "http://213.91.179.28:8000/play/a06i"
+  },
+  {
+    "id": "live_movie_filmbox__one_czechia_68",
+    "type": "tv",
+    "name": "FILMBOX+ One Czechia (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bone.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ One Czechia.",
+    "streamUrl": "http://88.212.15.19/live/test_filmbox/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_filmbox__one_magyar_69",
+    "type": "tv",
+    "name": "FILMBOX+ One Magyar (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bone.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FILMBOX+ One Magyar.",
+    "streamUrl": "http://88.212.15.19/live/test_filmbox_plus_hun_atk_1200/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_filmuadrama__1080p__70",
+    "type": "tv",
+    "name": "FilmUADrama (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/Hnwsh5d.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FilmUADrama (1080p).",
+    "streamUrl": "http://88.99.215.227/FilmUADrama/index.m3u8"
+  },
+  {
+    "id": "live_movie_fx_movie_channel__720p__71",
+    "type": "tv",
+    "name": "FX Movie Channel (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/FXM_Logo.svg/960px-FXM_Logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from FX Movie Channel (720p).",
+    "streamUrl": "http://40.160.24.56/FXM_SD/index.m3u8"
+  },
+  {
+    "id": "live_movie_goldmines__576p__72",
+    "type": "tv",
+    "name": "Goldmines (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_GOLDMINES/images/LOGO_HD/image.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Goldmines (576p).",
+    "streamUrl": "http://103.175.73.12:8080/live/53/53_0.m3u8"
+  },
+  {
+    "id": "live_movie_goldmines_bollywood__576p_73",
+    "type": "tv",
+    "name": "Goldmines Bollywood (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/6mNQ9mM.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Goldmines Bollywood (576p).",
+    "streamUrl": "http://103.175.73.12:8080/live/52/52_0.m3u8"
+  },
+  {
+    "id": "live_movie_great_american_family__10_74",
+    "type": "tv",
+    "name": "Great American Family (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/TzvnHDn.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Great American Family (1080p).",
+    "streamUrl": "http://40.160.24.58/GAC_FAMILY/index.m3u8"
+  },
+  {
+    "id": "live_movie_ifc__1080p__75",
+    "type": "tv",
+    "name": "IFC (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/bQdkyF9.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from IFC (1080p).",
+    "streamUrl": "http://23.237.104.106:8080/USA_IFC/index.m3u8"
+  },
+  {
+    "id": "live_movie_indiyskoye_kino__576p__76",
+    "type": "tv",
+    "name": "Indiyskoye Kino (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/LL8GyCh.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Indiyskoye Kino (576p).",
+    "streamUrl": "http://188.113.190.12/329/index.m3u8"
+  },
+  {
+    "id": "live_movie_kino_barrandov_77",
+    "type": "tv",
+    "name": "Kino Barrandov (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Kino_Barrandov_logo.png/960px-Kino_Barrandov_logo.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Kino Barrandov.",
+    "streamUrl": "http://88.212.15.19/live/test_kino_barrandov_sd_hevc50/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_kino_nova_78",
+    "type": "tv",
+    "name": "Kino Nova (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/hMqEY0J.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Kino Nova.",
+    "streamUrl": "http://213.91.179.28:8000/play/a041"
+  },
+  {
+    "id": "live_movie_kino_tv_hd__1080p__79",
+    "type": "tv",
+    "name": "Kino TV HD (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/sMpamNO.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Kino TV HD (1080p).",
+    "streamUrl": "http://176.118.197.101/KinoTvHD/playlist.m3u8"
+  },
+  {
+    "id": "live_movie_kinomix__576p__80",
+    "type": "tv",
+    "name": "Kinomix (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/D4q2XUT.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Kinomix (576p).",
+    "streamUrl": "http://93.170.254.17/Kinomiks/index.m3u8"
+  },
+  {
+    "id": "live_movie_kinopremyera__1080p__81",
+    "type": "tv",
+    "name": "Kinopremyera (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/s0UYT8T.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Kinopremyera (1080p).",
+    "streamUrl": "http://5.188.159.128:8070/KINOPREMIERA/index.m3u8"
+  },
+  {
+    "id": "live_movie_kinosvidanie__576p__82",
+    "type": "tv",
+    "name": "Kinosvidanie (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/ZRaWqxj.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Kinosvidanie (576p).",
+    "streamUrl": "http://5.188.159.128:8070/kinosvidanie/index.m3u8"
+  },
+  {
+    "id": "live_movie_lifetime_movies__1080p__83",
+    "type": "tv",
+    "name": "Lifetime Movies (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/BWmqYTO.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Lifetime Movies (1080p).",
+    "streamUrl": "http://23.237.104.106:8080/USA_LMN/index.m3u8"
+  },
+  {
+    "id": "live_movie_magyar_mozi_tv_84",
+    "type": "tv",
+    "name": "Magyar Mozi TV (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/cXajs8V.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Magyar Mozi TV.",
+    "streamUrl": "http://88.212.15.19/live/mozi/index.m3u8"
+  },
+  {
+    "id": "live_movie_moremax__1080p__85",
+    "type": "tv",
+    "name": "MoreMax (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/MoreMax_Logo.svg/960px-MoreMax_Logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from MoreMax (1080p).",
+    "streamUrl": "http://23.237.104.106:8080/USA_MOREMAX/index.m3u8"
+  },
+  {
+    "id": "live_movie_mozi__86",
+    "type": "tv",
+    "name": "Mozi+ (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/LtCnPFJ.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Mozi+.",
+    "streamUrl": "http://88.212.15.19/live/mozi_plusz/index.m3u8"
+  },
+  {
+    "id": "live_movie_moziverzum_87",
+    "type": "tv",
+    "name": "Moziverzum (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/NMifecQ.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Moziverzum.",
+    "streamUrl": "http://88.212.15.19/live/moziverzum/index.m3u8"
+  },
+  {
+    "id": "live_movie_nollywood_tv__720p__88",
+    "type": "tv",
+    "name": "Nollywood TV (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/29L2gbb.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Nollywood TV (720p).",
+    "streamUrl": "http://145.239.5.177/148/index.m3u8"
+  },
+  {
+    "id": "live_movie_public_movies__576p__89",
+    "type": "tv",
+    "name": "Public Movies (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_PUBLIC_MOVIES/images/LOGO_HD/image.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Public Movies (576p).",
+    "streamUrl": "http://103.175.73.12:8080/live/239/master.m3u8"
+  },
+  {
+    "id": "live_movie_sony_max_1__720p__90",
+    "type": "tv",
+    "name": "Sony Max 1 (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://dtil.tmsimg.com/assets/s179440_ld_h15_aa.png?lock=720x540",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Sony Max 1 (720p).",
+    "streamUrl": "http://103.159.180.34:5001/live/3418.m3u8"
+  },
+  {
+    "id": "live_movie_sony_movies__720p__91",
+    "type": "tv",
+    "name": "Sony Movies (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/500px-Sony_Movies_Logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Sony Movies (720p).",
+    "streamUrl": "http://45.162.64.114/SONY_MOVIES/index.m3u8"
+  },
+  {
+    "id": "live_movie_sony_movies_latin_america_92",
+    "type": "tv",
+    "name": "Sony Movies Latin America (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/500px-Sony_Movies_Logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Sony Movies Latin America (720p).",
+    "streamUrl": "http://15.204.246.24:8080/SonyMoviesHD/index.m3u8"
+  },
+  {
+    "id": "live_movie_star_channel_93",
+    "type": "tv",
+    "name": "Star Channel (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Star_Channel_2020.svg/960px-Star_Channel_2020.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Star Channel.",
+    "streamUrl": "http://213.91.179.28:8000/play/a0c9"
+  },
+  {
+    "id": "live_movie_star_channel__720p__94",
+    "type": "tv",
+    "name": "Star Channel (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Star_Channel_2020.svg/960px-Star_Channel_2020.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Star Channel (720p).",
+    "streamUrl": "http://138.121.15.230:9002/STAR-CHANNEL/index.m3u8"
+  },
+  {
+    "id": "live_movie_star_channel_latin_americ_95",
+    "type": "tv",
+    "name": "Star Channel Latin America (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Star_Channel_2020.svg/960px-Star_Channel_2020.svg.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Star Channel Latin America (1080p).",
+    "streamUrl": "http://15.204.246.24:8080/STARCHANNELHD/index.m3u8"
+  },
+  {
+    "id": "live_movie_star_gold_2__576p__96",
+    "type": "tv",
+    "name": "Star Gold 2 (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/G0ZfzZr.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Star Gold 2 (576p).",
+    "streamUrl": "http://103.253.18.58:8000/play/a00r"
+  },
+  {
+    "id": "live_movie_star_gold_hd__1080p___not_97",
+    "type": "tv",
+    "name": "Star Gold HD (1080p) [Not 24/7] (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/xC460sj.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Star Gold HD (1080p) [Not 24/7].",
+    "streamUrl": "http://103.253.18.58:8000/play/a00q"
+  },
+  {
+    "id": "live_movie_star_gold_romance__576p__98",
+    "type": "tv",
+    "name": "Star Gold Romance (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/gSWv9U3.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Star Gold Romance (576p).",
+    "streamUrl": "http://103.253.18.58:8000/play/a017"
+  },
+  {
+    "id": "live_movie_star_gold_select_hd__1080_99",
+    "type": "tv",
+    "name": "Star Gold Select HD (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/U7eiuqv.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Star Gold Select HD (1080p).",
+    "streamUrl": "http://103.253.18.58:8000/play/a02u"
+  },
+  {
+    "id": "live_movie_starz_cinema__720p__100",
+    "type": "tv",
+    "name": "Starz Cinema (720p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/ghzzKoT.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Starz Cinema (720p).",
+    "streamUrl": "http://23.237.104.106:8080/USA_STARZ_CINEMA/index.m3u8"
+  },
+  {
+    "id": "live_movie_tv1000__1080p__101",
+    "type": "tv",
+    "name": "TV1000 (1080p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/GHNsctR.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from TV1000 (1080p).",
+    "streamUrl": "http://176.61.157.250/TV1000/index.m3u8"
+  },
+  {
+    "id": "live_movie_tv1000_russian_kino_globa_102",
+    "type": "tv",
+    "name": "TV1000 Russian Kino Global (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TV1000_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B8%D0%BD%D0%BE_2014.png/1280px-TV1000_%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B5_%D0%BA%D0%B8%D0%BD%D0%BE_2014.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from TV1000 Russian Kino Global.",
+    "streamUrl": "http://213.91.179.28:8000/play/a0bx"
+  },
+  {
+    "id": "live_movie_viasat_film_103",
+    "type": "tv",
+    "name": "Viasat Film (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/5CoP6ex.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Viasat Film.",
+    "streamUrl": "http://88.212.15.19/live/viasat_film/index.m3u8"
+  },
+  {
+    "id": "live_movie_zee_action__576p__104",
+    "type": "tv",
+    "name": "Zee Action (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Zee Action (576p).",
+    "streamUrl": "http://103.175.73.12:8080/live/270/master.m3u8"
+  },
+  {
+    "id": "live_movie_zee_biskope__576p__105",
+    "type": "tv",
+    "name": "Zee Biskope (576p) (Live)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BISKOPE/images/LOGO_HD/LOGO_HD_image.png",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "24/7 continuous feature films, classic cinema, blockbusters, and indie movies from Zee Biskope (576p).",
+    "streamUrl": "http://103.175.73.12:8080/live/347/master.m3u8"
   }
 ]
