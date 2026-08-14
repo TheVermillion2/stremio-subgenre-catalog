@@ -1165,10 +1165,24 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
     }
   }
 
-  // 2. Fallback to Movie / Series YouTube Trailers
+  // 2. Resolve Movie / Series details & Fetch Easynews Video Streams + YouTube Trailers
   try {
     let tmdbId = rawId;
     let isTv = type === 'series';
+    let movieTitle = '';
+    let movieYear = '';
+
+    // Check if item is in our collections
+    for (const colId in collections) {
+      if (collections[colId].movies) {
+        const foundM = collections[colId].movies.find(m => m.id === rawId);
+        if (foundM) {
+          movieTitle = foundM.name || foundM.title || '';
+          movieYear = (foundM.releaseInfo || foundM.year || '').toString().slice(0, 4);
+          break;
+        }
+      }
+    }
 
     // If ID starts with 'tt', resolve via TMDB find endpoint
     if (rawId.startsWith('tt')) {
@@ -1176,16 +1190,30 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
       if (findRes) {
         if (findRes.tv_results && findRes.tv_results.length > 0 && (isTv || !findRes.movie_results || findRes.movie_results.length === 0)) {
           tmdbId = findRes.tv_results[0].id;
+          movieTitle = movieTitle || findRes.tv_results[0].name || findRes.tv_results[0].original_name || '';
+          movieYear = movieYear || (findRes.tv_results[0].first_air_date || '').slice(0, 4);
           isTv = true;
         } else if (findRes.movie_results && findRes.movie_results.length > 0) {
           tmdbId = findRes.movie_results[0].id;
+          movieTitle = movieTitle || findRes.movie_results[0].title || findRes.movie_results[0].original_title || '';
+          movieYear = movieYear || (findRes.movie_results[0].release_date || '').slice(0, 4);
         }
       }
     }
 
+    const streams = [];
+
+    // Search Easynews for direct high-speed video streams
+    if (movieTitle) {
+      const enStreams = await searchEasynews(movieTitle, movieYear);
+      if (enStreams && enStreams.length > 0) {
+        streams.push(...enStreams);
+      }
+    }
+
+    // Fetch YouTube Trailers as fallback
     const endpoint = isTv ? 'tv' : 'movie';
     const videosRes = await fetchJson(`https://api.themoviedb.org/3/${endpoint}/${tmdbId}/videos?api_key=${apiKey}`);
-    const streams = [];
 
     if (videosRes && videosRes.results) {
       const trailers = videosRes.results.filter(v => v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser'));
@@ -1206,6 +1234,58 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
     res.json({ streams: [] });
   }
 });
+
+async function searchEasynews(title, year = '', username = 'aibutzkxjw', password = 'hjmm-rwbe-pkbg') {
+  try {
+    const query = `${title} ${year}`.trim();
+    const searchUrl = `https://members.easynews.com/2.0/search/solr-search/?gps=${encodeURIComponent(query)}&fty[]=VIDEO&pby=12&sb=1`;
+    const authHeader = 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64');
+
+    const res = await fetch(searchUrl, {
+      headers: {
+        'Authorization': authHeader,
+        'User-Agent': 'Mozilla/5.0'
+      }
+    });
+
+    if (!res.ok) return [];
+
+    const data = await res.json();
+    const items = data.data || [];
+    const streams = [];
+
+    for (const item of items) {
+      const hash = item['0'] || item['hash'];
+      const fn = item['10'] || item['fn'] || '';
+      const ext = item['11'] || item['extension'] || '.mkv';
+      const rawName = item['6'] || item['subject'] || `${fn}${ext}`;
+      const rawSize = item['size'] || item['rawSize'] || 0;
+      const sizeGb = (rawSize / (1024 * 1024 * 1024)).toFixed(2);
+
+      if (!hash || !fn) continue;
+
+      const streamUrl = `https://${username}:${password}@members.easynews.com/dl/${hash}/${encodeURIComponent(fn + ext)}`;
+
+      let quality = '1080p';
+      if (rawName.includes('2160p') || rawName.includes('4K') || rawName.includes('4k') || rawName.includes('UHD')) quality = '4K Ultra HD';
+      else if (rawName.includes('1080p') || rawName.includes('FHD')) quality = '1080p HD';
+      else if (rawName.includes('720p') || rawName.includes('HD')) quality = '720p HD';
+
+      streams.push({
+        name: `⚡ Easynews (${quality})`,
+        title: `${rawName.replace(/\.mkv|\.mp4/gi, '').slice(0, 85)}\n💾 ${sizeGb} GB • 🚀 High-Speed Usenet`,
+        url: streamUrl,
+        behaviorHints: {
+          notWebReady: false
+        }
+      });
+    }
+    return streams;
+  } catch (err) {
+    console.error('Easynews search error:', err.message);
+    return [];
+  }
+}
 
 // REST API for Dashboard UI
 app.get('/api/subgenres', (req, res) => {
