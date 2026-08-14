@@ -230,20 +230,112 @@ if (!fs.existsSync(path.join(__dirname, 'data'))) {
 // Memory cache for collections & live channels
 let collections = {};
 let liveChannels = [];
+let epgCache = {}; // channelId -> { currentTitle, currentDesc, nextTitle }
 let searchCache = {}; // Cache for live AI search queries
 
 const FIREBASE_URL = 'https://stremio-catalogue-3bad5-default-rtdb.firebaseio.com';
+
+async function updateLiveEPG() {
+  const epgUrls = [
+    'https://i.mjh.nz/SamsungTVPlus/us.xml',
+    'https://i.mjh.nz/SamsungTVPlus/gb.xml',
+    'https://i.mjh.nz/Plex/us.xml'
+  ];
+
+  const nowUtc = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
+
+  for (const url of epgUrls) {
+    try {
+      const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+      if (!res.ok) continue;
+      const xmlText = await res.text();
+
+      // 1. Channel map
+      const channelMap = {};
+      const chMatches = xmlText.match(/<channel id="([^"]+)">[\s\S]*?<display-name>([^<]+)<\/display-name>/g) || [];
+      chMatches.forEach(chBlock => {
+        const idM = chBlock.match(/id="([^"]+)"/);
+        const nameM = chBlock.match(/<display-name>([^<]+)<\/display-name>/);
+        if (idM && nameM) {
+          channelMap[idM[1]] = nameM[1].trim().toLowerCase();
+        }
+      });
+
+      // 2. Match our channels
+      liveChannels.forEach(ch => {
+        if (epgCache[ch.id]) return;
+
+        const nameClean = ch.name.toLowerCase();
+        let matchedXmlId = null;
+        for (const [xId, xName] of Object.entries(channelMap)) {
+          if (
+            (nameClean.includes('universal monsters') && xName.includes('universal monsters')) ||
+            (nameClean.includes('haunt') && xName.includes('haunt')) ||
+            (nameClean.includes('alter') && xName.includes('alter')) ||
+            (nameClean.includes('dark matter') && xName.includes('dark matter')) ||
+            (nameClean.includes('thriller') && xName.includes('thriller')) ||
+            (nameClean.includes('screamin') && xName.includes('screamin')) ||
+            (nameClean.includes('fear factor') && xName.includes('fear factor')) ||
+            (nameClean.includes('river monsters') && xName.includes('river monsters')) ||
+            (nameClean.includes('30a classic') && xName.includes('cinevault')) ||
+            (nameClean.includes('red bull') && xName.includes('red bull')) ||
+            (nameClean.includes('sky news') && xName.includes('sky news')) ||
+            (nameClean.includes('abc news') && xName.includes('abc news'))
+          ) {
+            matchedXmlId = xId;
+            break;
+          }
+        }
+
+        if (matchedXmlId) {
+          const progRegex = new RegExp(`<programme[^>]+channel="${matchedXmlId}"[^>]+start="([0-9]{14})[^"]*"[^>]+stop="([0-9]{14})[^"]*"[^>]*>[\\s\\S]*?<title[^>]*>([\\s\\S]*?)<\\/title>(?:[\\s\\S]*?<desc[^>]*>([\\s\\S]*?)<\\/desc>)?`, 'g');
+          let pm;
+          let current = null;
+          let next = null;
+
+          while ((pm = progRegex.exec(xmlText)) !== null) {
+            const start = pm[1];
+            const stop = pm[2];
+            const title = pm[3] ? pm[3].trim() : '';
+            const desc = pm[4] ? pm[4].trim() : '';
+
+            if (start <= nowUtc && nowUtc <= stop) {
+              current = { title, desc, start, stop };
+            } else if (start > nowUtc && (!next || start < next.start)) {
+              next = { title, desc, start, stop };
+            }
+          }
+
+          if (current) {
+            epgCache[ch.id] = {
+              currentTitle: current.title,
+              currentDesc: current.desc,
+              nextTitle: next ? next.title : 'Next Feature Presentation'
+            };
+          }
+        }
+      });
+    } catch (err) {
+      console.error(`[EPG Engine] Error loading ${url}:`, err.message);
+    }
+  }
+  console.log(`[EPG Engine] Live EPG schedule updated for ${Object.keys(epgCache).length} channels.`);
+}
 
 function loadLiveChannels() {
   if (fs.existsSync(LIVE_CHANNELS_FILE)) {
     try {
       liveChannels = JSON.parse(fs.readFileSync(LIVE_CHANNELS_FILE, 'utf8')) || [];
       console.log(`[24/7 Channels] Loaded ${liveChannels.length} live channels from local file.`);
+      updateLiveEPG();
     } catch (err) {
       console.error('Failed to load live_channels.json:', err.message);
     }
   }
 }
+
+// Refresh EPG every 1 hour
+setInterval(updateLiveEPG, 3600000);
 
 async function loadCollections() {
   loadLiveChannels();
@@ -763,7 +855,15 @@ app.get('/catalog/:type/:id*', async (req, res) => {
       const selectedGenre = params.get('genre');
       const skip = parseInt(params.get('skip') || '0', 10);
 
-      let items = [...liveChannels];
+      let items = liveChannels.map(ch => {
+        const meta = { ...ch };
+        const epg = epgCache[ch.id];
+        if (epg && epg.currentTitle) {
+          meta.description = `🔴 LIVE NOW: ${epg.currentTitle}\n${epg.currentDesc ? `📖 Plot: ${epg.currentDesc}\n` : ''}⏭️ UP NEXT: ${epg.nextTitle}\n\n${ch.description || ''}`;
+        }
+        return meta;
+      });
+
       if (selectedGenre && selectedGenre !== 'All Channels') {
         items = items.filter(ch => ch.genre === selectedGenre || (ch.genres && ch.genres.includes(selectedGenre)));
       }
@@ -905,7 +1005,12 @@ app.get(['/meta/:type/:id.json', '/meta/tv/:id.json', '/meta/channel/:id.json', 
   if (rawId.startsWith('live_') || type === 'tv' || type === 'channel') {
     const channel = liveChannels.find(ch => ch.id === rawId);
     if (channel) {
-      return res.json({ meta: channel });
+      const meta = { ...channel };
+      const epg = epgCache[channel.id];
+      if (epg && epg.currentTitle) {
+        meta.description = `🔴 LIVE NOW: ${epg.currentTitle}\n${epg.currentDesc ? `📖 Plot: ${epg.currentDesc}\n` : ''}⏭️ UP NEXT: ${epg.nextTitle}\n\n${channel.description || ''}`;
+      }
+      return res.json({ meta });
     }
   }
 
@@ -1029,11 +1134,14 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
       const protocol = req.protocol === 'https' || req.get('x-forwarded-proto') === 'https' ? 'https' : 'http';
       const proxyUrl = `${protocol}://${host}/live-proxy/${channel.id}/master.m3u8`;
 
+      const epg = epgCache[channel.id];
+      const nowPlayingTitle = epg && epg.currentTitle ? `🔴 NOW PLAYING: ${epg.currentTitle}\n⏭️ Next: ${epg.nextTitle}` : `▶ Watch Live (1080p HD)\n${channel.name} • 24/7 Continuous Feed`;
+
       return res.json({
         streams: [
           {
             name: "📺 24/7 LIVE (Direct)",
-            title: `▶ Watch Live (Direct HD)\n${channel.name} • 24/7 Continuous Feed`,
+            title: `${nowPlayingTitle}`,
             url: finalUrl,
             isFree: true,
             live: true,
@@ -1043,7 +1151,7 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
           },
           {
             name: "🛡️ 24/7 UNBLOCKED (Cloud Mirror)",
-            title: `▶ Watch Live (Region-Free Cloud Mirror)\n${channel.name} • Bypasses All Geo-Blocks`,
+            title: `🛡️ Unblocked Cloud Mirror\n${epg && epg.currentTitle ? `Playing: ${epg.currentTitle}` : channel.name}`,
             url: proxyUrl,
             isFree: true,
             live: true,
