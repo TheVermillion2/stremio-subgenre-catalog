@@ -973,6 +973,35 @@ app.get(['/meta/:type/:id.json', '/meta/tv/:id.json', '/meta/channel/:id.json', 
   }
 });
 
+// Cloud Proxy endpoint for 24/7 streams to bypass regional geo-blocks
+app.get('/live-proxy/:channelId/master.m3u8', async (req, res) => {
+  const { channelId } = req.params;
+  const channel = liveChannels.find(ch => ch.id === channelId);
+  if (!channel || !channel.streamUrl) return res.status(404).send('Channel not found');
+
+  try {
+    const crypto = require('crypto');
+    const devId = crypto.randomUUID();
+    const sid = crypto.randomUUID();
+    const base = channel.streamUrl.split('?')[0];
+    const upstreamUrl = `${base}?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientDeviceType=0&deviceDNT=0&deviceId=${devId}&deviceLat=34.0522&deviceLon=-118.2437&deviceMake=Chrome&deviceModel=Chrome&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=${sid}&userId=`;
+
+    const upstreamRes = await fetch(upstreamUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'X-Forwarded-For': '104.244.42.1'
+      }
+    });
+
+    const manifestText = await upstreamRes.text();
+    res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.send(manifestText);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+});
+
 // Stremio Stream Endpoint for 24/7 Live Channels & YouTube Trailers
 app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.json', '/stream/movie/:id.json', '/stream/series/:id.json'], async (req, res) => {
   const { type, id } = req.params;
@@ -993,15 +1022,29 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
         const devId = crypto.randomUUID();
         const sid = crypto.randomUUID();
         const base = finalUrl.split('?')[0];
-        finalUrl = `${base}?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientDeviceType=0&deviceDNT=0&deviceId=${devId}&deviceLat=0&deviceLon=0&deviceMake=Chrome&deviceModel=Chrome&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=${sid}&userId=`;
+        finalUrl = `${base}?advertisingId=&appName=web&appVersion=unknown&appStoreUrl=&architecture=&buildVersion=&clientDeviceType=0&deviceDNT=0&deviceId=${devId}&deviceLat=34.0522&deviceLon=-118.2437&deviceMake=Chrome&deviceModel=Chrome&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&sid=${sid}&userId=`;
       }
+
+      const host = req.get('host') || 'stremio-subgenre-catalog.onrender.com';
+      const protocol = req.protocol === 'https' || req.get('x-forwarded-proto') === 'https' ? 'https' : 'http';
+      const proxyUrl = `${protocol}://${host}/live-proxy/${channel.id}/master.m3u8`;
 
       return res.json({
         streams: [
           {
-            name: "📺 24/7 LIVE",
-            title: `▶ Watch Live (1080p HD)\n${channel.name} • 24/7 Continuous Feed`,
+            name: "📺 24/7 LIVE (Direct)",
+            title: `▶ Watch Live (Direct HD)\n${channel.name} • 24/7 Continuous Feed`,
             url: finalUrl,
+            isFree: true,
+            live: true,
+            behaviorHints: {
+              notWebReady: false
+            }
+          },
+          {
+            name: "🛡️ 24/7 UNBLOCKED (Cloud Mirror)",
+            title: `▶ Watch Live (Region-Free Cloud Mirror)\n${channel.name} • Bypasses All Geo-Blocks`,
+            url: proxyUrl,
             isFree: true,
             live: true,
             behaviorHints: {
