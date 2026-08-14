@@ -311,6 +311,88 @@ function getChannelEPG(channel) {
   };
 }
 
+async function updateLiveEPG() {
+  const epgUrls = [
+    'https://i.mjh.nz/SamsungTVPlus/us.xml',
+    'https://i.mjh.nz/SamsungTVPlus/gb.xml',
+    'https://i.mjh.nz/Plex/us.xml'
+  ];
+
+  const nowUtc = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
+
+  for (const url of epgUrls) {
+    try {
+      const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+      if (!res.ok) continue;
+      const xmlText = await res.text();
+
+      const channelMap = {};
+      const chMatches = xmlText.match(/<channel id="([^"]+)">[\s\S]*?<display-name>([^<]+)<\/display-name>/g) || [];
+      chMatches.forEach(chBlock => {
+        const idM = chBlock.match(/id="([^"]+)"/);
+        const nameM = chBlock.match(/<display-name>([^<]+)<\/display-name>/);
+        if (idM && nameM) {
+          channelMap[idM[1]] = nameM[1].trim().toLowerCase();
+        }
+      });
+
+      liveChannels.forEach(ch => {
+        if (epgCache[ch.id]) return;
+
+        const nameClean = ch.name.toLowerCase();
+        let matchedXmlId = null;
+        for (const [xId, xName] of Object.entries(channelMap)) {
+          if (
+            (nameClean.includes('universal monsters') && xName.includes('universal monsters')) ||
+            (nameClean.includes('haunt') && xName.includes('haunt')) ||
+            (nameClean.includes('alter') && xName.includes('alter')) ||
+            (nameClean.includes('dark matter') && xName.includes('dark matter')) ||
+            (nameClean.includes('fear factor') && xName.includes('fear factor')) ||
+            (nameClean.includes('river monsters') && xName.includes('river monsters')) ||
+            (nameClean.includes('30a classic') && xName.includes('cinevault')) ||
+            (nameClean.includes('red bull') && xName.includes('red bull')) ||
+            (nameClean.includes('sky news') && xName.includes('sky news')) ||
+            (nameClean.includes('abc news') && xName.includes('abc news'))
+          ) {
+            matchedXmlId = xId;
+            break;
+          }
+        }
+
+        if (matchedXmlId) {
+          const progRegex = new RegExp(`<programme[^>]+channel="${matchedXmlId}"[^>]+start="([0-9]{14})[^"]*"[^>]+stop="([0-9]{14})[^"]*"[^>]*>[\\s\\S]*?<title[^>]*>([\\s\\S]*?)<\\/title>(?:[\\s\\S]*?<desc[^>]*>([\\s\\S]*?)<\\/desc>)?`, 'g');
+          let pm;
+          let current = null;
+          let next = null;
+
+          while ((pm = progRegex.exec(xmlText)) !== null) {
+            const start = pm[1];
+            const stop = pm[2];
+            const title = pm[3] ? pm[3].trim() : '';
+            const desc = pm[4] ? pm[4].trim() : '';
+
+            if (start <= nowUtc && nowUtc <= stop) {
+              current = { title, desc, start, stop };
+            } else if (start > nowUtc && (!next || start < next.start)) {
+              next = { title, desc, start, stop };
+            }
+          }
+
+          if (current) {
+            epgCache[ch.id] = {
+              currentTitle: current.title,
+              currentDesc: current.desc,
+              nextTitle: next ? next.title : 'Next Feature Presentation'
+            };
+          }
+        }
+      });
+    } catch (err) {
+      console.error(`[EPG Engine] Error loading ${url}:`, err.message);
+    }
+  }
+}
+
 function loadLiveChannels() {
   if (fs.existsSync(LIVE_CHANNELS_FILE)) {
     try {
