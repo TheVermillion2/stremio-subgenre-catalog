@@ -988,7 +988,8 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
       return res.json({
         streams: [
           {
-            title: `📺 24/7 Live Stream (1080p HD) - ${channel.name}`,
+            name: "📺 24/7 LIVE",
+            title: `▶ CLICK TO WATCH LIVE (1080p HD)\n${channel.name} • 24/7 Continuous Stream`,
             url: channel.streamUrl,
             isFree: true,
             live: true,
