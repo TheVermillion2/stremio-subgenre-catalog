@@ -4,4 +4,7 @@ node_modules/
 .DS_Store
 firebase-key.json
 config.json
-
+scratch/
+cinemagoer.db
+old_server.js
+batch_create_collections.py

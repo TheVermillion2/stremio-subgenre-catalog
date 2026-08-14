@@ -473,55 +473,107 @@ async function getMoviesForSubgenre(subgenreId, options = {}) {
   }
 }
 
+const MASTER_CATEGORIES = [
+  {
+    id: 'cat_horror_thrillers',
+    name: '👻 Horror & Thrillers',
+    type: 'movie',
+    subgenres: [
+      'Spanish Thrillers',
+      'Korean Horror',
+      'Classic thrillers',
+      'Stalker/ Chased',
+      'Mind Twists',
+      'The Best Movie Villains of All Time'
+    ]
+  },
+  {
+    id: 'cat_urban_black_cinema',
+    name: '🎬 Urban & Black Cinema',
+    type: 'movie',
+    subgenres: [
+      '90s Hood Classics',
+      'Black Lead',
+      'BLACK DIRECTORS'
+    ]
+  },
+  {
+    id: 'cat_curated_masterpieces',
+    name: '⭐ Curated & Masterpieces',
+    type: 'movie',
+    subgenres: [
+      'Movies Everyone Should Watch At Least Once',
+      'Every A24 Movie Ever (Official Collection)',
+      'Letterboxd Official: Top 100 Sub-Saharan African Films',
+      'Letterboxd Official: Top 250 Documentary Films',
+      '450 Mind-Expanding Documentaries (DIY Genius)'
+    ]
+  },
+  {
+    id: 'cat_nostalgia_vibes',
+    name: '🍿 Nostalgia & Vibes',
+    type: 'movie',
+    subgenres: [
+      "90's Nostalgia",
+      'Action Packed',
+      'Got Time',
+      'Christmas Movies Collection',
+      '🚀 IMDb Release Calendar: Upcoming Movies'
+    ]
+  },
+  {
+    id: 'cat_tv_series',
+    name: '📺 Curated TV Series',
+    type: 'series',
+    subgenres: [
+      'IMDb Top 250 TV Shows',
+      'MDBList: Latest TV Shows Feed',
+      '450 Mind-Expanding Documentaries (DIY Genius)',
+      'Christmas Movies Collection'
+    ]
+  }
+];
+
+function findCollectionByName(name) {
+  if (!name) return null;
+  const nameNorm = name.trim().toLowerCase();
+  for (const col of Object.values(collections)) {
+    if (col && col.name && col.name.trim().toLowerCase() === nameNorm) {
+      return col;
+    }
+  }
+  return null;
+}
+
+function sortMoviesByRating(movies) {
+  if (!Array.isArray(movies)) return [];
+  return [...movies].sort((a, b) => {
+    const parseRating = (r) => {
+      if (!r || r === 'N/A' || r === '0') return -1;
+      const parsed = parseFloat(r);
+      return isNaN(parsed) ? -1 : parsed;
+    };
+    const ratingA = parseRating(a.imdbRating);
+    const ratingB = parseRating(b.imdbRating);
+    if (ratingB !== ratingA) {
+      return ratingB - ratingA;
+    }
+    const yearA = parseInt(a.releaseInfo || a.releaseDate || a.year || '0', 10) || 0;
+    const yearB = parseInt(b.releaseInfo || b.releaseDate || b.year || '0', 10) || 0;
+    return yearB - yearA;
+  });
+}
+
+function sortMoviesByYear(movies) {
+  return sortMoviesByRating(movies);
+}
+
 // Stremio Addon Protocol Manifest
 app.get('/manifest.json', (req, res) => {
-  const collectionIds = Object.keys(collections);
   const catalogs = [];
 
-  // Add Catalogs for both movies and TV series
-  collectionIds.forEach(id => {
-    const col = collections[id];
-    const hasMovies = col.movies && col.movies.some(m => m.type !== 'series');
-    const hasSeries = col.movies && col.movies.some(m => m.type === 'series');
-
-    if (hasSeries) {
-      catalogs.push({
-        type: 'series',
-        id: id,
-        name: col.name
-      });
-    }
-
-    if (hasMovies || !hasSeries) {
-      catalogs.push({
-        type: 'movie',
-        id: id,
-        name: col.name
-      });
-    }
-  });
-
-  // Provide a default empty catalog if none exist to prevent Stremio errors
-  if (catalogs.length === 0) {
-    catalogs.push({
-      type: 'movie',
-      id: 'default_empty',
-      name: 'No Collections Yet'
-    });
-  }
-
-  // Inject AI Search catalogs for both TV Series and Movies
-  catalogs.unshift({
-    type: 'series',
-    id: 'ai_search_series',
-    name: '🤖 AI TV Series Curator',
-    extra: [
-      { name: 'search', isRequired: true },
-      { name: 'skip', isRequired: false }
-    ]
-  });
-
-  catalogs.unshift({
+  // 1. Live AI Search catalogs
+  catalogs.push({
     type: 'movie',
     id: 'ai_search',
     name: '🤖 AI Movie Search Curator',
@@ -531,11 +583,119 @@ app.get('/manifest.json', (req, res) => {
     ]
   });
 
+  catalogs.push({
+    type: 'series',
+    id: 'ai_search_series',
+    name: '🤖 AI TV Series Curator',
+    extra: [
+      { name: 'search', isRequired: true },
+      { name: 'skip', isRequired: false }
+    ]
+  });
+
+  // 2. Master Categories with Subgenre Dropdowns
+  const categorizedSubgenreNames = new Set();
+
+  MASTER_CATEGORIES.forEach(cat => {
+    // Collect matching existing collections with items
+    const availableOptions = [];
+    cat.subgenres.forEach(subName => {
+      const col = findCollectionByName(subName);
+      if (col && col.movies && col.movies.length > 0) {
+        const hasMatchingType = col.movies.some(m => cat.type === 'series' ? m.type === 'series' : m.type !== 'series');
+        if (hasMatchingType) {
+          if (!availableOptions.includes(col.name)) {
+            availableOptions.push(col.name);
+          }
+          categorizedSubgenreNames.add(col.name.trim().toLowerCase());
+        }
+      }
+    });
+
+    if (availableOptions.length > 0) {
+      catalogs.push({
+        type: cat.type,
+        id: cat.id,
+        name: cat.name,
+        extra: [
+          {
+            name: 'genre',
+            options: availableOptions,
+            isRequired: false
+          },
+          {
+            name: 'skip',
+            isRequired: false
+          }
+        ]
+      });
+    }
+  });
+
+  // 3. Dynamic Custom AI Playlists for any other collections not in master categories
+  const uncategorizedMovieOptions = [];
+  const uncategorizedSeriesOptions = [];
+
+  Object.values(collections).forEach(col => {
+    if (!col || !col.name || !col.movies || col.movies.length === 0) return;
+    const nameNorm = col.name.trim().toLowerCase();
+    if (!categorizedSubgenreNames.has(nameNorm)) {
+      if (col.movies.some(m => m.type !== 'series')) {
+        if (!uncategorizedMovieOptions.includes(col.name)) {
+          uncategorizedMovieOptions.push(col.name);
+        }
+      }
+      if (col.movies.some(m => m.type === 'series')) {
+        if (!uncategorizedSeriesOptions.includes(col.name)) {
+          uncategorizedSeriesOptions.push(col.name);
+        }
+      }
+    }
+  });
+
+  if (uncategorizedMovieOptions.length > 0) {
+    catalogs.push({
+      type: 'movie',
+      id: 'cat_custom_ai_movies',
+      name: '✨ Custom AI Playlists',
+      extra: [
+        {
+          name: 'genre',
+          options: uncategorizedMovieOptions,
+          isRequired: false
+        },
+        {
+          name: 'skip',
+          isRequired: false
+        }
+      ]
+    });
+  }
+
+  if (uncategorizedSeriesOptions.length > 0) {
+    catalogs.push({
+      type: 'series',
+      id: 'cat_custom_ai_series',
+      name: '✨ Custom AI TV Shows',
+      extra: [
+        {
+          name: 'genre',
+          options: uncategorizedSeriesOptions,
+          isRequired: false
+        },
+        {
+          name: 'skip',
+          isRequired: false
+        }
+      ]
+    });
+  }
+
   const manifest = {
     id: 'org.subgenre.auto.catalog',
-    version: '2.6.0',
+    version: '3.0.0',
     name: '🤖 AI Movie & TV Show Curator',
-    description: 'Instant AI Movie & TV Show Search, Auto-updating Custom Playlists & Native Trailers!',
+    description: 'Master Categories, Subgenre Dropdowns, Instant AI Search & Trailers!',
     resources: ['catalog', 'meta', 'stream'],
     types: ['movie', 'series'],
     catalogs: catalogs,
@@ -543,15 +703,6 @@ app.get('/manifest.json', (req, res) => {
   };
   res.json(manifest);
 });
-
-function sortMoviesByYear(movies) {
-  if (!Array.isArray(movies)) return [];
-  return [...movies].sort((a, b) => {
-    const yearA = parseInt(a.releaseInfo || a.releaseDate || a.year || '0', 10) || 0;
-    const yearB = parseInt(b.releaseInfo || b.releaseDate || b.year || '0', 10) || 0;
-    return yearB - yearA;
-  });
-}
 
 // Stremio Catalog Endpoint for both Movies & TV Series
 app.get('/catalog/:type/:id*', async (req, res) => {
@@ -574,7 +725,7 @@ app.get('/catalog/:type/:id*', async (req, res) => {
       
       if (searchCache[cacheKey] && (Date.now() - searchCache[cacheKey].timestamp < 86400000)) {
         console.log(`[AI Search] Serving cached results for ${type}: "${query}", skip: ${skip}`);
-        const metas = searchCache[cacheKey].movies.slice(skip, skip + 50);
+        const metas = searchCache[cacheKey].movies.slice(skip, skip + 100);
         return res.json({ metas });
       }
       
@@ -584,7 +735,7 @@ app.get('/catalog/:type/:id*', async (req, res) => {
       try {
         const rawItems = await queryGeminiForMovies(query, config.geminiApiKey, '', true);
         const batch = await Promise.all(
-          rawItems.slice(0, 25).map(m => searchTmdbMovie(m.title, m.year, tmdbKey))
+          rawItems.slice(0, 30).map(m => searchTmdbMovie(m.title, m.year, tmdbKey))
         );
         const stremioMetas = batch.filter(Boolean);
         
@@ -594,15 +745,77 @@ app.get('/catalog/:type/:id*', async (req, res) => {
         };
         
         console.log(`[AI Search] Generated ${stremioMetas.length} results for: "${query}"`);
-        return res.json({ metas: stremioMetas.slice(skip, skip + 50) });
+        return res.json({ metas: stremioMetas.slice(skip, skip + 100) });
       } catch (err) {
         console.error('[AI Search] Failed to fulfill search request:', err.message);
         return res.json({ metas: [] });
       }
     }
 
-    const collection = collections[id];
+    const extraParams = new URLSearchParams(extraStr);
+    const selectedGenre = extraParams.get('genre');
+    const skip = parseInt(extraParams.get('skip') || '0', 10);
 
+    // Check if ID is a Master Category
+    const masterCat = MASTER_CATEGORIES.find(c => c.id === id);
+    const isCustomCat = (id === 'cat_custom_ai_movies' || id === 'cat_custom_ai_series');
+
+    if (masterCat || isCustomCat) {
+      if (selectedGenre) {
+        // User selected a specific Subgenre from the dropdown
+        const col = findCollectionByName(selectedGenre);
+        if (!col || !col.movies) {
+          return res.json({ metas: [] });
+        }
+        let items = col.movies;
+        if (type === 'series') {
+          items = items.filter(m => m.type === 'series');
+        } else if (type === 'movie') {
+          items = items.filter(m => m.type !== 'series');
+        }
+        console.log(`[Stremio Subgenre] Serving "${selectedGenre}" under ${id} (${type}, ${items.length} items, skip: ${skip})`);
+        return res.json({ metas: sortMoviesByRating(items).slice(skip, skip + 100) });
+      } else {
+        // User opened top-level category without selecting a subgenre -> combine all subgenres
+        let combined = [];
+        const seenIds = new Set();
+        
+        const targetSubgenres = masterCat ? masterCat.subgenres : [];
+        if (masterCat) {
+          targetSubgenres.forEach(subName => {
+            const col = findCollectionByName(subName);
+            if (col && col.movies) {
+              col.movies.forEach(m => {
+                const itemType = m.type === 'series' ? 'series' : 'movie';
+                if (itemType === type && !seenIds.has(m.id)) {
+                  seenIds.add(m.id);
+                  combined.push(m);
+                }
+              });
+            }
+          });
+        } else {
+          // Custom AI Playlists
+          Object.values(collections).forEach(col => {
+            if (col && col.movies) {
+              col.movies.forEach(m => {
+                const itemType = m.type === 'series' ? 'series' : 'movie';
+                if (itemType === type && !seenIds.has(m.id)) {
+                  seenIds.add(m.id);
+                  combined.push(m);
+                }
+              });
+            }
+          });
+        }
+        
+        console.log(`[Stremio Category] Serving combined ${id} (${type}, ${combined.length} total items, skip: ${skip})`);
+        return res.json({ metas: sortMoviesByRating(combined).slice(skip, skip + 100) });
+      }
+    }
+
+    // Direct / Legacy Collection ID lookup fallback
+    const collection = collections[id];
     if (!collection) {
       return res.json({ metas: [] });
     }
@@ -616,8 +829,8 @@ app.get('/catalog/:type/:id*', async (req, res) => {
       if (movieItems.length > 0) items = movieItems;
     }
 
-    console.log(`[Stremio Request] Serving collection ${id} (${type}, ${items.length} items)`);
-    res.json({ metas: sortMoviesByYear(items) });
+    console.log(`[Stremio Request] Serving direct collection ${id} (${type}, ${items.length} items, skip: ${skip})`);
+    res.json({ metas: sortMoviesByRating(items).slice(skip, skip + 100) });
   } catch (e) {
     console.error('Error serving catalog:', e.message);
     res.status(500).json({ metas: [] });
