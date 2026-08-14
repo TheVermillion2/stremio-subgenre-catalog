@@ -681,11 +681,11 @@ app.get('/manifest.json', (req, res) => {
   // 1. 24/7 Live Channels Catalog
   const liveChannelGenres = [
     "All Channels",
+    "Sports",
     "Horror",
     "Movies",
     "Crime and Mystery",
-    "Series",
-    "Comedy and Animation",
+    "Martial Arts and Action",
     "Sci-Fi and Action",
     "Docs and Nature",
     "News and Sports"

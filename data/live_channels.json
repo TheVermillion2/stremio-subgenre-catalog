@@ -10,7 +10,7 @@
     ],
     "poster": "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=600",
     "background": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920",
-    "description": "Curated modern horror movies, psychological chillers, slashers, and terrifying indie cinema in full 1080p HD.",
+    "description": "Curated modern horror movies, spine-chilling psychological thrillers, slashers, and terrifying indie cinema in full 1080p HD.",
     "streamUrl": "https://d3opw4b2eztyyq.cloudfront.net/playlist.m3u8"
   },
   {
@@ -56,20 +56,6 @@
     "streamUrl": "https://tricoast-tv-dark-matter-01-us.ono.wurl.tv/playlist.m3u8"
   },
   {
-    "id": "live_horror_tv_global",
-    "type": "tv",
-    "name": "Horror TV HD 24/7",
-    "genre": "Horror",
-    "genres": [
-      "Horror",
-      "24/7 Live Channels"
-    ],
-    "poster": "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=600",
-    "background": "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1920",
-    "description": "Non-stop global horror cinema, scream fests, creature features, and supernatural chillers.",
-    "streamUrl": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/93dc292b-cbcf-4988-ab97-94feced4c14b/manifest.m3u8"
-  },
-  {
     "id": "live_best_thriller_tv",
     "type": "tv",
     "name": "Best Thriller TV 24/7 (1080p)",
@@ -112,32 +98,34 @@
     "streamUrl": "https://amg00426-lds-amg00426c17-samsung-gb-10157.playouts.now.amagi.tv/playlist.m3u8"
   },
   {
-    "id": "live_30a_classic_movies",
-    "type": "tv",
-    "name": "30A Classic Movies 24/7 (HD)",
-    "genre": "Movies",
-    "genres": [
-      "Movies",
-      "24/7 Live Channels"
-    ],
-    "poster": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=600",
-    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
-    "description": "Golden age cinema, classic Hollywood blockbusters, vintage noir, and timeless cinematic masterpieces.",
-    "streamUrl": "https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8"
-  },
-  {
     "id": "live_movies_thriller_fast",
     "type": "tv",
-    "name": "Movies Thriller FAST 24/7 (1080p)",
-    "genre": "Movies",
+    "name": "Movies Thriller & Action FAST 24/7",
+    "genre": "Martial Arts and Action",
     "genres": [
+      "Martial Arts and Action",
       "Movies",
       "24/7 Live Channels"
     ],
     "poster": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=600",
     "background": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920",
-    "description": "Non-stop feature-length thriller, mystery, and suspense movies in high bitrate 1080p HD.",
+    "description": "High-octane action movies, adrenaline car chases, shootouts, and intense thriller cinema.",
     "streamUrl": "https://shd-amg-fast.edgenextcdn.net/tx012/playlist.m3u8"
+  },
+  {
+    "id": "live_horror_tv_global",
+    "type": "tv",
+    "name": "Horror & Action Cinema HD 24/7",
+    "genre": "Martial Arts and Action",
+    "genres": [
+      "Martial Arts and Action",
+      "Horror",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=600",
+    "background": "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1920",
+    "description": "Non-stop global genre cinema, cult martial arts, creature features, and underground films.",
+    "streamUrl": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/93dc292b-cbcf-4988-ab97-94feced4c14b/manifest.m3u8"
   },
   {
     "id": "live_crime_thrillher",
@@ -182,6 +170,20 @@
     "streamUrl": "https://amg00654-itv-amg00654c24-samsung-gb-8890.playouts.now.amagi.tv/playlist.m3u8"
   },
   {
+    "id": "live_30a_classic_movies",
+    "type": "tv",
+    "name": "30A Classic Movies 24/7 (HD)",
+    "genre": "Movies",
+    "genres": [
+      "Movies",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=600",
+    "background": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920",
+    "description": "Golden age cinema, classic Hollywood blockbusters, vintage noir, and timeless cinematic masterpieces.",
+    "streamUrl": "https://30a-tv.com/feeds/pzaz/30atvmovies.m3u8"
+  },
+  {
     "id": "live_nasa_tv",
     "type": "tv",
     "name": "NASA TV HD 24/7 (Live ISS Feed)",
@@ -202,6 +204,7 @@
     "genre": "News and Sports",
     "genres": [
       "News and Sports",
+      "Sports",
       "24/7 Live Channels"
     ],
     "poster": "https://resources.redbull.tv/tv/img/v1/meta-image?width=500",
@@ -210,31 +213,1758 @@
     "streamUrl": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8"
   },
   {
-    "id": "live_sky_news",
+    "id": "live_sport_5sport__1080p__0",
     "type": "tv",
-    "name": "Sky News Live HD",
-    "genre": "News and Sports",
+    "name": "5Sport (1080p) (Live)",
+    "genre": "Sports",
     "genres": [
+      "Sports",
       "News and Sports",
       "24/7 Live Channels"
     ],
-    "poster": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600",
-    "background": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1920",
-    "description": "Live UK and global news updates, exclusive interviews, financial markets, and breaking coverage.",
-    "streamUrl": "https://skynewsfeed.akamaized.net/hls/live/2042270/skynews_live1/master.m3u8"
+    "poster": "https://i.imgur.com/dRVsB89.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from 5Sport (1080p).",
+    "streamUrl": "http://stream.mcquack.net/41/index.m3u8"
   },
   {
-    "id": "live_abc_news",
+    "id": "live_sport_30a_golf_kingdom__720p__1",
     "type": "tv",
-    "name": "ABC News Live 24/7 (1080p)",
-    "genre": "News and Sports",
+    "name": "30A Golf Kingdom (720p) (Live)",
+    "genre": "Sports",
     "genres": [
+      "Sports",
       "News and Sports",
       "24/7 Live Channels"
     ],
-    "poster": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600",
-    "background": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1920",
-    "description": "24/7 live breaking news broadcasts, investigative reports, and world coverage from ABC News.",
-    "streamUrl": "https://abcnews-streams.akamaized.net/hls/live/2023560/abcnews_live1/master.m3u8"
+    "poster": "https://i.imgur.com/Lv53nh4.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from 30A Golf Kingdom (720p).",
+    "streamUrl": "https://30a-tv.com/feeds/vidaa/golf.m3u8"
+  },
+  {
+    "id": "live_sport_a_spor__1080p__2",
+    "type": "tv",
+    "name": "A Spor (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/ZhkZzLf.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from A Spor (1080p).",
+    "streamUrl": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8"
+  },
+  {
+    "id": "live_sport_accdn__1080p__3",
+    "type": "tv",
+    "name": "ACCDN (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/V6Kaqha.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ACCDN (1080p).",
+    "streamUrl": "https://raycom-accdn-firetv.amagi.tv/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_aci_sport_tv__1080p__4",
+    "type": "tv",
+    "name": "ACI Sport TV (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/U8cHMOt.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ACI Sport TV (1080p).",
+    "streamUrl": "https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8"
+  },
+  {
+    "id": "live_sport_ado_tv__720p__5",
+    "type": "tv",
+    "name": "ADO TV (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/pxFamLr.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ADO TV (720p).",
+    "streamUrl": "https://strhls.streamakaci.tv/ortb/ortb2-multi/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_africa_24_sport__1080p__6",
+    "type": "tv",
+    "name": "Africa 24 Sport (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i0.wp.com/africa24tv.com/wp-content/uploads/2023/12/LOGO-AFRICASPORT-4-HD-sans-fond.png?fit=512%2C107&ssl=1",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Africa 24 Sport (1080p).",
+    "streamUrl": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24sport/manifest.m3u8"
+  },
+  {
+    "id": "live_sport_al_iraqia_sport__720p__7",
+    "type": "tv",
+    "name": "Al Iraqia Sport (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/DrrlxTO.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Al Iraqia Sport (720p).",
+    "streamUrl": "https://imn-live.esite-lab.com/hls/iraqia-sports-1.m3u8"
+  },
+  {
+    "id": "live_sport_alkass_four__1080p__8",
+    "type": "tv",
+    "name": "Alkass Four (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/iDL65Wu.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Alkass Four (1080p).",
+    "streamUrl": "https://liveeu-gcp.alkassdigital.net/alkass4-p/main.m3u8"
+  },
+  {
+    "id": "live_sport_alkass_one__1080p__9",
+    "type": "tv",
+    "name": "Alkass One (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/10mmlha.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Alkass One (1080p).",
+    "streamUrl": "https://liveeu-gcp.alkassdigital.net/alkass1-p/main.m3u8"
+  },
+  {
+    "id": "live_sport_alkass_shoof__1080p__10",
+    "type": "tv",
+    "name": "Alkass SHOOF (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://shoof.alkass.net/assets/images/shoof.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Alkass SHOOF (1080p).",
+    "streamUrl": "https://liveeu-gcp.alkassdigital.net/shooflive/main.m3u8"
+  },
+  {
+    "id": "live_sport_alkass_shoof_2__1080p__11",
+    "type": "tv",
+    "name": "Alkass SHOOF 2 (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://shoof.alkass.net/assets/images/shoof2.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Alkass SHOOF 2 (1080p).",
+    "streamUrl": "https://liveeu-gcp.alkassdigital.net/shooflive2/main.m3u8"
+  },
+  {
+    "id": "live_sport_alkass_six__1080p__12",
+    "type": "tv",
+    "name": "Alkass Six (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/CrPSPSC.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Alkass Six (1080p).",
+    "streamUrl": "https://liveeu-gcp.alkassdigital.net/alkass6-p/main.m3u8"
+  },
+  {
+    "id": "live_sport_alkass_three__1080p__13",
+    "type": "tv",
+    "name": "Alkass Three (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/d57BdFh.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Alkass Three (1080p).",
+    "streamUrl": "https://liveeu-gcp.alkassdigital.net/alkass3-p/main.m3u8"
+  },
+  {
+    "id": "live_sport_alkass_two__1080p__14",
+    "type": "tv",
+    "name": "Alkass Two (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/8w61kFX.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Alkass Two (1080p).",
+    "streamUrl": "https://liveeu-gcp.alkassdigital.net/alkass2-p/main.m3u8"
+  },
+  {
+    "id": "live_sport_arena_sport_1_15",
+    "type": "tv",
+    "name": "Arena Sport 1 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/2qf67zW.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Arena Sport 1.",
+    "streamUrl": "http://88.212.15.19/live/test_arenasport/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_arena_sport_2_16",
+    "type": "tv",
+    "name": "Arena Sport 2 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/Yq3Jf19.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Arena Sport 2.",
+    "streamUrl": "http://88.212.15.19/live/test_arenasport_dva/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_arena_sport_4__1081p__17",
+    "type": "tv",
+    "name": "Arena Sport 4 (1081p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/h1XhGkz.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Arena Sport 4 (1081p).",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/67/index.m3u8"
+  },
+  {
+    "id": "live_sport_arena_sport_premium_1_bh__18",
+    "type": "tv",
+    "name": "Arena Sport Premium 1 BH (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://imgur.com/csv6YsL",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Arena Sport Premium 1 BH (1080p).",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/33/index.m3u8"
+  },
+  {
+    "id": "live_sport_arena_sport_premium_2_bh__19",
+    "type": "tv",
+    "name": "Arena Sport Premium 2 BH (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://imgur.com/ztOmQ7P",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Arena Sport Premium 2 BH (1080p).",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/48/index.m3u8"
+  },
+  {
+    "id": "live_sport_arryadia_20",
+    "type": "tv",
+    "name": "Arryadia (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/XjzK3gZ.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Arryadia.",
+    "streamUrl": "http://149.100.11.252:8000/play/a065/index.m3u8"
+  },
+  {
+    "id": "live_sport_as3_sport_tv__1080p__21",
+    "type": "tv",
+    "name": "AS3 Sport TV (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.ibb.co/bRmGbsyV/A3-SPORTTV.jpg",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from AS3 Sport TV (1080p).",
+    "streamUrl": "https://streamtv.as3sport.online:3394/hybrid/play.m3u8"
+  },
+  {
+    "id": "live_sport_atg_live__720p__22",
+    "type": "tv",
+    "name": "ATG Live (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/bPWFXkL.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ATG Live (720p).",
+    "streamUrl": "https://kanal75xto-llhls.akamaized.net/live/Data/atg-kanal-15-02a-rr/HLS-Legacy-HL/atg-kanal-15-02a-rr.m3u8"
+  },
+  {
+    "id": "live_sport_azteca_deportes_network___23",
+    "type": "tv",
+    "name": "Azteca Deportes Network (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://match-images.icdb.tv/5913207f2494844101287828e87625eb.jpg",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Azteca Deportes Network (1080p).",
+    "streamUrl": "http://181.119.66.28:8081/AZTECA-DEPORTES-HD/index.m3u8"
+  },
+  {
+    "id": "live_sport_bahrain_sports_1__720p____24",
+    "type": "tv",
+    "name": "Bahrain Sports 1 (720p) [Not 24/7] (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/fBpLsbC.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Bahrain Sports 1 (720p) [Not 24/7].",
+    "streamUrl": "https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_bahrain_sports_2__720p____25",
+    "type": "tv",
+    "name": "Bahrain Sports 2 (720p) [Not 24/7] (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/ZkuZmIo.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Bahrain Sports 2 (720p) [Not 24/7].",
+    "streamUrl": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_bein_sports_usa__1080p____26",
+    "type": "tv",
+    "name": "beIN Sports USA (1080p) [Geo-blocked] (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/BeIN_Sports_logo_%28vertical_version%29.svg/500px-BeIN_Sports_logo_%28vertical_version%29.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from beIN Sports USA (1080p) [Geo-blocked].",
+    "streamUrl": "https://messi.damitv.st/papi/ts/beinsports-usa/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_bein_sports_xtra__1080p__27",
+    "type": "tv",
+    "name": "beIN SPORTS XTRA (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.ibb.co/HT49GPmB/XTRA-2.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from beIN SPORTS XTRA (1080p).",
+    "streamUrl": "https://bein-xtra-bein.amagi.tv/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_bein_sports_xtra_en_espan_28",
+    "type": "tv",
+    "name": "beIN SPORTS XTRA en Espanol (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/V562tpO.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from beIN SPORTS XTRA en Espanol (1080p).",
+    "streamUrl": "http://201.190.41.246:9060/play/a03y/index.m3u8"
+  },
+  {
+    "id": "live_sport_bek_tv_sports_west__720p__29",
+    "type": "tv",
+    "name": "BEK TV Sports West (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/1l3t5jd.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from BEK TV Sports West (720p).",
+    "streamUrl": "https://cdn3.wowza.com/5/ZWQ1K2NYTmpFbGsr/BEK-WOWZA-1/smil:BEKPRIMEW.smil/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_belarus_5_hd__1080p__30",
+    "type": "tv",
+    "name": "Belarus-5 HD (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/NJsRFud.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Belarus-5 HD (1080p).",
+    "streamUrl": "http://178.124.179.122:8080/BT5/index.m3u8"
+  },
+  {
+    "id": "live_sport_billiard_tv__1080p___geo__31",
+    "type": "tv",
+    "name": "Billiard TV (1080p) [Geo-blocked] (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/BZijfKh.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Billiard TV (1080p) [Geo-blocked].",
+    "streamUrl": "https://pb-wm04vonaerv0k.akamaized.net/billi.m3u8"
+  },
+  {
+    "id": "live_sport_cazetv__1080i__32",
+    "type": "tv",
+    "name": "CazeTV (1080i) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/6/64/Caz%C3%A9TV_logo.svg/1280px-Caz%C3%A9TV_logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from CazeTV (1080i).",
+    "streamUrl": "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8"
+  },
+  {
+    "id": "live_sport_cbs_sports_hq__1080p___ge_33",
+    "type": "tv",
+    "name": "CBS Sports HQ (1080p) [Geo-blocked] (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/q8BENJg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from CBS Sports HQ (1080p) [Geo-blocked].",
+    "streamUrl": "https://propee33f9c2.airspace-cdn.cbsivideo.com/index.m3u8"
+  },
+  {
+    "id": "live_sport_cctv_5__34",
+    "type": "tv",
+    "name": "CCTV-5+ (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/OK8mdJV.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from CCTV-5+.",
+    "streamUrl": "https://myip.pdtvhd.com/Sports/streams/CCTV5pul.m3u8"
+  },
+  {
+    "id": "live_sport_cctv_16__1080p__35",
+    "type": "tv",
+    "name": "CCTV-16 (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/ZzV6JQp.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from CCTV-16 (1080p).",
+    "streamUrl": "http://74.91.26.218:82/live/cctv16hd.m3u8"
+  },
+  {
+    "id": "live_sport_cctv_billiards__1080p__36",
+    "type": "tv",
+    "name": "CCTV-Billiards (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/WK3keM9.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from CCTV-Billiards (1080p).",
+    "streamUrl": "http://38.75.136.137:98/gslb/dsdqpub/ystq.m3u8?auth=testpub"
+  },
+  {
+    "id": "live_sport_cctv_golf___tennis__1080p_37",
+    "type": "tv",
+    "name": "CCTV-Golf & Tennis (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/iqJJTmH.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from CCTV-Golf & Tennis (1080p).",
+    "streamUrl": "http://38.75.136.137:98/gslb/dsdqpub/gefwq.m3u8?auth=testpub"
+  },
+  {
+    "id": "live_sport_cctv_storm_football__1080_38",
+    "type": "tv",
+    "name": "CCTV-Storm Football (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/Fy6HkX0.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from CCTV-Storm Football (1080p).",
+    "streamUrl": "http://38.75.136.137:98/gslb/dsdqpub/fyzq.m3u8?auth=testpub"
+  },
+  {
+    "id": "live_sport_cricket_gold__1080p__39",
+    "type": "tv",
+    "name": "Cricket Gold (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://resources.cricket-australia.pulselive.com/cricket-australia/photo/2025/07/25/836eddae-4329-4542-ad17-dcd37e9d951a/Cricket-Gold-1920x1080_noBG.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Cricket Gold (1080p).",
+    "streamUrl": "https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/b2048bb8-1686-4432-aa50-647245383e0c/manifest.m3u8"
+  },
+  {
+    "id": "live_sport_crtv__720p__40",
+    "type": "tv",
+    "name": "CRTV (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i2.paste.pics/bf68b159547597c39574aec9dd7c626a.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from CRTV (720p).",
+    "streamUrl": "https://stmv2.voxtvhd.com.br/crtvchile/crtvchile/playlist.m3u8"
+  },
+  {
+    "id": "live_sport__t_sport__720p__41",
+    "type": "tv",
+    "name": "ČT Sport (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/%C4%8CT_sport_logo.png/960px-%C4%8CT_sport_logo.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ČT Sport (720p).",
+    "streamUrl": "http://88.212.15.19/live/test_ctsport_25p/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_dd_sports_sd__1080p__42",
+    "type": "tv",
+    "name": "DD Sports SD (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from DD Sports SD (1080p).",
+    "streamUrl": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8"
+  },
+  {
+    "id": "live_sport_deportes_por_movistar_plu_43",
+    "type": "tv",
+    "name": "Deportes por Movistar Plus+ (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=600",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Deportes por Movistar Plus+.",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/18/index.m3u8"
+  },
+  {
+    "id": "live_sport_digi_sport_1_44",
+    "type": "tv",
+    "name": "Digi Sport 1 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/5zMxDYq.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Digi Sport 1.",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/79/index.m3u8"
+  },
+  {
+    "id": "live_sport_divisport__1080p__45",
+    "type": "tv",
+    "name": "DiviSport (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.logos-download.com/114030/29915-s5120-904df224e4c030fefcc45adda448b6e8.png/DiviSport_Logo_2023-s5120.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from DiviSport (1080p).",
+    "streamUrl": "http://stream.mcquack.net/457/index.m3u8"
+  },
+  {
+    "id": "live_sport_equalympic__1080p__46",
+    "type": "tv",
+    "name": "Equalympic (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/ixSj4H7.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Equalympic (1080p).",
+    "streamUrl": "http://stream.mcquack.net/485/index.m3u8"
+  },
+  {
+    "id": "live_sport_equidia__1080p__47",
+    "type": "tv",
+    "name": "Equidia (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/QPpbRcZ.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Equidia (1080p).",
+    "streamUrl": "https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/equidia/live2.m3u8"
+  },
+  {
+    "id": "live_sport_espn__1080p__48",
+    "type": "tv",
+    "name": "ESPN (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/960px-ESPN_wordmark.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ESPN (1080p).",
+    "streamUrl": "http://181.78.197.59:8000/play/a07z/index.m3u8"
+  },
+  {
+    "id": "live_sport_espn_3__1080p__49",
+    "type": "tv",
+    "name": "ESPN 3 (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/ESPN3_Logo.png/960px-ESPN3_Logo.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ESPN 3 (1080p).",
+    "streamUrl": "http://190.83.2.182:8090/ESPN3/index.m3u8"
+  },
+  {
+    "id": "live_sport_espn_4__1080p__50",
+    "type": "tv",
+    "name": "ESPN 4 (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/ESPN_4_logo.svg/960px-ESPN_4_logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ESPN 4 (1080p).",
+    "streamUrl": "http://181.78.197.59:8000/play/a07n/index.m3u8"
+  },
+  {
+    "id": "live_sport_espn8_the_ocho__1080p__51",
+    "type": "tv",
+    "name": "ESPN8 The Ocho (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ESPN8 The Ocho (1080p).",
+    "streamUrl": "https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8"
+  },
+  {
+    "id": "live_sport_espn_deportes__720p__52",
+    "type": "tv",
+    "name": "ESPN Deportes (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/ESPN_Deportes.svg/960px-ESPN_Deportes.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ESPN Deportes (720p).",
+    "streamUrl": "http://40.160.24.58/ESPN_DEPORTES/index.m3u8"
+  },
+  {
+    "id": "live_sport_espnu__720p__53",
+    "type": "tv",
+    "name": "ESPNU (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/HiBrysh.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from ESPNU (720p).",
+    "streamUrl": "http://23.237.104.106:8080/USA_ESPNU/index.m3u8"
+  },
+  {
+    "id": "live_sport_esport3__1080p___not_24_7_54",
+    "type": "tv",
+    "name": "Esport3 (1080p) [Not 24/7] (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Esport3.svg/960px-Esport3.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Esport3 (1080p) [Not 24/7].",
+    "streamUrl": "https://directes-tv-int.3catdirectes.cat/live-content/esport3-hls/master.m3u8"
+  },
+  {
+    "id": "live_sport_f1_channel__1080p___geo_b_55",
+    "type": "tv",
+    "name": "F1 Channel (1080p) [Geo-blocked] (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/cjXzWsI.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from F1 Channel (1080p) [Geo-blocked].",
+    "streamUrl": "https://amg12058-c15studio-amg12058c1-lg-us-5787.playouts.now.amagi.tv/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fast_funbox_56",
+    "type": "tv",
+    "name": "Fast&FunBox (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/a9ZtP17.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Fast&FunBox.",
+    "streamUrl": "https://dash3.antik.sk/live/test_fast_and_funbox_medium_atk/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fb_tv_57",
+    "type": "tv",
+    "name": "FB TV (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/qBVqtYd.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FB TV.",
+    "streamUrl": "http://1hskrdto.rocketcdn.com/fenerbahcetv.smil/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fifa__french__720p__58",
+    "type": "tv",
+    "name": "FIFA+ French (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FIFA+ French (720p).",
+    "streamUrl": "https://37b4c228.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWZyX0ZJRkFQbHVzRnJlbmNoX0hMUw/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fifa__german__720p__59",
+    "type": "tv",
+    "name": "FIFA+ German (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FIFA+ German (720p).",
+    "streamUrl": "https://4397879b.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWRlX0ZJRkFQbHVzR2VybWFuX0hMUw/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fifa__hispanic_america__7_60",
+    "type": "tv",
+    "name": "FIFA+ Hispanic America (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FIFA+ Hispanic America (720p).",
+    "streamUrl": "https://6c849fb3.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctbXhfRklGQVBsdXNTcGFuaXNoLTFfSExT/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fifa__italy__720p__61",
+    "type": "tv",
+    "name": "FIFA+ Italy (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FIFA+ Italy (720p).",
+    "streamUrl": "https://5d95f7d7.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWl0X0ZJRkFQbHVzSXRhbGlhbl9ITFM/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fifa__portuguese__720p__62",
+    "type": "tv",
+    "name": "FIFA+ Portuguese (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FIFA+ Portuguese (720p).",
+    "streamUrl": "https://e3be9ac5.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctYnJfRklGQVBsdXNQb3J0dWd1ZXNlX0hMUw/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fifa__spain__720p__63",
+    "type": "tv",
+    "name": "FIFA+ Spain (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FIFA+ Spain (720p).",
+    "streamUrl": "https://d63fabad.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWVzX0ZJRkFQbHVzU3BhbmlzaF9ITFM/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fifa__united_states__720p_64",
+    "type": "tv",
+    "name": "FIFA+ United States (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FIFA+ United States (720p).",
+    "streamUrl": "https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-of5cbk3sav3w5/v1/sysdata_s_p_a_fifa_7/samsungheadend_us/latest/main/hls/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fifa__women__720p__65",
+    "type": "tv",
+    "name": "FIFA+ Women (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/xy9ZxVO.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FIFA+ Women (720p).",
+    "streamUrl": "https://cffda8ff.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c3dvbWVuX0hMUw/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_fightbox_66",
+    "type": "tv",
+    "name": "FightBox (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/mRsnztA.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FightBox.",
+    "streamUrl": "https://webtvstream.bhtelecom.ba/fightbox.m3u8"
+  },
+  {
+    "id": "live_sport_flohockey_24_7__1080p__67",
+    "type": "tv",
+    "name": "FloHockey 24/7 (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.fubo.tv/channel-config-ui/station-logos/on-dark/flohockey-white.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FloHockey 24/7 (1080p).",
+    "streamUrl": "https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_foot__68",
+    "type": "tv",
+    "name": "Foot+ (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/qsLLyn4.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Foot+.",
+    "streamUrl": "http://145.239.5.177/556a/index.m3u8"
+  },
+  {
+    "id": "live_sport_fox_deportes__720p__69",
+    "type": "tv",
+    "name": "Fox Deportes (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/FOX_Deportes_logo.png/960px-FOX_Deportes_logo.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Fox Deportes (720p).",
+    "streamUrl": "http://23.237.104.106:8080/USA_FOX_DEPORTES/index.m3u8"
+  },
+  {
+    "id": "live_sport_fox_sports_1__720p__70",
+    "type": "tv",
+    "name": "Fox Sports 1 (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/O9BapV9.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Fox Sports 1 (720p).",
+    "streamUrl": "http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8"
+  },
+  {
+    "id": "live_sport_futv_71",
+    "type": "tv",
+    "name": "FUTV (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/f8BkLql.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from FUTV.",
+    "streamUrl": "http://190.61.90.17:40000/play/a03v/index.m3u8"
+  },
+  {
+    "id": "live_sport_golf_channel__1080p___geo_72",
+    "type": "tv",
+    "name": "Golf Channel (1080p) [Geo-blocked] (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/Lgux6Ik.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Golf Channel (1080p) [Geo-blocked].",
+    "streamUrl": "https://messi.damitv.st/papi/ts/golfchannel-usa/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_golf_channel_latin_americ_73",
+    "type": "tv",
+    "name": "Golf Channel Latin America (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golf_Channel_Logo_2018.png/960px-Golf_Channel_Logo_2018.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Golf Channel Latin America (1080p).",
+    "streamUrl": "http://15.204.246.24:8080/GolfChannelHD/index.m3u8"
+  },
+  {
+    "id": "live_sport_goltv_latin_america__720p_74",
+    "type": "tv",
+    "name": "GolTV Latin America (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/pypul3s.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from GolTV Latin America (720p).",
+    "streamUrl": "http://177.234.249.178:8888/GOLTV/index.m3u8"
+  },
+  {
+    "id": "live_sport_jordan_sport__1080p__75",
+    "type": "tv",
+    "name": "Jordan Sport (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/2EmrZPQ.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Jordan Sport (1080p).",
+    "streamUrl": "http://93.184.10.248/JordanSport/index.m3u8"
+  },
+  {
+    "id": "live_sport_khl_prime__1080p__76",
+    "type": "tv",
+    "name": "KHL Prime (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/pwxT0ON.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from KHL Prime (1080p).",
+    "streamUrl": "http://stream.mcquack.net/178/index.m3u8"
+  },
+  {
+    "id": "live_sport_kozoom_tv__1080p__77",
+    "type": "tv",
+    "name": "Kozoom TV (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/M1Ee79b.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Kozoom TV (1080p).",
+    "streamUrl": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8"
+  },
+  {
+    "id": "live_sport_l1_max__1080p__78",
+    "type": "tv",
+    "name": "L1 Max (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/2fziU2B.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from L1 Max (1080p).",
+    "streamUrl": "http://190.93.224.42/LIGA-1-MAX/index.m3u8"
+  },
+  {
+    "id": "live_sport_liga_de_campeones_por_mov_79",
+    "type": "tv",
+    "name": "Liga de Campeones por Movistar Plus+ (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=600",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Liga de Campeones por Movistar Plus+.",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/36/index.m3u8"
+  },
+  {
+    "id": "live_sport_max_sport_1__720p__80",
+    "type": "tv",
+    "name": "Max Sport 1 (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/0ohnpql.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Max Sport 1 (720p).",
+    "streamUrl": "http://213.91.179.28:8000/play/a0as"
+  },
+  {
+    "id": "live_sport_max_sport_2__720p__81",
+    "type": "tv",
+    "name": "Max Sport 2 (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/33m1wPN.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Max Sport 2 (720p).",
+    "streamUrl": "http://213.91.179.28:8000/play/a0at"
+  },
+  {
+    "id": "live_sport_max_sport_3__720p__82",
+    "type": "tv",
+    "name": "Max Sport 3 (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/eGiGgZ2.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Max Sport 3 (720p).",
+    "streamUrl": "http://213.91.179.28:8000/play/a0ar"
+  },
+  {
+    "id": "live_sport_max_sport_4_83",
+    "type": "tv",
+    "name": "Max Sport 4 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/7IxXX6f.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Max Sport 4.",
+    "streamUrl": "http://213.91.179.28:8000/play/a05n"
+  },
+  {
+    "id": "live_sport_meridiano_tv__576p__84",
+    "type": "tv",
+    "name": "Meridiano TV (576p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/I6gsUqD.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Meridiano TV (576p).",
+    "streamUrl": "http://181.78.8.199:8000/play/a0fr/index.m3u8"
+  },
+  {
+    "id": "live_sport_mlb_strike_zone__720p__85",
+    "type": "tv",
+    "name": "MLB Strike Zone (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/uMI1ySO.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from MLB Strike Zone (720p).",
+    "streamUrl": "http://23.237.104.106:8080/USA_MLB_STRIKE_ZONE/index.m3u8"
+  },
+  {
+    "id": "live_sport_msg__720p__86",
+    "type": "tv",
+    "name": "MSG (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/SEQFh0P.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from MSG (720p).",
+    "streamUrl": "http://23.237.104.106:8080/USA_MSG/index.m3u8"
+  },
+  {
+    "id": "live_sport_nbc_sports_bay_area__1080_87",
+    "type": "tv",
+    "name": "NBC Sports Bay Area (1080p) [Geo-blocked] (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/MTgUVKx.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from NBC Sports Bay Area (1080p) [Geo-blocked].",
+    "streamUrl": "https://messi.damitv.st/papi/ts/nbc-sports-bayarea/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_nfl_network__720p__88",
+    "type": "tv",
+    "name": "NFL Network (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/NFL_Network_logo.svg/960px-NFL_Network_logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from NFL Network (720p).",
+    "streamUrl": "http://23.237.104.106:8080/USA_NFL_NETWORK/index.m3u8"
+  },
+  {
+    "id": "live_sport_okko_futbol__1080p__89",
+    "type": "tv",
+    "name": "Okko Futbol (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xml-epgservice.cdnvideo.ru/EPGService/hs/xmldata/852f4b92-cae5-463e-aad6-cd8844c5a49/logo/8986.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Okko Futbol (1080p).",
+    "streamUrl": "http://stream.mcquack.net/491/index.m3u8"
+  },
+  {
+    "id": "live_sport_premier_sports_1_90",
+    "type": "tv",
+    "name": "Premier Sports 1 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/eOybZMU.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Premier Sports 1.",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/47/index.m3u8"
+  },
+  {
+    "id": "live_sport_real_madrid_tv_english_91",
+    "type": "tv",
+    "name": "Real Madrid TV English (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/5pMo7dL.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Real Madrid TV English.",
+    "streamUrl": "http://88.212.15.19/live/real_madrid_tv/index.m3u8"
+  },
+  {
+    "id": "live_sport_rmc_sport_1_92",
+    "type": "tv",
+    "name": "RMC Sport 1 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/NsFTG7u.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from RMC Sport 1.",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/59/index.m3u8"
+  },
+  {
+    "id": "live_sport_setanta_sports_1_eurasia__93",
+    "type": "tv",
+    "name": "Setanta Sports 1 Eurasia (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/zlJK7ca.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Setanta Sports 1 Eurasia (1080p).",
+    "streamUrl": "http://stream.mcquack.net/234/index.m3u8"
+  },
+  {
+    "id": "live_sport_spiler_1_94",
+    "type": "tv",
+    "name": "Spiler 1 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/pbk8c4x.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Spiler 1.",
+    "streamUrl": "http://88.212.15.19/live/spiler1/index.m3u8"
+  },
+  {
+    "id": "live_sport_spiler_2_95",
+    "type": "tv",
+    "name": "Spiler 2 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/1e0VsVH.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Spiler 2.",
+    "streamUrl": "http://88.212.15.19/live/spiler2/index.m3u8"
+  },
+  {
+    "id": "live_sport_sport1_96",
+    "type": "tv",
+    "name": "Sport1 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/X5X3tKC.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Sport1.",
+    "streamUrl": "http://88.212.15.19/live/test_sport1_25p/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_sport_1_97",
+    "type": "tv",
+    "name": "Sport 1 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/X5X3tKC.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Sport 1.",
+    "streamUrl": "http://88.212.15.19/live/sport1_hun/index.m3u8"
+  },
+  {
+    "id": "live_sport_sport2_98",
+    "type": "tv",
+    "name": "Sport2 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/UxflVoU.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Sport2.",
+    "streamUrl": "http://88.212.15.19/live/test_sport_2/playlist.m3u8"
+  },
+  {
+    "id": "live_sport_sport_2_99",
+    "type": "tv",
+    "name": "Sport 2 (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/UxflVoU.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Sport 2.",
+    "streamUrl": "http://88.212.15.19/live/sport2_hun/index.m3u8"
+  },
+  {
+    "id": "live_sport_sport_tv__1080p__100",
+    "type": "tv",
+    "name": "Sport TV (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://www.beltelecom.by/sites/default/files/styles/200200/public/tv-channels/2025-10/sporttv.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Sport TV (1080p).",
+    "streamUrl": "http://178.124.179.122:8080/SportTV/mpegts"
+  },
+  {
+    "id": "live_sport_sportdigital_fussball_101",
+    "type": "tv",
+    "name": "Sportdigital FUSSBALL (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/NDbWxqF.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Sportdigital FUSSBALL.",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/15/index.m3u8"
+  },
+  {
+    "id": "live_sport_sportv_3__720p__102",
+    "type": "tv",
+    "name": "SporTV 3 (720p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/mWOR8pi.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from SporTV 3 (720p).",
+    "streamUrl": "http://170.83.49.66:8083/SPORTV3HD/index.m3u8"
+  },
+  {
+    "id": "live_sport_star_sports_1_hd__1080p__103",
+    "type": "tv",
+    "name": "Star Sports 1 HD (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/E5jjKHI.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Star Sports 1 HD (1080p).",
+    "streamUrl": "http://41.205.93.154/STARSPORTS1/index.m3u8"
+  },
+  {
+    "id": "live_sport_star_sports_1_hindi__576p_104",
+    "type": "tv",
+    "name": "Star Sports 1 Hindi (576p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HINDI/images/LOGO_HD/image.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Star Sports 1 Hindi (576p).",
+    "streamUrl": "http://103.253.18.58:8000/play/a03o"
+  },
+  {
+    "id": "live_sport_star_sports_1_hindi_hd_105",
+    "type": "tv",
+    "name": "Star Sports 1 Hindi HD (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_1_HD_HINDI/images/LOGO_HD/image.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Star Sports 1 Hindi HD.",
+    "streamUrl": "http://103.253.18.58:8000/play/a00t"
+  },
+  {
+    "id": "live_sport_star_sports_khel__1080p__106",
+    "type": "tv",
+    "name": "Star Sports Khel (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_SPORTS_KHEL/images/LOGO_HD/LOGO_HD_image.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Star Sports Khel (1080p).",
+    "streamUrl": "http://103.175.73.12:8080/live/151/151_0.m3u8"
+  },
+  {
+    "id": "live_sport_suspilne__sport__1080p__107",
+    "type": "tv",
+    "name": "Suspilne. Sport (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/16IhU0M.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Suspilne. Sport (1080p).",
+    "streamUrl": "http://stream.mcquack.net/444/index.m3u8"
+  },
+  {
+    "id": "live_sport_tigo_sports__108",
+    "type": "tv",
+    "name": "Tigo Sports+ (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Tigo_Sports_2025.png/960px-Tigo_Sports_2025.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Tigo Sports+.",
+    "streamUrl": "http://45.170.130.224:8000/play/a04i/index.m3u8"
+  },
+  {
+    "id": "live_sport_tv_2_sport_109",
+    "type": "tv",
+    "name": "TV 2 Sport (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/76Zzs5R.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from TV 2 Sport.",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/57/index.m3u8"
+  },
+  {
+    "id": "live_sport_tyc_sports__1080p__110",
+    "type": "tv",
+    "name": "TyC Sports (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TyC_Sports_logo.svg/960px-TyC_Sports_logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from TyC Sports (1080p).",
+    "streamUrl": "http://45.181.87.106/TYCSPORTSHD/index.m3u8"
+  },
+  {
+    "id": "live_sport_tyc_sports_usa_111",
+    "type": "tv",
+    "name": "TyC Sports USA (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TyC_Sports_logo.svg/960px-TyC_Sports_logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from TyC Sports USA.",
+    "streamUrl": "http://45.170.130.224:8000/play/a020/index.m3u8"
+  },
+  {
+    "id": "live_sport_udar__1080p__112",
+    "type": "tv",
+    "name": "UDAR (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://mt.media/upload/iblock/2b3/2b3cf99141bf7f99cda377eec62ec084.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from UDAR (1080p).",
+    "streamUrl": "http://5.188.159.128:8070/udar/index.m3u8"
+  },
+  {
+    "id": "live_sport_viju__sport__576p__113",
+    "type": "tv",
+    "name": "viju+ Sport (576p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/fXESG0l.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from viju+ Sport (576p).",
+    "streamUrl": "http://stream.mcquack.net/333/index.m3u8"
+  },
+  {
+    "id": "live_sport_win_sports__1080p__114",
+    "type": "tv",
+    "name": "Win Sports (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/DuSSrHV.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Win Sports (1080p).",
+    "streamUrl": "http://138.121.15.230:9002/WIN-SPORT/index.m3u8"
+  },
+  {
+    "id": "live_sport_ziggo_sport_5__1080p__115",
+    "type": "tv",
+    "name": "Ziggo Sport 5 (1080p) (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ziggo_Sport_logo.svg/960px-Ziggo_Sport_logo.svg.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Ziggo Sport 5 (1080p).",
+    "streamUrl": "http://145.239.5.177/349/index.m3u8"
+  },
+  {
+    "id": "live_sport_zona_dazn_116",
+    "type": "tv",
+    "name": "Zona DAZN (Live)",
+    "genre": "Sports",
+    "genres": [
+      "Sports",
+      "News and Sports",
+      "24/7 Live Channels"
+    ],
+    "poster": "https://i.imgur.com/Jop3Vip.png",
+    "background": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1920",
+    "description": "Live sports broadcast, matches, racing, extreme athletics, and highlights from Zona DAZN.",
+    "streamUrl": "https://7nyaler.streamhostingcdn.top/stream/24/index.m3u8"
   }
 ]
