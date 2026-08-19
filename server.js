@@ -1203,12 +1203,42 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
 
     const streams = [];
 
-    // Search Easynews for direct high-speed video streams
+    // ── Routing Orchestrator — choose best source, fallback on failure ────────
     if (movieTitle) {
-      const enStreams = await searchEasynews(movieTitle, movieYear);
-      if (enStreams && enStreams.length > 0) {
-        streams.push(...enStreams);
+      const routing = decideRouting(movieTitle, movieYear);
+
+      console.log('[Router] ROUTING_DECISION:');
+      console.log(`  Primary Source  : ${routing.primary || 'none'}`);
+      console.log(`  Secondary Source: ${routing.secondary || 'none'}`);
+      console.log(`  Fallback        : ${routing.fallback}`);
+      routing.notes.forEach(n => console.log(`  Note: ${n}`));
+
+      // Try primary source
+      let sourceStreams = [];
+      if (routing.primary) {
+        sourceStreams = await fetchFromSource(
+          routing.primary, movieTitle, movieYear,
+          process.env.EASYNEWS_USER || 'aibutzkxjw',
+          process.env.EASYNEWS_PASS || 'hjmm-rwbe-pkbg'
+        );
       }
+
+      // Primary returned nothing — activate secondary
+      if (sourceStreams.length === 0 && routing.secondary) {
+        console.log(`[Router] Primary source dry — activating secondary: ${routing.secondary}`);
+        sourceStreams = await fetchFromSource(
+          routing.secondary, movieTitle, movieYear,
+          process.env.EASYNEWS_USER || 'aibutzkxjw',
+          process.env.EASYNEWS_PASS || 'hjmm-rwbe-pkbg'
+        );
+      }
+
+      if (sourceStreams.length > 0) {
+        streams.push(...sourceStreams);
+      } else {
+        console.log('[Router] All sources returned 0 streams — YouTube trailer fallback active.');
+      }
+      // YouTube trailer fallback is always appended below regardless
     }
 
     // Fetch YouTube Trailers as fallback
@@ -1239,54 +1269,442 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
   }
 });
 
+// ─────────────────────────────────────────────────────────────────────────────
+// ROUTING ORCHESTRATOR — Predictive Source Selection + Fallback Logic
+// ─────────────────────────────────────────────────────────────────────────────
+
+// In-memory success/failure history per source (resets on server restart)
+const routingHistory = {
+  easynews: { hits: 0, misses: 0 },
+  torbox:   { hits: 0, misses: 0 },
+  debrid:   { hits: 0, misses: 0 }
+};
+
+/** Record a hit or miss for a source after each stream attempt. */
+function recordRouteResult(source, success) {
+  if (!routingHistory[source]) routingHistory[source] = { hits: 0, misses: 0 };
+  if (success) routingHistory[source].hits++;
+  else         routingHistory[source].misses++;
+}
+
+/** Success rate (0.0–1.0). Returns 1.0 if no history yet (optimistic start). */
+function successRate(source) {
+  const h = routingHistory[source] || { hits: 0, misses: 0 };
+  const total = h.hits + h.misses;
+  return total === 0 ? 1.0 : h.hits / total;
+}
+
+/**
+ * decideRouting(title, year, options)
+ *
+ * Routing priority rules:
+ *  1. Highest historical success rate wins primary slot.
+ *  2. Sources below 20% success rate are demoted to last resort.
+ *  3. Secondary = next-best available source.
+ *  4. Fallback = youtube_trailer (always available via TMDB).
+ *
+ * Returns: { primary, secondary, fallback, notes }
+ */
+function decideRouting(title, year, options = {}) {
+  const notes = [];
+
+  const hasEasynews = true; // always present (hardcoded credentials as default)
+  const hasTorBox   = !!(process.env.TORBOX_API_KEY || config.torboxApiKey);
+  const hasDebrid   = !!(process.env.DEBRID_API_KEY  || config.debridApiKey);
+
+  const candidates = [];
+
+  if (hasEasynews) {
+    const rate = successRate('easynews');
+    candidates.push({ source: 'easynews', rate, priority: 1 });
+    notes.push(`Easynews success rate: ${(rate * 100).toFixed(0)}%`);
+  }
+  if (hasTorBox) {
+    const rate = successRate('torbox');
+    candidates.push({ source: 'torbox', rate, priority: 2 });
+    notes.push(`TorBox success rate: ${(rate * 100).toFixed(0)}%`);
+  }
+  if (hasDebrid) {
+    const rate = successRate('debrid');
+    candidates.push({ source: 'debrid', rate, priority: 3 });
+    notes.push(`Debrid success rate: ${(rate * 100).toFixed(0)}%`);
+  }
+
+  if (candidates.length === 0) {
+    notes.push('No stream sources configured — YouTube trailer fallback only.');
+    return { primary: null, secondary: null, fallback: 'youtube_trailer', notes };
+  }
+
+  // Sort: highest success rate first; break ties by default priority
+  candidates.sort((a, b) => b.rate - a.rate || a.priority - b.priority);
+
+  // Demote sources with catastrophically low rates but never drop all of them
+  const viable = candidates.filter(c => c.rate >= 0.2);
+  const ranked = viable.length > 0 ? viable : candidates;
+
+  const primary   = ranked[0]?.source || null;
+  const secondary = ranked[1]?.source || null;
+
+  if (ranked[0] && ranked[0].rate < 0.5 && (ranked[0].hits + ranked[0].misses) > 0) {
+    notes.push(`⚠️ Primary "${primary}" is degraded (${(ranked[0].rate * 100).toFixed(0)}% success rate).`);
+  }
+  if (secondary) {
+    notes.push(`Secondary "${secondary}" — activates if primary returns 0 streams.`);
+  }
+
+  return { primary, secondary, fallback: 'youtube_trailer', notes };
+}
+
+/**
+ * fetchFromSource — dispatches to the correct search function,
+ * records the outcome into routingHistory.
+ */
+async function fetchFromSource(source, title, year, username, password) {
+  try {
+    let streams = [];
+    if      (source === 'easynews') streams = await searchEasynews(title, year, username, password);
+    else if (source === 'torbox')   streams = await searchTorBox(title, year);
+    else if (source === 'debrid')   streams = await searchDebrid(title, year);
+    recordRouteResult(source, streams.length > 0);
+    console.log(`[Router] Source "${source}" returned ${streams.length} streams.`);
+    return streams;
+  } catch (err) {
+    console.error(`[Router] Source "${source}" threw an error:`, err.message);
+    recordRouteResult(source, false);
+    return [];
+  }
+}
+
+// ── TorBox stub — wire your real TorBox API here ──────────────────────────────
+async function searchTorBox(title, year) {
+  const apiKey = process.env.TORBOX_API_KEY || config.torboxApiKey;
+  if (!apiKey) return [];
+  // TODO: implement real TorBox /torrents/search endpoint:
+  // const res = await fetch(
+  //   `https://api.torbox.app/v1/api/torrents/search?query=${encodeURIComponent(title + ' ' + year)}&limit=20`,
+  //   { headers: { 'Authorization': `Bearer ${apiKey}` } }
+  // );
+  // const data = await res.json();
+  // Parse results → parseReleaseMetadata() → scoreStream() → sort → return Stremio stream objects
+  console.log('[TorBox] Stub — configure TORBOX_API_KEY to enable.');
+  return [];
+}
+
+// ── Debrid stub — wire your real Real-Debrid / AllDebrid API here ─────────────
+async function searchDebrid(title, year) {
+  const apiKey = process.env.DEBRID_API_KEY || config.debridApiKey;
+  if (!apiKey) return [];
+  // TODO: implement Real-Debrid /torrents or AllDebrid unrestrict.link endpoint
+  console.log('[Debrid] Stub — configure DEBRID_API_KEY to enable.');
+  return [];
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AI QUALITY RANKER — Layer 1: Release Metadata Parser
+// ─────────────────────────────────────────────────────────────────────────────
+function parseReleaseMetadata(filename, sizeBytes = 0) {
+  const f = filename.toUpperCase();
+
+  // Resolution
+  let resolution = 'SD';
+  if (/\b(2160P|4K|UHD)\b/.test(f)) resolution = '4K';
+  else if (/\b(1080P|FHD)\b/.test(f)) resolution = '1080p';
+  else if (/\b(720P)\b/.test(f)) resolution = '720p';
+  else if (/\b(480P|576P)\b/.test(f)) resolution = '480p';
+
+  // Dynamic Range
+  let dynamicRange = 'SDR';
+  if (/\b(DOVI|DOLBY\.?VISION|DV)\b/.test(f)) dynamicRange = 'DoVi';
+  else if (/HDR10\+/.test(f)) dynamicRange = 'HDR10+';
+  else if (/\bHDR\b/.test(f)) dynamicRange = 'HDR';
+
+  // Video Codec
+  let videoCodec = 'Unknown';
+  let isRemux = false;
+  if (/\bREMUX\b/.test(f)) { videoCodec = 'REMUX'; isRemux = true; }
+  else if (/\b(X265|H\.?265|HEVC)\b/.test(f)) videoCodec = 'HEVC';
+  else if (/\b(X264|H\.?264|AVC)\b/.test(f)) videoCodec = 'AVC';
+  else if (/\bAV1\b/.test(f)) videoCodec = 'AV1';
+
+  // Audio Codec
+  let audioCodec = 'Unknown';
+  if (/TRUEHD.{0,10}ATMOS|ATMOS.{0,10}TRUEHD/.test(f)) audioCodec = 'TrueHD Atmos';
+  else if (/\bTRUEHD\b/.test(f)) audioCodec = 'TrueHD';
+  else if (/DTS[-.]?HD.{0,6}MA/.test(f)) audioCodec = 'DTS-HD MA';
+  else if (/DTS[-.]?X\b/.test(f)) audioCodec = 'DTS-X';
+  else if (/\b(EAC3|DD\+|DDPLUS|DOLBY\.?DIGITAL\.?PLUS)\b/.test(f)) audioCodec = 'DD+';
+  else if (/\bDTS\b/.test(f)) audioCodec = 'DTS';
+  else if (/\bAAC\b/.test(f)) audioCodec = 'AAC';
+  else if (/\bAC3\b/.test(f)) audioCodec = 'AC3';
+  else if (/\bMP3\b/.test(f)) audioCodec = 'MP3';
+
+  // Audio Channels
+  let audioChannels = '';
+  if (/7\.1/.test(f)) audioChannels = '7.1';
+  else if (/5\.1/.test(f)) audioChannels = '5.1';
+  else if (/2\.0/.test(f)) audioChannels = '2.0';
+
+  // Container
+  let container = 'mkv';
+  const extMatch = filename.match(/\.(mkv|mp4|avi|ts|m2ts|mov)$/i);
+  if (extMatch) container = extMatch[1].toLowerCase();
+
+  // Multi-part RAR — not direct-streamable by Stremio
+  const isMultiPart = /\.(rar|r\d{2})$/i.test(filename) || /\.part\d+\.rar$/i.test(filename);
+
+  // Release group — segment after last dash/dot before extension
+  let releaseGroup = 'Unknown';
+  const groupMatch = filename.replace(/\.(mkv|mp4|avi|ts|m2ts|mov|rar)$/i, '').match(/[-.]([A-Za-z0-9]+)$/);
+  if (groupMatch) releaseGroup = groupMatch[1].toUpperCase();
+
+  // File size & estimated bitrate (120-min default runtime)
+  const sizeGb = sizeBytes > 0 ? sizeBytes / (1024 ** 3) : 0;
+  const bitrateEstimate = sizeGb > 0 ? (sizeGb * 8192) / 120 : 0; // Mbps
+
+  return {
+    resolution, dynamicRange, videoCodec, isRemux,
+    audioCodec, audioChannels, container, isMultiPart,
+    releaseGroup, sizeGb, bitrateEstimate
+  };
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AI QUALITY RANKER — Layer 2: Deterministic Scorer (0–100)
+// ─────────────────────────────────────────────────────────────────────────────
+function scoreStream(meta) {
+  let score = 0;
+
+  // ── Video Quality (max 35 pts) ──────────────────────────────────────────
+  const resScore = { '4K': 35, '1080p': 28, '720p': 18, '480p': 8, 'SD': 5 };
+  score += resScore[meta.resolution] || 8;
+
+  // Dynamic range bonus
+  if (meta.dynamicRange === 'DoVi') score += 4;
+  else if (meta.dynamicRange === 'HDR10+') score += 3;
+  else if (meta.dynamicRange === 'HDR') score += 2;
+
+  // Codec bonus
+  if (meta.isRemux) score += 5;
+  else if (meta.videoCodec === 'HEVC') score += 3;
+  else if (meta.videoCodec === 'AV1') score += 2;
+
+  // Bitrate sanity penalties
+  if (meta.resolution === '4K') {
+    if (meta.bitrateEstimate > 0 && meta.bitrateEstimate < 15) score -= 8;
+    if (meta.bitrateEstimate > 80) score -= 3;
+  } else if (meta.resolution === '1080p') {
+    if (meta.bitrateEstimate > 0 && meta.bitrateEstimate < 5) score -= 6;
+  }
+
+  // ── Audio Quality (max 20 pts) ──────────────────────────────────────────
+  const audioScore = {
+    'TrueHD Atmos': 20, 'TrueHD': 17, 'DTS-HD MA': 16, 'DTS-X': 15,
+    'DD+': 11, 'DTS': 10, 'AC3': 7, 'AAC': 6, 'MP3': 2, 'Unknown': 4
+  };
+  score += audioScore[meta.audioCodec] || 4;
+  if (meta.audioChannels === '7.1') score += 2;
+  else if (meta.audioChannels === '5.1') score += 1;
+
+  // ── Release Group Reputation (max 20 pts) ──────────────────────────────
+  const TIER1 = new Set(['FRAMESTR', 'FRAMESTOR', 'EPSILON', 'FLUX', 'DON', 'PLAYBD', 'HIFI', 'BHYS', 'JETIX', 'MZABI']);
+  const TIER2 = new Set(['QXR', 'CTRLHD', 'DZ0N3', 'NCMT', 'HIDT', 'SBEASTS', 'TIGOLE', 'BHDSTUDIO', 'TEPES', 'LAZYCUNTS']);
+  const TIER3 = new Set(['YIFY', 'YTS', 'GALAXYRG', 'PSA', 'MEGUSTA', 'EZTV', 'ETTV', 'ION10', 'SPARKS', 'RARBG']);
+
+  const grp = meta.releaseGroup.replace(/[-_.]/g, '');
+  if (TIER1.has(grp)) score += 20;
+  else if (TIER2.has(grp)) score += 15;
+  else if (TIER3.has(grp)) score += 5;
+  else score += 10; // Unknown — neutral
+
+  // ── Playback Stability (max 25 pts) ────────────────────────────────────
+  if (meta.isMultiPart) {
+    score -= 20; // Cannot direct-stream in Stremio
+  } else if (meta.container === 'mkv' || meta.container === 'mp4') {
+    score += 25;
+  } else if (meta.container === 'ts' || meta.container === 'm2ts') {
+    score += 20;
+  } else if (meta.container === 'avi') {
+    score += 12;
+  } else {
+    score += 10;
+  }
+
+  // File too small to be legit for declared resolution
+  if (meta.resolution === '4K' && meta.sizeGb > 0 && meta.sizeGb < 5) score -= 10;
+  else if (meta.resolution === '1080p' && meta.sizeGb > 0 && meta.sizeGb < 0.5) score -= 10;
+
+  return Math.max(0, Math.min(100, Math.round(score)));
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// AI QUALITY RANKER — Layer 3: Optional Gemini Re-Ranker (3 s hard timeout)
+// ─────────────────────────────────────────────────────────────────────────────
+async function rankWithGemini(candidates, movieTitle) {
+  const apiKey = config.geminiApiKey || process.env.GEMINI_API_KEY;
+  if (!apiKey || candidates.length === 0) return candidates;
+
+  const summaries = candidates.slice(0, 10).map((c, i) => ({
+    index: i,
+    filename: c._rawName,
+    score: c._score,
+    resolution: c._meta.resolution,
+    videoCodec: c._meta.videoCodec,
+    audioCodec: c._meta.audioCodec,
+    group: c._meta.releaseGroup,
+    sizeGb: c._meta.sizeGb.toFixed(2)
+  }));
+
+  const prompt = `You are an AI stream quality ranker for the movie "${movieTitle}".
+Below are Usenet releases with deterministic quality scores (0-100).
+Adjust each score by at most ±10 based on release group reputation, bitrate sanity, or known bad encodes.
+Return ONLY a raw JSON array — no markdown: [{"index":0,"adjustedScore":92},...]
+
+Releases:
+${JSON.stringify(summaries)}`;
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 3000);
+
+    const resp = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { temperature: 0.1 }
+        })
+      }
+    );
+    clearTimeout(timeoutId);
+
+    if (!resp.ok) return candidates;
+    const data = await resp.json();
+    let text = (data?.candidates?.[0]?.content?.parts?.[0]?.text || '').trim();
+    text = text.replace(/```json|```/gi, '').trim();
+
+    let adjustments;
+    try { adjustments = JSON.parse(text); } catch { return candidates; }
+
+    if (Array.isArray(adjustments)) {
+      adjustments.forEach(adj => {
+        if (typeof adj.index === 'number' && candidates[adj.index]) {
+          candidates[adj.index]._score = Math.max(0, Math.min(100, Math.round(adj.adjustedScore)));
+          candidates[adj.index]._aiRanked = true;
+        }
+      });
+      console.log(`[AI Ranker] Gemini re-ranked ${adjustments.length} streams for "${movieTitle}".`);
+    }
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      console.warn('[AI Ranker] Gemini re-rank timed out — falling back to deterministic scores.');
+    } else {
+      console.warn('[AI Ranker] Gemini re-rank skipped:', err.message);
+    }
+  }
+
+  return candidates;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Easynews Search + AI Quality Ranking Pipeline
+// ─────────────────────────────────────────────────────────────────────────────
 async function searchEasynews(title, year = '', username = 'aibutzkxjw', password = 'hjmm-rwbe-pkbg') {
   try {
     const query = `${title} ${year}`.trim();
-    const searchUrl = `https://members.easynews.com/2.0/search/solr-search/?gps=${encodeURIComponent(query)}&fty[]=VIDEO&pby=12&sb=1`;
+    // Fetch 30 candidates so the ranker has a real pool to work with
+    const searchUrl = `https://members.easynews.com/2.0/search/solr-search/?gps=${encodeURIComponent(query)}&fty[]=VIDEO&pby=30&sb=1`;
     const authHeader = 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64');
 
     const res = await fetch(searchUrl, {
-      headers: {
-        'Authorization': authHeader,
-        'User-Agent': 'Mozilla/5.0'
-      }
+      headers: { 'Authorization': authHeader, 'User-Agent': 'Mozilla/5.0' }
     });
 
-    if (!res.ok) return [];
+    if (!res.ok) {
+      console.warn(`[Easynews] Search returned HTTP ${res.status} for "${query}"`);
+      return [];
+    }
 
     const data = await res.json();
     const items = data.data || [];
-    const streams = [];
+
+    // ── Parse & score each result ─────────────────────────────────────────
+    const candidates = [];
 
     for (const item of items) {
-      const hash = item['0'] || item['hash'];
-      const fn = item['10'] || item['fn'] || '';
-      const ext = item['11'] || item['extension'] || '.mkv';
+      const hash    = item['0'] || item['hash'];
+      const fn      = item['10'] || item['fn'] || '';
+      const ext     = item['11'] || item['extension'] || '.mkv';
       const rawName = item['6'] || item['subject'] || `${fn}${ext}`;
-      const rawSize = item['size'] || item['rawSize'] || 0;
-      const sizeGb = (rawSize / (1024 * 1024 * 1024)).toFixed(2);
+      const rawSize = item['4'] || item['size'] || item['rawSize'] || 0;
 
       if (!hash || !fn) continue;
 
-      const streamUrl = `https://${username}:${password}@members.easynews.com/dl/${hash}/${encodeURIComponent(fn + ext)}`;
+      const fullFilename = fn + ext;
 
-      let quality = '1080p';
-      if (rawName.includes('2160p') || rawName.includes('4K') || rawName.includes('4k') || rawName.includes('UHD')) quality = '4K Ultra HD';
-      else if (rawName.includes('1080p') || rawName.includes('FHD')) quality = '1080p HD';
-      else if (rawName.includes('720p') || rawName.includes('HD')) quality = '720p HD';
+      // Skip unplayable multi-part RARs up-front
+      if (/\.(r\d{2}|rar)$/i.test(fullFilename) || /\.part\d+\.rar$/i.test(fullFilename)) {
+        console.log(`[AI Ranker] Skipping unplayable multi-part RAR: ${fullFilename}`);
+        continue;
+      }
 
-      streams.push({
-        name: `⚡ Easynews (${quality})`,
-        title: `${rawName.replace(/\.mkv|\.mp4/gi, '').slice(0, 85)}\n💾 ${sizeGb} GB • 🚀 High-Speed Usenet`,
-        url: streamUrl,
-        behaviorHints: {
-          notWebReady: false
-        }
+      const meta  = parseReleaseMetadata(fullFilename, rawSize);
+      const score = scoreStream(meta);
+      const streamUrl = `https://${username}:${password}@members.easynews.com/dl/${hash}/${encodeURIComponent(fullFilename)}`;
+
+      candidates.push({
+        _rawName: rawName,
+        _filename: fullFilename,
+        _score: score,
+        _meta: meta,
+        _aiRanked: false,
+        streamUrl
       });
     }
-    return streams;
+
+    if (candidates.length === 0) return [];
+
+    // ── Optional Gemini re-rank (parallel to avoid blocking) ─────────────
+    await rankWithGemini(candidates, title);
+
+    // ── Sort best → worst ─────────────────────────────────────────────────
+    candidates.sort((a, b) => b._score - a._score);
+
+    console.log(`[AI Ranker] Ranked ${candidates.length} streams for "${title}" — top score: ${candidates[0]._score}`);
+
+    // ── Build enriched Stremio stream objects ─────────────────────────────
+    return candidates.map((c, i) => {
+      const m = c._meta;
+      const rank = i + 1;
+      const scoreLabel  = c._aiRanked ? `[AI: ${c._score}]` : `[Score: ${c._score}]`;
+      const recommended = c._score >= 75 ? '✅ Recommended'
+                        : c._score >= 50 ? '⚠️ Acceptable'
+                        : '❌ Low Quality';
+
+      // Build compact quality line
+      const drBadge    = m.dynamicRange !== 'SDR' ? ` ${m.dynamicRange}` : '';
+      const codecBadge = m.isRemux ? ' REMUX' : (m.videoCodec !== 'Unknown' ? ` ${m.videoCodec}` : '');
+      const audioBadge = m.audioCodec !== 'Unknown'
+                          ? `${m.audioCodec}${m.audioChannels ? ' ' + m.audioChannels : ''}`
+                          : 'Audio';
+      const sizeBadge  = m.sizeGb > 0 ? `📦 ${m.sizeGb.toFixed(1)} GB` : '';
+      const groupBadge = m.releaseGroup !== 'Unknown' ? `🏷️ ${m.releaseGroup}` : '';
+
+      const qualityLine = `🎬 ${m.resolution}${drBadge}${codecBadge} | ${audioBadge}`;
+      const metaLine    = [sizeBadge, groupBadge].filter(Boolean).join(' | ');
+
+      return {
+        name: `${scoreLabel} Easynews #${rank}`,
+        title: `${qualityLine}\n${metaLine ? metaLine + '\n' : ''}${recommended}`,
+        url: c.streamUrl,
+        behaviorHints: { notWebReady: false }
+      };
+    });
+
   } catch (err) {
-    console.error('Easynews search error:', err.message);
+    console.error('[Easynews] Search error:', err.message);
     return [];
   }
 }
@@ -1294,6 +1712,30 @@ async function searchEasynews(title, year = '', username = 'aibutzkxjw', passwor
 // REST API for Dashboard UI
 app.get('/api/subgenres', (req, res) => {
   res.json(SUBGENRES);
+});
+
+// Routing Orchestrator status — live hit/miss counts and success rates per source
+app.get('/api/routing', (req, res) => {
+  const status = {};
+  for (const [source, data] of Object.entries(routingHistory)) {
+    const total = data.hits + data.misses;
+    status[source] = {
+      hits: data.hits,
+      misses: data.misses,
+      total,
+      successRate: total === 0 ? 'No data yet' : `${((data.hits / total) * 100).toFixed(1)}%`
+    };
+  }
+  const decision = decideRouting('(status check)', '');
+  res.json({
+    history: status,
+    currentDecision: {
+      primary: decision.primary,
+      secondary: decision.secondary,
+      fallback: decision.fallback,
+      notes: decision.notes
+    }
+  });
 });
 
 app.get('/api/collections', (req, res) => {
