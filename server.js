@@ -1229,6 +1229,15 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
     if (movieTitle) {
       const routing = decideRouting(movieTitle, movieYear);
 
+      // Update dashboard state
+      dashboardState.lastSearch = `${movieTitle} (${movieYear})`;
+      dashboardState.decision = {
+        primarySource: routing.primary || 'none',
+        secondarySource: routing.secondary || 'none',
+        fallbackStrategy: routing.fallback,
+        notes: routing.notes.join(' | ')
+      };
+
       console.log('[Router] ROUTING_DECISION:');
       console.log(`  Primary Source  : ${routing.primary || 'none'}`);
       console.log(`  Secondary Source: ${routing.secondary || 'none'}`);
@@ -1543,8 +1552,16 @@ async function enrichMetadata(imdbId, tmdbId, title, year, isTv = false, apiKey)
 // ROUTING ORCHESTRATOR — Predictive Source Selection + Fallback Logic
 // ─────────────────────────────────────────────────────────────────────────────
 
+// ── Dashboard UI State ────────────────────────────────────────────────────────
+const dashboardState = {
+  lastSearch: 'No searches yet',
+  decision: { primarySource: 'none', secondarySource: 'none', fallbackStrategy: 'youtube', notes: '' },
+  rankedStreams: []
+};
+
 // In-memory success/failure history per source (resets on server restart)
 const routingHistory = {
+
   easynews: { hits: 0, misses: 0 },
   torbox:   { hits: 0, misses: 0 },
   debrid:   { hits: 0, misses: 0 }
@@ -2005,6 +2022,23 @@ async function searchEasynews(title, year = '', username = 'aibutzkxjw', passwor
 
     console.log(`[AI Ranker] Ranked ${candidates.length} streams for "${title}" — top score: ${candidates[0]._score}`);
 
+    // Update Dashboard UI State
+    dashboardState.rankedStreams = candidates.map((c, i) => ({
+      source: {
+        releaseName: c._filename,
+        source: 'Easynews',
+        resolution: c._meta.resolution,
+        audio: c._meta.audioCodec,
+        fileSize: c._meta.sizeGb.toFixed(2),
+        releaseGroup: c._meta.releaseGroup,
+        matchConfidence: 100 // Pre-filtered by title match
+      },
+      rank: i + 1,
+      score: c._score,
+      recommended: c._score >= 50,
+      reason: c._aiRanked ? 'AI Re-ranked' : 'Deterministic Heuristics'
+    }));
+
     // ── Build enriched Stremio stream objects ─────────────────────────────
     return candidates.map((c, i) => {
       const m = c._meta;
@@ -2092,6 +2126,155 @@ app.get('/api/metadata', async (req, res) => {
 
 app.get('/api/collections', (req, res) => {
   res.json(collections);
+});
+
+// ── Dashboard UI Endpoint ───────────────────────────────────────────────────
+app.get('/dashboard', (req, res) => {
+  const { decision, rankedStreams, lastSearch } = dashboardState;
+  
+  const streamsHtml = (rankedStreams || []).map(s => `
+            <article class="stream-card">
+                <div class="stream-header">
+                    <div class="stream-title" style="word-break: break-all;">
+                        ${s.source.releaseName}
+                    </div>
+                    <div class="stream-rank">
+                        Rank #${s.rank} &middot; Score ${s.score}/100
+                    </div>
+                </div>
+
+                <div class="stream-meta">
+                    <span class="pill pill-primary">${s.source.source}</span>
+                    <span class="pill">${s.source.resolution}</span>
+                    <span class="pill">${s.source.audio}</span>
+                    <span class="pill">${s.source.fileSize} GB</span>
+                    <span class="pill">${s.source.releaseGroup}</span>
+                    <span class="pill">Match ${s.source.matchConfidence}%</span>
+                    ${s.recommended 
+                        ? '<span class="pill pill-success">Recommended</span>' 
+                        : '<span class="pill pill-danger">Not Recommended</span>'}
+                </div>
+
+                <div class="score-bar">
+                    <div class="score-fill" style="width: ${s.score}%;"></div>
+                </div>
+
+                <div class="stream-reason">
+                    ${s.reason}
+                </div>
+            </article>
+  `).join('');
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stream Selection &middot; Antigravity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #05060a;
+            --bg-alt: #0b0d14;
+            --card-bg: #10131c;
+            --accent: #4f8cff;
+            --accent-soft: rgba(79, 140, 255, 0.15);
+            --text: #e5e9f5;
+            --text-muted: #8b92a6;
+            --danger: #ff4f6a;
+            --success: #4fff9a;
+            --border: #1b1f2b;
+            --radius-lg: 14px;
+            --radius-md: 10px;
+            --radius-sm: 6px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #141827 0, #05060a 55%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        .page { max-width: 1120px; margin: 0 auto; padding: 24px 16px 40px; }
+        header { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+        header h1 { font-size: 1.6rem; letter-spacing: 0.04em; text-transform: uppercase; margin: 0; }
+        header .subtitle { font-size: 0.9rem; color: var(--text-muted); }
+        .routing-card {
+            background: linear-gradient(135deg, var(--card-bg), #15192a);
+            border-radius: var(--radius-lg); border: 1px solid var(--border);
+            padding: 16px 18px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 12px; margin-bottom: 20px;
+        }
+        .routing-main-title { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 6px; }
+        .routing-primary { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+        .routing-secondary { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 4px; }
+        .routing-fallback { font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; }
+        .routing-notes { font-size: 0.85rem; color: var(--text-muted); border-left: 2px solid var(--accent-soft); padding-left: 10px; display: flex; align-items: center; line-height: 1.4; }
+        .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; padding: 4px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-bottom: 12px; }
+        .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+        .streams-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+        .stream-card {
+            background: var(--bg-alt); border-radius: var(--radius-md); border: 1px solid var(--border);
+            padding: 12px 12px 11px; display: flex; flex-direction: column; gap: 8px; position: relative; overflow: hidden;
+        }
+        .stream-card::before {
+            content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top left, rgba(79, 140, 255, 0.12), transparent 55%);
+            opacity: 0.7; pointer-events: none;
+        }
+        .stream-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-direction: column; }
+        .stream-title { font-size: 0.9rem; font-weight: 600; line-height: 1.3; }
+        .stream-rank { font-size: 0.8rem; color: var(--text-muted); }
+        .stream-meta { display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.78rem; }
+        .pill { padding: 3px 8px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.02); color: var(--text-muted); }
+        .pill-primary { border-color: var(--accent-soft); color: var(--accent); }
+        .pill-success { border-color: rgba(79, 255, 154, 0.25); color: var(--success); background: rgba(79, 255, 154, 0.05); }
+        .pill-danger { border-color: rgba(255, 79, 106, 0.25); color: var(--danger); background: rgba(255, 79, 106, 0.05); }
+        .score-bar { width: 100%; height: 5px; border-radius: 999px; background: #0b0d14; overflow: hidden; position: relative; margin-top: 4px; }
+        .score-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--success)); width: 0%; transition: width 1s ease-out; }
+        .stream-reason { font-size: 0.78rem; color: var(--text-muted); }
+        footer { margin-top: 40px; font-size: 0.75rem; color: var(--text-muted); text-align: center; }
+        @media (max-width: 720px) { .routing-card { grid-template-columns: minmax(0, 1fr); } }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header>
+        <h1>Stream Selection</h1>
+        <div class="subtitle">
+            Ranked candidates and routing strategy for: <strong style="color:var(--text)">${lastSearch}</strong>
+        </div>
+    </header>
+
+    <section class="routing-card">
+        <div>
+            <div class="routing-main-title">Routing Strategy</div>
+            <div class="routing-primary">Primary: <span style="color:var(--text)">${decision.primarySource}</span></div>
+            <div class="routing-secondary">Secondary: <span style="color:var(--text)">${decision.secondarySource}</span></div>
+            <div class="routing-fallback">Fallback: ${decision.fallbackStrategy}</div>
+        </div>
+        <div class="routing-notes">${decision.notes || 'No routing notes available.'}</div>
+    </section>
+
+    <section>
+        <div class="badge"><span class="badge-dot"></span> Ranked Streams</div>
+        <div class="streams-grid">
+            ${streamsHtml || '<div style="color:var(--text-muted); font-size:0.9rem; padding: 20px;">No streams available. Please search for a movie in Stremio first.</div>'}
+        </div>
+    </section>
+
+    <footer>Generated by Antigravity &middot; Dark-mode UI &middot; Stream intelligence powered by your AI pipeline.</footer>
+</div>
+<script>
+  setTimeout(() => {
+    document.querySelectorAll('.score-fill').forEach(el => {
+      el.style.width = el.style.width; // re-apply to trigger transition if needed
+    });
+  }, 100);
+</script>
+</body>
+</html>`;
+  
+  res.send(html);
 });
 
 app.post('/api/sync-collections', (req, res) => {
