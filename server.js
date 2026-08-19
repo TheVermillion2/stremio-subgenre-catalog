@@ -1879,6 +1879,61 @@ ${JSON.stringify(summaries)}`;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// Match Verification & Clean Filename Extraction
+// ─────────────────────────────────────────────────────────────────────────────
+function extractCleanReleaseName(fn, ext, rawName) {
+  if (fn && fn.length > 5 && !/^[a-f0-9]{20,}$/i.test(fn)) {
+    return fn.endsWith(ext) ? fn : fn + ext;
+  }
+  const match = (rawName || '').match(/"([^"]+\.(mkv|mp4|avi|ts|m2ts))"/i) 
+             || (rawName || '').match(/([a-zA-Z0-9._-]+\.(mkv|mp4|avi|ts|m2ts))/i);
+  if (match) return match[1];
+  return (fn + ext) || rawName || 'Unknown Release';
+}
+
+function isLikelyMovieMatch(filename, title, year = '') {
+  if (!filename || !title) return true;
+
+  const cleanStr = (s) => (s || '').toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const cleanFn = cleanStr(filename);
+  const cleanTitle = cleanStr(title);
+
+  const stopWords = new Set(['the', 'a', 'an', 'and', 'of', 'in', 'to', 'for', 'with', 'on', 'at', 'by', 'from', 'movie', 'film', 'part', 'vol']);
+  const titleTokens = cleanTitle.split(' ').filter(w => w.length >= 2 && !stopWords.has(w));
+
+  if (titleTokens.length === 0) return true;
+
+  // Check how many title words appear in the filename
+  const matchedTokens = titleTokens.filter(token => cleanFn.includes(token));
+  const matchRatio = matchedTokens.length / titleTokens.length;
+
+  // If fewer than half of significant title words match, reject
+  if (matchRatio < 0.5 && matchedTokens.length < 2) {
+    return false;
+  }
+
+  // If target year is present, verify against years found in filename
+  if (year && /^\d{4}$/.test(String(year))) {
+    const targetYear = parseInt(year, 10);
+    const fnYears = filename.match(/\b(19\d{2}|20\d{2})\b/g);
+    if (fnYears && fnYears.length > 0) {
+      const yearDiffs = fnYears.map(y => Math.abs(parseInt(y, 10) - targetYear));
+      const hasCloseYear = yearDiffs.some(diff => diff <= 1);
+      // If filename has a specific year that differs by > 2 years, reject wrong release
+      if (!hasCloseYear && yearDiffs.every(diff => diff > 2)) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Easynews Search + AI Quality Ranking Pipeline
 // ─────────────────────────────────────────────────────────────────────────────
 async function searchEasynews(title, year = '', username = 'aibutzkxjw', password = 'hjmm-rwbe-pkbg', runtimeMinutes = 120) {
@@ -1910,9 +1965,9 @@ async function searchEasynews(title, year = '', username = 'aibutzkxjw', passwor
       const rawName = item['6'] || item['subject'] || `${fn}${ext}`;
       const rawSize = item['4'] || item['size'] || item['rawSize'] || 0;
 
-      if (!hash || !fn) continue;
+      if (!hash || (!fn && !rawName)) continue;
 
-      const fullFilename = fn + ext;
+      const fullFilename = extractCleanReleaseName(fn, ext, rawName);
 
       // Skip unplayable multi-part RARs up-front
       if (/\.(r\d{2}|rar)$/i.test(fullFilename) || /\.part\d+\.rar$/i.test(fullFilename)) {
@@ -1920,9 +1975,15 @@ async function searchEasynews(title, year = '', username = 'aibutzkxjw', passwor
         continue;
       }
 
+      // Skip title/year mismatches (wrong movie from Usenet index)
+      if (!isLikelyMovieMatch(fullFilename, title, year)) {
+        console.log(`[AI Ranker] Skipping title mismatch: "${fullFilename}" for target "${title}" (${year})`);
+        continue;
+      }
+
       const meta  = parseReleaseMetadata(fullFilename, rawSize, runtimeMinutes);
       const score = scoreStream(meta);
-      const streamUrl = `https://${username}:${password}@members.easynews.com/dl/${hash}/${encodeURIComponent(fullFilename)}`;
+      const streamUrl = `https://${username}:${password}@members.easynews.com/dl/${hash}/${encodeURIComponent(fn ? fn + ext : fullFilename)}`;
 
       candidates.push({
         _rawName: rawName,
@@ -1966,8 +2027,8 @@ async function searchEasynews(title, year = '', username = 'aibutzkxjw', passwor
       const metaLine    = [sizeBadge, groupBadge].filter(Boolean).join(' | ');
 
       return {
-        name: `${scoreLabel} Easynews #${rank}`,
-        title: `${qualityLine}\n${metaLine ? metaLine + '\n' : ''}${recommended}`,
+        name: `Easynews\n${m.resolution} ${m.isRemux ? 'REMUX' : (m.videoCodec !== 'Unknown' ? m.videoCodec : '')}`.trim(),
+        title: `📁 ${c._filename}\n${qualityLine}\n${metaLine ? metaLine + ' | ' : ''}${recommended} (${scoreLabel})`,
         url: c.streamUrl,
         behaviorHints: { notWebReady: false }
       };
