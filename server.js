@@ -893,7 +893,14 @@ app.get('/catalog/:type/:id*', async (req, res) => {
       const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
       
       try {
-        const rawItems = await queryGeminiForMovies(query, config.geminiApiKey, '', true);
+        // ── Intent Interpreter — normalize raw query before searching ─────────
+        const intent = await interpretIntent(query);
+        const searchTitle = intent?.title || query;
+        const searchType  = intent?.type  || (id === 'ai_search_series' ? 'show' : 'movie');
+
+        console.log(`[Intent] TITLE: "${searchTitle}" | YEAR: "${intent?.year || '?'}" | TYPE: ${searchType} | QUALITY: "${intent?.qualityTarget || 'any'}" | AUDIO: "${intent?.audioTarget || 'any'}" | SOURCE: "${intent?.sourcePriority || 'Easynews'}" | via: ${intent?.source || 'heuristic'}`);
+
+        const rawItems = await queryGeminiForMovies(searchTitle, config.geminiApiKey, '', true);
         const batch = await Promise.all(
           rawItems.slice(0, 30).map(m => searchTmdbMovie(m.title, m.year, tmdbKey))
         );
@@ -904,7 +911,7 @@ app.get('/catalog/:type/:id*', async (req, res) => {
           movies: stremioMetas
         };
         
-        console.log(`[AI Search] Generated ${stremioMetas.length} results for: "${query}"`);
+        console.log(`[AI Search] Generated ${stremioMetas.length} results for: "${searchTitle}"`);
         return res.json({ metas: stremioMetas.slice(skip, skip + 100) });
       } catch (err) {
         console.error('[AI Search] Failed to fulfill search request:', err.message);
@@ -1203,6 +1210,21 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
 
     const streams = [];
 
+    // ── Metadata Enricher — validate & enrich title, year, runtime, genres ───
+    let enrichedMeta = null;
+    if (tmdbId || rawId.startsWith('tt')) {
+      enrichedMeta = await enrichMetadata(
+        rawId.startsWith('tt') ? rawId : null,
+        typeof tmdbId === 'number' ? tmdbId : null,
+        movieTitle, movieYear, isTv, apiKey
+      );
+      // Prefer the enriched official title and corrected year for search accuracy
+      if (enrichedMeta.enriched) {
+        if (enrichedMeta.officialTitle) movieTitle = enrichedMeta.officialTitle;
+        if (enrichedMeta.year)          movieYear  = enrichedMeta.year;
+      }
+    }
+
     // ── Routing Orchestrator — choose best source, fallback on failure ────────
     if (movieTitle) {
       const routing = decideRouting(movieTitle, movieYear);
@@ -1219,7 +1241,8 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
         sourceStreams = await fetchFromSource(
           routing.primary, movieTitle, movieYear,
           process.env.EASYNEWS_USER || 'aibutzkxjw',
-          process.env.EASYNEWS_PASS || 'hjmm-rwbe-pkbg'
+          process.env.EASYNEWS_PASS || 'hjmm-rwbe-pkbg',
+          enrichedMeta?.runtime || 120
         );
       }
 
@@ -1229,7 +1252,8 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
         sourceStreams = await fetchFromSource(
           routing.secondary, movieTitle, movieYear,
           process.env.EASYNEWS_USER || 'aibutzkxjw',
-          process.env.EASYNEWS_PASS || 'hjmm-rwbe-pkbg'
+          process.env.EASYNEWS_PASS || 'hjmm-rwbe-pkbg',
+          enrichedMeta?.runtime || 120
         );
       }
 
@@ -1268,6 +1292,252 @@ app.get(['/stream/:type/:id.json', '/stream/tv/:id.json', '/stream/channel/:id.j
     res.json({ streams: [] });
   }
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// INTENT INTERPRETER — Normalize Raw User Queries into Structured Intent
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * interpretIntent(rawQuery)
+ *
+ * Uses Gemini to decode a natural-language or messy user search query into
+ * a clean structured object ready for downstream pipeline nodes.
+ *
+ * Returns:
+ * {
+ *   title:          string,   // canonical title
+ *   year:           string,   // 4-digit year or ''
+ *   type:           'movie' | 'show' | 'season' | 'episode',
+ *   qualityTarget:  string,   // e.g. '2160p', '1080p', 'Remux'
+ *   audioTarget:    string,   // e.g. 'Atmos', '5.1', 'DTS-HD'
+ *   sourcePriority: string,   // e.g. 'Easynews', 'TorBox', 'Hybrid'
+ *   season:         string,   // 'S02' or ''
+ *   episode:        string,   // 'E05' or ''
+ *   notes:          string,   // anything extra the user said
+ *   raw:            string    // original query preserved
+ * }
+ *
+ * Falls back to a best-effort heuristic parse if Gemini is unavailable.
+ */
+async function interpretIntent(rawQuery) {
+  const query = (rawQuery || '').trim();
+  if (!query) return null;
+
+  // ── Heuristic fallback (always available, ~0ms) ──────────────────────────
+  const heuristic = () => {
+    const yearMatch   = query.match(/\b(19|20)\d{2}\b/);
+    const seasonMatch = query.match(/\bS(\d{1,2})\b/i);
+    const episodeMatch= query.match(/\bE(\d{1,2})\b/i);
+    const is4K        = /\b(4k|2160p|uhd)\b/i.test(query);
+    const isRemux     = /\bremux\b/i.test(query);
+    const is1080      = /\b1080p?\b/i.test(query);
+    const hasAtmos    = /\batmos\b/i.test(query);
+    const hasDtsHd    = /\bdts.?hd\b/i.test(query);
+    const has51       = /\b5\.1\b/.test(query);
+    const isSeries    = /\b(season|episode|series|show|s\d{2}e\d{2})\b/i.test(query);
+
+    // Strip year, season/episode tags, quality tags to get a cleaner title
+    let title = query
+      .replace(/\b(19|20)\d{2}\b/, '')
+      .replace(/\bS\d{1,2}E\d{1,2}\b/i, '')
+      .replace(/\bS\d{1,2}\b/i, '')
+      .replace(/\b(4k|2160p|uhd|1080p|remux|atmos|dts|bluray|blu-ray|hdr)\b/ig, '')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+
+    return {
+      title,
+      year:           yearMatch ? yearMatch[0] : '',
+      type:           isSeries ? (episodeMatch ? 'episode' : seasonMatch ? 'season' : 'show') : 'movie',
+      qualityTarget:  isRemux ? 'Remux' : is4K ? '2160p' : is1080 ? '1080p' : '',
+      audioTarget:    hasAtmos ? 'Atmos' : hasDtsHd ? 'DTS-HD' : has51 ? '5.1' : '',
+      sourcePriority: 'Easynews',
+      season:         seasonMatch ? `S${seasonMatch[1].padStart(2, '0')}` : '',
+      episode:        episodeMatch ? `E${episodeMatch[1].padStart(2, '0')}` : '',
+      notes:          '',
+      raw:            query,
+      source:         'heuristic'
+    };
+  };
+
+  // ── Gemini-powered parse (when API key is available) ─────────────────────
+  const apiKey = config.geminiApiKey || process.env.GEMINI_API_KEY;
+  if (!apiKey) return heuristic();
+
+  const prompt = `You are a strict intent parser for a video streaming search engine.
+Parse the user query into this exact JSON object (no markdown, no commentary):
+{
+  "title": "canonical movie or show title",
+  "year": "YYYY or empty string",
+  "type": "movie | show | season | episode",
+  "qualityTarget": "2160p | 1080p | 720p | Remux | empty string",
+  "audioTarget": "Atmos | TrueHD | DTS-HD | 5.1 | 2.0 | empty string",
+  "sourcePriority": "Easynews | TorBox | Debrid | Hybrid | Easynews",
+  "season": "S01 format or empty string",
+  "episode": "E01 format or empty string",
+  "notes": "anything else the user mentioned"
+}
+
+User query: "${query}"`;
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 4000);
+
+    const resp = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { temperature: 0.0 }
+        })
+      }
+    );
+    clearTimeout(timeoutId);
+
+    if (!resp.ok) return heuristic();
+    const data = await resp.json();
+    let text = (data?.candidates?.[0]?.content?.parts?.[0]?.text || '').trim();
+    text = text.replace(/```json|```/gi, '').trim();
+
+    const parsed = JSON.parse(text);
+    parsed.raw    = query;
+    parsed.source = 'gemini';
+    console.log(`[Intent] Gemini parsed: title="${parsed.title}" year="${parsed.year}" type="${parsed.type}" quality="${parsed.qualityTarget}"`);
+    return parsed;
+  } catch (err) {
+    console.warn('[Intent] Gemini parse failed — using heuristic fallback:', err.name === 'AbortError' ? 'timeout' : err.message);
+    return heuristic();
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// METADATA ENRICHER — TMDB-backed Enrichment with In-Memory LRU Cache
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Simple LRU cache — max 200 entries, keyed by imdbId or `tmdb_${tmdbId}`
+const metadataCache = new Map();
+const METADATA_CACHE_MAX = 200;
+
+function cacheSet(key, value) {
+  if (metadataCache.size >= METADATA_CACHE_MAX) {
+    // Evict the oldest entry
+    metadataCache.delete(metadataCache.keys().next().value);
+  }
+  metadataCache.set(key, value);
+}
+
+/**
+ * enrichMetadata(imdbId, tmdbId, title, year, isTv, apiKey)
+ *
+ * Fetches full details from TMDB, corrects title/year mismatches, and returns
+ * a clean enriched object used by downstream nodes (ranker, router, stream title).
+ *
+ * Returns:
+ * {
+ *   imdbId, tmdbId, officialTitle, year, runtime,
+ *   genres, cast, language, overview, posterUrl, enriched: true
+ * }
+ *
+ * On failure returns a minimal passthrough object with enriched: false.
+ */
+async function enrichMetadata(imdbId, tmdbId, title, year, isTv = false, apiKey) {
+  const key = imdbId || `tmdb_${tmdbId}`;
+  if (metadataCache.has(key)) {
+    return metadataCache.get(key);
+  }
+
+  const fallback = {
+    imdbId:       imdbId || null,
+    tmdbId:       tmdbId || null,
+    officialTitle: title,
+    year,
+    runtime:      120, // default assumption
+    genres:       [],
+    cast:         [],
+    language:     'en',
+    overview:     '',
+    posterUrl:    '',
+    enriched:     false
+  };
+
+  const tmdbApiKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+  if (!tmdbId && !imdbId) return fallback;
+
+  try {
+    const endpoint = isTv ? 'tv' : 'movie';
+    const detailsId = tmdbId || imdbId;
+
+    // If only IMDB ID, first resolve to TMDB ID
+    let resolvedTmdbId = tmdbId;
+    if (!resolvedTmdbId && imdbId) {
+      const findRes = await fetchJson(
+        `https://api.themoviedb.org/3/find/${imdbId}?api_key=${tmdbApiKey}&external_source=imdb_id`
+      );
+      if (isTv && findRes?.tv_results?.length > 0) {
+        resolvedTmdbId = findRes.tv_results[0].id;
+      } else if (findRes?.movie_results?.length > 0) {
+        resolvedTmdbId = findRes.movie_results[0].id;
+      }
+    }
+
+    if (!resolvedTmdbId) return fallback;
+
+    // Fetch full details with cast in one call via append_to_response
+    const details = await fetchJson(
+      `https://api.themoviedb.org/3/${endpoint}/${resolvedTmdbId}?api_key=${tmdbApiKey}&append_to_response=credits,external_ids`
+    );
+
+    if (!details || details.status_code) return fallback;
+
+    // Resolve fields — TV and movie schemas differ slightly
+    const officialTitle = (isTv ? details.name : details.title) || details.original_title || details.original_name || title;
+    const releaseDate   = isTv ? details.first_air_date : details.release_date;
+    const enrichedYear  = releaseDate ? releaseDate.slice(0, 4) : year;
+    const runtime       = isTv
+      ? (details.episode_run_time?.[0] || 45)   // TV episode runtime
+      : (details.runtime || 120);                // Movie runtime
+
+    const genres = (details.genres || []).map(g => g.name);
+    const cast   = (details.credits?.cast || [])
+      .slice(0, 8)
+      .map(c => c.name);
+    const language  = details.original_language || 'en';
+    const overview  = details.overview || '';
+    const posterUrl = details.poster_path
+      ? `https://image.tmdb.org/t/p/w500${details.poster_path}`
+      : '';
+
+    // IMDB ID from external_ids if not already known
+    const resolvedImdbId = imdbId || details.external_ids?.imdb_id || null;
+
+    const enriched = {
+      imdbId:       resolvedImdbId,
+      tmdbId:       resolvedTmdbId,
+      officialTitle,
+      year:         enrichedYear,
+      runtime,
+      genres,
+      cast,
+      language,
+      overview,
+      posterUrl,
+      enriched:     true
+    };
+
+    cacheSet(key, enriched);
+
+    console.log(`[Enricher] "${officialTitle}" (${enrichedYear}) | Runtime: ${runtime}min | Genres: ${genres.slice(0, 3).join(', ')} | Cast: ${cast.slice(0, 3).join(', ')}`);
+    return enriched;
+
+  } catch (err) {
+    console.warn('[Enricher] TMDB enrichment failed:', err.message);
+    return fallback;
+  }
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // ROUTING ORCHESTRATOR — Predictive Source Selection + Fallback Logic
@@ -1359,10 +1629,10 @@ function decideRouting(title, year, options = {}) {
  * fetchFromSource — dispatches to the correct search function,
  * records the outcome into routingHistory.
  */
-async function fetchFromSource(source, title, year, username, password) {
+async function fetchFromSource(source, title, year, username, password, runtimeMinutes = 120) {
   try {
     let streams = [];
-    if      (source === 'easynews') streams = await searchEasynews(title, year, username, password);
+    if      (source === 'easynews') streams = await searchEasynews(title, year, username, password, runtimeMinutes);
     else if (source === 'torbox')   streams = await searchTorBox(title, year);
     else if (source === 'debrid')   streams = await searchDebrid(title, year);
     recordRouteResult(source, streams.length > 0);
@@ -1402,7 +1672,7 @@ async function searchDebrid(title, year) {
 // ─────────────────────────────────────────────────────────────────────────────
 // AI QUALITY RANKER — Layer 1: Release Metadata Parser
 // ─────────────────────────────────────────────────────────────────────────────
-function parseReleaseMetadata(filename, sizeBytes = 0) {
+function parseReleaseMetadata(filename, sizeBytes = 0, runtimeMinutes = 120) {
   const f = filename.toUpperCase();
 
   // Resolution
@@ -1459,7 +1729,7 @@ function parseReleaseMetadata(filename, sizeBytes = 0) {
 
   // File size & estimated bitrate (120-min default runtime)
   const sizeGb = sizeBytes > 0 ? sizeBytes / (1024 ** 3) : 0;
-  const bitrateEstimate = sizeGb > 0 ? (sizeGb * 8192) / 120 : 0; // Mbps
+  const bitrateEstimate = sizeGb > 0 ? (sizeGb * 8192) / (runtimeMinutes || 120) : 0; // Mbps
 
   return {
     resolution, dynamicRange, videoCodec, isRemux,
@@ -1611,7 +1881,7 @@ ${JSON.stringify(summaries)}`;
 // ─────────────────────────────────────────────────────────────────────────────
 // Easynews Search + AI Quality Ranking Pipeline
 // ─────────────────────────────────────────────────────────────────────────────
-async function searchEasynews(title, year = '', username = 'aibutzkxjw', password = 'hjmm-rwbe-pkbg') {
+async function searchEasynews(title, year = '', username = 'aibutzkxjw', password = 'hjmm-rwbe-pkbg', runtimeMinutes = 120) {
   try {
     const query = `${title} ${year}`.trim();
     // Fetch 30 candidates so the ranker has a real pool to work with
@@ -1650,7 +1920,7 @@ async function searchEasynews(title, year = '', username = 'aibutzkxjw', passwor
         continue;
       }
 
-      const meta  = parseReleaseMetadata(fullFilename, rawSize);
+      const meta  = parseReleaseMetadata(fullFilename, rawSize, runtimeMinutes);
       const score = scoreStream(meta);
       const streamUrl = `https://${username}:${password}@members.easynews.com/dl/${hash}/${encodeURIComponent(fullFilename)}`;
 
@@ -1736,6 +2006,27 @@ app.get('/api/routing', (req, res) => {
       notes: decision.notes
     }
   });
+});
+
+// Debug/Standalone endpoint for Intent Interpreter
+app.get('/api/interpret', async (req, res) => {
+  const query = req.query.q;
+  if (!query) return res.status(400).json({ error: 'Missing ?q= parameter' });
+  const intent = await interpretIntent(query);
+  res.json(intent);
+});
+
+// Debug/Standalone endpoint for Metadata Enricher
+app.get('/api/metadata', async (req, res) => {
+  const { imdbId, tmdbId, title, year, isTv } = req.query;
+  const meta = await enrichMetadata(
+    imdbId || null,
+    tmdbId ? parseInt(tmdbId, 10) : null,
+    title || '',
+    year || '',
+    isTv === 'true'
+  );
+  res.json(meta);
 });
 
 app.get('/api/collections', (req, res) => {
