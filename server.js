@@ -344,25 +344,48 @@ async function loadCollections() {
   if (fs.existsSync(COLLECTIONS_FILE)) {
     try {
       localData = JSON.parse(fs.readFileSync(COLLECTIONS_FILE, 'utf8')) || {};
+      console.log(`[Local Storage] Loaded ${Object.keys(localData).length} collections from local collections.json.`);
     } catch (err) {
       console.error('Failed to load collections locally:', err.message);
     }
   }
 
-  try {
-    const fbRes = await fetchJson(`${FIREBASE_URL}/collections.json`);
-    if (fbRes && typeof fbRes === 'object' && Object.keys(fbRes).length > 0) {
-      collections = fbRes;
-      console.log(`[Firebase Cloud] Successfully loaded ${Object.keys(collections).length} collections from Firebase Cloud DB.`);
-    } else if (Object.keys(localData).length > 0) {
-      collections = localData;
-      console.log(`[Firebase Cloud] Seeded Firebase Cloud DB with ${Object.keys(collections).length} local collections.`);
-      await saveCollections();
-    }
-  } catch (err) {
-    console.error('Failed to load collections from Firebase Cloud:', err.message);
-    collections = localData;
+  // Always seed with localData first so catalog is guaranteed to never be empty
+  if (localData && typeof localData === 'object' && Object.keys(localData).length > 0) {
+    collections = { ...localData };
   }
+
+  // If Firebase Admin SDK is initialized, prefer authenticated Cloud DB
+  if (db) {
+    try {
+      const snap = await db.ref('collections').once('value');
+      if (snap.exists()) {
+        const val = snap.val();
+        if (val && typeof val === 'object' && !val.error && Object.keys(val).length > 0) {
+          collections = val;
+          console.log(`[Firebase Cloud] Successfully loaded ${Object.keys(collections).length} collections from Firebase Cloud DB.`);
+        }
+      } else if (Object.keys(collections).length > 0) {
+        await db.ref('collections').set(collections);
+        console.log(`[Firebase Cloud] Seeded Firebase Cloud DB with ${Object.keys(collections).length} local collections.`);
+      }
+    } catch (err) {
+      console.error('[Firebase Cloud] Error loading collections from DB:', err.message);
+    }
+  } else {
+    // If no db, attempt unauthenticated REST only if valid response without permission errors
+    try {
+      const fbRes = await fetchJson(`${FIREBASE_URL}/collections.json`);
+      if (fbRes && typeof fbRes === 'object' && !fbRes.error && !Array.isArray(fbRes) && Object.keys(fbRes).length > 1) {
+        collections = fbRes;
+        console.log(`[Firebase Cloud] Loaded ${Object.keys(collections).length} collections via REST.`);
+      }
+    } catch (err) {
+      // Ignored: localData is already active
+    }
+  }
+
+  console.log(`[Collections Ready] Addon active with ${Object.keys(collections).length} total collections.`);
 }
 
 async function saveCollections() {
@@ -372,28 +395,24 @@ async function saveCollections() {
     console.error('Failed to save collections locally:', err.message);
   }
   
-  try {
-    const res = await fetch(`${FIREBASE_URL}/collections.json`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(collections)
-    });
-    if (res.ok) {
+  if (db) {
+    try {
+      await db.ref('collections').set(collections);
       console.log(`[Firebase Cloud] Saved ${Object.keys(collections).length} collections to Cloud DB.`);
+    } catch (err) {
+      console.error('Failed to save collections to Firebase Cloud:', err.message);
     }
-  } catch (err) {
-    console.error('Failed to save collections to Firebase Cloud:', err.message);
   }
 }
 
 async function deleteCollectionFromCloud(id) {
-  try {
-    await fetch(`${FIREBASE_URL}/collections/${id}.json`, {
-      method: 'DELETE'
-    });
-    console.log(`[Firebase Cloud] Deleted collection ${id} from Cloud DB.`);
-  } catch (err) {
-    console.error(`Failed to delete collection ${id} from Firebase Cloud:`, err.message);
+  if (db) {
+    try {
+      await db.ref(`collections/${id}`).remove();
+      console.log(`[Firebase Cloud] Deleted collection ${id} from Cloud DB.`);
+    } catch (err) {
+      console.error(`Failed to delete collection ${id} from Firebase Cloud:`, err.message);
+    }
   }
 }
 
@@ -649,6 +668,18 @@ function findCollectionByName(name) {
       return col;
     }
   }
+  // Loose matching fallback for slight punctuation variations (e.g. 90's vs 90s)
+  const nameAlpha = nameNorm.replace(/[^a-z0-9]/g, '');
+  if (nameAlpha) {
+    for (const col of Object.values(collections)) {
+      if (col && col.name) {
+        const colAlpha = col.name.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (colAlpha === nameAlpha || colAlpha.includes(nameAlpha) || nameAlpha.includes(colAlpha)) {
+          return col;
+        }
+      }
+    }
+  }
   return null;
 }
 
@@ -830,7 +861,7 @@ app.get('/manifest.json', (req, res) => {
 
   const manifest = {
     id: 'org.subgenre.auto.catalog',
-    version: '3.1.0',
+    version: '3.2.0',
     name: '🤖 AI Movie, TV & 24/7 Channels',
     description: '24/7 Live FAST Channels, Master Categories, Subgenre Dropdowns, Instant AI Search & Trailers!',
     resources: ['catalog', 'meta', 'stream'],
