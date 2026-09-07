@@ -501,6 +501,210 @@ async function getLiveFeedMovies(feedType, apiKeyStr) {
   return stremioMetas;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// LIVE DAILY FEEDS ENGINE — FirstShowing.net & TMDB Daily Trending
+// ─────────────────────────────────────────────────────────────────────────────
+const DAILY_FEEDS_FILE = path.join(__dirname, 'data', 'daily_feeds.json');
+
+let dailyFeeds = {
+  firstshowing_buzz: [],
+  firstshowing_schedule: [],
+  trending_today: [],
+  lastUpdated: 0
+};
+
+function decodeHtmlEntities(str) {
+  return (str || '')
+    .replace(/&#039;/g, "'")
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .trim();
+}
+
+function loadDailyFeeds() {
+  if (fs.existsSync(DAILY_FEEDS_FILE)) {
+    try {
+      const saved = JSON.parse(fs.readFileSync(DAILY_FEEDS_FILE, 'utf8'));
+      if (saved && typeof saved === 'object') {
+        dailyFeeds = { ...dailyFeeds, ...saved };
+        console.log(`[Daily Feeds] Loaded cached daily feeds from disk (${dailyFeeds.firstshowing_buzz.length} buzz, ${dailyFeeds.firstshowing_schedule.length} schedule, ${dailyFeeds.trending_today.length} trending).`);
+      }
+    } catch (err) {
+      console.error('[Daily Feeds] Failed to read cached feeds:', err.message);
+    }
+  }
+}
+
+async function fetchFirstShowingBuzz(apiKey) {
+  const feedUrls = [
+    'https://www.firstshowing.net/feed/',
+    'https://www.firstshowing.net/category/trailers/feed/'
+  ];
+  const items = [];
+  const seenTitles = new Set();
+
+  for (const url of feedUrls) {
+    try {
+      const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+      if (!res.ok) continue;
+      const xml = await res.text();
+      const itemRegex = /<item>[\s\S]*?<title>([\s\S]*?)<\/title>[\s\S]*?<link>([\s\S]*?)<\/link>[\s\S]*?<\/item>/g;
+      let m;
+      while ((m = itemRegex.exec(xml)) !== null) {
+        const rawHeadline = decodeHtmlEntities(m[1]);
+        const link = (m[2] || '').trim();
+
+        // 1. Quoted movie title (e.g. 'Mum, I\'m Alien Pregnant')
+        let movieTitle = null;
+        const qMatch = rawHeadline.match(/'([^']+)'/) || rawHeadline.match(/"([^"]+)"/);
+        if (qMatch && qMatch[1].length > 1) {
+          movieTitle = qMatch[1];
+        }
+
+        // 2. If quote missed or generic, parse from link slug
+        if (!movieTitle && link) {
+          const slugMatch = link.match(/\/([0-9]{4})\/([^\/]+)\/?/);
+          if (slugMatch) {
+            const slug = slugMatch[2].replace(/^(full-trailer-for|trailer-for|teaser-for|review|sneaky-teaser-for|venice-[0-9]{4})-/i, '');
+            movieTitle = slug.split('-').slice(0, 4).join(' ');
+          }
+        }
+
+        if (movieTitle) {
+          const cleanTitle = movieTitle.replace(/^(season\s+\d+|part\s+\d+|volume\s+\d+)/i, '').trim();
+          if (cleanTitle.length > 1 && !seenTitles.has(cleanTitle.toLowerCase())) {
+            seenTitles.add(cleanTitle.toLowerCase());
+            items.push({ title: cleanTitle, headline: rawHeadline, link });
+          }
+        }
+      }
+    } catch (err) {
+      console.error('[FirstShowing] Feed fetch error:', err.message);
+    }
+  }
+
+  console.log(`[FirstShowing Buzz] Found ${items.length} titles from RSS feeds. Resolving TMDB metadata...`);
+  const metas = [];
+  for (const item of items.slice(0, 30)) {
+    const meta = await searchTmdbMovie(item.title, '', apiKey);
+    if (meta && !metas.some(m => m.id === meta.id)) {
+      meta.description = `📰 [FirstShowing Buzz]: ${item.headline}\n\n${meta.description || ''}`;
+      metas.push(meta);
+    }
+  }
+  console.log(`[FirstShowing Buzz] Successfully matched ${metas.length} movies with streamable metadata.`);
+  return metas;
+}
+
+async function fetchFirstShowingSchedule(apiKey) {
+  try {
+    const currentYear = new Date().getFullYear();
+    const url = `https://www.firstshowing.net/schedule${currentYear}/`;
+    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    if (!res.ok) return [];
+    const html = await res.text();
+
+    const titleMatches = html.match(/<strong>([^<]+)<\/strong>/g) || [];
+    const ignoredWords = new Set(['2026', '2025', '2027', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec', 'Bold', 'Nationwide Release', 'The Most Recent Opening Weekend', 'Sundance Film Festival', 'Cannes Film Festival', 'Venice Film Festival', 'TIFF']);
+
+    const movieTitles = [];
+    const seen = new Set();
+    for (const tag of titleMatches) {
+      const clean = tag.replace(/<\/?strong>/g, '').trim();
+      if (
+        clean.length > 1 &&
+        !ignoredWords.has(clean) &&
+        !/^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d+$/i.test(clean) &&
+        !seen.has(clean.toLowerCase())
+      ) {
+        seen.add(clean.toLowerCase());
+        movieTitles.push(clean);
+      }
+    }
+
+    console.log(`[FirstShowing Schedule] Extracted ${movieTitles.length} theatrical release titles. Resolving TMDB...`);
+    const metas = [];
+    for (const title of movieTitles.slice(0, 35)) {
+      const meta = await searchTmdbMovie(title, currentYear, apiKey);
+      if (meta && !metas.some(m => m.id === meta.id)) {
+        meta.description = `📅 [Theatrical Calendar ${currentYear}]: Now In Theaters / Opening Soon via FirstShowing.net\n\n${meta.description || ''}`;
+        metas.push(meta);
+      }
+    }
+    console.log(`[FirstShowing Schedule] Successfully matched ${metas.length} movies for theatrical schedule.`);
+    return metas;
+  } catch (err) {
+    console.error('[FirstShowing Schedule] Error:', err.message);
+    return [];
+  }
+}
+
+async function fetchDailyTrending(apiKey) {
+  try {
+    const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+    const url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${tmdbKey}`;
+    const res = await fetchJson(url);
+    if (!res || !res.results) return [];
+
+    const metas = [];
+    for (const m of res.results.slice(0, 30)) {
+      let externalId = `tt${m.id}`;
+      try {
+        const extRes = await fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`);
+        if (extRes && extRes.imdb_id) externalId = extRes.imdb_id;
+      } catch (err) {}
+
+      metas.push({
+        id: externalId,
+        type: 'movie',
+        name: m.title || m.original_title,
+        poster: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster',
+        background: m.backdrop_path ? `https://image.tmdb.org/t/p/original${m.backdrop_path}` : null,
+        description: `🔥 [Today's Trending #1-${res.results.indexOf(m) + 1}]: Updated live every 24 hours.\n\n${m.overview || ''}`,
+        releaseInfo: m.release_date ? m.release_date.substring(0, 4) : 'N/A',
+        imdbRating: m.vote_average ? m.vote_average.toFixed(1) : 'N/A',
+        genres: ['Trending Today']
+      });
+    }
+    return metas;
+  } catch (err) {
+    console.error('[Daily Trending] Error:', err.message);
+    return [];
+  }
+}
+
+async function updateDailyFeeds() {
+  console.log('[Daily Feeds] Starting daily live feeds refresh (FirstShowing + Daily Trending)...');
+  const apiKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+
+  try {
+    const [buzz, schedule, trending] = await Promise.all([
+      fetchFirstShowingBuzz(apiKey),
+      fetchFirstShowingSchedule(apiKey),
+      fetchDailyTrending(apiKey)
+    ]);
+
+    if (buzz.length > 0) dailyFeeds.firstshowing_buzz = buzz;
+    if (schedule.length > 0) dailyFeeds.firstshowing_schedule = schedule;
+    if (trending.length > 0) dailyFeeds.trending_today = trending;
+    dailyFeeds.lastUpdated = Date.now();
+
+    try {
+      fs.writeFileSync(DAILY_FEEDS_FILE, JSON.stringify(dailyFeeds, null, 2));
+      console.log(`[Daily Feeds] Daily feeds cached to disk successfully (${buzz.length} buzz, ${schedule.length} schedule, ${trending.length} trending).`);
+    } catch (err) {
+      console.error('[Daily Feeds] Failed to write daily feeds to disk:', err.message);
+    }
+  } catch (err) {
+    console.error('[Daily Feeds] Update failed:', err.message);
+  }
+}
+
+// Auto-refresh daily feeds every 6 hours
+setInterval(updateDailyFeeds, 6 * 3600 * 1000);
+
 // Fetch movies from TMDB for active subgenre or query
 async function getMoviesForSubgenre(subgenreId, options = {}) {
   if (['trending_week', 'top_rated', 'now_playing', 'upcoming'].includes(subgenreId)) {
@@ -710,6 +914,28 @@ function sortMoviesByYear(movies) {
 app.get('/manifest.json', (req, res) => {
   const catalogs = [];
 
+  // 0. Live Daily Feeds (Updates Everyday from FirstShowing.net & TMDB Daily)
+  catalogs.push({
+    type: 'movie',
+    id: 'cat_firstshowing_buzz',
+    name: '🎬 FirstShowing: Daily Buzz & Trailers',
+    extra: [{ name: 'skip', isRequired: false }]
+  });
+
+  catalogs.push({
+    type: 'movie',
+    id: 'cat_firstshowing_schedule',
+    name: '📅 FirstShowing: In Theaters & New Releases',
+    extra: [{ name: 'skip', isRequired: false }]
+  });
+
+  catalogs.push({
+    type: 'movie',
+    id: 'cat_trending_today',
+    name: '🔥 Trending Movies Today (Live Daily)',
+    extra: [{ name: 'skip', isRequired: false }]
+  });
+
   // 1. 24/7 Live Channels Catalog
   const liveChannelGenres = [
     "All Channels",
@@ -861,7 +1087,7 @@ app.get('/manifest.json', (req, res) => {
 
   const manifest = {
     id: 'org.subgenre.auto.catalog',
-    version: '3.2.0',
+    version: '3.3.0',
     name: '🤖 AI Movie, TV & 24/7 Channels',
     description: '24/7 Live FAST Channels, Master Categories, Subgenre Dropdowns, Instant AI Search & Trailers!',
     resources: ['catalog', 'meta', 'stream'],
@@ -953,6 +1179,20 @@ app.get('/catalog/:type/:id*', async (req, res) => {
     const extraParams = new URLSearchParams(extraStr);
     const selectedGenre = extraParams.get('genre');
     const skip = parseInt(extraParams.get('skip') || '0', 10);
+
+    // ── Handle Live Daily Feeds (FirstShowing.net & Daily Trending) ──────────
+    if (id === 'cat_firstshowing_buzz' || id === 'cat_firstshowing_schedule' || id === 'cat_trending_today') {
+      const feedKey = id.replace(/^cat_/, '');
+      let items = dailyFeeds[feedKey] || [];
+
+      // If feed is empty or stale (> 12 hours), trigger background update
+      if (items.length === 0 || (Date.now() - dailyFeeds.lastUpdated > 43200000)) {
+        updateDailyFeeds().catch(err => console.error('[Daily Feeds] Refresh error:', err.message));
+      }
+
+      console.log(`[Stremio Daily Feed] Serving ${items.length} items for "${id}" (skip: ${skip})`);
+      return res.json({ metas: items.slice(skip, skip + 100) });
+    }
 
     // Check if ID is a Master Category
     const masterCat = MASTER_CATEGORIES.find(c => c.id === id);
@@ -2788,6 +3028,8 @@ app.get(['/api/movie-details/:id', '/api/show-details/:id'], async (req, res) =>
 app.listen(PORT, '0.0.0.0', async () => {
   await loadConfig();
   await loadCollections();
+  loadDailyFeeds();
+  updateDailyFeeds().catch(e => console.error('[Daily Feeds] Initial update error:', e.message));
   
   const localIp = getLocalIpAddress();
   console.log(`=======================================================`);
