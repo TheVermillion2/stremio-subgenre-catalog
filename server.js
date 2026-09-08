@@ -537,6 +537,57 @@ function loadDailyFeeds() {
   }
 }
 
+function titlesMatch(a, b) {
+  const clean = s => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const ca = clean(a);
+  const cb = clean(b);
+  if (!ca || !cb) return false;
+  return ca === cb || ca.includes(cb) || cb.includes(ca);
+}
+
+async function searchRecentTmdbMovie(title, year = '', apiKey) {
+  const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+  try {
+    let searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${encodeURIComponent(title)}`;
+    if (year) searchUrl += `&year=${year}`;
+
+    const res = await fetchJson(searchUrl);
+    if (!res || !res.results || res.results.length === 0) return null;
+
+    const currentYear = new Date().getFullYear();
+    // Enforce recency: must be released in the last 2 years (2024+) or upcoming (2026+)
+    const valid = res.results.filter(m => {
+      const y = m.release_date ? parseInt(m.release_date.slice(0, 4), 10) : currentYear;
+      const isRecent = isNaN(y) || y >= (currentYear - 2);
+      const isMatch = titlesMatch(title, m.title) || titlesMatch(title, m.original_title);
+      return isRecent && isMatch;
+    });
+
+    if (valid.length === 0) return null;
+    const m = valid[0];
+
+    let externalId = `tt${m.id}`;
+    try {
+      const extRes = await fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`);
+      if (extRes && extRes.imdb_id) externalId = extRes.imdb_id;
+    } catch (err) {}
+
+    return {
+      id: externalId,
+      type: 'movie',
+      name: m.title || m.original_title,
+      poster: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster',
+      background: m.backdrop_path ? `https://image.tmdb.org/t/p/original${m.backdrop_path}` : null,
+      description: m.overview || 'No description available.',
+      releaseInfo: m.release_date ? m.release_date.substring(0, 4) : String(currentYear),
+      imdbRating: m.vote_average ? m.vote_average.toFixed(1) : 'N/A',
+      genres: ['Recent Release']
+    };
+  } catch (err) {
+    return null;
+  }
+}
+
 async function fetchFirstShowingBuzz(apiKey) {
   const feedUrls = [
     'https://www.firstshowing.net/feed/',
@@ -556,11 +607,11 @@ async function fetchFirstShowingBuzz(apiKey) {
         const rawHeadline = decodeHtmlEntities(m[1]);
         const link = (m[2] || '').trim();
 
-        // 1. Quoted movie title (e.g. 'Mum, I\'m Alien Pregnant')
+        // 1. Quoted movie title with smart contraction handling
         let movieTitle = null;
-        const qMatch = rawHeadline.match(/'([^']+)'/) || rawHeadline.match(/"([^"]+)"/);
+        const qMatch = rawHeadline.match(/(?:^|[\s:\(\[\-])['"](.+?)['"](?=[\s:,\.\)\]\-]|$)/);
         if (qMatch && qMatch[1].length > 1) {
-          movieTitle = qMatch[1];
+          movieTitle = qMatch[1].trim();
         }
 
         // 2. If quote missed or generic, parse from link slug
@@ -570,6 +621,10 @@ async function fetchFirstShowingBuzz(apiKey) {
             const slug = slugMatch[2].replace(/^(full-trailer-for|trailer-for|teaser-for|review|sneaky-teaser-for|venice-[0-9]{4})-/i, '');
             movieTitle = slug.split('-').slice(0, 4).join(' ');
           }
+        }
+
+        if (movieTitle && /^(season|part|volume|trailer|teaser|review)/i.test(movieTitle)) {
+          movieTitle = null;
         }
 
         if (movieTitle) {
@@ -585,55 +640,85 @@ async function fetchFirstShowingBuzz(apiKey) {
     }
   }
 
-  console.log(`[FirstShowing Buzz] Found ${items.length} titles from RSS feeds. Resolving TMDB metadata...`);
+  console.log(`[FirstShowing Buzz] Found ${items.length} titles from RSS feeds. Resolving recent TMDB metadata...`);
   const metas = [];
-  for (const item of items.slice(0, 30)) {
-    const meta = await searchTmdbMovie(item.title, '', apiKey);
+  for (const item of items.slice(0, 35)) {
+    const meta = await searchRecentTmdbMovie(item.title, '', apiKey);
     if (meta && !metas.some(m => m.id === meta.id)) {
       meta.description = `📰 [FirstShowing Buzz]: ${item.headline}\n\n${meta.description || ''}`;
       metas.push(meta);
     }
   }
-  console.log(`[FirstShowing Buzz] Successfully matched ${metas.length} movies with streamable metadata.`);
+  console.log(`[FirstShowing Buzz] Successfully matched ${metas.length} recent movies with streamable metadata.`);
   return metas;
 }
 
 async function fetchFirstShowingSchedule(apiKey) {
   try {
     const currentYear = new Date().getFullYear();
+    const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+    const metas = [];
+    const seenIds = new Set();
+
+    // 1. Fetch live "Now Playing" in theaters from TMDB for the freshest box office
+    const npRes = await fetchJson(`https://api.themoviedb.org/3/movie/now_playing?api_key=${tmdbKey}`);
+    if (npRes && npRes.results) {
+      for (const m of npRes.results.slice(0, 20)) {
+        let externalId = `tt${m.id}`;
+        try {
+          const extRes = await fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`);
+          if (extRes && extRes.imdb_id) externalId = extRes.imdb_id;
+        } catch (err) {}
+
+        seenIds.add(externalId);
+        metas.push({
+          id: externalId,
+          type: 'movie',
+          name: m.title || m.original_title,
+          poster: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster',
+          background: m.backdrop_path ? `https://image.tmdb.org/t/p/original${m.backdrop_path}` : null,
+          description: `🎟️ [Now Playing in Theaters]: Released ${m.release_date || 'Recently'}.\n\n${m.overview || ''}`,
+          releaseInfo: m.release_date ? m.release_date.substring(0, 4) : String(currentYear),
+          imdbRating: m.vote_average ? m.vote_average.toFixed(1) : 'N/A',
+          genres: ['In Theaters']
+        });
+      }
+    }
+
+    // 2. Supplement with FirstShowing's daily 2026 theatrical schedule
     const url = `https://www.firstshowing.net/schedule${currentYear}/`;
     const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-    if (!res.ok) return [];
-    const html = await res.text();
+    if (res.ok) {
+      const html = await res.text();
+      const titleMatches = html.match(/<strong>([^<]+)<\/strong>/g) || [];
+      const ignoredWords = new Set(['2026', '2025', '2027', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec', 'Bold', 'Nationwide Release', 'The Most Recent Opening Weekend', 'Sundance Film Festival', 'Cannes Film Festival', 'Venice Film Festival', 'TIFF']);
 
-    const titleMatches = html.match(/<strong>([^<]+)<\/strong>/g) || [];
-    const ignoredWords = new Set(['2026', '2025', '2027', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec', 'Bold', 'Nationwide Release', 'The Most Recent Opening Weekend', 'Sundance Film Festival', 'Cannes Film Festival', 'Venice Film Festival', 'TIFF']);
+      const movieTitles = [];
+      const seen = new Set();
+      for (const tag of titleMatches) {
+        const clean = tag.replace(/<\/?strong>/g, '').trim();
+        if (
+          clean.length > 1 &&
+          !ignoredWords.has(clean) &&
+          !/^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d+$/i.test(clean) &&
+          !seen.has(clean.toLowerCase())
+        ) {
+          seen.add(clean.toLowerCase());
+          movieTitles.push(clean);
+        }
+      }
 
-    const movieTitles = [];
-    const seen = new Set();
-    for (const tag of titleMatches) {
-      const clean = tag.replace(/<\/?strong>/g, '').trim();
-      if (
-        clean.length > 1 &&
-        !ignoredWords.has(clean) &&
-        !/^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d+$/i.test(clean) &&
-        !seen.has(clean.toLowerCase())
-      ) {
-        seen.add(clean.toLowerCase());
-        movieTitles.push(clean);
+      for (const title of movieTitles.slice(0, 25)) {
+        const meta = await searchRecentTmdbMovie(title, currentYear, apiKey);
+        if (meta && !seenIds.has(meta.id)) {
+          seenIds.add(meta.id);
+          meta.description = `📅 [Theatrical Calendar ${currentYear}]: Now In Theaters / Opening Soon via FirstShowing.net\n\n${meta.description || ''}`;
+          metas.push(meta);
+        }
       }
     }
 
-    console.log(`[FirstShowing Schedule] Extracted ${movieTitles.length} theatrical release titles. Resolving TMDB...`);
-    const metas = [];
-    for (const title of movieTitles.slice(0, 35)) {
-      const meta = await searchTmdbMovie(title, currentYear, apiKey);
-      if (meta && !metas.some(m => m.id === meta.id)) {
-        meta.description = `📅 [Theatrical Calendar ${currentYear}]: Now In Theaters / Opening Soon via FirstShowing.net\n\n${meta.description || ''}`;
-        metas.push(meta);
-      }
-    }
-    console.log(`[FirstShowing Schedule] Successfully matched ${metas.length} movies for theatrical schedule.`);
+    console.log(`[FirstShowing Schedule] Total ${metas.length} fresh recent theatrical releases loaded.`);
     return metas;
   } catch (err) {
     console.error('[FirstShowing Schedule] Error:', err.message);
@@ -644,12 +729,17 @@ async function fetchFirstShowingSchedule(apiKey) {
 async function fetchDailyTrending(apiKey) {
   try {
     const tmdbKey = apiKey || config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
+    const currentYear = new Date().getFullYear();
     const url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${tmdbKey}`;
     const res = await fetchJson(url);
     if (!res || !res.results) return [];
 
     const metas = [];
     for (const m of res.results.slice(0, 30)) {
+      // Enforce recency: only movies released in 2024 or later, or upcoming 2026
+      const yearNum = m.release_date ? parseInt(m.release_date.slice(0, 4), 10) : currentYear;
+      if (!isNaN(yearNum) && yearNum < (currentYear - 2)) continue;
+
       let externalId = `tt${m.id}`;
       try {
         const extRes = await fetchJson(`https://api.themoviedb.org/3/movie/${m.id}/external_ids?api_key=${tmdbKey}`);
@@ -662,8 +752,8 @@ async function fetchDailyTrending(apiKey) {
         name: m.title || m.original_title,
         poster: m.poster_path ? `https://image.tmdb.org/t/p/w500${m.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster',
         background: m.backdrop_path ? `https://image.tmdb.org/t/p/original${m.backdrop_path}` : null,
-        description: `🔥 [Today's Trending #1-${res.results.indexOf(m) + 1}]: Updated live every 24 hours.\n\n${m.overview || ''}`,
-        releaseInfo: m.release_date ? m.release_date.substring(0, 4) : 'N/A',
+        description: `🔥 [Today's Trending #1-${metas.length + 1}]: Released ${m.release_date || 'Recently'}. Updated live daily.\n\n${m.overview || ''}`,
+        releaseInfo: m.release_date ? m.release_date.substring(0, 4) : String(currentYear),
         imdbRating: m.vote_average ? m.vote_average.toFixed(1) : 'N/A',
         genres: ['Trending Today']
       });

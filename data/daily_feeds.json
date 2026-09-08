@@ -1,14 +1,30 @@
 {
   "firstshowing_buzz": [
     {
-      "id": "tt582663",
+      "id": "tt27041231",
       "type": "movie",
-      "name": "Barry Manilow - The Best of Me Live",
-      "poster": "https://image.tmdb.org/t/p/w500/2tJM152Kk4gbmvn8LTSfzQs8JoA.jpg",
-      "background": "https://image.tmdb.org/t/p/original/yKqWnzbCOTnrDwd0PRiEsXrtvye.jpg",
-      "description": "📰 [FirstShowing Buzz]: Full Trailer for Extra Cheesy 'Barry & Me' Swiss St. Bernard Dogs Movie\n\nGreatest Hits concert filmed in the UK. Barry sings his greatest hits live to a sold-out crowd at Wembley Arena London in 1993.",
-      "releaseInfo": "N/A",
-      "imdbRating": "N/A"
+      "name": "Musk",
+      "poster": "https://image.tmdb.org/t/p/w500/fAyZqyN78VYb0usFgsmYjxZIFcN.jpg",
+      "background": "https://image.tmdb.org/t/p/original/rbF8b5NqcN5SprJmWz9CwGquMGa.jpg",
+      "description": "📰 [FirstShowing Buzz]: First Teaser for Alex Gibney's 4-Hour 'Musk' Documentary About Elon\n\nA definitive and unvarnished examination of multi-billionaire tech entrepreneur Elon Musk.",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
+    },
+    {
+      "id": "tt38893248",
+      "type": "movie",
+      "name": "Arrested Memory",
+      "poster": "https://image.tmdb.org/t/p/w500/pzQscOy3gZWeqPV9dOfDsztNwXo.jpg",
+      "background": "https://image.tmdb.org/t/p/original/nhtXrhJVYYX4uz7haHPkL1KC3Bb.jpg",
+      "description": "📰 [FirstShowing Buzz]: Venice 2026: Sabu's 'Arrested Memory' is Clever Action Comedy Fun\n\nLee is a superstar police detective in Taipei. After losing his team during a crime investigation, he is haunted by guilt and transferred to a rural police station. Traumatized by the incident, Lee develops amnesia—but is determined to keep it a secret. Soon, he is assigned a new case: the kidnapping of the son of an influential Japanese businessman. As his memory continues to fade, Lee can only rely on his instincts—which, against all odds, lead him to the criminals.",
+      "releaseInfo": "2026",
+      "imdbRating": "7.0",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt28784376",
@@ -18,17 +34,23 @@
       "background": "https://image.tmdb.org/t/p/original/2ASkOyNYZvDs3M9xzKhckYmcRz4.jpg",
       "description": "📰 [FirstShowing Buzz]: Fun Trailer #2 for 'Mum, I'm Alien Pregnant' Gross Kiwi Horror Comedy\n\nWhen a messy underachiever accidentally gets alien-pregnant, she must overcome skeptical doctors, a useless baby daddy, and her oversharing mum in order to survive and reclaim her life.",
       "releaseInfo": "2026",
-      "imdbRating": "9.0"
+      "imdbRating": "9.0",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
-      "id": "tt0069495",
+      "id": "tt45368240",
       "type": "movie",
-      "name": "What's Up, Doc?",
-      "poster": "https://image.tmdb.org/t/p/w500/d5WwZxneeAH2Kj2SeDV6oUY2oW0.jpg",
-      "background": "https://image.tmdb.org/t/p/original/lDeH6UkNGX2UcaOKTJ5SHtmNwbD.jpg",
-      "description": "📰 [FirstShowing Buzz]: Teaser for Nathan Fielder's Doc 'You Can See Everything' on Holmes\n\nThe accidental mix-up of four identical plaid overnight bags leads to a series of increasingly wild and wacky situations.",
-      "releaseInfo": "1972",
-      "imdbRating": "7.4"
+      "name": "You Can See Everything",
+      "poster": "https://image.tmdb.org/t/p/w500/qhFWz1BsEMg5rcs6TAstmGQggMT.jpg",
+      "background": "https://image.tmdb.org/t/p/original/nhIL3O4W9h5V5JbNQm7yjoDk3So.jpg",
+      "description": "📰 [FirstShowing Buzz]: Teaser for Nathan Fielder's Doc 'You Can See Everything' on Holmes\n\nThirty-four days before she's sent to prison, notorious Silicon Valley founder Elizabeth Holmes invites a skeptical film crew to document her every move. What begins as an intimate portrait of an enigmatic felon becomes a mind-bending three-year journey into the abyss.",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt37803364",
@@ -38,7 +60,23 @@
       "background": "https://image.tmdb.org/t/p/original/kPbyLj2OyjojqvR1jfK1VvXzabg.jpg",
       "description": "📰 [FirstShowing Buzz]: Venice 2026: 'Possible Love' - An Intricate Tale of Social Class Disparity\n\nA laid-off worker and his wife cross paths with a documentary filmmaker and her spouse and confront their hidden desires.",
       "releaseInfo": "2026",
-      "imdbRating": "N/A"
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
+    },
+    {
+      "id": "tt1762506",
+      "type": "movie",
+      "name": "Band of Brothers: Legacy",
+      "poster": "https://image.tmdb.org/t/p/w500/n29MsV1m2OCbDp6PLeHxziOVOLG.jpg",
+      "background": "https://image.tmdb.org/t/p/original/mMLVXM8UOKSxVSxnXcmuBPMiHsC.jpg",
+      "description": "📰 [FirstShowing Buzz]: Trailer for HBO's 'Band of Brothers: Legacy' Doc on the WWII Series\n\nThis tribute to the groundbreaking series that helped preserve the story of Easy Company and deepened public appreciation for the sacrifices of the Greatest Generation features new interviews with cast members Damian Lewis, Ron Livingston, Michael Cudlitz, Capt. Dale Dye, USMC (Ret.), David Schwimmer, and more. Through personal reflections and behind-the-scenes stories, participants revisit the experience of making the series and explore its lasting cultural resonance, and also includes never-before-seen archival footage and photographs of Easy Company and World War II.",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt6262770",
@@ -48,17 +86,10 @@
       "background": "https://image.tmdb.org/t/p/original/57y3cRE0XVI6oWqakiKILSHsULH.jpg",
       "description": "📰 [FirstShowing Buzz]: Review: 'Tenzing' is So Much More Than a Mountain Climbing Movie\n\nA determined man embarks on a high-stakes quest—and defies seemingly impossible odds—to fulfill his dream of being the first to reach the summit of Mount Everest.",
       "releaseInfo": "2026",
-      "imdbRating": "N/A"
-    },
-    {
-      "id": "tt11445200",
-      "type": "movie",
-      "name": "Onwards and Sideways",
-      "poster": "https://via.placeholder.com/500x750?text=No+Poster",
-      "background": null,
-      "description": "📰 [FirstShowing Buzz]: Rhys Ifans & Laura Linney in UK Comedy 'Onwards & Sideways' Trailer\n\nTony Evans is the deputy head of a local primary school. Emma Dretzin is a pianist, composer and single mother of two daughters. Neither knows the other until a startling encounter changes the course of their lives: on the same morning, they are both confronted with a diagnosis of Parkinson’s.",
-      "releaseInfo": "2026",
-      "imdbRating": "N/A"
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt37279821",
@@ -68,37 +99,49 @@
       "background": "https://image.tmdb.org/t/p/original/oUFo3cN4XZAZlz0AR3l6dHLkDLT.jpg",
       "description": "📰 [FirstShowing Buzz]: Venice 2026: 'The Basics of Philosophy' is Disgusting, Pathetic Drivel\n\nA repressed philosophy professor, Dr. John Jorissen, is employed at Ridgemont College, a small liberal arts school in the American Midwest. He teaches an introductory course and is writing a book on renowned Dutch philosopher Baruch Spinoza. Haunted by a long-buried transgression and the sudden return of its victim, he descends into a crisis of guilt, desire, and spiritual reckoning.",
       "releaseInfo": "2026",
-      "imdbRating": "6.5"
+      "imdbRating": "6.5",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
-      "id": "tt9270426",
+      "id": "tt37674760",
       "type": "movie",
-      "name": "Wild East",
-      "poster": "https://image.tmdb.org/t/p/w500/fjlWSceqdWLzNallWA4XSjT6kJR.jpg",
-      "background": "https://image.tmdb.org/t/p/original/hVZwjIQ0B1ZybK9XVSCvEzADjlC.jpg",
-      "description": "📰 [FirstShowing Buzz]: Polish WWII Noir 'Wild, Wild East' Festival Trailer Feat. Joanna Kulig\n\nA runaway bride, a young peasant, mysterious illusionists and a manic investigator become entwined in a murderous affair at a Baltic German baron's manor.",
-      "releaseInfo": "2021",
-      "imdbRating": "5.0"
+      "name": "Wild Wild East",
+      "poster": "https://via.placeholder.com/500x750?text=No+Poster",
+      "background": null,
+      "description": "📰 [FirstShowing Buzz]: Polish WWII Noir 'Wild, Wild East' Festival Trailer Feat. Joanna Kulig\n\nIn occupied Poland 1943, German official Martin Wolff is sent to a remote village to investigate the disappearance of a Jewish lawyer. His arrival unsettles the fragile order between scarred villagers, corrupt collaborators, and Nazi authorities, unearthing a web of betrayal and greed tied to whispers of the lawyer’s hidden fortune. Yet as the village’s darkest truths come to light, Wolff’s search may be hiding more than it reveals.",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
-      "id": "tt2659210",
+      "id": "tt1285722",
       "type": "movie",
-      "name": "Silo",
-      "poster": "https://image.tmdb.org/t/p/w500/rpMgWEeCbiKWiv1v3dxGvbtHXYx.jpg",
-      "background": "https://image.tmdb.org/t/p/original/rKYHlcTOVQWACDbnnVBgWXnNfyd.jpg",
-      "description": "📰 [FirstShowing Buzz]: Sneaky Teaser for Season 4 of 'Silo' Sci-Fi Series with Jessica Henwick\n\nThe best kept secret of The Andes will be revealed…  For some, he is the thinker that set in motion a spiritual and political movement that passed through borders and extended from Argentina to India.  For other, he is the leader of a sect, a skillful manipulator and demagogue.  For most, he is still a mystery.  Through this feature length documentary film we try to tell the life and work of this extraordinary person, posing a disturbing question: Who is Silo?",
-      "releaseInfo": "2015",
-      "imdbRating": "7.3"
+      "name": "SILO",
+      "poster": "https://image.tmdb.org/t/p/w500/w49qzSt0ssGX1AIupiffNB74Mjw.jpg",
+      "background": null,
+      "description": "📰 [FirstShowing Buzz]: Sneaky Teaser for Season 4 of 'Silo' Sci-Fi Series with Jessica Henwick\n\nTrapped in the shadow of a towering silo, Claire faces her haunting past in a hostile women's community. To embrace life, she must confront her trauma. Will hope outshine the darkness of her wounds?",
+      "releaseInfo": "2024",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
-      "id": "tt0783233",
+      "id": "tt36789083",
       "type": "movie",
       "name": "Atonement",
-      "poster": "https://image.tmdb.org/t/p/w500/hMRIyBjPzxaSXWM06se3OcNjIQa.jpg",
-      "background": "https://image.tmdb.org/t/p/original/ffKYRCEVOzpb5y4tA7VW1DwhQw9.jpg",
-      "description": "📰 [FirstShowing Buzz]: First Trailer for Iraq War Drama 'Atonement' Feat. Branagh & Holbrook\n\nA young girl irrevocably changes the course of several lives when she accuses her older sister's lover of a crime he did not commit.",
-      "releaseInfo": "2007",
-      "imdbRating": "7.6"
+      "poster": "https://image.tmdb.org/t/p/w500/sJTPu1afH0jSfrSrGl8b0gt7vf0.jpg",
+      "background": "https://image.tmdb.org/t/p/original/3FqZlkKA2hs7YM0Zq8d8VwionWZ.jpg",
+      "description": "📰 [FirstShowing Buzz]: First Trailer for Iraq War Drama 'Atonement' Feat. Branagh & Holbrook\n\nBased on Dexter Filkins’ resonant New Yorker article of the same name, about Marine Lu Lobello, haunted by memories of a deadly incident in Baghdad, whose journey of guilt and remorse leads him to reach out to Nora, the sole surviving member of the family he believes he may have harmed.",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt15799564",
@@ -108,7 +151,10 @@
       "background": "https://image.tmdb.org/t/p/original/3uLA0ujne91bkzFStZICCYeqhnt.jpg",
       "description": "📰 [FirstShowing Buzz]: Venice 2026: Two CIA Buddies Visit Easter Island in 'Wild Horse Nine'\n\nShortly before the 1973 Chilean coup, CIA agents Chris and Lee are dispatched from Santiago to Easter Island by their bureau chief, MJ. Amongst the Island's iconic statues, and as the longtime partners wrestle with their dark pasts and present conspiracies, Chris's newfound bond with a pair of rebellious students threatens to send everyone’s trip to this remote paradise sideways.",
       "releaseInfo": "2026",
-      "imdbRating": "N/A"
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt37542585",
@@ -118,7 +164,10 @@
       "background": "https://image.tmdb.org/t/p/original/puigRDD4deUvHTi6rBP7reSgHn5.jpg",
       "description": "📰 [FirstShowing Buzz]: Mountain Climbing + Grief Doc 'Everest: The Other Side' Official Trailer\n\nAn intimate portrait of two people bound by love, ambition, and the pursuit of the impossible. Elite ski mountaineers Jim Morrison and Hilaree Nelson fell deeply in love while reaching the pinnacle of their sport. Their drive sharpened into a shared dream: to climb and ski the direct North Face of Mount Everest - the most difficult and dangerous climb on the mountain and the most coveted ski line on Earth - something only a handful have ever achieved, and no one has successfully skied down.",
       "releaseInfo": "2026",
-      "imdbRating": "N/A"
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt32767134",
@@ -128,7 +177,10 @@
       "background": "https://image.tmdb.org/t/p/original/eOassvwSzhNfHzPA00XtDD0jYs4.jpg",
       "description": "📰 [FirstShowing Buzz]: Freaky Hands Irish Horror 'The Restoration at Grayson Manor' Trailer\n\nThe foundations of Grayson Manor are shaken when an accident leaves Boyd Grayson handless and his mother invests in radical new technology to help him.",
       "releaseInfo": "2025",
-      "imdbRating": "8.5"
+      "imdbRating": "8.5",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt39163347",
@@ -138,7 +190,36 @@
       "background": "https://image.tmdb.org/t/p/original/wk9dLaji3CXpl5FxIYBXR5ojcY6.jpg",
       "description": "📰 [FirstShowing Buzz]: Full Trailer for 'Once Upon a Time in Harlem' Revived Doc from 1972\n\nA decade after his death, genre-defying filmmaker William Greaves has one last trick up his sleeve with what he considered the most important event he captured on film: a 1972 party he engineered with the living luminaries of the Harlem Renaissance.",
       "releaseInfo": "2026",
-      "imdbRating": "N/A"
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
+    },
+    {
+      "id": "tt34966140",
+      "type": "movie",
+      "name": "Focker-in-Law",
+      "poster": "https://image.tmdb.org/t/p/w500/bZhYdECsSuCrmbfYhKAc2bgsNz.jpg",
+      "background": "https://image.tmdb.org/t/p/original/6IfsmHoVWwgJwzxA9DLim2XZbSn.jpg",
+      "description": "📰 [FirstShowing Buzz]: Trailer #2 for De Niro, Stiller, Grande's 'Focker-in-Law' Family Sequel\n\nHenry, son of Greg and Pam Focker, faces family chaos when he decides to marry a strong-willed woman who appears to be his complete mismatch.",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
+    },
+    {
+      "id": "tt15095848",
+      "type": "movie",
+      "name": "Being Heumann",
+      "poster": "https://image.tmdb.org/t/p/w500/bPlNdvgyjRUyK6sfms9hGh3Avpa.jpg",
+      "background": "https://image.tmdb.org/t/p/original/5A0Yr74Rlikxu2PLFaQ0RXaa8Nr.jpg",
+      "description": "📰 [FirstShowing Buzz]: First Teaser for Sian Heder's 'Being Heumann' Film on Judy Heumann\n\nScrappy, defiant, and done being treated like a burden, Judy Heumann turns her outrage into a revolution. In 1977, she and more than 100 disability rights protestors send a very loud message: The system is broken—not us.",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt8285320",
@@ -147,31 +228,313 @@
       "poster": "https://via.placeholder.com/500x750?text=No+Poster",
       "background": "https://image.tmdb.org/t/p/original/bPpMOwKJIuPTSYV0cLRutVkW0qq.jpg",
       "description": "📰 [FirstShowing Buzz]: WWII Spy Thriller 'Fortitude' Trailer w/ Nicolas Cage & Matthew Goode\n\nBrilliant British Army officers Dudley Clarke and Thomas Argyll “Tar” Robertson deploy an elaborate web of deception campaigns including fictitious armies, fake military equipment, and a network of double agents to mislead Nazi Intelligence.",
-      "releaseInfo": "N/A",
-      "imdbRating": "N/A"
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
-      "id": "tt2771200",
+      "id": "tt7526136",
       "type": "movie",
-      "name": "Beauty and the Beast",
-      "poster": "https://image.tmdb.org/t/p/w500/hKegSKIDep2ewJWPUQD7u0KqFIp.jpg",
-      "background": "https://image.tmdb.org/t/p/original/uU1Mt4JWhDvl4vKb3AfxNsorkoM.jpg",
-      "description": "📰 [FirstShowing Buzz]: Samuel L Jackson & Joel Kinnaman in 'The Beast' Action Thriller Teaser\n\nA live-action adaptation of Disney's version of the classic tale of a cursed prince and a beautiful young woman who helps him break the spell.",
-      "releaseInfo": "2017",
-      "imdbRating": "7.0"
+      "name": "Heart of the Beast",
+      "poster": "https://image.tmdb.org/t/p/w500/1ApfSA8JTqeha3GTFEY8syV4auq.jpg",
+      "background": "https://image.tmdb.org/t/p/original/bicMU6xVD5deVyKP2azpyx7xkmH.jpg",
+      "description": "📰 [FirstShowing Buzz]: Samuel L Jackson & Joel Kinnaman in 'The Beast' Action Thriller Teaser\n\nAfter a harrowing plane crash, Special Forces officer James Belmont and his combat dog, Odin, find themselves stranded deep in the Alaskan wilderness. Together, they are forced into a brutal fight for survival against the elements.",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
-      "id": "tt0048028",
+      "id": "tt33042905",
       "type": "movie",
-      "name": "East of Eden",
-      "poster": "https://image.tmdb.org/t/p/w500/xv1MZVIop0SQqwLUymgE5eb2LFl.jpg",
-      "background": "https://image.tmdb.org/t/p/original/u7i1XtbOubq0xwRy2Zbgmox6g9W.jpg",
-      "description": "📰 [FirstShowing Buzz]: Florence Pugh & Mike Faist in 'East of Eden' Adaptation Official Trailer\n\nIn the Salinas Valley in and around World War I, Cal Trask feels he must compete against overwhelming odds with his brother for the love of their father. Cal is frustrated at every turn, from his reaction to the war, how to get ahead in business and in life, and how to relate to his estranged mother.",
-      "releaseInfo": "1955",
-      "imdbRating": "7.5"
+      "name": "Harry Potter and the Stone",
+      "poster": "https://image.tmdb.org/t/p/w500/pXtcTXsOZuCJ6CjM0DzJAiooSnM.jpg",
+      "background": "https://image.tmdb.org/t/p/original/meCv0MJ2MQOVBou6AJc0g4ZV28y.jpg",
+      "description": "📰 [FirstShowing Buzz]: HBO Max's 'Harry Potter' Series Teaser #2 with Dominic McLaughlin\n\nHarry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him.",
+      "releaseInfo": "2024",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
+    },
+    {
+      "id": "tt1465350",
+      "type": "movie",
+      "name": "East of Eden: The First Eden - Seeds Of Hope",
+      "poster": "https://image.tmdb.org/t/p/w500/3fwzNbVFbRgKDT9Xse8BTnfDhuR.jpg",
+      "background": null,
+      "description": "📰 [FirstShowing Buzz]: Florence Pugh & Mike Faist in 'East of Eden' Adaptation Official Trailer\n\nEast of Eden: The First Eden - Seeds Of Hope",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
+      "genres": [
+        "Recent Release"
+      ]
     }
   ],
   "firstshowing_schedule": [
+    {
+      "id": "tt22084616",
+      "type": "movie",
+      "name": "Spider-Man: Brand New Day",
+      "poster": "https://image.tmdb.org/t/p/w500/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+      "background": "https://image.tmdb.org/t/p/original/qeQJx07rK2xm8SD2sJxFKhE7gs0.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-07-29.\n\nFighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
+      "releaseInfo": "2026",
+      "imdbRating": "7.9",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt1756855",
+      "type": "movie",
+      "name": "Coyote vs. Acme",
+      "poster": "https://image.tmdb.org/t/p/w500/orkLtdgMGiO9rTVMqJ1kKwrnup1.jpg",
+      "background": "https://image.tmdb.org/t/p/original/l9mFW9HQnAZ4r1ChZJHoOT3jaal.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-08-20.\n\nAfter Acme products fail him one too many times in his dogged pursuit of the Roadrunner, Wile E. Coyote decides to hire a billboard lawyer to sue the Acme Corporation.",
+      "releaseInfo": "2026",
+      "imdbRating": "7.7",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt33764258",
+      "type": "movie",
+      "name": "The Odyssey",
+      "poster": "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+      "background": "https://image.tmdb.org/t/p/original/RMXG8myu1aGlNUsRjtxzmpdMK0.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-07-15.\n\nOdysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
+      "releaseInfo": "2026",
+      "imdbRating": "8.0",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt32338669",
+      "type": "movie",
+      "name": "Mutiny",
+      "poster": "https://image.tmdb.org/t/p/w500/pu2VxGlpGwffOx292w18b1tv96j.jpg",
+      "background": "https://image.tmdb.org/t/p/original/qDa0fqDqIBCovRp975RvtGPcuN3.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-08-19.\n\nAfter witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a one-man crusade to avenge his boss' death only to discover an international conspiracy.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.4",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt34564059",
+      "type": "movie",
+      "name": "The Runner",
+      "poster": "https://image.tmdb.org/t/p/w500/uxCaBoYXsDC4A0SqTm3SISj0OwK.jpg",
+      "background": "https://image.tmdb.org/t/p/original/ziXF8wIBguHNCeplNthUlDTCZP8.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-09-03.\n\nMaia Marten, a brilliant London lawyer, has her life shattered by a single call on her morning run: her son has been taken. To get him back, she must keep running, obey every ruthless command, and trust no one-each second a test of how far a mother will go to save her child.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.7",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt34385135",
+      "type": "movie",
+      "name": "Colony",
+      "poster": "https://image.tmdb.org/t/p/w500/tN799oUR0f1gUKDYdMNrDaY7I51.jpg",
+      "background": "https://image.tmdb.org/t/p/original/hpBGCnzOvdtQoMyE48gvwp2y5yx.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-05-21.\n\nProfessor Se-jeong is thrust into a bloody nightmare when a rapidly mutating virus is released during a biotech conference causing authorities to seal the facility. Trapped inside with no escape, Se-jeong along with a small group of survivors must fight to stay alive while the infected undergo horrific transformations.",
+      "releaseInfo": "2026",
+      "imdbRating": "8.1",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt9000310",
+      "type": "movie",
+      "name": "Ghost in the Cell",
+      "poster": "https://image.tmdb.org/t/p/w500/zxcMdx0w5Zmg8yZuuiS7CJ8vOea.jpg",
+      "background": "https://image.tmdb.org/t/p/original/tK3QdOOrX4qEkmSlvrmc8cK7iOU.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-04-16.\n\nIn a notorious prison, an invisible force begins killing inmates brutally, compelling enemy gangs and corrupt guards to work together as they try to survive the mounting bloodshed.",
+      "releaseInfo": "2026",
+      "imdbRating": "7.1",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt28014327",
+      "type": "movie",
+      "name": "Mayday",
+      "poster": "https://image.tmdb.org/t/p/w500/hVXjX1jLZ1ljFSNGXpjJfbTUOa7.jpg",
+      "background": "https://image.tmdb.org/t/p/original/4gyx49ibwQslyrwuUS1c58PJEEd.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-09-03.\n\nWhen a U.S. Navy pilot on a top-secret mission during the Cold War gets trapped behind enemy lines, his only chance at survival is to form an alliance with an eccentric ex-KGB agent.",
+      "releaseInfo": "2026",
+      "imdbRating": "7.9",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt37287335",
+      "type": "movie",
+      "name": "Obsession",
+      "poster": "https://image.tmdb.org/t/p/w500/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg",
+      "background": "https://image.tmdb.org/t/p/original/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-05-13.\n\nAfter breaking the mysterious \"One Wish Willow\" to win his crush's heart, a hopeless romantic finds himself getting exactly what he asked for but soon discovers that some desires come at a dark, sinister price.",
+      "releaseInfo": "2026",
+      "imdbRating": "8.2",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt37752275",
+      "type": "movie",
+      "name": "Clash of the Thundermans",
+      "poster": "https://image.tmdb.org/t/p/w500/16oqRrWVzQm6qdGfBxvziZ2UiMT.jpg",
+      "background": "https://image.tmdb.org/t/p/original/tBZMwg5oCJn8P0pStfuOMhhSQD3.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-09-03.\n\nWhen Chloe develops a destructive new superpower, the Hero League orders her to an elite boarding school for superheroes to learn control of her abilities. Faced with the prospect of sending Chloe away for years, the Thundermans split apart, with Phoebe, Barb and Billy taking her into hiding. Max, Hank, and Nora track their rogue family members, until the two factions face off against each other in a full-on battle for the Thundermans’ future.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.8",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt37654096",
+      "type": "movie",
+      "name": "The Last Sunrise",
+      "poster": "https://image.tmdb.org/t/p/w500/3PWJqDfygN0YNNjWsDUOXclCp3h.jpg",
+      "background": "https://image.tmdb.org/t/p/original/zFCWfU2ViMIm38G1W8UsnSpqmWn.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-08-26.\n\nRy, a college student with a chronic illness, escapes to Mallorca for the summer with her mother, where she unexpectedly falls for a local and begins to embrace living in the moment. But as her condition worsens and long-hidden family secrets come to light, everything she has found before summer's end is threatened.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.6",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt39390497",
+      "type": "movie",
+      "name": "Facing El Chapo",
+      "poster": "https://image.tmdb.org/t/p/w500/alpf5v4UqSFawPmG9RX03Or4BDk.jpg",
+      "background": "https://image.tmdb.org/t/p/original/c4U96GrPRfnNrS01mBtqnocvlLJ.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-08-21.\n\nTwo Mexican officers must survive the final hours of their shift after crossing a ruthless cartel boss.",
+      "releaseInfo": "2026",
+      "imdbRating": "8.8",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt37603783",
+      "type": "movie",
+      "name": "Above & Below",
+      "poster": "https://image.tmdb.org/t/p/w500/7bOuu1SRALGwsG2fLCTvRkCmQBj.jpg",
+      "background": "https://image.tmdb.org/t/p/original/lSd6nEnlaeQkswLLUgHC5gyuXyU.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-07-29.\n\nA group of friends set off for an unforgettable vacation. What begins as an adventure of partying and diving quickly turns into a nightmare when they are attacked by criminals in open waters.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.2",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt29512655",
+      "type": "movie",
+      "name": "Rage of Stars",
+      "poster": "https://image.tmdb.org/t/p/w500/oLld47ZT1I3iecM3OWhIphohQUJ.jpg",
+      "background": "https://image.tmdb.org/t/p/original/z7lZgL5tzefTfhyRtouThFhsuUS.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-08-06.\n\nA story about a woman from the International Special Forces Unit, who has a premonition about the impending end of humanity.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.0",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt32890033",
+      "type": "movie",
+      "name": "Minions & Monsters",
+      "poster": "https://image.tmdb.org/t/p/w500/4LwvU9SZc8QQzW1X1FAPhNbXnEU.jpg",
+      "background": "https://image.tmdb.org/t/p/original/kkcwhgSFd81QDlXo8ytrpHPQjhy.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-06-24.\n\nThis is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
+      "releaseInfo": "2026",
+      "imdbRating": "7.6",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt27530512",
+      "type": "movie",
+      "name": "Toxic: A Fairy Tale for Grown-ups",
+      "poster": "https://image.tmdb.org/t/p/w500/oiIPU4lvnI0Ag2K9cyAi44eCaoE.jpg",
+      "background": "https://image.tmdb.org/t/p/original/tBRSSfgqOAq7YlG8udcoJIBm2FG.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-08-26.\n\nA powerful drug cartel pulls the strings behind a facade of sun-soaked beaches as a gritty, violent underworld power struggle emerges during the crumbling of Portuguese colonial rule.",
+      "releaseInfo": "2026",
+      "imdbRating": "8.0",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt27419466",
+      "type": "movie",
+      "name": "Moana",
+      "poster": "https://image.tmdb.org/t/p/w500/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg",
+      "background": "https://image.tmdb.org/t/p/original/76WFQTmh4gsqYpWTejxuEu5Iu69.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-07-08.\n\nTeenage Moana answers the Ocean's call and, for the first time, voyages beyond the reef of her island of Motunui with infamous demigod Maui on an unforgettable journey to restore prosperity to her people.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.3",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt11561116",
+      "type": "movie",
+      "name": "The Whisper Man",
+      "poster": "https://image.tmdb.org/t/p/w500/6UqflU8Qqkz7Dq4swJPqs0ZJjY4.jpg",
+      "background": "https://image.tmdb.org/t/p/original/xSJJQeAp9GBFmiKusysTRG6jQjt.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-08-27.\n\nWhen his young son vanishes, a widower enlists help from his estranged father, a retired detective who put away the serial killer now linked to the case.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.8",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt30887701",
+      "type": "movie",
+      "name": "Pinocchio: Unstrung",
+      "poster": "https://image.tmdb.org/t/p/w500/eUJXk3bTvLBi5Zcb0BCedZU7lVL.jpg",
+      "background": "https://image.tmdb.org/t/p/original/dNKFETDDujxm2PUN873Jwiw5VML.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-07-22.\n\nInfluenced by a sinister Cricket and created by Geppetto, Pinocchio launches a violent crusade to carve himself into a real boy like his brother James, one piece at a time.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.6",
+      "genres": [
+        "In Theaters"
+      ]
+    },
+    {
+      "id": "tt27844906",
+      "type": "movie",
+      "name": "Rosebush Pruning",
+      "poster": "https://image.tmdb.org/t/p/w500/rsHEVjzxU8cxz1sm3vboj99daNv.jpg",
+      "background": "https://image.tmdb.org/t/p/original/vcZ3UUVmFNk90DBSrTBlTKCdbbE.jpg",
+      "description": "🎟️ [Now Playing in Theaters]: Released 2026-04-23.\n\nIn a Spanish villa, American siblings Jack, Ed, Anna and Robert wallow in isolation and their inherited fortune. When Jack wants to move in with his girlfriend and Ed uncovers the truth about their mother’s death, the fabric of the family begins to unravel.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.2",
+      "genres": [
+        "In Theaters"
+      ]
+    },
     {
       "id": "tt32792934",
       "type": "movie",
@@ -180,7 +543,10 @@
       "background": "https://image.tmdb.org/t/p/original/kHyN3PejjlYWYz1Eah3jS64oV0g.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nA socially awkward tween endures the ruthless hierarchy at a water polo camp, his anxiety spiraling into psychological turmoil over the summer.",
       "releaseInfo": "2025",
-      "imdbRating": "6.4"
+      "imdbRating": "6.4",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt28083456",
@@ -190,7 +556,10 @@
       "background": "https://image.tmdb.org/t/p/original/argJlxQHbXAzyH8fKnjLfoEyDcd.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nAs their marriage quietly unravels, Alex faces middle age and an impending divorce, seeking new purpose in the New York comedy scene while Tess confronts the sacrifices she made for their family—forcing them to navigate co-parenting, identity, and whether love can take a new form.",
       "releaseInfo": "2025",
-      "imdbRating": "6.6"
+      "imdbRating": "6.6",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt29344894",
@@ -200,7 +569,10 @@
       "background": "https://image.tmdb.org/t/p/original/gRMJQCyl6T2kFJlqRm3Gpo6HP0i.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nAfter a Palestinian teen gets swept up into a West Bank protest, his mother recounts the family story of hope, courage and relentless struggle that led to this fateful moment.",
       "releaseInfo": "2025",
-      "imdbRating": "7.9"
+      "imdbRating": "7.9",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt8667404",
@@ -210,7 +582,10 @@
       "background": "https://image.tmdb.org/t/p/original/vTiI8auKiV8KnewOqySCZkXB19t.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nPlagued by an abusive childhood, a woman finds escape in competitive swimming, sexual experimentation, toxic relationships, and addiction before ultimately finding her voice through writing.",
       "releaseInfo": "2025",
-      "imdbRating": "6.7"
+      "imdbRating": "6.7",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt14850054",
@@ -220,7 +595,10 @@
       "background": "https://image.tmdb.org/t/p/original/cLFbDVfhllIMybpo2fkGNzehiQG.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nHaving found the safety of the Greenland bunker after the comet Clarke decimated the Earth, the Garrity family must now risk everything to embark on a perilous journey across the wasteland of Europe to find a new home.",
       "releaseInfo": "2026",
-      "imdbRating": "6.4"
+      "imdbRating": "6.4",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt33028778",
@@ -230,7 +608,10 @@
       "background": "https://image.tmdb.org/t/p/original/d5C5Wsx4fnMRA0tj9BK1kTPcgQe.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nCollege student Lucy and her friends spend their vacation at her family's home in Hawaii, which includes her pet chimpanzee, Ben. However, when Ben contracts rabies after being bitten by a rabid animal, the group must fight for their lives in order to avoid the now-violent chimp.",
       "releaseInfo": "2026",
-      "imdbRating": "6.5"
+      "imdbRating": "6.5",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt32141377",
@@ -240,7 +621,10 @@
       "background": "https://image.tmdb.org/t/p/original/hHDNOlATHhre4eZ7aYz5cdyJLik.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nDr. Kelson finds himself in a shocking new relationship - with consequences that could change the world as they know it - and Spike's encounter with Jimmy Crystal becomes a nightmare he can't escape.",
       "releaseInfo": "2026",
-      "imdbRating": "7.1"
+      "imdbRating": "7.1",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt29612071",
@@ -250,7 +634,10 @@
       "background": "https://image.tmdb.org/t/p/original/2skPNvhiF3B0pUigNm1L5KLWvrk.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nNine-year-old Danny teams up with his beloved family dog Charlie, who gets abducted by aliens and returns with superpowers, to thwart a plan by the neighbor's sinister cat Puddy to destroy humanity.",
       "releaseInfo": "2025",
-      "imdbRating": "6.3"
+      "imdbRating": "6.3",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt15181326",
@@ -260,7 +647,10 @@
       "background": "https://image.tmdb.org/t/p/original/ulw8SrKbDeDrsSVNKPb5211AseI.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nIn 1977, former real estate developer Tony Kiritsis puts a dead man's switch on himself and the mortgage banker who did him wrong, demanding $5 million and a personal apology.",
       "releaseInfo": "2026",
-      "imdbRating": "6.5"
+      "imdbRating": "6.5",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt1527793",
@@ -270,7 +660,10 @@
       "background": "https://image.tmdb.org/t/p/original/1eM6Ey1FzpgJigrxRiSYtntSWq7.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nAfter being laid off and humiliated by a ruthless job market, a veteran paper mill manager descends into violence in a desperate bid to reclaim his dignity.",
       "releaseInfo": "2025",
-      "imdbRating": "7.5"
+      "imdbRating": "7.5",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt28334938",
@@ -280,7 +673,10 @@
       "background": "https://image.tmdb.org/t/p/original/juj498fB0FRZHRKrirHL61gMqUs.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nAspiring small-town musician Chito is determined to make it big. When a clip of him performing one of his songs goes viral, he seizes the opportunity and pushes to carve out a place for himself in the new wave of Mexican-American music... and ultimately gets caught in a game more dangerous than anticipated.",
       "releaseInfo": "2026",
-      "imdbRating": "8.2"
+      "imdbRating": "8.2",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt10329560",
@@ -290,7 +686,10 @@
       "background": "https://image.tmdb.org/t/p/original/2nMCDgLekQA2mumJLXJvGY4RUx0.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nAfter losing her beloved father, Helen finds herself saved by an unlikely friendship with a stubborn hawk named Mabel. Through the bond, Helen rediscovers the beauty of being alive.",
       "releaseInfo": "2025",
-      "imdbRating": "7.1"
+      "imdbRating": "7.1",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt31050594",
@@ -300,7 +699,10 @@
       "background": "https://image.tmdb.org/t/p/original/gIClklFGYBe0uiOoiP2vtocJbss.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nIn the near future, a detective stands on trial accused of murdering his wife. He has ninety minutes to prove his innocence to the advanced AI Judge he once championed, before it determines his fate.",
       "releaseInfo": "2026",
-      "imdbRating": "7.1"
+      "imdbRating": "7.1",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt22868010",
@@ -310,7 +712,10 @@
       "background": "https://image.tmdb.org/t/p/original/v0NEB75SZjxY8GS3ho8WeEvjIT3.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nWhen James receives a mysterious letter from his lost love Mary, he is drawn to Silent Hill—a once-familiar town now consumed by darkness. As he searches for her, James faces monstrous creatures and unravels a terrifying truth that will push him to the edge of his sanity.",
       "releaseInfo": "2026",
-      "imdbRating": "5.4"
+      "imdbRating": "5.4",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt34819091",
@@ -320,7 +725,10 @@
       "background": "https://image.tmdb.org/t/p/original/jZNR5onRZijwyGr5iWbs3J9QcYr.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nThe extraordinary true legend of Ann Lee, founder of the devotional sect known as the Shakers, who preached gender and social equality and was revered by her followers as the female Christ.",
       "releaseInfo": "2025",
-      "imdbRating": "6.3"
+      "imdbRating": "6.3",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt14883538",
@@ -330,7 +738,10 @@
       "background": "https://image.tmdb.org/t/p/original/reQELo8rDiLIOoYIA7M6q7KGRW0.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nTen-year-old Arco lives in a far future. During his first flight in his rainbow suit, he loses control and falls into the past. Iris, a girl his age from 2075, comes to his rescue and tries by any means to help send him back to his own era.",
       "releaseInfo": "2025",
-      "imdbRating": "7.5"
+      "imdbRating": "7.5",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt27564844",
@@ -340,7 +751,10 @@
       "background": "https://image.tmdb.org/t/p/original/seuG9UslSFybML8C4enbrE6Hsyz.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nIn a post-apocalyptic future where an event known as \"The Quiet Rapture\" caused all known stars and habitable planets in the universe to disappear, a convict is sent to search an ocean of blood discovered on a desolate moon, using a small submarine nicknamed the \"Iron Lung\".",
       "releaseInfo": "2026",
-      "imdbRating": "6.9"
+      "imdbRating": "6.9",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt8036976",
@@ -350,7 +764,10 @@
       "background": "https://image.tmdb.org/t/p/original/hO2jx1H3XafR7Y8QbFgVH1sHTY9.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nTwo colleagues become stranded on a deserted island, the only survivors of a plane crash. On the island, they must overcome past grievances and work together to survive, but ultimately, it's a battle of wills and wits to make it out alive.",
       "releaseInfo": "2026",
-      "imdbRating": "7.0"
+      "imdbRating": "7.0",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt32357218",
@@ -360,7 +777,10 @@
       "background": "https://image.tmdb.org/t/p/original/nHxWyy18SvAZ8jJeemtS8k1UNjM.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nA man living in self-imposed exile on a remote island rescues a young girl from a violent storm, setting off a chain of events that forces him out of seclusion to protect her from enemies tied to his past.",
       "releaseInfo": "2026",
-      "imdbRating": "7.8"
+      "imdbRating": "7.8",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt14264694",
@@ -370,7 +790,10 @@
       "background": "https://image.tmdb.org/t/p/original/gMItMzDOyrfQGZsMWRM9tdxq5cV.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nFive years ago, a tear in the fabric of reality brought creatures to our world from an alternate dimension bent on our destruction. A father hides his daughter on an island to keep her safe while he prepares her for survival and the battles to come. But when the world is about to break, no place is safe.",
       "releaseInfo": "2025",
-      "imdbRating": "6.0"
+      "imdbRating": "6.0",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt31434030",
@@ -380,7 +803,10 @@
       "background": "https://image.tmdb.org/t/p/original/be5SIsRGMckO8tU9lrLcIik70Dy.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nIn late 15th-century Eastern Europe, Prince Vlad II’s bride is brutally murdered. As a result, he renounces God and damns Heaven itself. Cursed with eternal life, Vlad is reborn as Dracula, an immortal warlord who defies fate in a blood-soaked crusade to wrench his lost love back from death.",
       "releaseInfo": "2025",
-      "imdbRating": "7.2"
+      "imdbRating": "7.2",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt32306991",
@@ -390,7 +816,10 @@
       "background": "https://image.tmdb.org/t/p/original/eVXBp5BBskAj0RJ6pDSNPcBs1uI.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nAfter Matt's dreams of a picturesque Italian wedding are shattered when his fiancée leaves him at the altar, he embarks on his planned honeymoon across Italy alone, immersing himself in the country's vibrant culture, food, and beauty, meeting Gia along the way.",
       "releaseInfo": "2026",
-      "imdbRating": "7.5"
+      "imdbRating": "7.5",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt28682323",
@@ -400,7 +829,10 @@
       "background": "https://image.tmdb.org/t/p/original/fPfDB0IHOqvmKIzFP9CA51OOS1N.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nTethered by a frightening conclusion, Maya and the Strangers are locked on an unavoidable, unforgiving collision course — a showdown that proves they’re far from strangers now.",
       "releaseInfo": "2026",
-      "imdbRating": "5.9"
+      "imdbRating": "5.9",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt29550683",
@@ -410,7 +842,10 @@
       "background": "https://image.tmdb.org/t/p/original/rfawRNnOrpqlvTi3Xn4XRjkxx66.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nWhen a misfit group of unwitting high school students stumbles upon a cursed Aztec Death Whistle, they discover that blowing it unleashes a terrifying sound that summons their future deaths to hunt them down.",
       "releaseInfo": "2026",
-      "imdbRating": "6.3"
+      "imdbRating": "6.3",
+      "genres": [
+        "Recent Release"
+      ]
     },
     {
       "id": "tt8879928",
@@ -420,107 +855,10 @@
       "background": "https://image.tmdb.org/t/p/original/puqQGxK9HYITUKhCdREg3XOLlZd.jpg",
       "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nWhen a mutating, highly contagious fungus escapes a sealed facility, two employees – joined by a grizzled bioterror operative – must survive the wildest night shift ever to save humanity from extinction.",
       "releaseInfo": "2026",
-      "imdbRating": "6.8"
-    },
-    {
-      "id": "tt32430579",
-      "type": "movie",
-      "name": "Crime 101",
-      "poster": "https://image.tmdb.org/t/p/w500/tVvpFIoteRHNnoZMhdnwIVwJpCA.jpg",
-      "background": "https://image.tmdb.org/t/p/original/zvGMwQ1mAFrxSzzMFT9WMEl6hxB.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nWhen an elusive thief whose high-stakes heists unfold along the iconic 101 freeway in Los Angeles eyes the score of a lifetime, with hopes of this being his final job, his path collides with a disillusioned insurance broker who is facing her own crossroads. Determined to crack the case, a relentless detective closes in on the operation, raising the stakes even higher.",
-      "releaseInfo": "2026",
-      "imdbRating": "7.0"
-    },
-    {
-      "id": "tt27613895",
-      "type": "movie",
-      "name": "GOAT",
-      "poster": "https://image.tmdb.org/t/p/w500/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
-      "background": "https://image.tmdb.org/t/p/original/tq3h43fZy0H80vzf47MAY7R9Mxo.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nA small goat with big dreams gets a once-in-a-lifetime shot to join the pros and play roarball, a high-intensity, co-ed, full-contact sport dominated by the fastest, fiercest animals in the world.",
-      "releaseInfo": "2026",
-      "imdbRating": "8.1"
-    },
-    {
-      "id": "tt1341338",
-      "type": "movie",
-      "name": "Good Luck, Have Fun, Don't Die",
-      "poster": "https://image.tmdb.org/t/p/w500/af7yguGbWQyvYtk6QCD5l4yBbKN.jpg",
-      "background": "https://image.tmdb.org/t/p/original/drRxbu2OHG0DEENptZ8wI5f0uEU.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nA 'Man from the Future' arrives at an LA diner where he must recruit the precise combination of disgruntled patrons to join him on a one-night quest to save the world from the terminal threat of a rogue artificial intelligence.",
-      "releaseInfo": "2026",
-      "imdbRating": "7.1"
-    },
-    {
-      "id": "tt35114460",
-      "type": "movie",
-      "name": "Scarlet",
-      "poster": "https://image.tmdb.org/t/p/w500/2O2tOyS4kvO9GtFPHpWmbXvfRQv.jpg",
-      "background": "https://image.tmdb.org/t/p/original/4ZZiOP4Imzv6ULF9QczvfQ1VdEO.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nAfter failing to avenge her father's murder, Princess Scarlet, wakes up in the \"Land of the Dead.\" In this world filled with madness, if she does not achieve her revenge against her nemesis and reach the \"No End Place,\" she will become \"Void\" and cease to exist. Can Scarlet find a way to live at the end of her endless journey?",
-      "releaseInfo": "2025",
-      "imdbRating": "7.0"
-    },
-    {
-      "id": "tt32897959",
-      "type": "movie",
-      "name": "“Wuthering Heights”",
-      "poster": "https://image.tmdb.org/t/p/w500/3YBce6dTh1D5oCMITXk2S5QhPt.jpg",
-      "background": "https://image.tmdb.org/t/p/original/nHKscpZcAPkh97OsJJjyE5yaVE0.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nTragedy strikes when Heathcliff falls in love with Catherine Earnshaw, a woman from a wealthy family in 18th-century England.",
-      "releaseInfo": "2026",
-      "imdbRating": "6.7"
-    },
-    {
-      "id": "tt4357198",
-      "type": "movie",
-      "name": "How to Make a Killing",
-      "poster": "https://image.tmdb.org/t/p/w500/kw7x5mSmHhoeeqwXLwXTBsofD1N.jpg",
-      "background": "https://image.tmdb.org/t/p/original/bkUa5ZDqjQPx6rkxs0hM87vaWVa.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nDisowned at birth by his obscenely wealthy family, blue-collar Becket Redfellow will stop at nothing to reclaim his inheritance, no matter how many relatives stand in his way.",
-      "releaseInfo": "2026",
-      "imdbRating": "7.0"
-    },
-    {
-      "id": "tt34888646",
-      "type": "movie",
-      "name": "I Can Only Imagine 2",
-      "poster": "https://image.tmdb.org/t/p/w500/qYBCs9nBmdNCLduw5BTlendq89z.jpg",
-      "background": "https://image.tmdb.org/t/p/original/qHBnPZA3J6hSl9a3Q1JAQzDeo2L.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nFollowing the breakout success of the song 'I Can Only Imagine', MercyMe's Bart Millard is living the dream—sold-out arenas, a devoted fanbase, and a thriving career. But behind the spotlight, Bart's past threatens the family he's built, especially the fragile bond with his son Sam. When hopeful newcomer Tim Timmons joins the band for their biggest tour yet, he unknowingly brings a renewed gratitude to Bart's life through their unlikely friendship. Bart soon discovers that Tim carries hardships—and secrets—of his own, forcing him to face his past and repair his relationships with Sam and his wife Shannon before fame costs him what matters most.",
-      "releaseInfo": "2026",
-      "imdbRating": "8.3"
-    },
-    {
-      "id": "tt35231039",
-      "type": "movie",
-      "name": "Kokuho",
-      "poster": "https://image.tmdb.org/t/p/w500/a15F5KJ4mleusJR1YKP4zUyZaxG.jpg",
-      "background": "https://image.tmdb.org/t/p/original/3C8yAIuXlH4BGCpTwEetIv0VBt8.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nNagasaki, 1964: Following the death of his Yakuza father, 15-year-old Kikuo is taken under the wings of a famous Kabuki actor. Alongside Shunsuke, the actor’s only son, he decides to dedicate himself to this traditional form of theatre. For decades, the two young men grow and evolve together – and one will become the greatest Japanese master of the art of Kabuki.",
-      "releaseInfo": "2025",
-      "imdbRating": "7.8"
-    },
-    {
-      "id": "tt1764551",
-      "type": "movie",
-      "name": "Psycho Killer",
-      "poster": "https://image.tmdb.org/t/p/w500/5xgxxmLivJXL8aF0HdZfpx8aAIo.jpg",
-      "background": "https://image.tmdb.org/t/p/original/gMC4KIdHsj37w3kPI7mRUJLC57Q.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nFollowing the brutal murder of her husband, a Kansas highway patrol officer sets out on a journey to track down the perpetrator. As the hunt progresses, she comes to realize the man responsible is a sadistic serial killer, and the depth of his mental depravity and his sinister agenda is more twisted than anyone could have imagined.",
-      "releaseInfo": "2026",
-      "imdbRating": "6.7"
-    },
-    {
-      "id": "tt35003538",
-      "type": "movie",
-      "name": "EPiC: Elvis Presley in Concert",
-      "poster": "https://image.tmdb.org/t/p/w500/2K2NH5dforjT9kLcUC0eeBpdZkC.jpg",
-      "background": "https://image.tmdb.org/t/p/original/ttOBvac1oW0OCCfFzZlXh3NeKyl.jpg",
-      "description": "📅 [Theatrical Calendar 2026]: Now In Theaters / Opening Soon via FirstShowing.net\n\nLong-lost footage from Elvis Presley's legendary Las Vegas residency in the 1970s woven together with rare 16mm footage from Elvis on Tour, and 8mm from the Graceland archive, plus recordings of Elvis telling \"his side of the story\" rediscovered during Baz Luhrmann's research for his 2022 film, Elvis.",
-      "releaseInfo": "2026",
-      "imdbRating": "8.2"
+      "imdbRating": "6.8",
+      "genres": [
+        "Recent Release"
+      ]
     }
   ],
   "trending_today": [
@@ -530,9 +868,9 @@
       "name": "Moana",
       "poster": "https://image.tmdb.org/t/p/w500/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg",
       "background": "https://image.tmdb.org/t/p/original/76WFQTmh4gsqYpWTejxuEu5Iu69.jpg",
-      "description": "🔥 [Today's Trending #1-1]: Updated live every 24 hours.\n\nTeenage Moana answers the Ocean's call and, for the first time, voyages beyond the reef of her island of Motunui with infamous demigod Maui on an unforgettable journey to restore prosperity to her people.",
+      "description": "🔥 [Today's Trending #1-1]: Released 2026-07-08. Updated live daily.\n\nTeenage Moana answers the Ocean's call and, for the first time, voyages beyond the reef of her island of Motunui with infamous demigod Maui on an unforgettable journey to restore prosperity to her people.",
       "releaseInfo": "2026",
-      "imdbRating": "6.2",
+      "imdbRating": "6.5",
       "genres": [
         "Trending Today"
       ]
@@ -543,7 +881,7 @@
       "name": "You Can See Everything",
       "poster": "https://image.tmdb.org/t/p/w500/qhFWz1BsEMg5rcs6TAstmGQggMT.jpg",
       "background": "https://image.tmdb.org/t/p/original/nhIL3O4W9h5V5JbNQm7yjoDk3So.jpg",
-      "description": "🔥 [Today's Trending #1-2]: Updated live every 24 hours.\n\nThirty-four days before she's sent to prison, notorious Silicon Valley founder Elizabeth Holmes invites a skeptical film crew to document her every move. What begins as an intimate portrait of an enigmatic felon becomes a mind-bending three-year journey into the abyss.",
+      "description": "🔥 [Today's Trending #1-2]: Released 2026-10-16. Updated live daily.\n\nThirty-four days before she's sent to prison, notorious Silicon Valley founder Elizabeth Holmes invites a skeptical film crew to document her every move. What begins as an intimate portrait of an enigmatic felon becomes a mind-bending three-year journey into the abyss.",
       "releaseInfo": "2026",
       "imdbRating": "N/A",
       "genres": [
@@ -555,8 +893,21 @@
       "type": "movie",
       "name": "Mayday",
       "poster": "https://image.tmdb.org/t/p/w500/hVXjX1jLZ1ljFSNGXpjJfbTUOa7.jpg",
-      "background": "https://image.tmdb.org/t/p/original/4gyx49ibwQslyrwuUS1c58PJEEd.jpg",
-      "description": "🔥 [Today's Trending #1-3]: Updated live every 24 hours.\n\nWhen a U.S. Navy pilot on a top-secret mission during the Cold War gets trapped behind enemy lines, his only chance at survival is to form an alliance with an eccentric ex-KGB agent.",
+      "background": "https://image.tmdb.org/t/p/original/g7Ccid5kuD7A8hXWlsQiNfwOxaD.jpg",
+      "description": "🔥 [Today's Trending #1-3]: Released 2026-09-03. Updated live daily.\n\nWhen a U.S. Navy pilot on a top-secret mission during the Cold War gets trapped behind enemy lines, his only chance at survival is to form an alliance with an eccentric ex-KGB agent.",
+      "releaseInfo": "2026",
+      "imdbRating": "8.0",
+      "genres": [
+        "Trending Today"
+      ]
+    },
+    {
+      "id": "tt22084616",
+      "type": "movie",
+      "name": "Spider-Man: Brand New Day",
+      "poster": "https://image.tmdb.org/t/p/w500/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+      "background": "https://image.tmdb.org/t/p/original/qeQJx07rK2xm8SD2sJxFKhE7gs0.jpg",
+      "description": "🔥 [Today's Trending #1-4]: Released 2026-07-29. Updated live daily.\n\nFighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
       "releaseInfo": "2026",
       "imdbRating": "7.9",
       "genres": [
@@ -569,22 +920,9 @@
       "name": "The Runner",
       "poster": "https://image.tmdb.org/t/p/w500/uxCaBoYXsDC4A0SqTm3SISj0OwK.jpg",
       "background": "https://image.tmdb.org/t/p/original/ziXF8wIBguHNCeplNthUlDTCZP8.jpg",
-      "description": "🔥 [Today's Trending #1-4]: Updated live every 24 hours.\n\nMaia Marten, a brilliant London lawyer, has her life shattered by a single call on her morning run: her son has been taken. To get him back, she must keep running, obey every ruthless command, and trust no one-each second a test of how far a mother will go to save her child.",
+      "description": "🔥 [Today's Trending #1-5]: Released 2026-09-03. Updated live daily.\n\nMaia Marten, a brilliant London lawyer, has her life shattered by a single call on her morning run: her son has been taken. To get him back, she must keep running, obey every ruthless command, and trust no one-each second a test of how far a mother will go to save her child.",
       "releaseInfo": "2026",
       "imdbRating": "6.7",
-      "genres": [
-        "Trending Today"
-      ]
-    },
-    {
-      "id": "tt22084616",
-      "type": "movie",
-      "name": "Spider-Man: Brand New Day",
-      "poster": "https://image.tmdb.org/t/p/w500/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
-      "background": "https://image.tmdb.org/t/p/original/qeQJx07rK2xm8SD2sJxFKhE7gs0.jpg",
-      "description": "🔥 [Today's Trending #1-5]: Updated live every 24 hours.\n\nFighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
-      "releaseInfo": "2026",
-      "imdbRating": "7.9",
       "genres": [
         "Trending Today"
       ]
@@ -595,7 +933,7 @@
       "name": "The Odyssey",
       "poster": "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
       "background": "https://image.tmdb.org/t/p/original/RMXG8myu1aGlNUsRjtxzmpdMK0.jpg",
-      "description": "🔥 [Today's Trending #1-6]: Updated live every 24 hours.\n\nOdysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
+      "description": "🔥 [Today's Trending #1-6]: Released 2026-07-15. Updated live daily.\n\nOdysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
       "releaseInfo": "2026",
       "imdbRating": "8.0",
       "genres": [
@@ -608,7 +946,7 @@
       "name": "Obsession",
       "poster": "https://image.tmdb.org/t/p/w500/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg",
       "background": "https://image.tmdb.org/t/p/original/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
-      "description": "🔥 [Today's Trending #1-7]: Updated live every 24 hours.\n\nAfter breaking the mysterious \"One Wish Willow\" to win his crush's heart, a hopeless romantic finds himself getting exactly what he asked for but soon discovers that some desires come at a dark, sinister price.",
+      "description": "🔥 [Today's Trending #1-7]: Released 2026-05-13. Updated live daily.\n\nAfter breaking the mysterious \"One Wish Willow\" to win his crush's heart, a hopeless romantic finds himself getting exactly what he asked for but soon discovers that some desires come at a dark, sinister price.",
       "releaseInfo": "2026",
       "imdbRating": "8.2",
       "genres": [
@@ -621,7 +959,7 @@
       "name": "Coyote vs. Acme",
       "poster": "https://image.tmdb.org/t/p/w500/orkLtdgMGiO9rTVMqJ1kKwrnup1.jpg",
       "background": "https://image.tmdb.org/t/p/original/l9mFW9HQnAZ4r1ChZJHoOT3jaal.jpg",
-      "description": "🔥 [Today's Trending #1-8]: Updated live every 24 hours.\n\nAfter Acme products fail him one too many times in his dogged pursuit of the Roadrunner, Wile E. Coyote decides to hire a billboard lawyer to sue the Acme Corporation.",
+      "description": "🔥 [Today's Trending #1-8]: Released 2026-08-20. Updated live daily.\n\nAfter Acme products fail him one too many times in his dogged pursuit of the Roadrunner, Wile E. Coyote decides to hire a billboard lawyer to sue the Acme Corporation.",
       "releaseInfo": "2026",
       "imdbRating": "7.7",
       "genres": [
@@ -634,22 +972,9 @@
       "name": "Practical Magic 2",
       "poster": "https://image.tmdb.org/t/p/w500/7jCV8dkRFK3DGJ4dTqlvrMTFPwZ.jpg",
       "background": "https://image.tmdb.org/t/p/original/nUcauJ000dFBYkgGpxyxJ5aWEH2.jpg",
-      "description": "🔥 [Today's Trending #1-9]: Updated live every 24 hours.\n\nThe Owens sisters must confront the dark curse that threatens to unravel their family once and for all.",
+      "description": "🔥 [Today's Trending #1-9]: Released 2026-09-09. Updated live daily.\n\nThe Owens sisters must confront the dark curse that threatens to unravel their family once and for all.",
       "releaseInfo": "2026",
-      "imdbRating": "6.7",
-      "genres": [
-        "Trending Today"
-      ]
-    },
-    {
-      "id": "tt26657236",
-      "type": "movie",
-      "name": "Backrooms",
-      "poster": "https://image.tmdb.org/t/p/w500/rhGx6E3qRNMgj3i5su2oukNHwIQ.jpg",
-      "background": "https://image.tmdb.org/t/p/original/dqmMWNWfLnExDRpMtIMqI97GQFR.jpg",
-      "description": "🔥 [Today's Trending #1-10]: Updated live every 24 hours.\n\nA strange doorway appears in the basement of a furniture showroom.",
-      "releaseInfo": "2026",
-      "imdbRating": "7.1",
+      "imdbRating": "6.2",
       "genres": [
         "Trending Today"
       ]
@@ -660,48 +985,9 @@
       "name": "Buddy",
       "poster": "https://image.tmdb.org/t/p/w500/6Lh4ZlsAISFQFVfLZ90sE9ycVnN.jpg",
       "background": "https://image.tmdb.org/t/p/original/ytoLEl5yDaxB8AtZ52uKWjaQ9ql.jpg",
-      "description": "🔥 [Today's Trending #1-11]: Updated live every 24 hours.\n\nA magical, singing orange unicorn holds his cast hostage in a surreal TV-show dimension, as he becomes more and more demented.",
+      "description": "🔥 [Today's Trending #1-10]: Released 2026-08-27. Updated live daily.\n\nA magical, singing orange unicorn holds his cast hostage in a surreal TV-show dimension, as he becomes more and more demented.",
       "releaseInfo": "2026",
-      "imdbRating": "8.3",
-      "genres": [
-        "Trending Today"
-      ]
-    },
-    {
-      "id": "tt29355505",
-      "type": "movie",
-      "name": "Toy Story 5",
-      "poster": "https://image.tmdb.org/t/p/w500/sfQtVlIHljToOwYjhe21KPGzZWK.jpg",
-      "background": "https://image.tmdb.org/t/p/original/qjTqY5coNiz6sVtPng40IzltsoN.jpg",
-      "description": "🔥 [Today's Trending #1-12]: Updated live every 24 hours.\n\nWhen Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
-      "releaseInfo": "2026",
-      "imdbRating": "8.3",
-      "genres": [
-        "Trending Today"
-      ]
-    },
-    {
-      "id": "tt11561116",
-      "type": "movie",
-      "name": "The Whisper Man",
-      "poster": "https://image.tmdb.org/t/p/w500/6UqflU8Qqkz7Dq4swJPqs0ZJjY4.jpg",
-      "background": "https://image.tmdb.org/t/p/original/xSJJQeAp9GBFmiKusysTRG6jQjt.jpg",
-      "description": "🔥 [Today's Trending #1-13]: Updated live every 24 hours.\n\nWhen his young son vanishes, a widower enlists help from his estranged father, a retired detective who put away the serial killer now linked to the case.",
-      "releaseInfo": "2026",
-      "imdbRating": "6.8",
-      "genres": [
-        "Trending Today"
-      ]
-    },
-    {
-      "id": "tt32338669",
-      "type": "movie",
-      "name": "Mutiny",
-      "poster": "https://image.tmdb.org/t/p/w500/pu2VxGlpGwffOx292w18b1tv96j.jpg",
-      "background": "https://image.tmdb.org/t/p/original/qDa0fqDqIBCovRp975RvtGPcuN3.jpg",
-      "description": "🔥 [Today's Trending #1-14]: Updated live every 24 hours.\n\nAfter witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a one-man crusade to avenge his boss' death only to discover an international conspiracy.",
-      "releaseInfo": "2026",
-      "imdbRating": "6.4",
+      "imdbRating": "8.2",
       "genres": [
         "Trending Today"
       ]
@@ -712,7 +998,7 @@
       "name": "Resident Evil",
       "poster": "https://image.tmdb.org/t/p/w500/qku2uWSoJ9amQV5MWo1Eek29iji.jpg",
       "background": "https://image.tmdb.org/t/p/original/ddfXMkaPViSrg0P5aoYGFMc58x2.jpg",
-      "description": "🔥 [Today's Trending #1-15]: Updated live every 24 hours.\n\nMedical courier Bryan unwittingly finds himself fighting for survival as one fateful, horrifying night collapses around him in chaos.",
+      "description": "🔥 [Today's Trending #1-11]: Released 2026-09-16. Updated live daily.\n\nMedical courier Bryan unwittingly finds himself fighting for survival as one fateful, horrifying night collapses around him in chaos.",
       "releaseInfo": "2026",
       "imdbRating": "N/A",
       "genres": [
@@ -720,14 +1006,66 @@
       ]
     },
     {
-      "id": "tt8814476",
+      "id": "tt26657236",
       "type": "movie",
-      "name": "Supergirl",
-      "poster": "https://image.tmdb.org/t/p/w500/uhzRnTW4DM13UQBvZP3eVNzQTuz.jpg",
-      "background": "https://image.tmdb.org/t/p/original/4X2YSe8PaYbsBqX3TDmmIU4vOju.jpg",
-      "description": "🔥 [Today's Trending #1-16]: Updated live every 24 hours.\n\nWhen an unexpected and ruthless adversary strikes too close to home, Kara Zor-El, aka Supergirl, reluctantly joins forces with an unlikely companion on an epic, interstellar journey of vengeance and justice.",
+      "name": "Backrooms",
+      "poster": "https://image.tmdb.org/t/p/w500/rhGx6E3qRNMgj3i5su2oukNHwIQ.jpg",
+      "background": "https://image.tmdb.org/t/p/original/dqmMWNWfLnExDRpMtIMqI97GQFR.jpg",
+      "description": "🔥 [Today's Trending #1-12]: Released 2026-05-27. Updated live daily.\n\nA strange doorway appears in the basement of a furniture showroom.",
       "releaseInfo": "2026",
-      "imdbRating": "6.7",
+      "imdbRating": "7.1",
+      "genres": [
+        "Trending Today"
+      ]
+    },
+    {
+      "id": "tt11561116",
+      "type": "movie",
+      "name": "The Whisper Man",
+      "poster": "https://image.tmdb.org/t/p/w500/6UqflU8Qqkz7Dq4swJPqs0ZJjY4.jpg",
+      "background": "https://image.tmdb.org/t/p/original/xSJJQeAp9GBFmiKusysTRG6jQjt.jpg",
+      "description": "🔥 [Today's Trending #1-13]: Released 2026-08-27. Updated live daily.\n\nWhen his young son vanishes, a widower enlists help from his estranged father, a retired detective who put away the serial killer now linked to the case.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.8",
+      "genres": [
+        "Trending Today"
+      ]
+    },
+    {
+      "id": "tt29355505",
+      "type": "movie",
+      "name": "Toy Story 5",
+      "poster": "https://image.tmdb.org/t/p/w500/sfQtVlIHljToOwYjhe21KPGzZWK.jpg",
+      "background": "https://image.tmdb.org/t/p/original/qjTqY5coNiz6sVtPng40IzltsoN.jpg",
+      "description": "🔥 [Today's Trending #1-14]: Released 2026-06-17. Updated live daily.\n\nWhen Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
+      "releaseInfo": "2026",
+      "imdbRating": "8.4",
+      "genres": [
+        "Trending Today"
+      ]
+    },
+    {
+      "id": "tt32338669",
+      "type": "movie",
+      "name": "Mutiny",
+      "poster": "https://image.tmdb.org/t/p/w500/pu2VxGlpGwffOx292w18b1tv96j.jpg",
+      "background": "https://image.tmdb.org/t/p/original/qDa0fqDqIBCovRp975RvtGPcuN3.jpg",
+      "description": "🔥 [Today's Trending #1-15]: Released 2026-08-19. Updated live daily.\n\nAfter witnessing his billionaire boss' murder and being framed for the crime, Cole Reed boards a cargo ship on a one-man crusade to avenge his boss' death only to discover an international conspiracy.",
+      "releaseInfo": "2026",
+      "imdbRating": "6.4",
+      "genres": [
+        "Trending Today"
+      ]
+    },
+    {
+      "id": "tt21357150",
+      "type": "movie",
+      "name": "Avengers: Doomsday",
+      "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg",
+      "background": "https://image.tmdb.org/t/p/original/s4v0UX1anfXm0UvloLsTTJ4v222.jpg",
+      "description": "🔥 [Today's Trending #1-16]: Released 2026-12-16. Updated live daily.\n\nBeloved heroes from three distinct universes are set on a deadly collision course and face an existential threat unlike anything they've ever encountered.",
+      "releaseInfo": "2026",
+      "imdbRating": "N/A",
       "genres": [
         "Trending Today"
       ]
@@ -738,7 +1076,7 @@
       "name": "Fall 2: Deadpoint",
       "poster": "https://image.tmdb.org/t/p/w500/sY65bOZcjQqO6VdpOXLN5VcW61e.jpg",
       "background": "https://image.tmdb.org/t/p/original/yQXU4rgJ5LVCzn16SeIg34T35lV.jpg",
-      "description": "🔥 [Today's Trending #1-17]: Updated live every 24 hours.\n\nOn a perilous climb across Thailand's Mount Kwan, two climbers become trapped thousands of feet above the ground, where vertigo-inducing heights, sheer exposure, and impossible odds turn every moment into a fight for survival.",
+      "description": "🔥 [Today's Trending #1-17]: Released 2026-09-01. Updated live daily.\n\nOn a perilous climb across Thailand's Mount Kwan, two climbers become trapped thousands of feet above the ground, where vertigo-inducing heights, sheer exposure, and impossible odds turn every moment into a fight for survival.",
       "releaseInfo": "2026",
       "imdbRating": "6.8",
       "genres": [
@@ -750,8 +1088,8 @@
       "type": "movie",
       "name": "Just Play Dead",
       "poster": "https://image.tmdb.org/t/p/w500/glALx6QaIgw1u4joXsnfHTjWi6D.jpg",
-      "background": "https://image.tmdb.org/t/p/original/lBWfbmUj9Jw0EM1OYtDXr0B5FPW.jpg",
-      "description": "🔥 [Today's Trending #1-18]: Updated live every 24 hours.\n\nA criminal mastermind plans to fake his death for insurance money while framing his wife's lover. His wife plots to kill him for real and take it all. Both race to outmanoeuvre each other in a deadly battle of wits.",
+      "background": "https://image.tmdb.org/t/p/original/tieojVpH6eW44JQOQEWnf8t4khG.jpg",
+      "description": "🔥 [Today's Trending #1-18]: Released 2026-08-28. Updated live daily.\n\nA criminal mastermind plans to fake his death for insurance money while framing his wife's lover. His wife plots to kill him for real and take it all. Both race to outmanoeuvre each other in a deadly battle of wits.",
       "releaseInfo": "2026",
       "imdbRating": "6.6",
       "genres": [
@@ -759,14 +1097,14 @@
       ]
     },
     {
-      "id": "tt21357150",
+      "id": "tt15047880",
       "type": "movie",
-      "name": "Avengers: Doomsday",
-      "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg",
-      "background": "https://image.tmdb.org/t/p/original/s4v0UX1anfXm0UvloLsTTJ4v222.jpg",
-      "description": "🔥 [Today's Trending #1-19]: Updated live every 24 hours.\n\nBeloved heroes from three distinct universes are set on a deadly collision course and face an existential threat unlike anything they've ever encountered.",
+      "name": "Disclosure Day",
+      "poster": "https://image.tmdb.org/t/p/w500/AnJ8IQJI23hNpYXVNaythu061Ru.jpg",
+      "background": "https://image.tmdb.org/t/p/original/flxau5Iu7bChQHsESqvGZ3FQRaI.jpg",
+      "description": "🔥 [Today's Trending #1-19]: Released 2026-06-10. Updated live daily.\n\nA cybersecurity expert becomes a whistleblower after uncovering secrets about aliens, putting him on the run from a corporation. Meanwhile, a meteorologist experiencing strange phenomena joins forces with him to prove there's life beyond our understanding.",
       "releaseInfo": "2026",
-      "imdbRating": "N/A",
+      "imdbRating": "7.5",
       "genres": [
         "Trending Today"
       ]
@@ -777,7 +1115,7 @@
       "name": "Minions & Monsters",
       "poster": "https://image.tmdb.org/t/p/w500/4LwvU9SZc8QQzW1X1FAPhNbXnEU.jpg",
       "background": "https://image.tmdb.org/t/p/original/kkcwhgSFd81QDlXo8ytrpHPQjhy.jpg",
-      "description": "🔥 [Today's Trending #1-20]: Updated live every 24 hours.\n\nThis is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
+      "description": "🔥 [Today's Trending #1-20]: Released 2026-06-24. Updated live daily.\n\nThis is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
       "releaseInfo": "2026",
       "imdbRating": "7.6",
       "genres": [
@@ -785,5 +1123,5 @@
       ]
     }
   ],
-  "lastUpdated": 1788803631809
+  "lastUpdated": 1788847441555
 }
