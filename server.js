@@ -956,9 +956,13 @@ const MASTER_CATEGORIES = [
 
 function findCollectionByName(name) {
   if (!name) return null;
+  // Direct key lookup check
+  if (collections[name] && collections[name].movies && Array.isArray(collections[name].movies) && collections[name].movies.length > 0) {
+    return collections[name];
+  }
   const nameNorm = name.trim().toLowerCase();
   for (const col of Object.values(collections)) {
-    if (col && col.name && col.name.trim().toLowerCase() === nameNorm) {
+    if (col && col.name && col.name.trim().toLowerCase() === nameNorm && col.movies && Array.isArray(col.movies) && col.movies.length > 0) {
       return col;
     }
   }
@@ -966,7 +970,7 @@ function findCollectionByName(name) {
   const nameAlpha = nameNorm.replace(/[^a-z0-9]/g, '');
   if (nameAlpha) {
     for (const col of Object.values(collections)) {
-      if (col && col.name) {
+      if (col && col.name && col.movies && Array.isArray(col.movies) && col.movies.length > 0) {
         const colAlpha = col.name.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
         if (colAlpha === nameAlpha || colAlpha.includes(nameAlpha) || nameAlpha.includes(colAlpha)) {
           return col;
@@ -975,6 +979,33 @@ function findCollectionByName(name) {
     }
   }
   return null;
+}
+
+function parseCatalogExtras(rawPath, param0, query = {}) {
+  const result = {};
+  if (query) {
+    for (const [k, v] of Object.entries(query)) {
+      if (v !== undefined && v !== null) {
+        try { result[k] = decodeURIComponent(String(v)).trim(); } catch (e) { result[k] = String(v).trim(); }
+      }
+    }
+  }
+  const extraPart = (param0 || '').replace(/^\//, '').replace(/\.json$/, '');
+  if (extraPart) {
+    const skipMatch = extraPart.match(/(?:^|[&/])skip=([^&/]+)/);
+    if (skipMatch && !result.skip) {
+      try { result.skip = decodeURIComponent(skipMatch[1]).trim(); } catch (e) { result.skip = skipMatch[1].trim(); }
+    }
+    const searchMatch = extraPart.match(/(?:^|[&/])search=(.*?)(?=(?:[&/]skip=)|$)/);
+    if (searchMatch && !result.search) {
+      try { result.search = decodeURIComponent(searchMatch[1]).trim(); } catch (e) { result.search = searchMatch[1].trim(); }
+    }
+    const genreMatch = extraPart.match(/(?:^|[&/])genre=(.*?)(?=(?:[&/]skip=)|(?:[&/]search=)|$)/);
+    if (genreMatch && !result.genre) {
+      try { result.genre = decodeURIComponent(genreMatch[1]).trim(); } catch (e) { result.genre = genreMatch[1].trim(); }
+    }
+  }
+  return result;
 }
 
 function sortMoviesByRating(movies) {
@@ -1034,7 +1065,6 @@ app.get('/manifest.json', (req, res) => {
     "Movies",
     "Crime and Mystery",
     "Martial Arts and Action",
-    "Sci-Fi and Action",
     "Docs and Nature",
     "News and Sports"
   ];
@@ -1177,7 +1207,7 @@ app.get('/manifest.json', (req, res) => {
 
   const manifest = {
     id: 'org.subgenre.auto.catalog',
-    version: '3.3.0',
+    version: '3.4.0',
     name: '🤖 AI Movie, TV & 24/7 Channels',
     description: '24/7 Live FAST Channels, Master Categories, Subgenre Dropdowns, Instant AI Search & Trailers!',
     resources: ['catalog', 'meta', 'stream'],
@@ -1192,17 +1222,18 @@ app.get('/manifest.json', (req, res) => {
 app.get('/catalog/:type/:id*', async (req, res) => {
   try {
     const rawPath = req.params.id + (req.params[0] || '');
-    const parts = rawPath.replace(/\.json$/, '').split('/');
-    const id = parts[0];
+    const cleanPath = rawPath.replace(/\.json$/, '');
+    const firstSlashIndex = cleanPath.indexOf('/');
+    const id = firstSlashIndex !== -1 ? cleanPath.substring(0, firstSlashIndex) : cleanPath;
     const type = req.params.type;
-    const extraStr = parts.slice(1).join('&');
+
+    const extras = parseCatalogExtras(rawPath, req.params[0], req.query);
+    const selectedGenre = extras.genre;
+    const skip = parseInt(extras.skip || '0', 10);
+    const searchQuery = extras.search;
     
     // Handle 24/7 Live Channels Catalog
     if (id === 'cat_247_channels' || type === 'tv' || type === 'channel') {
-      const params = new URLSearchParams(extraStr);
-      const selectedGenre = params.get('genre');
-      const skip = parseInt(params.get('skip') || '0', 10);
-
       let items = liveChannels.map(ch => {
         const meta = { ...ch };
         const epg = getChannelEPG(ch);
@@ -1222,27 +1253,23 @@ app.get('/catalog/:type/:id*', async (req, res) => {
 
     // Handle Live AI Search Catalog
     if (id === 'ai_search' || id === 'ai_search_series') {
-      const params = new URLSearchParams(extraStr);
-      const query = params.get('search');
-      const skip = parseInt(params.get('skip') || '0', 10);
+      if (!searchQuery) return res.json({ metas: [] });
       
-      if (!query) return res.json({ metas: [] });
-      
-      const cacheKey = `${type}_${query.toLowerCase().trim()}`;
+      const cacheKey = `${type}_${searchQuery.toLowerCase().trim()}`;
       
       if (searchCache[cacheKey] && (Date.now() - searchCache[cacheKey].timestamp < 86400000)) {
-        console.log(`[AI Search] Serving cached results for ${type}: "${query}", skip: ${skip}`);
+        console.log(`[AI Search] Serving cached results for ${type}: "${searchQuery}", skip: ${skip}`);
         const metas = searchCache[cacheKey].movies.slice(skip, skip + 100);
         return res.json({ metas });
       }
       
-      console.log(`[AI Search] New search request for ${type}: "${query}"`);
+      console.log(`[AI Search] New search request for ${type}: "${searchQuery}"`);
       const tmdbKey = config.tmdbApiKey || '15d2ea6d0dc1d476efbca3eba2b9bbfb';
       
       try {
         // ── Intent Interpreter — normalize raw query before searching ─────────
-        const intent = await interpretIntent(query);
-        const searchTitle = intent?.title || query;
+        const intent = await interpretIntent(searchQuery);
+        const searchTitle = intent?.title || searchQuery;
         const searchType  = intent?.type  || (id === 'ai_search_series' ? 'show' : 'movie');
 
         console.log(`[Intent] TITLE: "${searchTitle}" | YEAR: "${intent?.year || '?'}" | TYPE: ${searchType} | QUALITY: "${intent?.qualityTarget || 'any'}" | AUDIO: "${intent?.audioTarget || 'any'}" | SOURCE: "${intent?.sourcePriority || 'Easynews'}" | via: ${intent?.source || 'heuristic'}`);
@@ -1266,10 +1293,6 @@ app.get('/catalog/:type/:id*', async (req, res) => {
       }
     }
 
-    const extraParams = new URLSearchParams(extraStr);
-    const selectedGenre = extraParams.get('genre');
-    const skip = parseInt(extraParams.get('skip') || '0', 10);
-
     // ── Handle Live Daily Feeds (FirstShowing.net & Daily Trending) ──────────
     if (id === 'cat_firstshowing_buzz' || id === 'cat_firstshowing_schedule' || id === 'cat_trending_today') {
       const feedKey = id.replace(/^cat_/, '');
@@ -1292,14 +1315,17 @@ app.get('/catalog/:type/:id*', async (req, res) => {
       if (selectedGenre) {
         // User selected a specific Subgenre from the dropdown
         const col = findCollectionByName(selectedGenre);
-        if (!col || !col.movies) {
+        if (!col || !col.movies || col.movies.length === 0) {
+          console.warn(`[Stremio Subgenre] Warning: Subgenre collection "${selectedGenre}" not found or empty.`);
           return res.json({ metas: [] });
         }
         let items = col.movies;
         if (type === 'series') {
-          items = items.filter(m => m.type === 'series');
+          const seriesItems = items.filter(m => m.type === 'series');
+          if (seriesItems.length > 0) items = seriesItems;
         } else if (type === 'movie') {
-          items = items.filter(m => m.type !== 'series');
+          const movieItems = items.filter(m => m.type !== 'series');
+          if (movieItems.length > 0) items = movieItems;
         }
         console.log(`[Stremio Subgenre] Serving "${selectedGenre}" under ${id} (${type}, ${items.length} items, skip: ${skip})`);
         return res.json({ metas: sortMoviesByRating(items).slice(skip, skip + 100) });
@@ -1312,7 +1338,7 @@ app.get('/catalog/:type/:id*', async (req, res) => {
         if (masterCat) {
           targetSubgenres.forEach(subName => {
             const col = findCollectionByName(subName);
-            if (col && col.movies) {
+            if (col && col.movies && col.movies.length > 0) {
               col.movies.forEach(m => {
                 const itemType = m.type === 'series' ? 'series' : 'movie';
                 if (itemType === type && !seenIds.has(m.id)) {
@@ -1322,10 +1348,24 @@ app.get('/catalog/:type/:id*', async (req, res) => {
               });
             }
           });
+          // Fallback: If type filtering yielded 0 items, include all items so TV screen is never empty
+          if (combined.length === 0) {
+            targetSubgenres.forEach(subName => {
+              const col = findCollectionByName(subName);
+              if (col && col.movies && col.movies.length > 0) {
+                col.movies.forEach(m => {
+                  if (!seenIds.has(m.id)) {
+                    seenIds.add(m.id);
+                    combined.push(m);
+                  }
+                });
+              }
+            });
+          }
         } else {
           // Custom AI Playlists
           Object.values(collections).forEach(col => {
-            if (col && col.movies) {
+            if (col && col.movies && col.movies.length > 0) {
               col.movies.forEach(m => {
                 const itemType = m.type === 'series' ? 'series' : 'movie';
                 if (itemType === type && !seenIds.has(m.id)) {
@@ -1335,6 +1375,19 @@ app.get('/catalog/:type/:id*', async (req, res) => {
               });
             }
           });
+          // Fallback: If type filtering yielded 0 items, include all items
+          if (combined.length === 0) {
+            Object.values(collections).forEach(col => {
+              if (col && col.movies && col.movies.length > 0) {
+                col.movies.forEach(m => {
+                  if (!seenIds.has(m.id)) {
+                    seenIds.add(m.id);
+                    combined.push(m);
+                  }
+                });
+              }
+            });
+          }
         }
         
         console.log(`[Stremio Category] Serving combined ${id} (${type}, ${combined.length} total items, skip: ${skip})`);
@@ -1343,12 +1396,13 @@ app.get('/catalog/:type/:id*', async (req, res) => {
     }
 
     // Direct / Legacy Collection ID lookup fallback
-    const collection = collections[id];
-    if (!collection) {
+    let collection = collections[id] || findCollectionByName(id);
+    if (!collection || !collection.movies || collection.movies.length === 0) {
+      console.warn(`[Stremio Request] Direct collection lookup for "${id}" not found or empty.`);
       return res.json({ metas: [] });
     }
 
-    let items = collection.movies || [];
+    let items = collection.movies;
     if (type === 'series') {
       const seriesItems = items.filter(m => m.type === 'series');
       if (seriesItems.length > 0) items = seriesItems;
